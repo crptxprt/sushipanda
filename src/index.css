@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans bg-[#f7f5f2] text-[#111111] antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    background: #C41230;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Hero display size */
+  .hero-display {
+    font-size: clamp(4.2rem, 10.5vw, 9.5rem);
+    line-height: 0.88;
+    letter-spacing: -0.02em;
+    font-weight: 900;
+  }
+
+  .section-display {
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+}

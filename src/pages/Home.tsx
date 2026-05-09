@@ -1,0 +1,396 @@
+import { useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
+import { navigate } from '../lib/router';
+
+const TICKER = ['SUSHI KETERING', 'PROSLAVE', 'SLAVE', 'KORPORATIVNI EVENTI', 'SUSHI CHEF', 'BEOGRAD · SRBIJA'];
+
+const categories = [
+  { num: '01', title: 'Proslave', sub: 'Rođendani & privatne žurke', path: '/ketering-proslave', img: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=900' },
+  { num: '02', title: 'Slave', sub: 'Tradicionalna okupljanja', path: '/ketering-slave', img: 'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=900' },
+  { num: '03', title: 'Devojačko & Momačko', sub: 'Zabavni eventi', path: '/ketering-devojacko-momacko', img: 'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=900' },
+  { num: '04', title: 'Korporativni', sub: 'Firme & poslovni eventi', path: '/ketering-korporativni', img: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=900' },
+];
+
+const whyItems = [
+  {
+    img: 'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=300',
+    title: 'Svež sushi',
+    desc: 'Pripremamo isključivo sa svežim, pažljivo odabranim sastojcima za svaki event.',
+  },
+  {
+    img: 'https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=300',
+    title: 'Profesionalna ekipa',
+    desc: 'Iskusni tim iz restorana koji zna kako da isporuči savršeno iskustvo.',
+  },
+  {
+    img: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300',
+    title: 'Fleksibilni paketi',
+    desc: 'Prilagodljive opcije za grupe svih veličina — od 10 do 500+ gostiju.',
+  },
+];
+
+export default function Home() {
+  const whyRef = useRef<HTMLElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
+
+  const go = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0 });
+  };
+
+  return (
+    <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
+      <Header transparent />
+
+      {/* ══════════════════════════════════════════════════════════════
+          HERO  —  inspired by Sushi Samurai reference
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-screen bg-[#f7f5f2] overflow-hidden flex flex-col">
+
+        {/* Blob shape — left side */}
+        <div
+          className="absolute top-[3%] left-[-160px] w-[700px] h-[850px] bg-sp-blob pointer-events-none select-none"
+          style={{ borderRadius: '50%' }}
+        />
+
+        {/* Circle behind sushi image — right side */}
+        <div
+          className="absolute right-[-80px] top-1/2 -translate-y-[45%] w-[560px] h-[560px] bg-sp-circle pointer-events-none select-none"
+          style={{ borderRadius: '50%' }}
+        />
+
+        {/* Main flex content */}
+        <div className="relative z-10 flex flex-col lg:flex-row items-center w-full max-w-[1320px] mx-auto px-6 lg:px-10 pt-[90px] min-h-screen pb-10 gap-0">
+
+          {/* ── LEFT: Headline + CTA ── */}
+          <div className="w-full lg:w-[50%] flex flex-col justify-center py-12 lg:py-0">
+
+            {/* Overline */}
+            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-8 font-light">
+              — Premium Sushi Catering, Srbija
+            </p>
+
+            {/* Massive headline */}
+            <h1 className="hero-display text-[#111111] mb-8">
+              {/* First line: "Sushi" + floating food image */}
+              <span className="flex items-center gap-5 flex-wrap">
+                <span>Sushi</span>
+                <span className="inline-flex w-[70px] h-[70px] lg:w-[88px] lg:h-[88px] rounded-full overflow-hidden border-[3px] border-white shadow-md shrink-0">
+                  <img
+                    src="https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=200"
+                    alt="sushi"
+                    className="w-full h-full object-cover"
+                  />
+                </span>
+              </span>
+              {/* Second line */}
+              <span className="block text-[#111111]">
+                Panda
+              </span>
+            </h1>
+
+            {/* Tagline */}
+            <p className="text-stone-500 font-light text-[15px] leading-[1.8] max-w-[290px] mb-10">
+              Premium sushi ketering za proslave, slave, korporativne
+              i privatne događaje.
+            </p>
+
+            {/* CTA — pill button (matches reference) */}
+            <div className="flex flex-wrap items-center gap-4 mb-14">
+              <button
+                onClick={() => go('/kontakt')}
+                className="bg-[#111111] text-white text-[12px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C41230] transition-colors duration-300 font-light"
+              >
+                Zatraži ponudu
+              </button>
+              <button
+                onClick={() => whyRef.current?.scrollIntoView({ behavior: 'smooth' })}
+                className="text-[12px] tracking-widest uppercase text-stone-400 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
+              >
+                Pogledaj opcije
+              </button>
+            </div>
+
+            {/* Avatars — "Meet our team" */}
+            <div className="flex items-center gap-5">
+              <div className="flex -space-x-3">
+                {[
+                  'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=80',
+                  'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=80',
+                  'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=80',
+                ].map((src, i) => (
+                  <div
+                    key={i}
+                    className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
+                    style={{ zIndex: 3 - i }}
+                  >
+                    <img src={src} alt="" className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+              <div>
+                <p className="text-[13px] text-stone-600 font-light">Upoznajte naš tim</p>
+                <p className="text-[11px] text-stone-400 font-light tracking-wide">Iskusni sushi majstori</p>
+              </div>
+            </div>
+          </div>
+
+          {/* ── CENTER: Kanji column ── */}
+          <div
+            className="hidden xl:flex flex-col items-center gap-5 px-8 py-16 shrink-0"
+            style={{ writingMode: 'vertical-rl' }}
+          >
+            {'寿司'.split('').map((ch, i) => (
+              <span
+                key={i}
+                className="font-serif text-[3.2rem] leading-none text-sp-kanji select-none"
+                style={{ writingMode: 'horizontal-tb' }}
+              >
+                {ch}
+              </span>
+            ))}
+            <span className="w-px h-12 bg-sp-kanji/30 my-2" />
+            {'武士'.split('').map((ch, i) => (
+              <span
+                key={i}
+                className="font-serif text-[3.2rem] leading-none text-sp-kanji/50 select-none"
+                style={{ writingMode: 'horizontal-tb' }}
+              >
+                {ch}
+              </span>
+            ))}
+          </div>
+
+          {/* ── RIGHT: Sushi hero image ── */}
+          <div className="w-full lg:w-[50%] flex items-center justify-center lg:justify-end relative mt-10 lg:mt-0">
+            <img
+              src="https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Premium sushi"
+              className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[90%] object-cover"
+              style={{ borderRadius: '40% 50% 50% 40% / 40% 40% 50% 50%' }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* ── TICKER ──────────────────────────────────────────────────── */}
+      <div className="bg-[#111111] py-4 overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[...TICKER, ...TICKER, ...TICKER, ...TICKER].map((item, i) => (
+            <span key={i} className="inline-flex items-center gap-5 text-[10px] tracking-widest2 uppercase text-white/40 mx-7 font-light">
+              {item}
+              <span className="text-sp-kanji text-sm leading-none">·</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ── WHY SUSHI PANDA — matches reference layout ────────────── */}
+      <section ref={whyRef} className="py-28 bg-white">
+        <div className="max-w-[1100px] mx-auto px-6">
+          {/* Centered heading */}
+          <h2 className="font-serif text-center mb-3" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, letterSpacing: '-0.01em' }}>
+            Zašto Sushi Panda ?
+          </h2>
+          <p className="text-center text-stone-400 font-light text-[14px] mb-16 tracking-wide">
+            Razlozi zbog kojih nas klijenti biraju iznova.
+          </p>
+
+          {/* 3-column feature cards with circular images */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {whyItems.map((item, i) => (
+              <div
+                key={i}
+                className="bg-[#F8F8F5] px-8 py-10 flex flex-col items-center text-center group hover:shadow-md transition-shadow duration-300"
+                style={{ borderRadius: '20px' }}
+              >
+                {/* Circular image */}
+                <div
+                  className="w-24 h-24 rounded-full overflow-hidden mb-7 border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300"
+                >
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-serif text-[1.2rem] font-bold text-[#111111] mb-3">{item.title}</h3>
+                <p className="text-stone-500 text-[13px] font-light leading-[1.75]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── KATEGORIJE ──────────────────────────────────────────────── */}
+      <section className="py-28 px-6 bg-[#f7f5f2]">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
+          <div className="text-center mb-16">
+            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-4 font-light">Usluge</p>
+            <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.01em' }}>
+              Vrste ketering evenata
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {categories.map((cat) => (
+              <button
+                key={cat.path}
+                onClick={() => go(cat.path)}
+                className="group relative overflow-hidden focus:outline-none text-left"
+                style={{ borderRadius: '16px' }}
+              >
+                <div className="aspect-[3/4] overflow-hidden bg-stone-200">
+                  <img
+                    src={cat.img}
+                    alt={cat.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+                </div>
+
+                {/* Large number watermark */}
+                <div className="absolute top-5 left-5 font-serif font-bold text-white/15 text-[3.5rem] leading-none select-none">
+                  {cat.num}
+                </div>
+
+                {/* Bottom text */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="font-serif font-bold text-white text-[1.15rem] mb-1">{cat.title}</h3>
+                  <p className="text-white/55 text-[10px] font-light tracking-widest uppercase">{cat.sub}</p>
+                  <div className="mt-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 text-sp-kanji text-[10px] tracking-widest uppercase">
+                    Saznaj više <ArrowRight size={11} />
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SUSHI CHEF — dark cinematic ─────────────────────────────── */}
+      <section className="relative min-h-[580px] flex items-center overflow-hidden bg-[#111111]">
+        <img
+          src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Sushi chef"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          style={{ objectPosition: 'center 25%' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+
+        {/* Kanji decoration */}
+        <span
+          aria-hidden="true"
+          className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[150px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden xl:block"
+        >
+          司
+        </span>
+
+        <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 py-28 w-full">
+          <div className="max-w-lg">
+            <p className="text-[11px] tracking-widest uppercase text-sp-kanji mb-7 font-light">Ekskluzivna usluga</p>
+            <h2
+              className="font-serif font-bold text-white mb-7 leading-[1]"
+              style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
+            >
+              Sushi chef na<br />
+              <em className="not-italic italic">vašem eventi</em>
+            </h2>
+            <p className="text-stone-400 font-light text-[14px] leading-[1.85] mb-12 max-w-sm">
+              Naš chef dolazi s kompletnom opremom i svežim sastojcima — priprema
+              sushi uživo pred gostima i kreira gastronomsko iskustvo koje se pamti.
+            </p>
+            <button
+              onClick={() => go('/sushi-chef')}
+              className="group inline-flex items-center gap-4 bg-white text-[#111111] text-[11px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C41230] hover:text-white transition-all duration-300 font-light"
+            >
+              Saznaj više
+              <ArrowRight size={13} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GALLERY ─────────────────────────────────────────────────── */}
+      <section className="py-28 px-6 bg-white">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
+          <div className="flex items-end justify-between mb-14">
+            <div>
+              <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-3 font-light">Naš rad</p>
+              <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>
+                Galerija
+              </h2>
+            </div>
+            <button
+              onClick={() => go('/galerija')}
+              className="hidden sm:flex items-center gap-2 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C41230] transition-colors group font-light"
+            >
+              Sve slike <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+
+          {/* Asymmetric editorial grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 overflow-hidden bg-stone-100 min-h-[260px] lg:min-h-0" style={{ borderRadius: '16px' }}>
+              <img src="https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            {[
+              'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=700',
+              'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=700',
+              'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=700',
+              'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=700',
+            ].map((src, i) => (
+              <div key={i} className="aspect-square overflow-hidden bg-stone-100" style={{ borderRadius: '12px' }}>
+                <img src={src} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TRUST LINE ──────────────────────────────────────────────── */}
+      <div className="py-12 bg-[#f7f5f2] text-center">
+        <div className="flex items-center justify-center gap-6 max-w-md mx-auto px-6">
+          <div className="flex-1 h-px bg-stone-200" />
+          <p className="text-[11px] tracking-widest uppercase text-stone-400 font-light whitespace-nowrap">
+            Za privatne i poslovne događaje · Srbija
+          </p>
+          <div className="flex-1 h-px bg-stone-200" />
+        </div>
+      </div>
+
+      {/* ── CTA FORM ────────────────────────────────────────────────── */}
+      <section ref={ctaRef} className="py-28 px-6 bg-[#F0EDE7]">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+
+          {/* Left */}
+          <div className="lg:sticky lg:top-28">
+            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-7 font-light">Kontakt</p>
+            <h2
+              className="font-serif font-bold text-[#111111] mb-5 leading-[1]"
+              style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
+            >
+              Planiraš<br />
+              <span className="italic font-normal">događaj?</span>
+            </h2>
+            <div className="w-10 h-px bg-[#C41230] mb-7" />
+            <p className="text-stone-500 font-light text-[14px] leading-[1.9] max-w-xs mb-10">
+              Zatraži ponudu i mi ćemo pripremiti sve za tebe — od jelovnika
+              do kompletne organizacije.
+            </p>
+            <div className="flex items-center gap-3">
+              <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
+              <p className="text-[12px] text-stone-400 font-light">Odgovaramo u roku od 2 sata</p>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div className="bg-white p-8 lg:p-12" style={{ borderRadius: '20px' }}>
+            <ContactForm source="home" />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
