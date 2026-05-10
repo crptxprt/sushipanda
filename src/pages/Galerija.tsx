@@ -55,7 +55,7 @@ export default function Galerija() {
           <h2 className="font-serif font-bold text-white mb-10 leading-[1]" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' }}>
             Organizujmo tvoj<br /><span className="italic font-normal">sushi event</span>
           </h2>
-          <button onClick={() => navigate('/kontakt')} className="bg-[#C41230] text-white text-[11px] tracking-widest uppercase px-12 py-4 rounded-full hover:bg-[#C41230]-light transition-colors font-light">
+          <button onClick={() => navigate('/kontakt')} className="bg-[#C44F6E] text-white text-[11px] tracking-widest uppercase px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">
             Zatraži ponudu
           </button>
         </div>

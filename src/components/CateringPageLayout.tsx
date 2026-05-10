@@ -56,7 +56,7 @@ export default function CateringPageLayout({
       <section className="py-24 px-6 bg-white">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <div className="w-10 h-px bg-[#C41230] mb-8" />
+            <div className="w-10 h-px bg-[#C44F6E] mb-8" />
             <p className="text-stone-500 font-light text-[14px] leading-[1.9]">{intro}</p>
           </div>
           <div className="flex items-center">
@@ -85,7 +85,7 @@ export default function CateringPageLayout({
                 style={{ borderRadius: '20px' }}
               >
                 {i === 1 && (
-                  <div className="absolute top-0 left-10 -translate-y-1/2 bg-[#C41230] text-white text-[9px] tracking-widest2 uppercase px-4 py-1.5 rounded-full">
+                  <div className="absolute top-0 left-10 -translate-y-1/2 bg-[#C44F6E] text-white text-[9px] tracking-widest2 uppercase px-4 py-1.5 rounded-full">
                     Najpopularniji
                   </div>
                 )}
@@ -105,7 +105,7 @@ export default function CateringPageLayout({
                 <ul className="space-y-4 mb-10">
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-4">
-                      <ArrowRight size={12} strokeWidth={1.5} className="text-[#C41230] shrink-0 mt-1" />
+                      <ArrowRight size={12} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
                       <span className={`text-[13px] font-light leading-[1.7] ${i === 1 ? 'text-stone-300' : 'text-stone-500'}`}>
                         {item}
                       </span>
@@ -117,7 +117,7 @@ export default function CateringPageLayout({
                   onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                   className={`w-full py-4 text-[11px] tracking-widest uppercase rounded-full transition-all duration-300 font-light ${
                     i === 1
-                      ? 'bg-[#C41230] text-white hover:bg-[#C41230]-light'
+                      ? 'bg-[#C44F6E] text-white hover:bg-[#D8748D]'
                       : 'border border-sp-dark text-[#111111] hover:bg-[#111111] hover:text-white'
                   }`}
                 >

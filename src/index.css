@@ -5,12 +5,26 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --sp-bg: #f8f3f1;
+    --sp-paper: #fffdfb;
+    --sp-ink: #171214;
+    --sp-rose: #c44f6e;
+    --sp-rose-soft: #e8c7cf;
+    --sp-blush: #f3e6e4;
+    --sp-kanji: #d48c98;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans bg-[#f7f5f2] text-[#111111] antialiased;
+    @apply font-sans text-[#111111] antialiased;
+    background:
+      radial-gradient(circle at 10% 18%, rgba(235, 224, 220, 0.7), transparent 24%),
+      radial-gradient(circle at 84% 22%, rgba(245, 223, 228, 0.45), transparent 18%),
+      linear-gradient(180deg, var(--sp-paper) 0%, var(--sp-bg) 100%);
   }
 
   h1, h2, h3, h4 {
@@ -18,7 +32,7 @@
   }
 
   ::selection {
-    background: #C41230;
+    background: var(--sp-rose);
     color: white;
   }
 }
@@ -45,5 +59,25 @@
     font-size: clamp(2.2rem, 5vw, 4.5rem);
     line-height: 1;
     letter-spacing: -0.01em;
+  }
+
+  .soft-petal {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 55% 45% 58% 42% / 38% 57% 43% 62%;
+    border: 1px solid rgba(212, 140, 152, 0.26);
+    background:
+      linear-gradient(180deg, rgba(246, 221, 226, 0.65), rgba(246, 221, 226, 0.08)),
+      radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), transparent 52%);
+    box-shadow: 0 30px 70px rgba(196, 79, 110, 0.08);
+    backdrop-filter: blur(2px);
+  }
+
+  .rose-orb {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(228, 191, 201, 0.22), rgba(228, 191, 201, 0));
+    filter: blur(14px);
   }
 }

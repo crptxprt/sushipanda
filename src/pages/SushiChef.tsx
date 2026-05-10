@@ -47,14 +47,14 @@ export default function SushiChef() {
             <h2 className="font-serif font-bold mb-8 leading-[1]" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.02em' }}>
               Iskustvo koje<br /><span className="italic font-normal">se pamti</span>
             </h2>
-            <div className="w-10 h-px bg-[#C41230] mb-8" />
+            <div className="w-10 h-px bg-[#C44F6E] mb-8" />
             <p className="text-stone-500 font-light text-[14px] leading-[1.9] mb-10">
               Naš sushi chef dolazi sa kompletnom opremom i svežim sastojcima — priprema autentični japanski sushi koji postaje centralni deo večeri.
             </p>
             <ul className="space-y-5">
               {highlights.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <ArrowRight size={13} strokeWidth={1.5} className="text-[#C41230] shrink-0 mt-1" />
+                  <ArrowRight size={13} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
                   <span className="text-stone-500 text-[14px] font-light">{item}</span>
                 </li>
               ))}
@@ -93,11 +93,11 @@ export default function SushiChef() {
             <h2 className="font-serif font-bold text-[#111111] mb-5 leading-[1]" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' }}>
               Zatraži<br /><span className="italic font-normal">chefa</span>
             </h2>
-            <div className="w-10 h-px bg-[#C41230] mb-8" />
+            <div className="w-10 h-px bg-[#C44F6E] mb-8" />
             <p className="text-stone-500 font-light text-[14px] leading-[1.9] max-w-xs mb-8">
               Pošalji nam upit i dogovorićemo sve detalje za sushi chefa na tvom eventi.
             </p>
-            <button onClick={() => navigate('/kontakt')} className="group inline-flex items-center gap-3 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C41230] transition-colors font-light">
+            <button onClick={() => navigate('/kontakt')} className="group inline-flex items-center gap-3 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C44F6E] transition-colors font-light">
               Ili poseti kontakt stranicu
               <ArrowRight size={12} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
             </button>

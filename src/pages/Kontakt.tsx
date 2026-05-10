@@ -33,8 +33,8 @@ export default function Kontakt() {
                 { href: '#', Icon: Instagram, label: 'Instagram', val: '@sushipanda.rs' },
               ].map(({ href, Icon, label, val }) => (
                 <a key={label} href={href} className="flex items-start gap-5 group">
-                  <div className="w-9 h-9 border border-stone-200 flex items-center justify-center shrink-0 group-hover:border-[#C41230] transition-colors" style={{ borderRadius: '50%' }}>
-                    <Icon size={13} className="text-stone-400 group-hover:text-[#C41230] transition-colors" strokeWidth={1.5} />
+                  <div className="w-9 h-9 border border-stone-200 flex items-center justify-center shrink-0 group-hover:border-[#C44F6E] transition-colors" style={{ borderRadius: '50%' }}>
+                    <Icon size={13} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
                   </div>
                   <div>
                     <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-1 font-light">{label}</p>

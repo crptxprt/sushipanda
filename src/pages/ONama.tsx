@@ -87,8 +87,8 @@ export default function ONama() {
           Planiraš <span className="italic font-normal">sushi event?</span>
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-5">
-          <button onClick={() => navigate('/kontakt')} className="bg-[#111111] text-white text-[11px] tracking-widest uppercase px-12 py-4 rounded-full hover:bg-[#C41230] transition-colors font-light">Zatraži ponudu</button>
-          <button onClick={() => navigate('/ketering-proslave')} className="group inline-flex items-center gap-3 text-[11px] tracking-widest uppercase text-stone-500 hover:text-[#C41230] transition-colors font-light">
+          <button onClick={() => navigate('/kontakt')} className="bg-[#111111] text-white text-[11px] tracking-widest uppercase px-12 py-4 rounded-full hover:bg-[#C44F6E] transition-colors font-light">Zatraži ponudu</button>
+          <button onClick={() => navigate('/ketering-proslave')} className="group inline-flex items-center gap-3 text-[11px] tracking-widest uppercase text-stone-500 hover:text-[#C44F6E] transition-colors font-light">
             Pogledaj opcije <ArrowRight size={12} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
           </button>
         </div>

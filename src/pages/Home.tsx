@@ -49,6 +49,10 @@ export default function Home() {
           HERO  —  inspired by Sushi Samurai reference
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen bg-[#f7f5f2] overflow-hidden flex flex-col">
+        <div className="soft-petal left-[8%] top-[11%] hidden h-44 w-24 rotate-[-24deg] lg:block" />
+        <div className="soft-petal left-[47%] top-[16%] hidden h-56 w-28 rotate-[18deg] xl:block" />
+        <div className="soft-petal right-[12%] top-[18%] hidden h-40 w-20 rotate-[26deg] lg:block" />
+        <div className="rose-orb left-[42%] top-[56%] hidden h-56 w-56 xl:block" />
 
         {/* Blob shape — left side */}
         <div
@@ -98,11 +102,17 @@ export default function Home() {
               i privatne događaje.
             </p>
 
+            <div className="inline-flex items-center gap-2 self-start rounded-full border border-[#e8d0d3] bg-white/70 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-[#b46b78] shadow-[0_12px_30px_rgba(196,79,110,0.08)] backdrop-blur-sm mb-8">
+              Sakura tone
+              <span className="h-1.5 w-1.5 rounded-full bg-[#C44F6E]" />
+              Premium catering
+            </div>
+
             {/* CTA — pill button (matches reference) */}
             <div className="flex flex-wrap items-center gap-4 mb-14">
               <button
                 onClick={() => go('/kontakt')}
-                className="bg-[#111111] text-white text-[12px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C41230] transition-colors duration-300 font-light"
+                className="bg-[#181214] text-white text-[12px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C44F6E] transition-colors duration-300 font-light shadow-[0_16px_36px_rgba(24,18,20,0.15)]"
               >
                 Zatraži ponudu
               </button>
@@ -167,11 +177,12 @@ export default function Home() {
           {/* ── RIGHT: Sushi hero image ── */}
           <div className="w-full lg:w-[50%] flex items-center justify-center lg:justify-end relative mt-10 lg:mt-0">
             <img
-              src="https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Premium sushi"
               className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[90%] object-cover"
               style={{ borderRadius: '40% 50% 50% 40% / 40% 40% 50% 50%' }}
             />
+            <div className="absolute -left-3 top-[10%] hidden h-24 w-24 rounded-full border border-[#e4c4cb] bg-white/70 shadow-[0_16px_40px_rgba(196,79,110,0.12)] backdrop-blur-sm lg:block" />
           </div>
         </div>
       </section>
@@ -189,7 +200,8 @@ export default function Home() {
       </div>
 
       {/* ── WHY SUSHI PANDA — matches reference layout ────────────── */}
-      <section ref={whyRef} className="py-28 bg-white">
+      <section ref={whyRef} className="relative py-28 bg-white overflow-hidden">
+        <div className="soft-petal right-[7%] top-[14%] hidden h-48 w-24 rotate-[28deg] lg:block" />
         <div className="max-w-[1100px] mx-auto px-6">
           {/* Centered heading */}
           <h2 className="font-serif text-center mb-3" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, letterSpacing: '-0.01em' }}>
@@ -204,7 +216,7 @@ export default function Home() {
             {whyItems.map((item, i) => (
               <div
                 key={i}
-                className="bg-[#F8F8F5] px-8 py-10 flex flex-col items-center text-center group hover:shadow-md transition-shadow duration-300"
+                className="bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-8 py-10 flex flex-col items-center text-center group hover:shadow-[0_18px_45px_rgba(196,79,110,0.08)] transition-shadow duration-300 border border-[#f0e3e5]"
                 style={{ borderRadius: '20px' }}
               >
                 {/* Circular image */}
@@ -301,7 +313,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => go('/sushi-chef')}
-              className="group inline-flex items-center gap-4 bg-white text-[#111111] text-[11px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C41230] hover:text-white transition-all duration-300 font-light"
+              className="group inline-flex items-center gap-4 bg-white text-[#111111] text-[11px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C44F6E] hover:text-white transition-all duration-300 font-light"
             >
               Saznaj više
               <ArrowRight size={13} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
@@ -322,7 +334,7 @@ export default function Home() {
             </div>
             <button
               onClick={() => go('/galerija')}
-              className="hidden sm:flex items-center gap-2 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C41230] transition-colors group font-light"
+              className="hidden sm:flex items-center gap-2 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C44F6E] transition-colors group font-light"
             >
               Sve slike <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -359,7 +371,9 @@ export default function Home() {
       </div>
 
       {/* ── CTA FORM ────────────────────────────────────────────────── */}
-      <section ref={ctaRef} className="py-28 px-6 bg-[#F0EDE7]">
+      <section ref={ctaRef} className="relative py-28 px-6 bg-[#F3E8E5] overflow-hidden">
+        <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
+        <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
           {/* Left */}
@@ -372,7 +386,7 @@ export default function Home() {
               Planiraš<br />
               <span className="italic font-normal">događaj?</span>
             </h2>
-            <div className="w-10 h-px bg-[#C41230] mb-7" />
+            <div className="w-10 h-px bg-[#C44F6E] mb-7" />
             <p className="text-stone-500 font-light text-[14px] leading-[1.9] max-w-xs mb-10">
               Zatraži ponudu i mi ćemo pripremiti sve za tebe — od jelovnika
               do kompletne organizacije.

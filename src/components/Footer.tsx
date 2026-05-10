@@ -1,5 +1,6 @@
 import { Phone, Mail, Instagram } from 'lucide-react';
 import { navigate } from '../lib/router';
+import BrandMark from './BrandMark';
 
 const keteringLinks = [
   { label: 'Proslave', path: '/ketering-proslave' },
@@ -27,14 +28,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <button onClick={() => go('/')} className="focus:outline-none mb-6 block">
-              <span className="font-serif font-bold tracking-widest text-xl">
-                Sushi <span className="text-[#C41230]">Panda</span>
-              </span>
+              <BrandMark size="md" className="bg-white/6 border-white/12" />
             </button>
             <p className="text-stone-500 text-[13px] font-light leading-[1.9] max-w-xs mb-8">
               Premium sushi ketering za sve vrste privatnih i korporativnih događaja širom Srbije.
             </p>
-            <button onClick={() => go('/kontakt')} className="inline-block text-[11px] tracking-widest uppercase border border-white/20 text-white px-7 py-3 rounded-full hover:bg-white hover:text-[#111111] transition-all duration-300 font-light">
+            <button onClick={() => go('/kontakt')} className="inline-block text-[11px] tracking-widest uppercase border border-[#e2c1ca]/30 text-white px-7 py-3 rounded-full hover:bg-[#C44F6E] hover:border-[#C44F6E] hover:text-white transition-all duration-300 font-light">
               Zatraži ponudu
             </button>
           </div>

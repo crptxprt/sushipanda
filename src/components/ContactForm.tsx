@@ -57,14 +57,14 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
   if (success) {
     return (
       <div className={`flex flex-col items-center justify-center py-20 text-center ${className}`}>
-        <CheckCircle className="text-[#C41230] mb-6" size={40} strokeWidth={1} />
+        <CheckCircle className="text-[#C44F6E] mb-6" size={40} strokeWidth={1} />
         <h3 className="font-serif text-2xl font-light mb-3">Hvala na upitu!</h3>
         <p className="text-stone-400 text-[13px] font-light leading-relaxed max-w-[260px]">
           Kontaktiraćemo vas u roku od 2 sata.
         </p>
         <button
           onClick={() => setSuccess(false)}
-          className="mt-8 text-[10px] tracking-widest2 uppercase text-stone-400 hover:text-[#C41230] transition-colors"
+          className="mt-8 text-[10px] tracking-widest2 uppercase text-stone-400 hover:text-[#C44F6E] transition-colors"
         >
           Pošalji novi upit →
         </button>
@@ -106,12 +106,12 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
         <textarea name="message" rows={3} value={form.message} onChange={handleChange} placeholder="Opišite vaš događaj..." className={`${inputClass} resize-none`} />
       </div>
 
-      {error && <p className="text-[#C41230] text-[13px]">{error}</p>}
+      {error && <p className="text-[#C44F6E] text-[13px]">{error}</p>}
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-[#111111] text-white text-[10px] tracking-widest2 uppercase py-4 hover:bg-[#C41230] transition-colors duration-300 disabled:opacity-50 mt-4"
+        className="w-full bg-[#111111] text-white text-[10px] tracking-widest2 uppercase py-4 hover:bg-[#C44F6E] transition-colors duration-300 disabled:opacity-50 mt-4"
       >
         {loading ? 'Slanje...' : 'Pošalji upit'}
       </button>
