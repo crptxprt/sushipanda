@@ -1,10 +1,3 @@
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
 export type Inquiry = {
   name: string;
   phone: string;
@@ -15,7 +8,7 @@ export type Inquiry = {
   page_source?: string;
 };
 
-export async function submitInquiry(data: Inquiry) {
-  const { error } = await supabase.from('inquiries').insert([data]);
-  if (error) throw error;
+export async function submitInquiry(_data: Inquiry) {
+  // The landing page is intentionally detached from any backend for now.
+  return Promise.resolve();
 }
