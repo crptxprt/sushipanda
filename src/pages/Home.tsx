@@ -375,8 +375,13 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,8,8,0.08)_0%,rgba(10,8,8,0)_32%,rgba(10,8,8,0.54)_100%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,8,8,0)_0%,rgba(10,8,8,0.28)_100%)]" />
-
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(196,79,110,0.12),rgba(10,8,8,0)_28%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(196,79,110,0.12),rgba(10,8,8,0)_28%)]" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <p className="font-serif text-[2.3rem] italic leading-none text-white drop-shadow-[0_10px_24px_rgba(0,0,0,0.34)]">
+                  Denis Ivanoff
+                </p>
+              </div>
             </div>
           </div>
         </div>
