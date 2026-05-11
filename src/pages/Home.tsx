@@ -9,6 +9,10 @@ import chefHero2 from '../assets/chef-hero-2.jpg';
 import chefHero3 from '../assets/chef-hero-3.jpg';
 import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
 import chefPavaRaskovic from '../assets/chef-pava-raskovic.png';
+import galleryChefAction from '../assets/gallery-chef-action.jpeg';
+import galleryLiveEvent from '../assets/gallery-live-event.jpg';
+import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
+import galleryAtmosphereStyling from '../assets/gallery-atmosphere-styling.png';
 
 const PROOF_STRIP = [
   'Premium sushi ketering',
@@ -50,25 +54,25 @@ const galleryShots = [
     className: 'col-span-2 lg:col-span-1 lg:row-span-2 min-h-[320px] lg:min-h-0',
   },
   {
-    src: chefDenisIvanoff,
+    src: galleryChefAction,
     title: 'Chef action',
     copy: 'Cinematic live priprema koja pretvara catering u pravi doživljaj.',
     className: 'aspect-[1.1/1]',
   },
   {
-    src: 'https://images.pexels.com/photos/5638730/pexels-photo-5638730.jpeg?auto=compress&cs=tinysrgb&w=900',
+    src: galleryLiveEvent,
     title: 'Live event',
     copy: 'Atmosfera događaja, interakcija gostiju i premium experience u kadru.',
     className: 'aspect-[1.1/1]',
   },
   {
-    src: 'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=900',
+    src: galleryDetailIngredients,
     title: 'Detail & ingredients',
     copy: 'Macro detalji, teksture i clean plating sa japanskim editorial vibe-om.',
     className: 'aspect-[1.1/1]',
   },
   {
-    src: 'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=900',
+    src: galleryAtmosphereStyling,
     title: 'Atmosphere & styling',
     copy: 'Tamne teksture, rekviziti i mood kadar koji pojačava premium utisak.',
     className: 'aspect-[1.1/1]',
@@ -460,7 +464,6 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
                   <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/65">Sushi Panda</p>
                   <h3 className="font-serif text-[1.15rem] font-bold text-white">{shot.title}</h3>
-                  <p className="mt-2 max-w-xs text-[12px] font-light leading-[1.7] text-white/70">{shot.copy}</p>
                 </div>
               </div>
             ))}
