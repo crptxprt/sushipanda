@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <button onClick={() => go('/')} className="mb-7 block focus:outline-none">
-              <BrandMark size="sm" variant="bare" />
+              <BrandMark variant="footer" />
             </button>
             <p className="max-w-sm text-[14px] font-light leading-[1.85] text-stone-300">
               Savremen sushi catering za privatne proslave, slave i korporativne događaje u Kragujevcu.

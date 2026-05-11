@@ -16,11 +16,11 @@ export default function BrandMark({ size = 'md', className = '', variant = 'floa
   if (variant === 'footer') {
     return (
       <span className={`inline-flex flex-col items-start leading-none ${className}`}>
-        <span className="font-sans text-[2rem] font-black tracking-[-0.08em] text-white sm:text-[2.25rem]">
+        <span className="font-sans text-[2rem] font-black uppercase tracking-[-0.08em] text-white sm:text-[2.25rem]">
           PANDA
         </span>
-        <span className="mt-1 text-[0.62rem] font-light uppercase tracking-[0.42em] text-[#d08d9a]">
-          sushi catering
+        <span className="mt-0.5 pl-[2.15rem] font-sans text-[1rem] font-black uppercase tracking-[-0.04em] text-[#ff5a2a] sm:text-[1.15rem]">
+          SUSHI
         </span>
       </span>
     );
