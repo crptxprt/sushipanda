@@ -5,7 +5,9 @@ import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { navigate } from '../lib/router';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
-import heroSushiDarkCircle from '../assets/hero-sushi-dark-circle.png';
+import chefHero1 from '../assets/chef-hero-1.jpg';
+import chefHero2 from '../assets/chef-hero-2.jpg';
+import chefHero3 from '../assets/chef-hero-3.jpg';
 
 const TICKER = ['SUSHI KETERING', 'PROSLAVE', 'SLAVE', 'KORPORATIVNI EVENTI', 'SUSHI CHEF', 'BEOGRAD · SRBIJA'];
 
@@ -51,19 +53,19 @@ export default function Home() {
           HERO  —  inspired by Sushi Samurai reference
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen bg-[#f7f5f2] overflow-hidden flex flex-col">
-        <div className="soft-petal left-[48%] top-[17%] hidden h-44 w-22 rotate-[16deg] opacity-45 xl:block" />
-        <div className="soft-petal right-[11%] top-[21%] hidden h-32 w-18 rotate-[22deg] opacity-35 lg:block" />
-        <div className="rose-orb left-[46%] top-[60%] hidden h-40 w-40 opacity-35 xl:block" />
+        <div className="soft-petal left-[48%] top-[17%] hidden h-44 w-22 rotate-[16deg] opacity-28 xl:block" />
+        <div className="soft-petal right-[11%] top-[21%] hidden h-32 w-18 rotate-[22deg] opacity-20 lg:block" />
+        <div className="rose-orb left-[46%] top-[60%] hidden h-40 w-40 opacity-20 xl:block" />
 
         {/* Blob shape — left side */}
         <div
-          className="absolute top-[4%] left-[-210px] w-[720px] h-[860px] bg-sp-blob pointer-events-none select-none"
+          className="absolute top-[4%] left-[-230px] w-[650px] h-[790px] bg-sp-blob pointer-events-none select-none opacity-60"
           style={{ borderRadius: '50%' }}
         />
 
         {/* Circle behind sushi image — right side */}
         <div
-          className="absolute right-[-90px] top-1/2 -translate-y-[45%] w-[580px] h-[580px] bg-sp-circle pointer-events-none select-none"
+          className="absolute right-[-100px] top-1/2 -translate-y-[45%] w-[540px] h-[540px] bg-sp-circle pointer-events-none select-none opacity-55"
           style={{ borderRadius: '50%' }}
         />
 
@@ -80,27 +82,16 @@ export default function Home() {
 
             {/* Massive headline */}
             <h1 className="hero-display text-[#111111] mb-8">
-              {/* First line: "Sushi" + floating food image */}
-              <span className="flex items-center gap-5 flex-wrap">
-                <span>Sushi</span>
-                <span className="inline-flex w-[60px] h-[60px] lg:w-[74px] lg:h-[74px] rounded-full overflow-hidden border-[3px] border-white shadow-md shrink-0 translate-y-2">
-                  <img
-                    src={heroSushiDarkCircle}
-                    alt="Sushi details"
-                    className="w-full h-full object-cover"
-                  />
-                </span>
-              </span>
-              {/* Second line */}
+              <span>Sushi</span>
               <span className="block text-[#111111]">
                 Panda
               </span>
             </h1>
 
             {/* Tagline */}
-            <p className="text-stone-500 font-light text-[15px] leading-[1.8] max-w-[420px] mb-8">
-              Premium sushi ketering za proslave, slave, korporativne
-              i privatne događaje.
+            <p className="text-stone-500 font-light text-[16px] leading-[1.85] max-w-[520px] mb-8">
+              Elegantni sushi ketering za proslave, slave, korporativne i privatne događaje
+              sa pažljivo osmišljenom postavkom, live chef iskustvom i premium prezentacijom.
             </p>
 
             {/* CTA — pill button (matches reference) */}
@@ -130,17 +121,12 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Avatars — "Meet our team" */}
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 rounded-[22px] border border-[#eadfdb] bg-white/72 px-5 py-4 shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm w-fit">
               <div className="flex -space-x-3">
-                {[
-                  'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=80',
-                  'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=80',
-                  'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=80',
-                ].map((src, i) => (
+                {[chefHero1, chefHero2, chefHero3].map((src, i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full border-2 border-white overflow-hidden"
+                    className="h-12 w-12 rounded-full border-2 border-white overflow-hidden bg-[#f6f1eb]"
                     style={{ zIndex: 3 - i }}
                   >
                     <img src={src} alt="" className="w-full h-full object-cover" />
@@ -148,8 +134,8 @@ export default function Home() {
                 ))}
               </div>
               <div>
-                <p className="text-[13px] text-stone-600 font-light">Upoznajte naš tim</p>
-                <p className="text-[11px] text-stone-400 font-light tracking-wide">Iskusni sushi majstori</p>
+                <p className="text-[13px] text-stone-700 font-light">Naš tim kuvara i sushi majstora</p>
+                <p className="text-[11px] text-stone-400 font-light tracking-wide">Iskusna ekipa za evente svih formata</p>
               </div>
             </div>
           </div>
@@ -186,7 +172,6 @@ export default function Home() {
               className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[112%] object-cover drop-shadow-[0_30px_58px_rgba(207,184,144,0.28)]"
               style={{ borderRadius: '40% 50% 50% 40% / 40% 40% 50% 50%' }}
             />
-            <div className="absolute left-[6%] top-[14%] hidden h-14 w-14 rounded-full border border-[#edd4da] bg-white/55 shadow-[0_10px_24px_rgba(196,79,110,0.05)] backdrop-blur-sm lg:block" />
           </div>
         </div>
       </section>
