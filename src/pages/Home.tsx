@@ -13,7 +13,7 @@ const PROOF_STRIP = [
   'Premium sushi ketering',
   'Privatni i poslovni eventi',
   'Live sushi chef',
-  'Beograd i Srbija',
+  'Kragujevac',
 ];
 
 const categories = [
@@ -115,7 +115,7 @@ export default function Home() {
 
             {/* Overline */}
             <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-8 font-light">
-              — Premium Sushi Catering, Srbija
+              — Premium Sushi Catering, Kragujevac
             </p>
 
             {/* Massive headline */}
@@ -149,7 +149,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap gap-3 mb-14">
-              {['10–500+ gostiju', 'Live sushi chef', 'Postavka i dostava'].map((item) => (
+              {['10–50+ gostiju', 'Live sushi chef', 'Postavka i dostava'].map((item) => (
                 <span
                   key={item}
                   className="inline-flex items-center rounded-full border border-[#eadbdc] bg-white/80 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-stone-500 shadow-[0_10px_28px_rgba(196,79,110,0.05)]"
@@ -247,9 +247,7 @@ export default function Home() {
 
             <div className="mt-10 grid max-w-[420px] grid-cols-2 gap-4">
               {[
-                ['10–500+', 'gostiju za različite formate'],
-                ['2h', 'prosečan odgovor na upit'],
-                ['Fresh daily', 'svakodnevna priprema sastojaka'],
+                ['10–50+', 'gostiju za različite formate'],
                 ['On-site', 'postavka i podrška na događaju'],
               ].map(([value, label]) => (
                 <div key={value} className="rounded-[18px] border border-[#f1e7e2] bg-[#fcfaf8] px-5 py-5">
@@ -339,16 +337,17 @@ export default function Home() {
         <img
           src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt="Sushi chef"
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover opacity-24"
           style={{ objectPosition: 'center 25%' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="absolute inset-y-0 right-0 hidden w-[28%] bg-[radial-gradient(circle_at_center,rgba(196,79,110,0.13),rgba(17,17,17,0))] xl:block" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/72" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(196,79,110,0.12),rgba(17,17,17,0)_28%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.18),rgba(17,17,17,0.28))]" />
 
         {/* Kanji decoration */}
         <span
           aria-hidden="true"
-          className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[150px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden xl:block"
+          className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[150px] leading-none text-sp-kanji/20 pointer-events-none select-none hidden xl:block"
         >
           司
         </span>
@@ -365,7 +364,7 @@ export default function Home() {
                 <br />
                 <em className="not-italic italic">vašem eventu</em>
               </h2>
-              <p className="mb-10 max-w-md text-[14px] font-light leading-[1.9] text-stone-400">
+              <p className="mb-10 max-w-md text-[15px] font-light leading-[1.9] text-stone-200">
                 Naš chef dolazi sa kompletnom opremom i svežim sastojcima, priprema sushi uživo
                 pred gostima i pretvara ketering u performans koji podiže ceo događaj.
               </p>
@@ -373,7 +372,7 @@ export default function Home() {
                 {['Live priprema', 'Premium setup', 'Chef station on-site'].map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-sm"
+                    className="rounded-full border border-white/14 bg-white/8 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white/82 backdrop-blur-sm"
                   >
                     {item}
                   </span>
@@ -388,15 +387,15 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="grid gap-4 rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="grid gap-4 rounded-[28px] border border-white/14 bg-white/8 p-6 backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.22)]">
               {[
                 ['Chef setup', 'Dolazak, postavka i koordinacija na lokaciji.'],
                 ['Servis uživo', 'Priprema pred gostima za premium wow efekat.'],
                 ['Tailored meni', 'Od signature rolnica do nigiri selekcije za vaš event.'],
               ].map(([title, copy]) => (
-                <div key={title} className="border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
-                  <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-sp-kanji">{title}</p>
-                  <p className="text-[13px] font-light leading-[1.8] text-white/70">{copy}</p>
+                <div key={title} className="border-b border-white/14 pb-4 last:border-b-0 last:pb-0">
+                  <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-sp-kanji/95">{title}</p>
+                  <p className="text-[14px] font-light leading-[1.8] text-white/82">{copy}</p>
                 </div>
               ))}
             </div>
@@ -478,20 +477,9 @@ export default function Home() {
               Zatraži ponudu i mi ćemo pripremiti sve za tebe — od jelovnika
               do kompletne organizacije.
             </p>
-            <div className="mb-8 grid max-w-sm grid-cols-2 gap-3">
-              {[
-                ['2h', 'prosečan odgovor'],
-                ['10–500+', 'gostiju po događaju'],
-              ].map(([value, label]) => (
-                <div key={value} className="rounded-[18px] border border-[#eadcd6] bg-white/65 px-4 py-4 backdrop-blur-sm">
-                  <p className="font-serif text-[1.5rem] font-bold text-[#111111]">{value}</p>
-                  <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-400">{label}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="h-2 w-2 shrink-0 rounded-full bg-green-400" />
-              <p className="text-[12px] font-light text-stone-400">Odgovaramo u roku od 2 sata</p>
+            <div className="mb-8 max-w-sm rounded-[18px] border border-[#eadcd6] bg-white/65 px-4 py-4 backdrop-blur-sm">
+              <p className="font-serif text-[1.5rem] font-bold text-[#111111]">10–50+</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-400">gostiju po događaju</p>
             </div>
           </div>
 
