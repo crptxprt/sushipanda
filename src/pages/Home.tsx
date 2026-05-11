@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -102,6 +102,14 @@ export default function Home() {
     navigate(path);
     window.scrollTo({ top: 0 });
   };
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveChefSlide((current) => (current + 1) % chefSlides.length);
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
 
   const currentChefSlide = chefSlides[activeChefSlide];
 
@@ -502,11 +510,10 @@ export default function Home() {
                 rel="noreferrer"
                 className="group rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E] hover:shadow-[0_18px_38px_rgba(24,18,20,0.18)]"
               >
-                <div className="mb-10 flex items-start justify-between gap-4">
-                  <div className="rounded-full border border-white/14 bg-white/8 p-3 text-white">
+                <div className="mb-10">
+                  <div className="w-fit rounded-full border border-white/14 bg-white/8 p-3 text-white">
                     <MessageCircle size={18} strokeWidth={1.6} />
                   </div>
-                  <span className="text-[11px] uppercase tracking-[0.18em] text-white/52">Otvorite chat</span>
                 </div>
                 <p className="text-[11px] uppercase tracking-[0.18em] text-white/65">WhatsApp</p>
                 <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pišite na WhatsApp</p>
@@ -519,11 +526,10 @@ export default function Home() {
                 href={phoneLink}
                 className="group rounded-[22px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-6 text-[#111111] transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_18px_38px_rgba(196,79,110,0.10)]"
               >
-                <div className="mb-10 flex items-start justify-between gap-4">
-                  <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
+                <div className="mb-10">
+                  <div className="w-fit rounded-full bg-[#f6ece8] p-3 text-[#181214]">
                     <Phone size={18} strokeWidth={1.7} />
                   </div>
-                  <span className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Pozovite odmah</span>
                 </div>
                 <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Telefon</p>
                 <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pozovite nas</p>
