@@ -1,8 +1,7 @@
 import { useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ContactForm from '../components/ContactForm';
 import { navigate } from '../lib/router';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import chefHero1 from '../assets/chef-hero-1.jpg';
@@ -77,6 +76,9 @@ const galleryShots = [
 export default function Home() {
   const whyRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
+  const whatsappLink =
+    'https://wa.me/381600000000?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.';
+  const phoneLink = 'tel:+381600000000';
 
   const go = (path: string) => {
     navigate(path);
@@ -327,6 +329,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SUSHI CHEF — clean service spotlight ───────────────────── */}
+      <section className="bg-[#fcfaf8] px-6 py-24">
+        <div className="mx-auto grid max-w-[1320px] gap-12 rounded-[34px] border border-[#efe3dc] bg-[linear-gradient(135deg,#fffdfb_0%,#f6efea_100%)] p-8 shadow-[0_24px_55px_rgba(196,79,110,0.06)] lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:p-12">
+          <div className="max-w-[460px]">
+            <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Ekskluzivna usluga</p>
+            <h2
+              className="mb-5 font-serif font-bold text-[#111111]"
+              style={{ fontSize: 'clamp(2rem, 4.8vw, 4rem)', letterSpacing: '-0.02em', lineHeight: 0.98 }}
+            >
+              Sushi chef
+              <br />
+              <span className="italic font-normal text-stone-700">na vašem eventu</span>
+            </h2>
+            <p className="mb-8 text-[15px] font-light leading-[1.9] text-stone-500">
+              Ako želite jači utisak na goste, naš sushi chef dolazi na lokaciju, priprema sushi uživo
+              i pretvara ketering u deo doživljaja, a ne samo posluženje.
+            </p>
+
+            <div className="mb-8 flex flex-wrap gap-3">
+              {['Live priprema', 'Premium setup', 'Meni po meri'].map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-[#ead9d4] bg-white/90 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-stone-500"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <button
+              onClick={() => go('/sushi-chef')}
+              className="group inline-flex items-center gap-3 rounded-full bg-[#181214] px-8 py-4 text-[11px] font-light uppercase tracking-widest text-white transition-colors duration-300 hover:bg-[#C44F6E]"
+            >
+              Saznaj više
+              <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
+            </button>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3">
+            {[
+              ['Dolazak na lokaciju', 'Kompletna postavka i koordinacija sushi stanice na eventu.'],
+              ['Priprema pred gostima', 'Vizuelno atraktivna usluga koja podiže premium utisak događaja.'],
+              ['Prilagođen meni', 'Nigiri, rolnice i selekcije prilagođene gostima i formatu eventa.'],
+            ].map(([title, copy]) => (
+              <div key={title} className="rounded-[24px] border border-[#eadfd9] bg-white/88 p-6 shadow-[0_12px_32px_rgba(140,108,101,0.06)]">
+                <p className="mb-3 text-[11px] uppercase tracking-[0.18em] text-sp-kanji">{title}</p>
+                <p className="text-[14px] font-light leading-[1.8] text-stone-600">{copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── GALLERY ─────────────────────────────────────────────────── */}
       <section className="py-28 px-6 bg-white">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
@@ -380,7 +435,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── CTA FORM ────────────────────────────────────────────────── */}
+      {/* ── QUICK CONTACT CTA ──────────────────────────────────────── */}
       <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-28">
         <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
         <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
@@ -398,8 +453,8 @@ export default function Home() {
             </h2>
             <div className="mb-7 h-px w-10 bg-[#C44F6E]" />
             <p className="mb-10 max-w-sm text-[14px] font-light leading-[1.9] text-stone-500">
-              Zatraži ponudu i mi ćemo pripremiti sve za tebe — od jelovnika
-              do kompletne organizacije.
+              Javite nam se odmah i dobićete brz odgovor, predlog menija i smernice za vaš događaj bez
+              popunjavanja duge forme.
             </p>
             <div className="mb-8 max-w-sm rounded-[18px] border border-[#eadcd6] bg-white/65 px-4 py-4 backdrop-blur-sm">
               <p className="font-serif text-[1.5rem] font-bold text-[#111111]">10–50+</p>
@@ -407,9 +462,61 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Form */}
+          {/* Fast actions */}
           <div className="rounded-[24px] border border-white/60 bg-white/92 p-8 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-12">
-            <ContactForm source="home" />
+            <div className="mb-8 rounded-[18px] border border-[#f2e7e3] bg-[#fcfaf8] px-5 py-5">
+              <p className="text-[10px] tracking-[0.2em] uppercase text-stone-400">Brz kontakt</p>
+              <p className="mt-2 max-w-lg text-[14px] font-light leading-[1.8] text-stone-500">
+                Najlakše je da nas kontaktirate direktno. Za ovakvu uslugu ljudi najčešće žele odmah
+                odgovor, okvirnu cenu i preporuku za broj gostiju.
+              </p>
+            </div>
+
+            <div className="grid gap-4">
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-start justify-between rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E]"
+              >
+                <div>
+                  <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-white/70">WhatsApp</p>
+                  <p className="text-[1.2rem] font-medium tracking-[0.01em]">Pišite odmah</p>
+                  <p className="mt-2 text-[14px] font-light leading-[1.7] text-white/78">
+                    Najbrži način za dogovor oko termina, broja gostiju i predloga menija.
+                  </p>
+                </div>
+                <MessageCircle size={20} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform group-hover:scale-105" />
+              </a>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                <a
+                  href={phoneLink}
+                  className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
+                >
+                  <div className="mb-4 flex items-center gap-3">
+                    <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
+                      <Phone size={16} strokeWidth={1.7} />
+                    </div>
+                    <div>
+                      <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Telefon</p>
+                      <p className="mt-1 text-[15px] font-medium text-[#111111]">+381 60 000 0000</p>
+                    </div>
+                  </div>
+                  <p className="text-[13px] font-light leading-[1.75] text-stone-500">
+                    Pozovite ako želite brz dogovor i preporuku odmah.
+                  </p>
+                </a>
+
+                <div className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-5">
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Najčešće pitanje</p>
+                  <p className="mt-3 font-serif text-[1.4rem] font-bold text-[#111111]">Koliko unapred?</p>
+                  <p className="mt-2 text-[13px] font-light leading-[1.75] text-stone-500">
+                    Idealno nekoliko dana ranije, ali za manje događaje možemo odgovoriti i mnogo brže.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
