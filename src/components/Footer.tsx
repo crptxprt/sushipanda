@@ -23,10 +23,12 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#111111] text-white">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-16 top-20 h-44 w-44 rounded-full bg-[#c44f6e]/6 blur-3xl" />
-        <div className="absolute right-[-40px] top-28 h-60 w-60 rounded-full bg-[#f0d3d9]/5 blur-3xl" />
-        <div className="absolute bottom-10 left-[14%] h-28 w-14 rounded-full border border-[#c44f6e]/10 opacity-40 rotate-[-18deg]" />
-        <div className="absolute bottom-16 right-[12%] h-24 w-12 rounded-full border border-[#f2d8dd]/10 opacity-35 rotate-[24deg]" />
+        <div className="absolute -left-20 top-12 h-56 w-56 rounded-full bg-[#c44f6e]/12 blur-3xl" />
+        <div className="absolute right-[-60px] top-24 h-72 w-72 rounded-full bg-[#f0d3d9]/10 blur-3xl" />
+        <div className="absolute left-[10%] top-24 h-36 w-18 rounded-full border border-[#f2d8dd]/18 opacity-70 rotate-[-24deg]" />
+        <div className="absolute bottom-14 left-[18%] h-24 w-12 rounded-full border border-[#c44f6e]/18 opacity-70 rotate-[18deg]" />
+        <div className="absolute bottom-16 right-[10%] h-32 w-16 rounded-full border border-[#f2d8dd]/16 opacity-70 rotate-[26deg]" />
+        <div className="absolute right-[28%] bottom-24 h-40 w-40 rounded-full bg-[#c44f6e]/8 blur-3xl" />
       </div>
 
       <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10 pt-16 pb-8">

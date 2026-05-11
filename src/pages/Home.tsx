@@ -367,36 +367,27 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="relative overflow-hidden rounded-[28px] border border-[#2c2322] bg-[#171214] min-h-[420px] shadow-[0_24px_50px_rgba(17,12,11,0.22)]">
+          <div className="relative overflow-hidden rounded-[28px] border border-[#2c2322] bg-[#171214] min-h-[430px] shadow-[0_24px_50px_rgba(17,12,11,0.22)]">
             <img
               src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1400"
               alt="Sushi chef priprema"
               className="absolute inset-0 h-full w-full object-cover"
               style={{ objectPosition: 'center 28%' }}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,12,11,0.88)_0%,rgba(17,12,11,0.58)_48%,rgba(17,12,11,0.76)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_30%,rgba(196,79,110,0.22),rgba(17,12,11,0)_30%)]" />
-
-            <div className="relative z-10 flex h-full flex-col justify-between p-7 lg:p-8">
-              <div className="max-w-[280px] rounded-[18px] border border-white/12 bg-black/18 px-5 py-5 backdrop-blur-[2px]">
-                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/58">Chef experience</p>
-                <p className="text-[15px] font-light leading-[1.85] text-white/82">
-                  Sushi se priprema pred gostima, uz elegantnu postavku i ritam servisa koji pojačava utisak celog događaja.
-                </p>
-              </div>
-
-              <div className="grid gap-3 md:grid-cols-3">
-                {[
-                  ['Priprema pred gostima', 'Live sushi iskustvo na lokaciji.'],
-                  ['Premium setup', 'Stanica, prezentacija i koordinacija.'],
-                  ['Meni po meri', 'Selekcija prilagođena eventu i gostima.'],
-                ].map(([title, copy]) => (
-                  <div key={title} className="rounded-[18px] border border-white/12 bg-black/22 px-4 py-4 backdrop-blur-[2px]">
-                    <p className="mb-2 text-[10px] uppercase tracking-[0.18em] text-sp-kanji/95">{title}</p>
-                    <p className="text-[13px] font-light leading-[1.7] text-white/78">{copy}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,12,11,0.42)_0%,rgba(17,12,11,0.12)_44%,rgba(17,12,11,0.72)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_24%,rgba(196,79,110,0.24),rgba(17,12,11,0)_26%)]" />
+            <div className="absolute left-7 top-7 h-24 w-24 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-[2px]" />
+            <div className="absolute bottom-7 left-7 h-16 w-40 rounded-full border border-white/12 bg-black/18 backdrop-blur-[2px]" />
+            <div className="absolute right-7 top-7 h-28 w-14 rounded-full border border-[#f3d7df]/14 opacity-55 rotate-[18deg]" />
+            <div className="absolute bottom-8 right-8 h-20 w-20 rounded-full bg-[#f1d4db]/[0.06] blur-2xl" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,rgba(17,12,11,0)_0%,rgba(17,12,11,0.54)_100%)]" />
+            <div className="absolute left-8 bottom-8 flex items-center gap-3">
+              <span className="rounded-full border border-white/14 bg-black/22 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/78 backdrop-blur-[2px]">
+                Live sushi
+              </span>
+              <span className="rounded-full border border-white/14 bg-black/22 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/78 backdrop-blur-[2px]">
+                Premium event
+              </span>
             </div>
           </div>
         </div>
@@ -456,17 +447,17 @@ export default function Home() {
       </div>
 
       {/* ── QUICK CONTACT CTA ──────────────────────────────────────── */}
-      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-20">
+      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-18">
         <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
         <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-[0.84fr_1.16fr] gap-12 items-center">
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
             <p className="mb-7 text-[11px] font-light uppercase tracking-widest text-stone-400">Kontakt</p>
             <h2
               className="mb-5 font-serif font-bold leading-[1] text-[#111111]"
-              style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
+              style={{ fontSize: 'clamp(2.55rem, 5.2vw, 4.6rem)', letterSpacing: '-0.02em' }}
             >
               Planiraš<br />
               <span className="italic font-normal">događaj?</span>
@@ -478,13 +469,13 @@ export default function Home() {
           </div>
 
           {/* Fast actions */}
-          <div className="rounded-[24px] border border-white/60 bg-white/92 p-7 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-9">
-            <div className="grid gap-4">
+          <div className="rounded-[24px] border border-white/60 bg-white/92 p-6 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-7">
+            <div className="grid gap-3">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E]"
+                className="group flex items-center justify-between rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-5 text-white transition-all duration-300 hover:bg-[#C44F6E]"
               >
                 <div>
                   <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-white/70">WhatsApp</p>
@@ -493,10 +484,10 @@ export default function Home() {
                 <MessageCircle size={20} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform group-hover:scale-105" />
               </a>
 
-              <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+              <div className="grid gap-3 md:grid-cols-[1.15fr_0.85fr]">
                 <a
                   href={phoneLink}
-                  className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
+                  className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-4 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
                 >
                   <div className="flex items-center gap-3">
                     <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
@@ -509,11 +500,10 @@ export default function Home() {
                   </div>
                 </a>
 
-                <div className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-5">
+                <div className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-4">
                   <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Najčešće pitanje</p>
-                  <p className="mt-3 font-serif text-[1.4rem] font-bold text-[#111111]">Koliko unapred?</p>
-                  <p className="mt-2 text-[13px] font-light leading-[1.75] text-stone-500">
-                    Idealno nekoliko dana ranije, ali za manje događaje možemo odgovoriti i mnogo brže.
+                  <p className="mt-3 text-[14px] font-light leading-[1.75] text-stone-600">
+                    Pišite odmah za termin i okvirnu ponudu.
                   </p>
                 </div>
               </div>
