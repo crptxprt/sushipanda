@@ -9,7 +9,12 @@ import chefHero1 from '../assets/chef-hero-1.jpg';
 import chefHero2 from '../assets/chef-hero-2.jpg';
 import chefHero3 from '../assets/chef-hero-3.jpg';
 
-const TICKER = ['SUSHI KETERING', 'PROSLAVE', 'SLAVE', 'KORPORATIVNI EVENTI', 'SUSHI CHEF', 'BEOGRAD · SRBIJA'];
+const PROOF_STRIP = [
+  'Premium sushi ketering',
+  'Privatni i poslovni eventi',
+  'Live sushi chef',
+  'Beograd i Srbija',
+];
 
 const categories = [
   { num: '01', title: 'Proslave', sub: 'Rođendani & privatne žurke', path: '/ketering-proslave', img: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=900' },
@@ -177,45 +182,67 @@ export default function Home() {
       </section>
 
       {/* ── TICKER ──────────────────────────────────────────────────── */}
-      <div className="bg-[#111111] py-5 overflow-hidden border-y border-white/6">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...TICKER, ...TICKER, ...TICKER, ...TICKER].map((item, i) => (
-            <span key={i} className="mx-8 inline-flex items-center gap-6 text-[12px] font-light uppercase tracking-[0.28em] text-white/75">
+      <div className="border-y border-[#efe6e1] bg-[linear-gradient(180deg,#fffdfb_0%,#faf5f2_100%)] py-4">
+        <div className="mx-auto flex max-w-[1320px] flex-wrap items-center justify-center gap-x-8 gap-y-3 px-6 lg:px-10">
+          {PROOF_STRIP.map((item, i) => (
+            <span key={item} className="inline-flex items-center gap-4 text-[11px] font-light uppercase tracking-[0.24em] text-stone-500">
+              {i > 0 && <span className="hidden h-px w-8 bg-[#e8dad8] md:inline-block" />}
               {item}
-              <span className="text-[14px] leading-none text-sp-kanji">·</span>
             </span>
           ))}
         </div>
       </div>
 
-      {/* ── WHY SUSHI PANDA — matches reference layout ────────────── */}
-      <section ref={whyRef} className="relative py-28 bg-white overflow-hidden">
-        <div className="soft-petal right-[7%] top-[14%] hidden h-48 w-24 rotate-[28deg] lg:block" />
-        <div className="max-w-[1100px] mx-auto px-6">
-          {/* Centered heading */}
-          <h2 className="font-serif text-center mb-3" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 700, letterSpacing: '-0.01em' }}>
-            Zašto Sushi Panda ?
-          </h2>
-          <p className="text-center text-stone-400 font-light text-[14px] mb-16 tracking-wide">
-            Razlozi zbog kojih nas klijenti biraju iznova.
-          </p>
+      {/* ── WHY SUSHI PANDA — editorial proof section ────────────── */}
+      <section ref={whyRef} className="relative overflow-hidden bg-white py-28">
+        <div className="soft-petal right-[7%] top-[12%] hidden h-40 w-20 rotate-[24deg] opacity-25 lg:block" />
+        <div className="mx-auto grid max-w-[1320px] gap-14 px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-10">
+          <div className="lg:pr-8">
+            <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Zašto Sushi Panda</p>
+            <h2
+              className="mb-6 font-serif font-bold text-[#111111]"
+              style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', letterSpacing: '-0.02em', lineHeight: 0.96 }}
+            >
+              Premium servis,
+              <br />
+              <span className="italic font-normal text-stone-700">bez kompromisa</span>
+            </h2>
+            <p className="max-w-[470px] text-[15px] font-light leading-[1.9] text-stone-500">
+              Od pažljivo odabranih sastojaka do elegantne postavke na lokaciji, svaki detalj je
+              osmišljen da događaj izgleda profinjeno i da gostima ostane u pamćenju.
+            </p>
 
-          {/* 3-column feature cards with circular images */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="mt-10 grid max-w-[420px] grid-cols-2 gap-4">
+              {[
+                ['10–500+', 'gostiju za različite formate'],
+                ['2h', 'prosečan odgovor na upit'],
+                ['Fresh daily', 'svakodnevna priprema sastojaka'],
+                ['On-site', 'postavka i podrška na događaju'],
+              ].map(([value, label]) => (
+                <div key={value} className="rounded-[18px] border border-[#f1e7e2] bg-[#fcfaf8] px-5 py-5">
+                  <p className="font-serif text-[1.6rem] font-bold text-[#111111]">{value}</p>
+                  <p className="mt-2 text-[11px] uppercase tracking-[0.18em] text-stone-400">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {whyItems.map((item, i) => (
               <div
                 key={i}
-                className="bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-8 py-10 flex flex-col items-center text-center group hover:shadow-[0_18px_45px_rgba(196,79,110,0.08)] transition-shadow duration-300 border border-[#f0e3e5]"
-                style={{ borderRadius: '20px' }}
+                className="group relative overflow-hidden rounded-[26px] border border-[#f1e7e2] bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-7 pb-8 pt-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(196,79,110,0.08)]"
               >
-                {/* Circular image */}
-                <div
-                  className="w-24 h-24 rounded-full overflow-hidden mb-7 border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300"
-                >
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                <div className="mb-7 flex items-center justify-between">
+                  <span className="font-serif text-[2.8rem] leading-none text-[#111111]/10">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div className="h-16 w-16 overflow-hidden rounded-full border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
+                    <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
+                  </div>
                 </div>
-                <h3 className="font-serif text-[1.2rem] font-bold text-[#111111] mb-3">{item.title}</h3>
-                <p className="text-stone-500 text-[13px] font-light leading-[1.75]">{item.desc}</p>
+                <h3 className="mb-3 font-serif text-[1.28rem] font-bold text-[#111111]">{item.title}</h3>
+                <p className="text-[13px] font-light leading-[1.8] text-stone-500">{item.desc}</p>
               </div>
             ))}
           </div>
