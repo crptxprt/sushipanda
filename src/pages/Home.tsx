@@ -367,17 +367,37 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
-            {[
-              ['Dolazak na lokaciju', 'Kompletna postavka i koordinacija sushi stanice na eventu.'],
-              ['Priprema pred gostima', 'Vizuelno atraktivna usluga koja podiže premium utisak događaja.'],
-              ['Prilagođen meni', 'Nigiri, rolnice i selekcije prilagođene gostima i formatu eventa.'],
-            ].map(([title, copy]) => (
-              <div key={title} className="rounded-[24px] border border-[#eadfd9] bg-white/88 p-6 shadow-[0_12px_32px_rgba(140,108,101,0.06)]">
-                <p className="mb-3 text-[11px] uppercase tracking-[0.18em] text-sp-kanji">{title}</p>
-                <p className="text-[14px] font-light leading-[1.8] text-stone-600">{copy}</p>
+          <div className="relative overflow-hidden rounded-[28px] border border-[#2c2322] bg-[#171214] min-h-[420px] shadow-[0_24px_50px_rgba(17,12,11,0.22)]">
+            <img
+              src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Sushi chef priprema"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ objectPosition: 'center 28%' }}
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,12,11,0.88)_0%,rgba(17,12,11,0.58)_48%,rgba(17,12,11,0.76)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_30%,rgba(196,79,110,0.22),rgba(17,12,11,0)_30%)]" />
+
+            <div className="relative z-10 flex h-full flex-col justify-between p-7 lg:p-8">
+              <div className="max-w-[280px] rounded-[18px] border border-white/12 bg-black/18 px-5 py-5 backdrop-blur-[2px]">
+                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/58">Chef experience</p>
+                <p className="text-[15px] font-light leading-[1.85] text-white/82">
+                  Sushi se priprema pred gostima, uz elegantnu postavku i ritam servisa koji pojačava utisak celog događaja.
+                </p>
               </div>
-            ))}
+
+              <div className="grid gap-3 md:grid-cols-3">
+                {[
+                  ['Priprema pred gostima', 'Live sushi iskustvo na lokaciji.'],
+                  ['Premium setup', 'Stanica, prezentacija i koordinacija.'],
+                  ['Meni po meri', 'Selekcija prilagođena eventu i gostima.'],
+                ].map(([title, copy]) => (
+                  <div key={title} className="rounded-[18px] border border-white/12 bg-black/22 px-4 py-4 backdrop-blur-[2px]">
+                    <p className="mb-2 text-[10px] uppercase tracking-[0.18em] text-sp-kanji/95">{title}</p>
+                    <p className="text-[13px] font-light leading-[1.7] text-white/78">{copy}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -429,17 +449,17 @@ export default function Home() {
         <div className="flex items-center justify-center gap-6 max-w-md mx-auto px-6">
           <div className="flex-1 h-px bg-stone-200" />
           <p className="text-[11px] tracking-widest uppercase text-stone-400 font-light whitespace-nowrap">
-            Za privatne i poslovne događaje · Srbija
+            Za privatne i poslovne događaje · Kragujevac
           </p>
           <div className="flex-1 h-px bg-stone-200" />
         </div>
       </div>
 
       {/* ── QUICK CONTACT CTA ──────────────────────────────────────── */}
-      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-28">
+      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-20">
         <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
         <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
@@ -452,49 +472,33 @@ export default function Home() {
               <span className="italic font-normal">događaj?</span>
             </h2>
             <div className="mb-7 h-px w-10 bg-[#C44F6E]" />
-            <p className="mb-10 max-w-sm text-[14px] font-light leading-[1.9] text-stone-500">
-              Javite nam se odmah i dobićete brz odgovor, predlog menija i smernice za vaš događaj bez
-              popunjavanja duge forme.
+            <p className="max-w-sm text-[14px] font-light leading-[1.9] text-stone-500">
+              Javite nam se odmah i dobićete brz odgovor, okvirnu cenu i smernice za vaš događaj.
             </p>
-            <div className="mb-8 max-w-sm rounded-[18px] border border-[#eadcd6] bg-white/65 px-4 py-4 backdrop-blur-sm">
-              <p className="font-serif text-[1.5rem] font-bold text-[#111111]">10–50+</p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-400">gostiju po događaju</p>
-            </div>
           </div>
 
           {/* Fast actions */}
-          <div className="rounded-[24px] border border-white/60 bg-white/92 p-8 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-12">
-            <div className="mb-8 rounded-[18px] border border-[#f2e7e3] bg-[#fcfaf8] px-5 py-5">
-              <p className="text-[10px] tracking-[0.2em] uppercase text-stone-400">Brz kontakt</p>
-              <p className="mt-2 max-w-lg text-[14px] font-light leading-[1.8] text-stone-500">
-                Najlakše je da nas kontaktirate direktno. Za ovakvu uslugu ljudi najčešće žele odmah
-                odgovor, okvirnu cenu i preporuku za broj gostiju.
-              </p>
-            </div>
-
+          <div className="rounded-[24px] border border-white/60 bg-white/92 p-7 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-9">
             <div className="grid gap-4">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-start justify-between rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E]"
+                className="group flex items-center justify-between rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E]"
               >
                 <div>
                   <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-white/70">WhatsApp</p>
                   <p className="text-[1.2rem] font-medium tracking-[0.01em]">Pišite odmah</p>
-                  <p className="mt-2 text-[14px] font-light leading-[1.7] text-white/78">
-                    Najbrži način za dogovor oko termina, broja gostiju i predloga menija.
-                  </p>
                 </div>
                 <MessageCircle size={20} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform group-hover:scale-105" />
               </a>
 
-              <div className="grid gap-4 md:grid-cols-2">
+              <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
                 <a
                   href={phoneLink}
                   className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
                 >
-                  <div className="mb-4 flex items-center gap-3">
+                  <div className="flex items-center gap-3">
                     <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
                       <Phone size={16} strokeWidth={1.7} />
                     </div>
@@ -503,9 +507,6 @@ export default function Home() {
                       <p className="mt-1 text-[15px] font-medium text-[#111111]">+381 60 000 0000</p>
                     </div>
                   </div>
-                  <p className="text-[13px] font-light leading-[1.75] text-stone-500">
-                    Pozovite ako želite brz dogovor i preporuku odmah.
-                  </p>
                 </a>
 
                 <div className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-5">

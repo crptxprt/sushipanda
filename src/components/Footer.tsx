@@ -21,8 +21,15 @@ export default function Footer() {
   const go = (path: string) => { navigate(path); window.scrollTo({ top: 0 }); };
 
   return (
-    <footer className="bg-[#111111] text-white">
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-10 pt-16 pb-8">
+    <footer className="relative overflow-hidden bg-[#111111] text-white">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-16 top-20 h-44 w-44 rounded-full bg-[#c44f6e]/6 blur-3xl" />
+        <div className="absolute right-[-40px] top-28 h-60 w-60 rounded-full bg-[#f0d3d9]/5 blur-3xl" />
+        <div className="absolute bottom-10 left-[14%] h-28 w-14 rounded-full border border-[#c44f6e]/10 opacity-40 rotate-[-18deg]" />
+        <div className="absolute bottom-16 right-[12%] h-24 w-12 rounded-full border border-[#f2d8dd]/10 opacity-35 rotate-[24deg]" />
+      </div>
+
+      <div className="relative max-w-[1320px] mx-auto px-6 lg:px-10 pt-16 pb-8">
         <div className="grid grid-cols-1 gap-12 border-t border-white/8 pt-12 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr] lg:gap-10">
 
           {/* Brand */}
