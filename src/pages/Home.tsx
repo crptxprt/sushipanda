@@ -495,16 +495,6 @@ export default function Home() {
 
           {/* Fast actions */}
           <div className="rounded-[24px] border border-white/60 bg-white/92 p-5 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-6">
-            <div className="mb-4 flex items-center justify-between gap-4 border-b border-[#ead9d4] pb-4">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Brzi kontakt</p>
-                <p className="mt-2 text-[15px] font-light leading-[1.7] text-stone-500">Odaberite način koji vam najviše odgovara.</p>
-              </div>
-              <span className="hidden rounded-full border border-[#ead9d4] px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-stone-400 md:inline-flex">
-                2 opcije
-              </span>
-            </div>
-
             <div className="grid gap-3 md:grid-cols-2">
               <a
                 href={whatsappLink}
