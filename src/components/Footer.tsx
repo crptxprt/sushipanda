@@ -23,6 +23,26 @@ export default function Footer() {
   return (
     <footer className="bg-[#111111] text-white">
       <div className="max-w-[1320px] mx-auto px-6 lg:px-10 pt-24 pb-10">
+        <div className="mb-14 grid gap-4 rounded-[26px] border border-white/8 bg-white/[0.03] px-6 py-6 lg:grid-cols-[0.7fr_0.3fr] lg:px-8">
+          <div>
+            <p className="mb-2 text-[10px] font-light uppercase tracking-[0.22em] text-stone-500">Sushi Panda</p>
+            <p className="max-w-lg text-[14px] font-light leading-[1.85] text-stone-300">
+              Kreiramo elegantan sushi catering za proslave, slave, korporativne i privatne događaje
+              sa fokusom na prezentaciju, ritam servisa i premium iskustvo za goste.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-1">
+            <div>
+              <p className="font-serif text-[1.8rem] font-bold text-white">10–500+</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-500">gostiju po događaju</p>
+            </div>
+            <div>
+              <p className="font-serif text-[1.8rem] font-bold text-white">2h</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-500">prosečan odgovor</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 gap-14 border-t border-white/6 pt-16 lg:grid-cols-12 lg:gap-10">
 
           {/* Brand */}

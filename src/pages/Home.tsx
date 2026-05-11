@@ -41,6 +41,39 @@ const whyItems = [
   },
 ];
 
+const galleryShots = [
+  {
+    src: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    title: 'Premium serving',
+    copy: 'Elegantni sushi setovi za privatne i poslovne događaje.',
+    className: 'col-span-2 lg:col-span-1 lg:row-span-2 min-h-[320px] lg:min-h-0',
+  },
+  {
+    src: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=900',
+    title: 'Signature moments',
+    copy: 'Detalji koji prave wow efekat na stolu.',
+    className: 'aspect-[1.1/1]',
+  },
+  {
+    src: 'https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=900',
+    title: 'Chef action',
+    copy: 'Live priprema pred gostima za nezaboravno iskustvo.',
+    className: 'aspect-[1.1/1]',
+  },
+  {
+    src: 'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=900',
+    title: 'Fresh plating',
+    copy: 'Sveže pripremljeni zalogaji i pažljivo birani sastojci.',
+    className: 'aspect-[1.1/1]',
+  },
+  {
+    src: 'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=900',
+    title: 'Event atmosphere',
+    copy: 'Topla atmosfera, besprekorna prezentacija i besprekoran servis.',
+    className: 'aspect-[1.1/1]',
+  },
+];
+
 export default function Home() {
   const whyRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
@@ -250,13 +283,19 @@ export default function Home() {
       </section>
 
       {/* ── KATEGORIJE ──────────────────────────────────────────────── */}
-      <section className="py-28 px-6 bg-[#f7f5f2]">
+      <section className="bg-[#f7f5f2] px-6 py-28">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
-          <div className="text-center mb-16">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-4 font-light">Usluge</p>
-            <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.01em' }}>
-              Vrste ketering evenata
-            </h2>
+          <div className="mb-16 grid gap-10 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
+            <div>
+              <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Usluge</p>
+              <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.01em' }}>
+                Vrste ketering evenata
+              </h2>
+            </div>
+            <p className="max-w-sm text-[14px] font-light leading-[1.85] text-stone-500 lg:ml-auto">
+              Različiti formati događaja traže različitu atmosferu, ritam i prezentaciju. Zato svaku
+              uslugu prilagođavamo gostima, lokaciji i karakteru eventa.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -264,8 +303,8 @@ export default function Home() {
               <button
                 key={cat.path}
                 onClick={() => go(cat.path)}
-                className="group relative overflow-hidden focus:outline-none text-left"
-                style={{ borderRadius: '16px' }}
+                className="group relative overflow-hidden border border-[#e9ddd6] bg-white/70 text-left focus:outline-none"
+                style={{ borderRadius: '22px' }}
               >
                 <div className="aspect-[3/4] overflow-hidden bg-stone-200">
                   <img
@@ -273,19 +312,19 @@ export default function Home() {
                     alt={cat.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
                 </div>
 
                 {/* Large number watermark */}
-                <div className="absolute top-5 left-5 font-serif font-bold text-white/15 text-[3.5rem] leading-none select-none">
+                <div className="absolute left-5 top-5 font-serif text-[3.5rem] font-bold leading-none text-white/18 select-none">
                   {cat.num}
                 </div>
 
                 {/* Bottom text */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-serif font-bold text-white text-[1.15rem] mb-1">{cat.title}</h3>
-                  <p className="text-white/55 text-[10px] font-light tracking-widest uppercase">{cat.sub}</p>
-                  <div className="mt-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 text-sp-kanji text-[10px] tracking-widest uppercase">
+                  <p className="text-[10px] font-light uppercase tracking-widest text-white/60">{cat.sub}</p>
+                  <div className="mt-4 flex translate-y-2 items-center gap-2 text-[10px] uppercase tracking-widest text-sp-kanji opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     Saznaj više <ArrowRight size={11} />
                   </div>
                 </div>
@@ -296,14 +335,15 @@ export default function Home() {
       </section>
 
       {/* ── SUSHI CHEF — dark cinematic ─────────────────────────────── */}
-      <section className="relative min-h-[580px] flex items-center overflow-hidden bg-[#111111]">
+      <section className="relative flex min-h-[620px] items-center overflow-hidden bg-[#111111]">
         <img
           src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt="Sushi chef"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
           style={{ objectPosition: 'center 25%' }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
+        <div className="absolute inset-y-0 right-0 hidden w-[28%] bg-[radial-gradient(circle_at_center,rgba(196,79,110,0.13),rgba(17,17,17,0))] xl:block" />
 
         {/* Kanji decoration */}
         <span
@@ -314,26 +354,52 @@ export default function Home() {
         </span>
 
         <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 py-28 w-full">
-          <div className="max-w-lg">
-            <p className="text-[11px] tracking-widest uppercase text-sp-kanji mb-7 font-light">Ekskluzivna usluga</p>
-            <h2
-              className="font-serif font-bold text-white mb-7 leading-[1]"
-              style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
-            >
-              Sushi chef na<br />
-              <em className="not-italic italic">vašem eventi</em>
-            </h2>
-            <p className="text-stone-400 font-light text-[14px] leading-[1.85] mb-12 max-w-sm">
-              Naš chef dolazi s kompletnom opremom i svežim sastojcima — priprema
-              sushi uživo pred gostima i kreira gastronomsko iskustvo koje se pamti.
-            </p>
-            <button
-              onClick={() => go('/sushi-chef')}
-              className="group inline-flex items-center gap-4 bg-white text-[#111111] text-[11px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C44F6E] hover:text-white transition-all duration-300 font-light"
-            >
-              Saznaj više
-              <ArrowRight size={13} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+          <div className="grid items-end gap-14 lg:grid-cols-[0.62fr_0.38fr]">
+            <div className="max-w-xl">
+              <p className="mb-7 text-[11px] font-light uppercase tracking-widest text-sp-kanji">Ekskluzivna usluga</p>
+              <h2
+                className="mb-7 font-serif font-bold leading-[0.98] text-white"
+                style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
+              >
+                Sushi chef na
+                <br />
+                <em className="not-italic italic">vašem eventu</em>
+              </h2>
+              <p className="mb-10 max-w-md text-[14px] font-light leading-[1.9] text-stone-400">
+                Naš chef dolazi sa kompletnom opremom i svežim sastojcima, priprema sushi uživo
+                pred gostima i pretvara ketering u performans koji podiže ceo događaj.
+              </p>
+              <div className="mb-12 flex flex-wrap gap-3">
+                {['Live priprema', 'Premium setup', 'Chef station on-site'].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white/70 backdrop-blur-sm"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <button
+                onClick={() => go('/sushi-chef')}
+                className="group inline-flex items-center gap-4 rounded-full bg-white px-9 py-4 text-[11px] font-light uppercase tracking-widest text-[#111111] transition-all duration-300 hover:bg-[#C44F6E] hover:text-white"
+              >
+                Saznaj više
+                <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
+              </button>
+            </div>
+
+            <div className="grid gap-4 rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              {[
+                ['Chef setup', 'Dolazak, postavka i koordinacija na lokaciji.'],
+                ['Servis uživo', 'Priprema pred gostima za premium wow efekat.'],
+                ['Tailored meni', 'Od signature rolnica do nigiri selekcije za vaš event.'],
+              ].map(([title, copy]) => (
+                <div key={title} className="border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
+                  <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-sp-kanji">{title}</p>
+                  <p className="text-[13px] font-light leading-[1.8] text-white/70">{copy}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -341,34 +407,39 @@ export default function Home() {
       {/* ── GALLERY ─────────────────────────────────────────────────── */}
       <section className="py-28 px-6 bg-white">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
-          <div className="flex items-end justify-between mb-14">
+          <div className="mb-14 flex items-end justify-between">
             <div>
-              <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-3 font-light">Naš rad</p>
+              <p className="mb-3 text-[11px] font-light uppercase tracking-widest text-stone-400">Naš rad</p>
               <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>
                 Galerija
               </h2>
+              <p className="mt-4 max-w-md text-[14px] font-light leading-[1.85] text-stone-500">
+                Od detalja na stolu do kompletnih event postavki, biramo kadar koji prenosi atmosferu
+                i kvalitet usluge, a ne samo još jednu stock galeriju.
+              </p>
             </div>
             <button
               onClick={() => go('/galerija')}
-              className="hidden sm:flex items-center gap-2 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C44F6E] transition-colors group font-light"
+              className="group hidden items-center gap-2 text-[11px] font-light uppercase tracking-widest text-stone-400 transition-colors hover:text-[#C44F6E] sm:flex"
             >
               Sve slike <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
-          {/* Asymmetric editorial grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-            <div className="col-span-2 lg:col-span-1 lg:row-span-2 overflow-hidden bg-stone-100 min-h-[260px] lg:min-h-0" style={{ borderRadius: '16px' }}>
-              <img src="https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-            </div>
-            {[
-              'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=700',
-              'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=700',
-              'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=700',
-              'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=700',
-            ].map((src, i) => (
-              <div key={i} className="aspect-square overflow-hidden bg-stone-100" style={{ borderRadius: '12px' }}>
-                <img src={src} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+            {galleryShots.map((shot) => (
+              <div
+                key={shot.src}
+                className={`group relative overflow-hidden bg-stone-100 ${shot.className}`}
+                style={{ borderRadius: shot.className.includes('row-span') ? '22px' : '16px' }}
+              >
+                <img src={shot.src} alt={shot.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-85" />
+                <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
+                  <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/65">Sushi Panda</p>
+                  <h3 className="font-serif text-[1.15rem] font-bold text-white">{shot.title}</h3>
+                  <p className="mt-2 max-w-xs text-[12px] font-light leading-[1.7] text-white/70">{shot.copy}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -387,34 +458,45 @@ export default function Home() {
       </div>
 
       {/* ── CTA FORM ────────────────────────────────────────────────── */}
-      <section ref={ctaRef} className="relative py-28 px-6 bg-[#F3E8E5] overflow-hidden">
+      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-28">
         <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
         <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-7 font-light">Kontakt</p>
+            <p className="mb-7 text-[11px] font-light uppercase tracking-widest text-stone-400">Kontakt</p>
             <h2
-              className="font-serif font-bold text-[#111111] mb-5 leading-[1]"
+              className="mb-5 font-serif font-bold leading-[1] text-[#111111]"
               style={{ fontSize: 'clamp(2.8rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
             >
               Planiraš<br />
               <span className="italic font-normal">događaj?</span>
             </h2>
-            <div className="w-10 h-px bg-[#C44F6E] mb-7" />
-            <p className="text-stone-500 font-light text-[14px] leading-[1.9] max-w-xs mb-10">
+            <div className="mb-7 h-px w-10 bg-[#C44F6E]" />
+            <p className="mb-10 max-w-sm text-[14px] font-light leading-[1.9] text-stone-500">
               Zatraži ponudu i mi ćemo pripremiti sve za tebe — od jelovnika
               do kompletne organizacije.
             </p>
+            <div className="mb-8 grid max-w-sm grid-cols-2 gap-3">
+              {[
+                ['2h', 'prosečan odgovor'],
+                ['10–500+', 'gostiju po događaju'],
+              ].map(([value, label]) => (
+                <div key={value} className="rounded-[18px] border border-[#eadcd6] bg-white/65 px-4 py-4 backdrop-blur-sm">
+                  <p className="font-serif text-[1.5rem] font-bold text-[#111111]">{value}</p>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-stone-400">{label}</p>
+                </div>
+              ))}
+            </div>
             <div className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-green-400 shrink-0" />
-              <p className="text-[12px] text-stone-400 font-light">Odgovaramo u roku od 2 sata</p>
+              <span className="h-2 w-2 shrink-0 rounded-full bg-green-400" />
+              <p className="text-[12px] font-light text-stone-400">Odgovaramo u roku od 2 sata</p>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-white p-8 lg:p-12" style={{ borderRadius: '20px' }}>
+          <div className="rounded-[24px] border border-white/60 bg-white/92 p-8 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-12">
             <ContactForm source="home" />
           </div>
         </div>

@@ -17,7 +17,7 @@ const initialState = {
 };
 
 const inputClass =
-  'w-full border-b border-stone-200 bg-transparent px-0 py-3 text-[14px] text-[#111111] placeholder-stone-400 focus:outline-none focus:border-sp-dark transition-colors font-light';
+  'w-full border-b border-stone-200 bg-transparent px-0 py-3 text-[14px] text-[#111111] placeholder-stone-300 focus:outline-none focus:border-[#181214] transition-colors font-light';
 
 const labelClass = 'block text-[10px] tracking-widest2 uppercase text-stone-400 mb-1';
 
@@ -74,6 +74,13 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-7 ${className}`}>
+      <div className="rounded-[18px] border border-[#f2e7e3] bg-[#fcfaf8] px-4 py-4">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-stone-400">Sushi Panda inquiry</p>
+        <p className="mt-2 text-[13px] font-light leading-[1.75] text-stone-500">
+          Pošaljite osnovne informacije o događaju, a mi ćemo pripremiti predlog menija i okvirnu ponudu.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
         <div>
           <label className={labelClass}>Ime i prezime *</label>
@@ -111,7 +118,7 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-[#111111] text-white text-[10px] tracking-widest2 uppercase py-4 hover:bg-[#C44F6E] transition-colors duration-300 disabled:opacity-50 mt-4"
+        className="mt-4 w-full rounded-full bg-[#111111] py-4 text-[10px] uppercase tracking-widest2 text-white transition-colors duration-300 hover:bg-[#C44F6E] disabled:opacity-50"
       >
         {loading ? 'Slanje...' : 'Pošalji upit'}
       </button>
