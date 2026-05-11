@@ -331,8 +331,8 @@ export default function Home() {
 
       {/* ── SUSHI CHEF — clean service spotlight ───────────────────── */}
       <section className="bg-[#fcfaf8] px-6 py-24">
-        <div className="mx-auto grid max-w-[1320px] gap-12 rounded-[34px] border border-[#efe3dc] bg-[linear-gradient(135deg,#fffdfb_0%,#f6efea_100%)] p-8 shadow-[0_24px_55px_rgba(196,79,110,0.06)] lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:p-12">
-          <div className="max-w-[460px]">
+        <div className="mx-auto grid max-w-[1320px] gap-10 rounded-[34px] border border-[#efe3dc] bg-[linear-gradient(135deg,#fffdfb_0%,#f6efea_100%)] p-8 shadow-[0_24px_55px_rgba(196,79,110,0.06)] lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:p-12">
+          <div className="max-w-[470px]">
             <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Ekskluzivna usluga</p>
             <h2
               className="mb-5 font-serif font-bold text-[#111111]"
@@ -347,7 +347,7 @@ export default function Home() {
               i pretvara ketering u deo doživljaja, a ne samo posluženje.
             </p>
 
-            <div className="mb-8 flex flex-wrap gap-3">
+            <div className="mb-9 flex flex-wrap gap-3">
               {['Live priprema', 'Premium setup', 'Meni po meri'].map((item) => (
                 <span
                   key={item}
@@ -367,26 +367,27 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="relative overflow-hidden rounded-[28px] border border-[#2c2322] bg-[#171214] min-h-[430px] shadow-[0_24px_50px_rgba(17,12,11,0.22)]">
+          <div className="relative overflow-hidden rounded-[30px] border border-[#2c2322] bg-[#171214] min-h-[460px] shadow-[0_24px_50px_rgba(17,12,11,0.22)]">
             <img
               src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1400"
               alt="Sushi chef priprema"
               className="absolute inset-0 h-full w-full object-cover"
-              style={{ objectPosition: 'center 28%' }}
+              style={{ objectPosition: 'center 30%' }}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,12,11,0.42)_0%,rgba(17,12,11,0.12)_44%,rgba(17,12,11,0.72)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_24%,rgba(196,79,110,0.24),rgba(17,12,11,0)_26%)]" />
-            <div className="absolute left-7 top-7 h-24 w-24 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-[2px]" />
-            <div className="absolute bottom-7 left-7 h-16 w-40 rounded-full border border-white/12 bg-black/18 backdrop-blur-[2px]" />
-            <div className="absolute right-7 top-7 h-28 w-14 rounded-full border border-[#f3d7df]/14 opacity-55 rotate-[18deg]" />
-            <div className="absolute bottom-8 right-8 h-20 w-20 rounded-full bg-[#f1d4db]/[0.06] blur-2xl" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-[linear-gradient(180deg,rgba(17,12,11,0)_0%,rgba(17,12,11,0.54)_100%)]" />
-            <div className="absolute left-8 bottom-8 flex items-center gap-3">
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,12,11,0.74)_0%,rgba(17,12,11,0.22)_42%,rgba(17,12,11,0.68)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(196,79,110,0.26),rgba(17,12,11,0)_24%)]" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(180deg,rgba(17,12,11,0)_0%,rgba(17,12,11,0.62)_100%)]" />
+            <div className="absolute left-7 top-7 rounded-full border border-white/16 bg-black/18 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-white/75 backdrop-blur-[2px]">
+              Live chef experience
+            </div>
+            <div className="absolute right-7 top-7 h-28 w-14 rounded-full border border-[#f3d7df]/18 opacity-65 rotate-[18deg]" />
+            <div className="absolute bottom-8 right-8 h-20 w-20 rounded-full bg-[#f1d4db]/[0.08] blur-2xl" />
+            <div className="absolute left-8 bottom-8 right-8 flex flex-wrap gap-3">
               <span className="rounded-full border border-white/14 bg-black/22 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/78 backdrop-blur-[2px]">
-                Live sushi
+                Sushi chef na lokaciji
               </span>
               <span className="rounded-full border border-white/14 bg-black/22 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/78 backdrop-blur-[2px]">
-                Premium event
+                Servis pred gostima
               </span>
             </div>
           </div>
@@ -447,17 +448,17 @@ export default function Home() {
       </div>
 
       {/* ── QUICK CONTACT CTA ──────────────────────────────────────── */}
-      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-18">
+      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-16">
         <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
         <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-[0.84fr_1.16fr] gap-12 items-center">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] gap-10 items-center">
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
             <p className="mb-7 text-[11px] font-light uppercase tracking-widest text-stone-400">Kontakt</p>
             <h2
               className="mb-5 font-serif font-bold leading-[1] text-[#111111]"
-              style={{ fontSize: 'clamp(2.55rem, 5.2vw, 4.6rem)', letterSpacing: '-0.02em' }}
+              style={{ fontSize: 'clamp(2.4rem, 4.8vw, 4.2rem)', letterSpacing: '-0.02em' }}
             >
               Planiraš<br />
               <span className="italic font-normal">događaj?</span>
@@ -469,7 +470,7 @@ export default function Home() {
           </div>
 
           {/* Fast actions */}
-          <div className="rounded-[24px] border border-white/60 bg-white/92 p-6 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-7">
+          <div className="rounded-[24px] border border-white/60 bg-white/92 p-5 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-6">
             <div className="grid gap-3">
               <a
                 href={whatsappLink}
@@ -484,12 +485,12 @@ export default function Home() {
                 <MessageCircle size={20} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform group-hover:scale-105" />
               </a>
 
-              <div className="grid gap-3 md:grid-cols-[1.15fr_0.85fr]">
+              <div className="grid gap-3 md:grid-cols-[1fr_1fr]">
                 <a
                   href={phoneLink}
-                  className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-4 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
+                  className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="mb-3 flex items-center gap-3">
                     <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
                       <Phone size={16} strokeWidth={1.7} />
                     </div>
@@ -498,14 +499,18 @@ export default function Home() {
                       <p className="mt-1 text-[15px] font-medium text-[#111111]">+381 60 000 0000</p>
                     </div>
                   </div>
+                  <p className="text-[13px] font-light leading-[1.7] text-stone-500">Pozovite odmah</p>
                 </a>
 
-                <div className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-4">
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Najčešće pitanje</p>
-                  <p className="mt-3 text-[14px] font-light leading-[1.75] text-stone-600">
-                    Pišite odmah za termin i okvirnu ponudu.
-                  </p>
-                </div>
+                <a
+                  href={whatsappLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
+                >
+                  <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Brz odgovor</p>
+                  <p className="mt-3 text-[15px] font-medium text-[#111111]">Pošaljite odmah na WhatsApp</p>
+                </a>
               </div>
             </div>
           </div>
