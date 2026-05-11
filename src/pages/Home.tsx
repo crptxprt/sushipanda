@@ -502,16 +502,16 @@ export default function Home() {
                 rel="noreferrer"
                 className="group rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E] hover:shadow-[0_18px_38px_rgba(24,18,20,0.18)]"
               >
-                <div className="mb-8 flex items-start justify-between gap-4">
-                  <div className="rounded-full border border-white/12 bg-white/8 p-3 text-white">
+                <div className="mb-10 flex items-start justify-between gap-4">
+                  <div className="rounded-full border border-white/14 bg-white/8 p-3 text-white">
                     <MessageCircle size={18} strokeWidth={1.6} />
                   </div>
-                  <ArrowRight size={18} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="text-[11px] uppercase tracking-[0.18em] text-white/52">Otvorite chat</span>
                 </div>
                 <p className="text-[11px] uppercase tracking-[0.18em] text-white/65">WhatsApp</p>
-                <p className="mt-3 text-[1.55rem] font-medium leading-[1.15] tracking-[-0.02em]">Pišite odmah</p>
-                <p className="mt-4 max-w-[18rem] text-[14px] font-light leading-[1.8] text-white/72">
-                  Najbrži način da dobijete okvirnu ponudu i termin za vaš događaj.
+                <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pišite na WhatsApp</p>
+                <p className="mt-4 max-w-[18rem] text-[14px] font-light leading-[1.7] text-white/72">
+                  Za brzu poruku, ponudu i dogovor termina.
                 </p>
               </a>
 
@@ -519,17 +519,17 @@ export default function Home() {
                 href={phoneLink}
                 className="group rounded-[22px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-6 text-[#111111] transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_18px_38px_rgba(196,79,110,0.10)]"
               >
-                <div className="mb-8 flex items-start justify-between gap-4">
+                <div className="mb-10 flex items-start justify-between gap-4">
                   <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
                     <Phone size={18} strokeWidth={1.7} />
                   </div>
-                  <ArrowRight size={18} strokeWidth={1.6} className="mt-1 shrink-0 text-stone-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#C44F6E]" />
+                  <span className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Pozovite odmah</span>
                 </div>
                 <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Telefon</p>
-                <p className="mt-3 text-[1.55rem] font-medium leading-[1.15] tracking-[-0.02em]">Pozovite direktno</p>
-                <p className="mt-4 text-[14px] font-light leading-[1.8] text-stone-500">
-                  <span className="block text-[15px] font-medium text-[#111111]">+381 60 000 0000</span>
-                  Brz poziv za potvrdu detalja, termina i dostupnosti.
+                <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pozovite nas</p>
+                <p className="mt-5 text-[1.35rem] font-medium tracking-[-0.02em] text-[#111111]">+381 60 000 0000</p>
+                <p className="mt-3 max-w-[18rem] text-[14px] font-light leading-[1.7] text-stone-500">
+                  Za direktan razgovor i brzu potvrdu detalja.
                 </p>
               </a>
             </div>
