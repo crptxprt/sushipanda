@@ -101,9 +101,8 @@ export default function Header({ transparent = false }: HeaderProps) {
             >
               <BrandMark
                 size="sm"
-                className={`transition-transform duration-300 group-hover:scale-[1.02] ${
-                  opaque ? 'bg-[#1c1519]/92' : 'bg-[#1b1416]/84'
-                }`}
+                variant="bare"
+                className="transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </button>
           </div>
@@ -131,7 +130,7 @@ export default function Header({ transparent = false }: HeaderProps) {
             className="focus:outline-none"
             aria-label="Sushi Panda"
           >
-            <BrandMark size="sm" className={`${opaque ? 'bg-[#1c1519]/92' : 'bg-[#1b1416]/84'} px-3.5 py-2`} />
+            <BrandMark size="sm" variant="bare" />
           </button>
           <button
             className={`transition-colors ${opaque ? 'text-[#111111]' : 'text-[#1b1416]'}`}

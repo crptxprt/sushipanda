@@ -102,12 +102,6 @@ export default function Home() {
               i privatne događaje.
             </p>
 
-            <div className="inline-flex items-center gap-2 self-start rounded-full border border-[#e8d0d3] bg-white/70 px-4 py-2 text-[10px] tracking-[0.24em] uppercase text-[#b46b78] shadow-[0_12px_30px_rgba(196,79,110,0.08)] backdrop-blur-sm mb-8">
-              Sakura tone
-              <span className="h-1.5 w-1.5 rounded-full bg-[#C44F6E]" />
-              Premium catering
-            </div>
-
             {/* CTA — pill button (matches reference) */}
             <div className="flex flex-wrap items-center gap-4 mb-14">
               <button
@@ -188,12 +182,12 @@ export default function Home() {
       </section>
 
       {/* ── TICKER ──────────────────────────────────────────────────── */}
-      <div className="bg-[#111111] py-4 overflow-hidden">
+      <div className="bg-[#111111] py-5 overflow-hidden border-y border-white/6">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...TICKER, ...TICKER, ...TICKER, ...TICKER].map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-5 text-[10px] tracking-widest2 uppercase text-white/40 mx-7 font-light">
+            <span key={i} className="mx-8 inline-flex items-center gap-6 text-[12px] font-light uppercase tracking-[0.28em] text-white/75">
               {item}
-              <span className="text-sp-kanji text-sm leading-none">·</span>
+              <span className="text-[14px] leading-none text-sp-kanji">·</span>
             </span>
           ))}
         </div>

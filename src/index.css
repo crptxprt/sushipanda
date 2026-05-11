@@ -25,6 +25,7 @@
       radial-gradient(circle at 10% 18%, rgba(235, 224, 220, 0.7), transparent 24%),
       radial-gradient(circle at 84% 22%, rgba(245, 223, 228, 0.45), transparent 18%),
       linear-gradient(180deg, var(--sp-paper) 0%, var(--sp-bg) 100%);
+    letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4 {
