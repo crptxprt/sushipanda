@@ -51,10 +51,9 @@ export default function Home() {
           HERO  —  inspired by Sushi Samurai reference
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen bg-[#f7f5f2] overflow-hidden flex flex-col">
-        <div className="soft-petal left-[8%] top-[11%] hidden h-44 w-24 rotate-[-24deg] lg:block" />
-        <div className="soft-petal left-[47%] top-[16%] hidden h-56 w-28 rotate-[18deg] xl:block" />
-        <div className="soft-petal right-[12%] top-[18%] hidden h-40 w-20 rotate-[26deg] lg:block" />
-        <div className="rose-orb left-[42%] top-[56%] hidden h-56 w-56 xl:block" />
+        <div className="soft-petal left-[44%] top-[14%] hidden h-48 w-24 rotate-[18deg] opacity-60 xl:block" />
+        <div className="soft-petal right-[12%] top-[20%] hidden h-36 w-20 rotate-[24deg] opacity-50 lg:block" />
+        <div className="rose-orb left-[44%] top-[58%] hidden h-44 w-44 opacity-45 xl:block" />
 
         {/* Blob shape — left side */}
         <div
@@ -84,7 +83,7 @@ export default function Home() {
               {/* First line: "Sushi" + floating food image */}
               <span className="flex items-center gap-5 flex-wrap">
                 <span>Sushi</span>
-                <span className="inline-flex w-[70px] h-[70px] lg:w-[88px] lg:h-[88px] rounded-full overflow-hidden border-[3px] border-white shadow-md shrink-0">
+                <span className="inline-flex w-[60px] h-[60px] lg:w-[74px] lg:h-[74px] rounded-full overflow-hidden border-[3px] border-white shadow-md shrink-0 translate-y-2">
                   <img
                     src={heroSushiDarkCircle}
                     alt="Sushi details"
@@ -171,14 +170,14 @@ export default function Home() {
           </div>
 
           {/* ── RIGHT: Sushi hero image ── */}
-          <div className="w-full lg:w-[50%] flex items-center justify-center lg:justify-end relative mt-10 lg:mt-0">
+          <div className="w-full lg:w-[50%] flex items-center justify-center lg:justify-end relative mt-10 lg:mt-0 lg:pr-4">
             <img
               src={heroSushiNigiri}
               alt="Premium sushi"
-              className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[90%] object-cover"
+              className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[102%] object-cover drop-shadow-[0_24px_48px_rgba(207,184,144,0.24)]"
               style={{ borderRadius: '40% 50% 50% 40% / 40% 40% 50% 50%' }}
             />
-            <div className="absolute -left-3 top-[10%] hidden h-24 w-24 rounded-full border border-[#e4c4cb] bg-white/70 shadow-[0_16px_40px_rgba(196,79,110,0.12)] backdrop-blur-sm lg:block" />
+            <div className="absolute -left-6 top-[16%] hidden h-16 w-16 rounded-full border border-[#edd4da] bg-white/65 shadow-[0_10px_24px_rgba(196,79,110,0.08)] backdrop-blur-sm lg:block" />
           </div>
         </div>
       </section>
