@@ -495,47 +495,53 @@ export default function Home() {
 
           {/* Fast actions */}
           <div className="rounded-[24px] border border-white/60 bg-white/92 p-5 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-6">
-            <div className="grid gap-3">
+            <div className="mb-4 flex items-center justify-between gap-4 border-b border-[#ead9d4] pb-4">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Brzi kontakt</p>
+                <p className="mt-2 text-[15px] font-light leading-[1.7] text-stone-500">Odaberite način koji vam najviše odgovara.</p>
+              </div>
+              <span className="hidden rounded-full border border-[#ead9d4] px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-stone-400 md:inline-flex">
+                2 opcije
+              </span>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-2">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-5 text-white transition-all duration-300 hover:bg-[#C44F6E]"
+                className="group rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E] hover:shadow-[0_18px_38px_rgba(24,18,20,0.18)]"
               >
-                <div>
-                  <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-white/70">WhatsApp</p>
-                  <p className="text-[1.2rem] font-medium tracking-[0.01em]">Pišite odmah</p>
+                <div className="mb-8 flex items-start justify-between gap-4">
+                  <div className="rounded-full border border-white/12 bg-white/8 p-3 text-white">
+                    <MessageCircle size={18} strokeWidth={1.6} />
+                  </div>
+                  <ArrowRight size={18} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
-                <MessageCircle size={20} strokeWidth={1.6} className="mt-1 shrink-0 transition-transform group-hover:scale-105" />
+                <p className="text-[11px] uppercase tracking-[0.18em] text-white/65">WhatsApp</p>
+                <p className="mt-3 text-[1.55rem] font-medium leading-[1.15] tracking-[-0.02em]">Pišite odmah</p>
+                <p className="mt-4 max-w-[18rem] text-[14px] font-light leading-[1.8] text-white/72">
+                  Najbrži način da dobijete okvirnu ponudu i termin za vaš događaj.
+                </p>
               </a>
 
-              <div className="grid gap-3 md:grid-cols-[1fr_1fr]">
-                <a
-                  href={phoneLink}
-                  className="rounded-[20px] border border-[#ead9d4] bg-white px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
-                >
-                  <div className="mb-3 flex items-center gap-3">
-                    <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
-                      <Phone size={16} strokeWidth={1.7} />
-                    </div>
-                    <div>
-                      <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Telefon</p>
-                      <p className="mt-1 text-[15px] font-medium text-[#111111]">+381 60 000 0000</p>
-                    </div>
+              <a
+                href={phoneLink}
+                className="group rounded-[22px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-6 text-[#111111] transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_18px_38px_rgba(196,79,110,0.10)]"
+              >
+                <div className="mb-8 flex items-start justify-between gap-4">
+                  <div className="rounded-full bg-[#f6ece8] p-3 text-[#181214]">
+                    <Phone size={18} strokeWidth={1.7} />
                   </div>
-                  <p className="text-[13px] font-light leading-[1.7] text-stone-500">Pozovite odmah</p>
-                </a>
-
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-[20px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-5 transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_16px_38px_rgba(196,79,110,0.08)]"
-                >
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Brz odgovor</p>
-                  <p className="mt-3 text-[15px] font-medium text-[#111111]">Pošaljite odmah na WhatsApp</p>
-                </a>
-              </div>
+                  <ArrowRight size={18} strokeWidth={1.6} className="mt-1 shrink-0 text-stone-400 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#C44F6E]" />
+                </div>
+                <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Telefon</p>
+                <p className="mt-3 text-[1.55rem] font-medium leading-[1.15] tracking-[-0.02em]">Pozovite direktno</p>
+                <p className="mt-4 text-[14px] font-light leading-[1.8] text-stone-500">
+                  <span className="block text-[15px] font-medium text-[#111111]">+381 60 000 0000</span>
+                  Brz poziv za potvrdu detalja, termina i dostupnosti.
+                </p>
+              </a>
             </div>
           </div>
         </div>
