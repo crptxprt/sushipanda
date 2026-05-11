@@ -7,6 +7,7 @@ import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import chefHero1 from '../assets/chef-hero-1.jpg';
 import chefHero2 from '../assets/chef-hero-2.jpg';
 import chefHero3 from '../assets/chef-hero-3.jpg';
+import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
 
 const PROOF_STRIP = [
   'Premium sushi ketering',
@@ -329,66 +330,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SUSHI CHEF — clean service spotlight ───────────────────── */}
+      {/* ── SUSHI CHEF — full dark premium card ───────────────────── */}
       <section className="bg-[#fcfaf8] px-6 py-24">
-        <div className="mx-auto grid max-w-[1320px] gap-10 rounded-[34px] border border-[#efe3dc] bg-[linear-gradient(135deg,#fffdfb_0%,#f6efea_100%)] p-8 shadow-[0_24px_55px_rgba(196,79,110,0.06)] lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:p-12">
-          <div className="max-w-[470px]">
-            <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Ekskluzivna usluga</p>
-            <h2
-              className="mb-5 font-serif font-bold text-[#111111]"
-              style={{ fontSize: 'clamp(2rem, 4.8vw, 4rem)', letterSpacing: '-0.02em', lineHeight: 0.98 }}
-            >
-              Sushi chef
-              <br />
-              <span className="italic font-normal text-stone-700">na vašem eventu</span>
-            </h2>
-            <p className="mb-8 text-[15px] font-light leading-[1.9] text-stone-500">
-              Ako želite jači utisak na goste, naš sushi chef dolazi na lokaciju, priprema sushi uživo
-              i pretvara ketering u deo doživljaja, a ne samo posluženje.
-            </p>
+        <div className="mx-auto max-w-[1320px] overflow-hidden rounded-[40px] border border-[#241b1a] bg-[radial-gradient(circle_at_top_right,rgba(196,79,110,0.14),rgba(18,15,14,0)_28%),linear-gradient(135deg,#171211_0%,#0e0b0a_100%)] shadow-[0_36px_80px_rgba(12,9,8,0.22)]">
+          <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
+            <div className="flex flex-col justify-center p-8 lg:p-14">
+              <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-white/42">Ekskluzivna usluga</p>
+              <h2
+                className="mb-5 font-serif font-bold text-white"
+                style={{ fontSize: 'clamp(2.2rem, 4.8vw, 4.2rem)', letterSpacing: '-0.025em', lineHeight: 0.96 }}
+              >
+                Sushi chef
+                <br />
+                <span className="italic font-normal text-[#efd8dc]">na vašem eventu</span>
+              </h2>
+              <p className="max-w-[430px] text-[15px] font-light leading-[1.9] text-stone-300">
+                Denis Ivanoff dolazi na lokaciju, priprema sushi pred gostima i pretvara ketering u
+                iskustvo koje izgleda jednako premium koliko i ukusno.
+              </p>
 
-            <div className="mb-9 flex flex-wrap gap-3">
-              {['Live priprema', 'Premium setup', 'Meni po meri'].map((item) => (
-                <span
-                  key={item}
-                  className="rounded-full border border-[#ead9d4] bg-white/90 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-stone-500"
-                >
-                  {item}
-                </span>
-              ))}
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-[11px] uppercase tracking-[0.18em] text-white/72">
+                <span>Live priprema</span>
+                <span className="text-[#c98b99]">•</span>
+                <span>Premium postavka</span>
+                <span className="text-[#c98b99]">•</span>
+                <span>Meni po meri</span>
+              </div>
+
+              <button
+                onClick={() => go('/sushi-chef')}
+                className="group mt-10 inline-flex w-fit items-center gap-3 rounded-full border border-white/12 bg-white px-8 py-4 text-[11px] font-light uppercase tracking-widest text-[#111111] transition-colors duration-300 hover:bg-[#C44F6E] hover:text-white"
+              >
+                Zatraži sushi chefa
+                <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
 
-            <button
-              onClick={() => go('/sushi-chef')}
-              className="group inline-flex items-center gap-3 rounded-full bg-[#181214] px-8 py-4 text-[11px] font-light uppercase tracking-widest text-white transition-colors duration-300 hover:bg-[#C44F6E]"
-            >
-              Saznaj više
-              <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
-            </button>
-          </div>
+            <div className="relative min-h-[560px] overflow-hidden bg-[#0f0c0b]">
+              <img
+                src={chefDenisIvanoff}
+                alt="Denis Ivanoff, Sushi Chef"
+                className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: 'center top' }}
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,8,8,0.08)_0%,rgba(10,8,8,0)_32%,rgba(10,8,8,0.54)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,8,8,0)_0%,rgba(10,8,8,0.28)_100%)]" />
 
-          <div className="relative overflow-hidden rounded-[30px] border border-[#2c2322] bg-[#171214] min-h-[460px] shadow-[0_24px_50px_rgba(17,12,11,0.22)]">
-            <img
-              src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1400"
-              alt="Sushi chef priprema"
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{ objectPosition: 'center 30%' }}
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(17,12,11,0.74)_0%,rgba(17,12,11,0.22)_42%,rgba(17,12,11,0.68)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_22%,rgba(196,79,110,0.26),rgba(17,12,11,0)_24%)]" />
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(180deg,rgba(17,12,11,0)_0%,rgba(17,12,11,0.62)_100%)]" />
-            <div className="absolute left-7 top-7 rounded-full border border-white/16 bg-black/18 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-white/75 backdrop-blur-[2px]">
-              Live chef experience
-            </div>
-            <div className="absolute right-7 top-7 h-28 w-14 rounded-full border border-[#f3d7df]/18 opacity-65 rotate-[18deg]" />
-            <div className="absolute bottom-8 right-8 h-20 w-20 rounded-full bg-[#f1d4db]/[0.08] blur-2xl" />
-            <div className="absolute left-8 bottom-8 right-8 flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/14 bg-black/22 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/78 backdrop-blur-[2px]">
-                Sushi chef na lokaciji
-              </span>
-              <span className="rounded-full border border-white/14 bg-black/22 px-4 py-2 text-[10px] uppercase tracking-[0.18em] text-white/78 backdrop-blur-[2px]">
-                Servis pred gostima
-              </span>
+              <div className="absolute left-8 top-8 rounded-full border border-white/18 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-white/78">
+                Denis Ivanoff
+              </div>
+
+              <div className="absolute bottom-10 left-8 right-8">
+                <p className="font-serif text-[2.35rem] italic leading-none text-white drop-shadow-[0_10px_24px_rgba(0,0,0,0.28)]">
+                  Denis Ivanoff
+                </p>
+                <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-white/62">
+                  Sushi Chef, Panda Sushi
+                </p>
+              </div>
             </div>
           </div>
         </div>
