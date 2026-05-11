@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { navigate } from '../lib/router';
+import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
+import heroSushiDarkCircle from '../assets/hero-sushi-dark-circle.png';
 
 const TICKER = ['SUSHI KETERING', 'PROSLAVE', 'SLAVE', 'KORPORATIVNI EVENTI', 'SUSHI CHEF', 'BEOGRAD · SRBIJA'];
 
@@ -84,8 +86,8 @@ export default function Home() {
                 <span>Sushi</span>
                 <span className="inline-flex w-[70px] h-[70px] lg:w-[88px] lg:h-[88px] rounded-full overflow-hidden border-[3px] border-white shadow-md shrink-0">
                   <img
-                    src="https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=200"
-                    alt="sushi"
+                    src={heroSushiDarkCircle}
+                    alt="Sushi details"
                     className="w-full h-full object-cover"
                   />
                 </span>
@@ -171,7 +173,7 @@ export default function Home() {
           {/* ── RIGHT: Sushi hero image ── */}
           <div className="w-full lg:w-[50%] flex items-center justify-center lg:justify-end relative mt-10 lg:mt-0">
             <img
-              src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              src={heroSushiNigiri}
               alt="Premium sushi"
               className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[90%] object-cover"
               style={{ borderRadius: '40% 50% 50% 40% / 40% 40% 50% 50%' }}
