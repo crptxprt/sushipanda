@@ -158,8 +158,8 @@ export default function Home() {
 
             {/* Tagline */}
             <p className="text-stone-500 font-light text-[16px] leading-[1.8] max-w-[470px] mb-8">
-              Elegantni sushi ketering za proslave, slave, korporativne i privatne događaje
-              uz live chef iskustvo i premium prezentaciju.
+              Premium sushi ketering i live chef iskustvo za proslave, slave
+              i korporativne događaje u Kragujevcu.
             </p>
 
             {/* CTA — pill button (matches reference) */}
