@@ -51,27 +51,27 @@ export default function Home() {
           HERO  —  inspired by Sushi Samurai reference
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-screen bg-[#f7f5f2] overflow-hidden flex flex-col">
-        <div className="soft-petal left-[44%] top-[14%] hidden h-48 w-24 rotate-[18deg] opacity-60 xl:block" />
-        <div className="soft-petal right-[12%] top-[20%] hidden h-36 w-20 rotate-[24deg] opacity-50 lg:block" />
-        <div className="rose-orb left-[44%] top-[58%] hidden h-44 w-44 opacity-45 xl:block" />
+        <div className="soft-petal left-[48%] top-[17%] hidden h-44 w-22 rotate-[16deg] opacity-45 xl:block" />
+        <div className="soft-petal right-[11%] top-[21%] hidden h-32 w-18 rotate-[22deg] opacity-35 lg:block" />
+        <div className="rose-orb left-[46%] top-[60%] hidden h-40 w-40 opacity-35 xl:block" />
 
         {/* Blob shape — left side */}
         <div
-          className="absolute top-[3%] left-[-160px] w-[700px] h-[850px] bg-sp-blob pointer-events-none select-none"
+          className="absolute top-[4%] left-[-210px] w-[720px] h-[860px] bg-sp-blob pointer-events-none select-none"
           style={{ borderRadius: '50%' }}
         />
 
         {/* Circle behind sushi image — right side */}
         <div
-          className="absolute right-[-80px] top-1/2 -translate-y-[45%] w-[560px] h-[560px] bg-sp-circle pointer-events-none select-none"
+          className="absolute right-[-90px] top-1/2 -translate-y-[45%] w-[580px] h-[580px] bg-sp-circle pointer-events-none select-none"
           style={{ borderRadius: '50%' }}
         />
 
         {/* Main flex content */}
-        <div className="relative z-10 flex flex-col lg:flex-row items-center w-full max-w-[1320px] mx-auto px-6 lg:px-10 pt-[90px] min-h-screen pb-10 gap-0">
+        <div className="relative z-10 grid w-full max-w-[1320px] mx-auto px-6 lg:px-10 pt-[90px] min-h-screen pb-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center gap-8 lg:gap-2">
 
           {/* ── LEFT: Headline + CTA ── */}
-          <div className="w-full lg:w-[50%] flex flex-col justify-center py-12 lg:py-0">
+          <div className="w-full flex flex-col justify-center py-12 lg:py-0 lg:pr-10">
 
             {/* Overline */}
             <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-8 font-light">
@@ -98,7 +98,7 @@ export default function Home() {
             </h1>
 
             {/* Tagline */}
-            <p className="text-stone-500 font-light text-[15px] leading-[1.8] max-w-[290px] mb-10">
+            <p className="text-stone-500 font-light text-[15px] leading-[1.8] max-w-[420px] mb-8">
               Premium sushi ketering za proslave, slave, korporativne
               i privatne događaje.
             </p>
@@ -117,6 +117,17 @@ export default function Home() {
               >
                 Pogledaj opcije
               </button>
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-14">
+              {['10–500+ gostiju', 'Live sushi chef', 'Postavka i dostava'].map((item) => (
+                <span
+                  key={item}
+                  className="inline-flex items-center rounded-full border border-[#eadbdc] bg-white/80 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-stone-500 shadow-[0_10px_28px_rgba(196,79,110,0.05)]"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
 
             {/* Avatars — "Meet our team" */}
@@ -143,41 +154,39 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ── CENTER: Kanji column ── */}
-          <div
-            className="hidden xl:flex flex-col items-center gap-5 px-8 py-16 shrink-0"
-            style={{ writingMode: 'vertical-rl' }}
-          >
-            {'寿司'.split('').map((ch, i) => (
-              <span
-                key={i}
-                className="font-serif text-[3.2rem] leading-none text-sp-kanji select-none"
-                style={{ writingMode: 'horizontal-tb' }}
-              >
-                {ch}
-              </span>
-            ))}
-            <span className="w-px h-12 bg-sp-kanji/30 my-2" />
-            {'武士'.split('').map((ch, i) => (
-              <span
-                key={i}
-                className="font-serif text-[3.2rem] leading-none text-sp-kanji/50 select-none"
-                style={{ writingMode: 'horizontal-tb' }}
-              >
-                {ch}
-              </span>
-            ))}
-          </div>
-
           {/* ── RIGHT: Sushi hero image ── */}
-          <div className="w-full lg:w-[50%] flex items-center justify-center lg:justify-end relative mt-10 lg:mt-0 lg:pr-4">
+          <div className="w-full flex items-center justify-center lg:justify-end relative mt-4 lg:mt-0 lg:-ml-12">
+            <div
+              className="absolute left-[8%] top-1/2 hidden -translate-y-1/2 xl:flex flex-col items-center gap-4 z-0"
+              style={{ writingMode: 'vertical-rl' }}
+            >
+              {'寿司'.split('').map((ch, i) => (
+                <span
+                  key={i}
+                  className="font-serif text-[3.6rem] leading-none text-sp-kanji/85 select-none"
+                  style={{ writingMode: 'horizontal-tb' }}
+                >
+                  {ch}
+                </span>
+              ))}
+              <span className="h-10 w-px bg-sp-kanji/25 my-1" />
+              {'武士'.split('').map((ch, i) => (
+                <span
+                  key={i}
+                  className="font-serif text-[3.6rem] leading-none text-sp-kanji/45 select-none"
+                  style={{ writingMode: 'horizontal-tb' }}
+                >
+                  {ch}
+                </span>
+              ))}
+            </div>
             <img
               src={heroSushiNigiri}
               alt="Premium sushi"
-              className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[102%] object-cover drop-shadow-[0_24px_48px_rgba(207,184,144,0.24)]"
+              className="relative z-10 w-full max-w-[540px] lg:max-w-none lg:w-[112%] object-cover drop-shadow-[0_30px_58px_rgba(207,184,144,0.28)]"
               style={{ borderRadius: '40% 50% 50% 40% / 40% 40% 50% 50%' }}
             />
-            <div className="absolute -left-6 top-[16%] hidden h-16 w-16 rounded-full border border-[#edd4da] bg-white/65 shadow-[0_10px_24px_rgba(196,79,110,0.08)] backdrop-blur-sm lg:block" />
+            <div className="absolute left-[6%] top-[14%] hidden h-14 w-14 rounded-full border border-[#edd4da] bg-white/55 shadow-[0_10px_24px_rgba(196,79,110,0.05)] backdrop-blur-sm lg:block" />
           </div>
         </div>
       </section>
