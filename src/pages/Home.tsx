@@ -65,7 +65,7 @@ export default function Home() {
 
         {/* Circle behind sushi image — right side */}
         <div
-          className="absolute right-[-100px] top-1/2 -translate-y-[45%] w-[540px] h-[540px] bg-sp-circle pointer-events-none select-none opacity-55"
+          className="absolute right-[-100px] top-1/2 -translate-y-[45%] w-[540px] h-[540px] bg-sp-circle pointer-events-none select-none opacity-45"
           style={{ borderRadius: '50%' }}
         />
 
@@ -89,9 +89,9 @@ export default function Home() {
             </h1>
 
             {/* Tagline */}
-            <p className="text-stone-500 font-light text-[16px] leading-[1.85] max-w-[520px] mb-8">
+            <p className="text-stone-500 font-light text-[16px] leading-[1.8] max-w-[470px] mb-8">
               Elegantni sushi ketering za proslave, slave, korporativne i privatne događaje
-              sa pažljivo osmišljenom postavkom, live chef iskustvom i premium prezentacijom.
+              uz live chef iskustvo i premium prezentaciju.
             </p>
 
             {/* CTA — pill button (matches reference) */}
@@ -121,12 +121,12 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="flex items-center gap-5 rounded-[22px] border border-[#eadfdb] bg-white/72 px-5 py-4 shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm w-fit">
+            <div className="flex items-center gap-4 rounded-[20px] border border-[#eadfdb] bg-white/72 px-4 py-3 shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm w-fit">
               <div className="flex -space-x-3">
                 {[chefHero1, chefHero2, chefHero3].map((src, i) => (
                   <div
                     key={i}
-                    className="h-12 w-12 rounded-full border-2 border-white overflow-hidden bg-[#f6f1eb]"
+                    className="h-10 w-10 rounded-full border-2 border-white overflow-hidden bg-[#f6f1eb]"
                     style={{ zIndex: 3 - i }}
                   >
                     <img src={src} alt="" className="w-full h-full object-cover" />
@@ -134,8 +134,8 @@ export default function Home() {
                 ))}
               </div>
               <div>
-                <p className="text-[13px] text-stone-700 font-light">Naš tim kuvara i sushi majstora</p>
-                <p className="text-[11px] text-stone-400 font-light tracking-wide">Iskusna ekipa za evente svih formata</p>
+                <p className="text-[12px] text-stone-700 font-light">Naš tim kuvara i sushi majstora</p>
+                <p className="text-[10px] text-stone-400 font-light tracking-wide">Iskusna ekipa za evente svih formata</p>
               </div>
             </div>
           </div>
