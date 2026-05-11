@@ -345,8 +345,8 @@ export default function Home() {
                 <span className="italic font-normal text-[#efd8dc]">na vašem eventu</span>
               </h2>
               <p className="max-w-[430px] text-[15px] font-light leading-[1.9] text-stone-300">
-                Denis Ivanoff dolazi na lokaciju, priprema sushi pred gostima i pretvara ketering u
-                iskustvo koje izgleda jednako premium koliko i ukusno.
+                Sushi chef dolazi na lokaciju, priprema sushi pred gostima i pretvara ketering u
+                doživljaj koji podiže atmosferu, ritam servisa i premium utisak celog eventa.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-[11px] uppercase tracking-[0.18em] text-white/72">
@@ -376,18 +376,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,8,8,0.08)_0%,rgba(10,8,8,0)_32%,rgba(10,8,8,0.54)_100%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,8,8,0)_0%,rgba(10,8,8,0.28)_100%)]" />
 
-              <div className="absolute left-8 top-8 rounded-full border border-white/18 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-white/78">
-                Denis Ivanoff
-              </div>
-
-              <div className="absolute bottom-10 left-8 right-8">
-                <p className="font-serif text-[2.35rem] italic leading-none text-white drop-shadow-[0_10px_24px_rgba(0,0,0,0.28)]">
-                  Denis Ivanoff
-                </p>
-                <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-white/62">
-                  Sushi Chef, Panda Sushi
-                </p>
-              </div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(196,79,110,0.12),rgba(10,8,8,0)_28%)]" />
             </div>
           </div>
         </div>
