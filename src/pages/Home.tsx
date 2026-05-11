@@ -313,11 +313,6 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
                 </div>
 
-                {/* Large number watermark */}
-                <div className="absolute left-5 top-5 font-serif text-[3.5rem] font-bold leading-none text-white/18 select-none">
-                  {cat.num}
-                </div>
-
                 {/* Bottom text */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-serif font-bold text-white text-[1.15rem] mb-1">{cat.title}</h3>
@@ -328,77 +323,6 @@ export default function Home() {
                 </div>
               </button>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── SUSHI CHEF — dark cinematic ─────────────────────────────── */}
-      <section className="relative flex min-h-[620px] items-center overflow-hidden bg-[#111111]">
-        <img
-          src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Sushi chef"
-          className="absolute inset-0 h-full w-full object-cover opacity-24"
-          style={{ objectPosition: 'center 25%' }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/72" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_50%,rgba(196,79,110,0.12),rgba(17,17,17,0)_28%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.18),rgba(17,17,17,0.28))]" />
-
-        {/* Kanji decoration */}
-        <span
-          aria-hidden="true"
-          className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[150px] leading-none text-sp-kanji/20 pointer-events-none select-none hidden xl:block"
-        >
-          司
-        </span>
-
-        <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 py-28 w-full">
-          <div className="grid items-end gap-14 lg:grid-cols-[0.62fr_0.38fr]">
-            <div className="max-w-xl">
-              <p className="mb-7 text-[11px] font-light uppercase tracking-widest text-sp-kanji">Ekskluzivna usluga</p>
-              <h2
-                className="mb-7 font-serif font-bold leading-[0.98] text-white"
-                style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}
-              >
-                Sushi chef na
-                <br />
-                <em className="not-italic italic">vašem eventu</em>
-              </h2>
-              <p className="mb-10 max-w-md text-[15px] font-light leading-[1.9] text-stone-200">
-                Naš chef dolazi sa kompletnom opremom i svežim sastojcima, priprema sushi uživo
-                pred gostima i pretvara ketering u performans koji podiže ceo događaj.
-              </p>
-              <div className="mb-12 flex flex-wrap gap-3">
-                {['Live priprema', 'Premium setup', 'Chef station on-site'].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/14 bg-white/8 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white/82 backdrop-blur-sm"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <button
-                onClick={() => go('/sushi-chef')}
-                className="group inline-flex items-center gap-4 rounded-full bg-white px-9 py-4 text-[11px] font-light uppercase tracking-widest text-[#111111] transition-all duration-300 hover:bg-[#C44F6E] hover:text-white"
-              >
-                Saznaj više
-                <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
-              </button>
-            </div>
-
-            <div className="grid gap-4 rounded-[28px] border border-white/14 bg-white/8 p-6 backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.22)]">
-              {[
-                ['Chef setup', 'Dolazak, postavka i koordinacija na lokaciji.'],
-                ['Servis uživo', 'Priprema pred gostima za premium wow efekat.'],
-                ['Tailored meni', 'Od signature rolnica do nigiri selekcije za vaš event.'],
-              ].map(([title, copy]) => (
-                <div key={title} className="border-b border-white/14 pb-4 last:border-b-0 last:pb-0">
-                  <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-sp-kanji/95">{title}</p>
-                  <p className="text-[14px] font-light leading-[1.8] text-white/82">{copy}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
