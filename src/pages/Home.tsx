@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -8,6 +8,7 @@ import chefHero1 from '../assets/chef-hero-1.jpg';
 import chefHero2 from '../assets/chef-hero-2.jpg';
 import chefHero3 from '../assets/chef-hero-3.jpg';
 import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
+import chefPavaRaskovic from '../assets/chef-pava-raskovic.png';
 
 const PROOF_STRIP = [
   'Premium sushi ketering',
@@ -74,9 +75,25 @@ const galleryShots = [
   },
 ];
 
+const chefSlides = [
+  {
+    src: chefDenisIvanoff,
+    name: 'Denis Ivanoff',
+    alt: 'Denis Ivanoff, Sushi Chef',
+    objectPosition: 'center top',
+  },
+  {
+    src: chefPavaRaskovic,
+    name: 'Pava Raskovic',
+    alt: 'Pava Raskovic, Sushi Chef',
+    objectPosition: 'center top',
+  },
+];
+
 export default function Home() {
   const whyRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
+  const [activeChefSlide, setActiveChefSlide] = useState(0);
   const whatsappLink =
     'https://wa.me/381600000000?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.';
   const phoneLink = 'tel:+381600000000';
@@ -85,6 +102,8 @@ export default function Home() {
     navigate(path);
     window.scrollTo({ top: 0 });
   };
+
+  const currentChefSlide = chefSlides[activeChefSlide];
 
   return (
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
@@ -368,19 +387,31 @@ export default function Home() {
 
             <div className="relative min-h-[560px] overflow-hidden bg-[#0f0c0b]">
               <img
-                src={chefDenisIvanoff}
-                alt="Denis Ivanoff, Sushi Chef"
-                className="absolute inset-0 h-full w-full object-cover"
-                style={{ objectPosition: 'center top' }}
+                src={currentChefSlide.src}
+                alt={currentChefSlide.alt}
+                className="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
+                style={{ objectPosition: currentChefSlide.objectPosition }}
               />
               <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(10,8,8,0.08)_0%,rgba(10,8,8,0)_32%,rgba(10,8,8,0.54)_100%)]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,8,8,0)_0%,rgba(10,8,8,0.28)_100%)]" />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(196,79,110,0.12),rgba(10,8,8,0)_28%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(196,79,110,0.12),rgba(10,8,8,0)_28%)]" />
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="font-serif text-[2.3rem] italic leading-none text-white drop-shadow-[0_10px_24px_rgba(0,0,0,0.34)]">
-                  Denis Ivanoff
+                  {currentChefSlide.name}
                 </p>
+              </div>
+              <div className="absolute bottom-8 right-8 flex items-center gap-2">
+                {chefSlides.map((slide, index) => (
+                  <button
+                    key={slide.name}
+                    type="button"
+                    aria-label={`Prikaži ${slide.name}`}
+                    onClick={() => setActiveChefSlide(index)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      activeChefSlide === index ? 'w-8 bg-white' : 'w-2.5 bg-white/40 hover:bg-white/70'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
