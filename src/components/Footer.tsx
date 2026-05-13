@@ -39,48 +39,48 @@ export default function Footer() {
             <button onClick={() => go('/')} className="mb-7 block focus:outline-none">
               <BrandMark variant="footer" />
             </button>
-            <p className="max-w-sm text-[14px] font-light leading-[1.85] text-stone-300">
+            <p className="max-w-sm text-[16px] font-light leading-[1.72] text-white/78">
               Savremen sushi catering za privatne proslave, slave i korporativne događaje u Kragujevcu.
             </p>
-            <button onClick={() => go('/kontakt')} className="mt-8 inline-block rounded-full border border-[#e2c1ca]/30 px-7 py-3 text-[11px] font-light uppercase tracking-[0.24em] text-white transition-all duration-300 hover:border-[#C44F6E] hover:bg-[#C44F6E] hover:text-white">
+            <button onClick={() => go('/kontakt')} className="mt-8 inline-block rounded-full border border-[#e2c1ca]/30 px-7 py-3 text-[12px] font-light uppercase tracking-[0.22em] text-white transition-all duration-300 hover:border-[#C44F6E] hover:bg-[#C44F6E] hover:text-white">
               Zatraži ponudu
             </button>
           </div>
 
           {/* Ketering */}
           <div>
-            <p className="mb-6 text-[11px] font-light uppercase tracking-[0.28em] text-stone-500">Ketering</p>
+            <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Ketering</p>
             <ul className="space-y-4">
               {keteringLinks.map((l) => (
-                <li key={l.path}><button onClick={() => go(l.path)} className="text-[15px] font-light tracking-[0.01em] text-stone-200 transition-colors hover:text-white">{l.label}</button></li>
+                <li key={l.path}><button onClick={() => go(l.path)} className="text-[16px] font-light leading-[1.65] tracking-[0.01em] text-white/82 transition-colors hover:text-white">{l.label}</button></li>
               ))}
             </ul>
           </div>
 
           {/* Links */}
           <div>
-            <p className="mb-6 text-[11px] font-light uppercase tracking-[0.28em] text-stone-500">Navigacija</p>
+            <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Navigacija</p>
             <ul className="space-y-4">
               {quickLinks.map((l) => (
-                <li key={l.path}><button onClick={() => go(l.path)} className="text-[15px] font-light tracking-[0.01em] text-stone-200 transition-colors hover:text-white">{l.label}</button></li>
+                <li key={l.path}><button onClick={() => go(l.path)} className="text-[16px] font-light leading-[1.65] tracking-[0.01em] text-white/82 transition-colors hover:text-white">{l.label}</button></li>
               ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <p className="mb-6 text-[11px] font-light uppercase tracking-[0.28em] text-stone-500">Kontakt</p>
+            <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Kontakt</p>
             <ul className="space-y-5">
-              <li><a href="tel:+38160000000" className="flex items-center gap-3 text-[15px] font-light leading-relaxed text-stone-200 transition-colors hover:text-white"><Phone size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />+381 60 000 0000</a></li>
-              <li><a href="mailto:info@sushipanda.rs" className="flex items-center gap-3 text-[15px] font-light leading-relaxed text-stone-200 transition-colors hover:text-white"><Mail size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />info@sushipanda.rs</a></li>
-              <li><a href="#" className="flex items-center gap-3 text-[15px] font-light leading-relaxed text-stone-200 transition-colors hover:text-white"><Instagram size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />@sushipanda.rs</a></li>
+              <li><a href="tel:+38160000000" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Phone size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />+381 60 000 0000</a></li>
+              <li><a href="mailto:info@sushipanda.rs" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Mail size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />info@sushipanda.rs</a></li>
+              <li><a href="#" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Instagram size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />@sushipanda.rs</a></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/8 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[11px] font-light uppercase tracking-[0.24em] text-stone-500">Sushi Panda &copy; {new Date().getFullYear()}</p>
-          <p className="text-[12px] font-light tracking-[0.08em] text-stone-500">Elegant sushi catering za događaje u Kragujevcu</p>
+          <p className="text-[12px] font-light uppercase tracking-[0.22em] text-stone-400">Sushi Panda &copy; {new Date().getFullYear()}</p>
+          <p className="text-[13px] font-light tracking-[0.06em] text-stone-400">Elegant sushi catering za događaje u Kragujevcu</p>
         </div>
       </div>
     </footer>

@@ -35,8 +35,8 @@ export default function Header({ transparent = false }: HeaderProps) {
     window.scrollTo({ top: 0 });
   };
 
-  const linkClass = `text-[11px] tracking-widest font-light uppercase transition-colors hover:text-[#C44F6E] cursor-pointer ${
-    opaque ? 'text-stone-600' : 'text-stone-500/95'
+  const linkClass = `text-[12px] tracking-[0.18em] font-light uppercase transition-colors hover:text-[#C44F6E] cursor-pointer ${
+    opaque ? 'text-stone-700' : 'text-stone-600/95'
   }`;
 
   return (
@@ -81,7 +81,7 @@ export default function Header({ transparent = false }: HeaderProps) {
                   <span
                     key={item.path}
                     onClick={() => go(item.path)}
-                    className="block px-6 py-3.5 text-[11px] tracking-widest uppercase text-stone-500 hover:text-[#C44F6E] hover:bg-[#fbf4f2] transition-colors font-light border-b border-black/4 last:border-0 cursor-pointer"
+                    className="block px-6 py-3.5 text-[12px] tracking-[0.18em] uppercase text-stone-600 hover:text-[#C44F6E] hover:bg-[#fbf4f2] transition-colors font-light border-b border-black/4 last:border-0 cursor-pointer"
                   >
                     {item.label}
                   </span>
@@ -112,7 +112,7 @@ export default function Header({ transparent = false }: HeaderProps) {
             <span onClick={() => go('/o-nama')} className={linkClass}>O nama</span>
             <span
               onClick={() => go('/kontakt')}
-              className={`text-[11px] tracking-widest uppercase font-light px-6 py-2.5 border transition-all duration-300 cursor-pointer ${
+              className={`text-[12px] tracking-[0.18em] uppercase font-light px-6 py-2.5 border transition-all duration-300 cursor-pointer ${
                 opaque
                   ? 'border-[#d9c6ca] text-[#111111] hover:bg-[#1b1416] hover:text-white hover:border-[#1b1416]'
                   : 'border-[#d9c6ca] text-[#1b1416] hover:bg-[#1b1416] hover:text-white hover:border-[#1b1416]'
@@ -157,18 +157,18 @@ export default function Header({ transparent = false }: HeaderProps) {
             <span
               key={l.path}
               onClick={() => go(l.path)}
-              className="block py-4 text-[11px] tracking-widest uppercase text-stone-500 border-b border-stone-100 cursor-pointer hover:text-[#C44F6E] transition-colors"
+              className="block py-4 text-[12px] tracking-[0.18em] uppercase text-stone-600 border-b border-stone-100 cursor-pointer hover:text-[#C44F6E] transition-colors"
             >
               {l.label}
             </span>
           ))}
           <div className="py-3">
-            <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-3">Ketering</p>
+            <p className="text-[12px] tracking-[0.18em] uppercase text-stone-500 mb-3">Ketering</p>
             {keteringItems.map((item) => (
               <span
                 key={item.path}
                 onClick={() => go(item.path)}
-                className="block py-3 pl-3 text-[11px] tracking-widest uppercase text-stone-500 border-b border-stone-50 cursor-pointer hover:text-[#C44F6E] transition-colors"
+                className="block py-3 pl-3 text-[12px] tracking-[0.18em] uppercase text-stone-600 border-b border-stone-50 cursor-pointer hover:text-[#C44F6E] transition-colors"
               >
                 {item.label}
               </span>
@@ -177,7 +177,7 @@ export default function Header({ transparent = false }: HeaderProps) {
           <div className="pt-6">
             <span
               onClick={() => go('/kontakt')}
-              className="block w-full text-center bg-[#1b1416] text-white text-[10px] tracking-widest uppercase py-4 cursor-pointer hover:bg-[#C44F6E] transition-colors"
+              className="block w-full text-center bg-[#1b1416] text-white text-[12px] tracking-[0.18em] uppercase py-4 cursor-pointer hover:bg-[#C44F6E] transition-colors"
             >
               Zatraži ponudu
             </span>

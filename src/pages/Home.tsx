@@ -151,7 +151,7 @@ export default function Home() {
           <div className="w-full flex flex-col justify-center py-12 lg:py-0 lg:pr-10">
 
             {/* Overline */}
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-8 font-light">
+            <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">
               — Premium Sushi Catering, Kragujevac
             </p>
 
@@ -164,7 +164,7 @@ export default function Home() {
             </h1>
 
             {/* Tagline */}
-            <p className="text-stone-500 font-light text-[16px] leading-[1.8] max-w-[470px] mb-8">
+            <p className="mb-8 max-w-[470px] text-[16px] font-light leading-[1.72] text-black/78 sm:text-[17px]">
               Premium sushi ketering i live chef iskustvo za proslave, slave
               i korporativne događaje u Kragujevcu.
             </p>
@@ -173,13 +173,13 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-4 mb-14">
               <button
                 onClick={() => go('/kontakt')}
-                className="bg-[#181214] text-white text-[12px] tracking-widest uppercase px-9 py-4 rounded-full hover:bg-[#C44F6E] transition-colors duration-300 font-light shadow-[0_16px_36px_rgba(24,18,20,0.15)]"
+                className="bg-[#181214] text-white text-[12px] uppercase tracking-[0.18em] px-9 py-4 rounded-full hover:bg-[#C44F6E] transition-colors duration-300 font-light shadow-[0_16px_36px_rgba(24,18,20,0.15)]"
               >
                 Zatraži ponudu
               </button>
               <button
                 onClick={() => whyRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-[12px] tracking-widest uppercase text-stone-400 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
+                className="text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
               >
                 Pogledaj opcije
               </button>
@@ -189,7 +189,7 @@ export default function Home() {
               {['10–50+ gostiju', 'Live sushi chef', 'Postavka i dostava'].map((item) => (
                 <span
                   key={item}
-                  className="inline-flex items-center rounded-full border border-[#eadbdc] bg-white/80 px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-stone-500 shadow-[0_10px_28px_rgba(196,79,110,0.05)]"
+                  className="inline-flex items-center rounded-full border border-[#eadbdc] bg-white/80 px-4 py-2 text-[12px] uppercase tracking-[0.16em] text-stone-600 shadow-[0_10px_28px_rgba(196,79,110,0.05)]"
                 >
                   {item}
                 </span>
@@ -209,8 +209,8 @@ export default function Home() {
                 ))}
               </div>
               <div>
-                <p className="text-[12px] text-stone-700 font-light">Naš tim kuvara i sushi majstora</p>
-                <p className="text-[10px] text-stone-400 font-light tracking-wide">Iskusna ekipa za evente svih formata</p>
+                <p className="text-[13px] text-stone-800 font-light">Naš tim kuvara i sushi majstora</p>
+                <p className="text-[12px] text-stone-500 font-light tracking-[0.04em]">Iskusna ekipa za evente svih formata</p>
               </div>
             </div>
           </div>
@@ -255,7 +255,7 @@ export default function Home() {
       <div className="border-y border-[#efe6e1] bg-[linear-gradient(180deg,#fffdfb_0%,#faf5f2_100%)] py-4">
         <div className="mx-auto flex max-w-[1320px] flex-wrap items-center justify-center gap-x-8 gap-y-3 px-6 lg:px-10">
           {PROOF_STRIP.map((item, i) => (
-            <span key={item} className="inline-flex items-center gap-4 text-[11px] font-light uppercase tracking-[0.24em] text-stone-500">
+            <span key={item} className="inline-flex items-center gap-4 text-[12px] font-light uppercase tracking-[0.22em] text-stone-600">
               {i > 0 && <span className="hidden h-px w-8 bg-[#e8dad8] md:inline-block" />}
               {item}
             </span>
@@ -268,7 +268,7 @@ export default function Home() {
         <div className="soft-petal right-[7%] top-[12%] hidden h-40 w-20 rotate-[24deg] opacity-25 lg:block" />
         <div className="mx-auto grid max-w-[1320px] gap-14 px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-10">
           <div className="lg:pr-8">
-            <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Zašto Sushi Panda</p>
+            <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Zašto Sushi Panda</p>
             <h2
               className="mb-6 font-serif font-bold text-[#111111]"
               style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', letterSpacing: '-0.02em', lineHeight: 0.96 }}
@@ -277,7 +277,7 @@ export default function Home() {
               <br />
               <span className="italic font-normal text-stone-700">bez kompromisa</span>
             </h2>
-            <p className="max-w-[470px] text-[15px] font-light leading-[1.9] text-stone-500">
+            <p className="max-w-[470px] text-[16px] font-light leading-[1.72] text-black/76 sm:text-[17px]">
               Od pažljivo odabranih sastojaka do elegantne postavke na lokaciji, svaki detalj je
               osmišljen da događaj izgleda profinjeno i da gostima ostane u pamćenju.
             </p>
@@ -289,7 +289,7 @@ export default function Home() {
               ].map(([value, label]) => (
                 <div key={value} className="rounded-[18px] border border-[#f1e7e2] bg-[#fcfaf8] px-5 py-5">
                   <p className="font-serif text-[1.6rem] font-bold text-[#111111]">{value}</p>
-                  <p className="mt-2 text-[11px] uppercase tracking-[0.18em] text-stone-400">{label}</p>
+                  <p className="mt-2 text-[12px] uppercase tracking-[0.16em] text-stone-500">{label}</p>
                 </div>
               ))}
             </div>
@@ -312,7 +312,7 @@ export default function Home() {
                 <h3 className="mb-3 min-h-[5.2rem] font-serif text-[1.28rem] font-bold leading-[1.18] text-[#111111]">
                   {item.title}
                 </h3>
-                <p className="text-[13px] font-light leading-[1.8] text-stone-500">{item.desc}</p>
+                <p className="text-[15px] font-light leading-[1.68] text-black/74">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -324,12 +324,12 @@ export default function Home() {
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
           <div className="mb-16 grid gap-10 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Usluge</p>
+              <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Usluge</p>
               <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.01em' }}>
                 Vrste ketering evenata
               </h2>
             </div>
-            <p className="max-w-sm text-[14px] font-light leading-[1.85] text-stone-500 lg:ml-auto">
+            <p className="max-w-sm text-[16px] font-light leading-[1.7] text-black/74 lg:ml-auto">
               Različiti formati događaja traže različitu atmosferu, ritam i prezentaciju. Zato svaku
               uslugu prilagođavamo gostima, lokaciji i karakteru eventa.
             </p>
@@ -355,8 +355,8 @@ export default function Home() {
                 {/* Bottom text */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-serif font-bold text-white text-[1.15rem] mb-1">{cat.title}</h3>
-                  <p className="text-[10px] font-light uppercase tracking-widest text-white/60">{cat.sub}</p>
-                  <div className="mt-4 flex translate-y-2 items-center gap-2 text-[10px] uppercase tracking-widest text-sp-kanji opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <p className="text-[12px] font-light uppercase tracking-[0.16em] text-white/72">{cat.sub}</p>
+                  <div className="mt-4 flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-[0.16em] text-sp-kanji opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     Saznaj više <ArrowRight size={11} />
                   </div>
                 </div>
@@ -371,7 +371,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] overflow-hidden rounded-[40px] border border-[#241b1a] bg-[radial-gradient(circle_at_top_right,rgba(196,79,110,0.14),rgba(18,15,14,0)_28%),linear-gradient(135deg,#171211_0%,#0e0b0a_100%)] shadow-[0_36px_80px_rgba(12,9,8,0.22)]">
           <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
             <div className="flex flex-col justify-center p-8 lg:p-14">
-              <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-white/42">Ekskluzivna usluga</p>
+              <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-white/56">Ekskluzivna usluga</p>
               <h2
                 className="mb-5 font-serif font-bold text-white"
                 style={{ fontSize: 'clamp(2.2rem, 4.8vw, 4.2rem)', letterSpacing: '-0.025em', lineHeight: 0.96 }}
@@ -380,12 +380,12 @@ export default function Home() {
                 <br />
                 <span className="italic font-normal text-[#efd8dc]">na vašem eventu</span>
               </h2>
-              <p className="max-w-[430px] text-[15px] font-light leading-[1.9] text-stone-300">
+              <p className="max-w-[430px] text-[16px] font-light leading-[1.72] text-white/76 sm:text-[17px]">
                 Sushi chef dolazi na lokaciju, priprema sushi pred gostima i pretvara ketering u
                 doživljaj koji podiže atmosferu, ritam servisa i premium utisak celog eventa.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-[11px] uppercase tracking-[0.18em] text-white/72">
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-[12px] uppercase tracking-[0.16em] text-white/78">
                 <span>Live priprema</span>
                 <span className="text-[#c98b99]">•</span>
                 <span>Premium postavka</span>
@@ -395,7 +395,7 @@ export default function Home() {
 
               <button
                 onClick={() => go('/sushi-chef')}
-                className="group mt-10 inline-flex w-fit items-center gap-3 rounded-full border border-white/12 bg-white px-8 py-4 text-[11px] font-light uppercase tracking-widest text-[#111111] transition-colors duration-300 hover:bg-[#C44F6E] hover:text-white"
+                className="group mt-10 inline-flex w-fit items-center gap-3 rounded-full border border-white/12 bg-white px-8 py-4 text-[12px] font-light uppercase tracking-[0.18em] text-[#111111] transition-colors duration-300 hover:bg-[#C44F6E] hover:text-white"
               >
                 Zatraži sushi chefa
                 <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
@@ -440,18 +440,18 @@ export default function Home() {
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
           <div className="mb-14 flex items-end justify-between">
             <div>
-              <p className="mb-3 text-[11px] font-light uppercase tracking-widest text-stone-400">Naš rad</p>
+              <p className="mb-3 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Naš rad</p>
               <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>
                 Galerija
               </h2>
-              <p className="mt-4 max-w-md text-[14px] font-light leading-[1.85] text-stone-500">
+              <p className="mt-4 max-w-md text-[16px] font-light leading-[1.7] text-black/74">
                 Od detalja na stolu do kompletnih event postavki, biramo kadar koji prenosi atmosferu
                 i kvalitet usluge, a ne samo još jednu stock galeriju.
               </p>
             </div>
             <button
               onClick={() => go('/galerija')}
-              className="group hidden items-center gap-2 text-[11px] font-light uppercase tracking-widest text-stone-400 transition-colors hover:text-[#C44F6E] sm:flex"
+              className="group hidden items-center gap-2 text-[12px] font-light uppercase tracking-[0.18em] text-stone-600 transition-colors hover:text-[#C44F6E] sm:flex"
             >
               Sve slike <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
             </button>
@@ -467,7 +467,7 @@ export default function Home() {
                 <img src={shot.src} alt={shot.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-85" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
-                  <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/65">Sushi Panda</p>
+                  <p className="mb-2 text-[12px] uppercase tracking-[0.16em] text-white/74">Sushi Panda</p>
                   <h3 className="font-serif text-[1.15rem] font-bold text-white">{shot.title}</h3>
                 </div>
               </div>
@@ -480,7 +480,7 @@ export default function Home() {
       <div className="py-12 bg-[#f7f5f2] text-center">
         <div className="flex items-center justify-center gap-6 max-w-md mx-auto px-6">
           <div className="flex-1 h-px bg-stone-200" />
-          <p className="text-[11px] tracking-widest uppercase text-stone-400 font-light whitespace-nowrap">
+          <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light whitespace-nowrap">
             Za privatne i poslovne događaje · Kragujevac
           </p>
           <div className="flex-1 h-px bg-stone-200" />
@@ -495,7 +495,7 @@ export default function Home() {
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
-            <p className="mb-7 text-[11px] font-light uppercase tracking-widest text-stone-400">Kontakt</p>
+            <p className="mb-7 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Kontakt</p>
             <h2
               className="mb-5 font-serif font-bold leading-[1] text-[#111111]"
               style={{ fontSize: 'clamp(2.4rem, 4.8vw, 4.2rem)', letterSpacing: '-0.02em' }}
@@ -504,7 +504,7 @@ export default function Home() {
               <span className="italic font-normal">događaj?</span>
             </h2>
             <div className="mb-7 h-px w-10 bg-[#C44F6E]" />
-            <p className="max-w-sm text-[14px] font-light leading-[1.9] text-stone-500">
+            <p className="max-w-sm text-[16px] font-light leading-[1.72] text-black/76 sm:text-[17px]">
               Javite nam se odmah i dobićete brz odgovor, okvirnu cenu i smernice za vaš događaj.
             </p>
           </div>
@@ -523,9 +523,9 @@ export default function Home() {
                     <MessageCircle size={18} strokeWidth={1.6} />
                   </div>
                 </div>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-white/65">WhatsApp</p>
+                <p className="text-[12px] uppercase tracking-[0.16em] text-white/76">WhatsApp</p>
                 <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pišite na WhatsApp</p>
-                <p className="mt-4 max-w-[18rem] text-[14px] font-light leading-[1.7] text-white/72">
+                <p className="mt-4 max-w-[18rem] text-[15px] font-light leading-[1.65] text-white/78 sm:text-[16px]">
                   Za brzu poruku, ponudu i dogovor termina.
                 </p>
               </a>
@@ -539,10 +539,10 @@ export default function Home() {
                     <Phone size={18} strokeWidth={1.7} />
                   </div>
                 </div>
-                <p className="text-[11px] uppercase tracking-[0.18em] text-stone-400">Telefon</p>
+                <p className="text-[12px] uppercase tracking-[0.16em] text-stone-500">Telefon</p>
                 <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pozovite nas</p>
                 <p className="mt-5 text-[1.35rem] font-medium tracking-[-0.02em] text-[#111111]">+381 60 000 0000</p>
-                <p className="mt-3 max-w-[18rem] text-[14px] font-light leading-[1.7] text-stone-500">
+                <p className="mt-3 max-w-[18rem] text-[15px] font-light leading-[1.65] text-black/72 sm:text-[16px]">
                   Za direktan razgovor i brzu potvrdu detalja.
                 </p>
               </a>

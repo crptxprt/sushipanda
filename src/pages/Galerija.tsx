@@ -24,12 +24,12 @@ export default function Galerija() {
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 relative z-10">
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-4 font-light">Vizual</p>
+              <p className="mb-4 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Vizual</p>
               <h1 className="font-serif font-bold leading-[0.88]" style={{ fontSize: 'clamp(3.5rem, 10vw, 8rem)', letterSpacing: '-0.03em' }}>
                 Galerija
               </h1>
             </div>
-            <p className="hidden sm:block text-stone-400 text-[13px] font-light max-w-xs text-right">
+            <p className="hidden max-w-xs text-right text-[15px] font-light leading-[1.65] text-stone-600 sm:block">
               Sushi ketering prezentacije i<br />premium vizuali iz naše prakse.
             </p>
           </div>
@@ -51,11 +51,11 @@ export default function Galerija() {
       <section className="py-24 px-6 bg-[#111111] text-center relative overflow-hidden">
         <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-serif text-[200px] leading-none text-sp-kanji/6 pointer-events-none select-none">寿</span>
         <div className="relative z-10">
-          <p className="text-[11px] tracking-widest uppercase text-stone-500 mb-8 font-light">Impresioniran?</p>
+          <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-400 font-light">Impresioniran?</p>
           <h2 className="font-serif font-bold text-white mb-10 leading-[1]" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' }}>
             Organizujmo tvoj<br /><span className="italic font-normal">sushi event</span>
           </h2>
-          <button onClick={() => navigate('/kontakt')} className="bg-[#C44F6E] text-white text-[11px] tracking-widest uppercase px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">
+          <button onClick={() => navigate('/kontakt')} className="bg-[#C44F6E] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">
             Zatraži ponudu
           </button>
         </div>

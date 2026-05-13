@@ -17,9 +17,9 @@ const initialState = {
 };
 
 const inputClass =
-  'w-full border-b border-stone-200 bg-transparent px-0 py-3 text-[14px] text-[#111111] placeholder-stone-300 focus:outline-none focus:border-[#181214] transition-colors font-light';
+  'w-full border-b border-stone-200 bg-transparent px-0 py-3 text-[16px] leading-[1.6] text-[#111111] placeholder-stone-400 focus:outline-none focus:border-[#181214] transition-colors font-light';
 
-const labelClass = 'block text-[10px] tracking-widest2 uppercase text-stone-400 mb-1';
+const labelClass = 'block text-[12px] tracking-[0.18em] uppercase text-stone-500 mb-1.5';
 
 export default function ContactForm({ source = 'home', className = '' }: ContactFormProps) {
   const [form, setForm] = useState(initialState);
@@ -59,12 +59,12 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
       <div className={`flex flex-col items-center justify-center py-20 text-center ${className}`}>
         <CheckCircle className="text-[#C44F6E] mb-6" size={40} strokeWidth={1} />
         <h3 className="font-serif text-2xl font-light mb-3">Hvala na upitu!</h3>
-        <p className="text-stone-400 text-[13px] font-light leading-relaxed max-w-[260px]">
+        <p className="max-w-[260px] text-[15px] font-light leading-[1.65] text-stone-600">
           Kontaktiraćemo vas u roku od 2 sata.
         </p>
         <button
           onClick={() => setSuccess(false)}
-          className="mt-8 text-[10px] tracking-widest2 uppercase text-stone-400 hover:text-[#C44F6E] transition-colors"
+          className="mt-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 transition-colors hover:text-[#C44F6E]"
         >
           Pošalji novi upit →
         </button>
@@ -75,8 +75,8 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
   return (
     <form onSubmit={handleSubmit} className={`space-y-7 ${className}`}>
       <div className="rounded-[18px] border border-[#f2e7e3] bg-[#fcfaf8] px-4 py-4">
-        <p className="text-[10px] tracking-[0.2em] uppercase text-stone-400">Sushi Panda inquiry</p>
-        <p className="mt-2 text-[13px] font-light leading-[1.75] text-stone-500">
+        <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500">Sushi Panda inquiry</p>
+        <p className="mt-2 text-[15px] font-light leading-[1.68] text-black/74">
           Pošaljite osnovne informacije o događaju, a mi ćemo pripremiti predlog menija i okvirnu ponudu.
         </p>
       </div>
@@ -113,12 +113,12 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
         <textarea name="message" rows={3} value={form.message} onChange={handleChange} placeholder="Opišite vaš događaj..." className={`${inputClass} resize-none`} />
       </div>
 
-      {error && <p className="text-[#C44F6E] text-[13px]">{error}</p>}
+      {error && <p className="text-[14px] text-[#C44F6E]">{error}</p>}
 
       <button
         type="submit"
         disabled={loading}
-        className="mt-4 w-full rounded-full bg-[#111111] py-4 text-[10px] uppercase tracking-widest2 text-white transition-colors duration-300 hover:bg-[#C44F6E] disabled:opacity-50"
+        className="mt-4 w-full rounded-full bg-[#111111] py-4 text-[12px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#C44F6E] disabled:opacity-50"
       >
         {loading ? 'Slanje...' : 'Pošalji upit'}
       </button>

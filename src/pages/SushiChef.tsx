@@ -32,7 +32,7 @@ export default function SushiChef() {
         <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[160px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden xl:block">司</span>
 
         <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-20 w-full">
-          <p className="text-[11px] tracking-widest uppercase text-sp-kanji mb-5 font-light">Ekskluzivna usluga</p>
+          <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Ekskluzivna usluga</p>
           <h1 className="font-serif font-bold text-white leading-[0.92]" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', letterSpacing: '-0.02em' }}>
             Sushi chef<br /><span className="italic font-normal">na vašem eventi</span>
           </h1>
@@ -43,19 +43,19 @@ export default function SushiChef() {
       <section className="py-28 px-6 bg-white">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div>
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-8 font-light">Šta dobijate</p>
+            <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Šta dobijate</p>
             <h2 className="font-serif font-bold mb-8 leading-[1]" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.02em' }}>
               Iskustvo koje<br /><span className="italic font-normal">se pamti</span>
             </h2>
             <div className="w-10 h-px bg-[#C44F6E] mb-8" />
-            <p className="text-stone-500 font-light text-[14px] leading-[1.9] mb-10">
+            <p className="mb-10 text-[16px] font-light leading-[1.72] text-black/76">
               Naš sushi chef dolazi sa kompletnom opremom i svežim sastojcima — priprema autentični japanski sushi koji postaje centralni deo večeri.
             </p>
             <ul className="space-y-5">
               {highlights.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <ArrowRight size={13} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
-                  <span className="text-stone-500 text-[14px] font-light">{item}</span>
+                  <span className="text-[16px] font-light leading-[1.65] text-black/76">{item}</span>
                 </li>
               ))}
             </ul>
@@ -70,7 +70,7 @@ export default function SushiChef() {
       <section className="py-28 px-6 bg-[#f7f5f2]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
           <div className="mb-16">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-3 font-light">Kako funkcioniše</p>
+            <p className="mb-3 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako funkcioniše</p>
             <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>Proces u 3 koraka</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -78,7 +78,7 @@ export default function SushiChef() {
               <div key={s.num} className="bg-white p-10 lg:p-12" style={{ borderRadius: '20px' }}>
                 <p className="font-serif font-bold text-[5rem] leading-none mb-6 select-none text-black/6">{s.num}</p>
                 <h3 className="font-serif font-bold text-[1.3rem] text-[#111111] mb-4">{s.title}</h3>
-                <p className="text-stone-500 text-[13px] font-light leading-[1.8]">{s.desc}</p>
+                <p className="text-[15px] font-light leading-[1.68] text-black/74">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -89,15 +89,15 @@ export default function SushiChef() {
       <section className="py-28 px-6 bg-[#F0EDE7]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-7 font-light">Rezervacija</p>
+            <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Rezervacija</p>
             <h2 className="font-serif font-bold text-[#111111] mb-5 leading-[1]" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' }}>
               Zatraži<br /><span className="italic font-normal">chefa</span>
             </h2>
             <div className="w-10 h-px bg-[#C44F6E] mb-8" />
-            <p className="text-stone-500 font-light text-[14px] leading-[1.9] max-w-xs mb-8">
+            <p className="mb-8 max-w-sm text-[16px] font-light leading-[1.72] text-black/76">
               Pošalji nam upit i dogovorićemo sve detalje za sushi chefa na tvom eventi.
             </p>
-            <button onClick={() => navigate('/kontakt')} className="group inline-flex items-center gap-3 text-[11px] tracking-widest uppercase text-stone-400 hover:text-[#C44F6E] transition-colors font-light">
+            <button onClick={() => navigate('/kontakt')} className="group inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#C44F6E] transition-colors font-light">
               Ili poseti kontakt stranicu
               <ArrowRight size={12} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
             </button>

@@ -40,7 +40,7 @@ export default function CateringPageLayout({
         </span>
 
         <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-16 w-full">
-          <p className="text-[11px] tracking-widest uppercase text-sp-kanji mb-4 font-light">Sushi Panda Ketering</p>
+          <p className="text-[12px] tracking-[0.18em] uppercase text-sp-kanji mb-4 font-light">Sushi Panda Ketering</p>
           <h1
             className="font-serif font-bold text-white leading-[0.92]"
             style={{ fontSize: 'clamp(2.8rem, 7vw, 6.5rem)', letterSpacing: '-0.02em' }}
@@ -48,7 +48,7 @@ export default function CateringPageLayout({
             {title}
             {titleItalic && <><br /><span className="italic font-normal">{titleItalic}</span></>}
           </h1>
-          <p className="text-white/45 font-light text-[11px] tracking-widest uppercase mt-4">{subtitle}</p>
+          <p className="mt-4 text-[12px] font-light uppercase tracking-[0.18em] text-white/62">{subtitle}</p>
         </div>
       </section>
 
@@ -57,7 +57,7 @@ export default function CateringPageLayout({
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <div className="w-10 h-px bg-[#C44F6E] mb-8" />
-            <p className="text-stone-500 font-light text-[14px] leading-[1.9]">{intro}</p>
+            <p className="text-[16px] font-light leading-[1.72] text-black/78">{intro}</p>
           </div>
           <div className="flex items-center">
             <p className="font-serif italic text-stone-300 leading-snug" style={{ fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)' }}>
@@ -71,7 +71,7 @@ export default function CateringPageLayout({
       <section className="pb-28 px-6 bg-[#f7f5f2]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
           <div className="mb-14">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-3 font-light">Paketi</p>
+            <p className="text-[12px] tracking-[0.18em] uppercase text-stone-500 mb-3 font-light">Paketi</p>
             <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>
               Odaberi paket
             </h2>
@@ -85,7 +85,7 @@ export default function CateringPageLayout({
                 style={{ borderRadius: '20px' }}
               >
                 {i === 1 && (
-                  <div className="absolute top-0 left-10 -translate-y-1/2 bg-[#C44F6E] text-white text-[9px] tracking-widest2 uppercase px-4 py-1.5 rounded-full">
+                  <div className="absolute top-0 left-10 -translate-y-1/2 rounded-full bg-[#C44F6E] px-4 py-1.5 text-[11px] uppercase tracking-[0.18em] text-white">
                     Najpopularniji
                   </div>
                 )}
@@ -96,7 +96,7 @@ export default function CateringPageLayout({
                 <h3 className={`font-serif font-bold text-[1.5rem] mb-1 ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
                   {pkg.name}
                 </h3>
-                <p className={`text-[11px] tracking-widest uppercase mb-9 font-light ${i === 1 ? 'text-white/40' : 'text-stone-400'}`}>
+                <p className={`mb-9 text-[12px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/60' : 'text-stone-500'}`}>
                   {pkg.guests}
                 </p>
 
@@ -106,7 +106,7 @@ export default function CateringPageLayout({
                   {pkg.items.map((item, j) => (
                     <li key={j} className="flex items-start gap-4">
                       <ArrowRight size={12} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
-                      <span className={`text-[13px] font-light leading-[1.7] ${i === 1 ? 'text-stone-300' : 'text-stone-500'}`}>
+                      <span className={`text-[15px] font-light leading-[1.68] ${i === 1 ? 'text-white/78' : 'text-black/76'}`}>
                         {item}
                       </span>
                     </li>
@@ -115,7 +115,7 @@ export default function CateringPageLayout({
 
                 <button
                   onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`w-full py-4 text-[11px] tracking-widest uppercase rounded-full transition-all duration-300 font-light ${
+                  className={`w-full rounded-full py-4 text-[12px] uppercase tracking-[0.18em] transition-all duration-300 font-light ${
                     i === 1
                       ? 'bg-[#C44F6E] text-white hover:bg-[#D8748D]'
                       : 'border border-sp-dark text-[#111111] hover:bg-[#111111] hover:text-white'
@@ -133,7 +133,7 @@ export default function CateringPageLayout({
       <section id="contact-form" className="py-28 px-6 bg-[#111111]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="text-[11px] tracking-widest uppercase text-sp-kanji mb-7 font-light">Kontakt</p>
+            <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Kontakt</p>
             <h2
               className="font-serif font-bold text-white mb-6 leading-[1]"
               style={{ fontSize: 'clamp(2.5rem, 5.5vw, 5rem)', letterSpacing: '-0.02em' }}
@@ -142,7 +142,7 @@ export default function CateringPageLayout({
               <span className="italic font-normal">ponudu</span>
             </h2>
             <div className="w-10 h-px bg-white/20 mb-8" />
-            <p className="text-stone-500 font-light text-[14px] leading-[1.9] max-w-xs">
+            <p className="max-w-xs text-[16px] font-light leading-[1.72] text-white/76">
               Pošalji nam upit i pripremićemo personalizovanu ponudu za tvoj događaj.
             </p>
           </div>

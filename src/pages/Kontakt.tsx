@@ -12,7 +12,7 @@ export default function Kontakt() {
       <section className="relative py-36 px-6 bg-[#111111] overflow-hidden">
         <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[180px] leading-none text-sp-kanji/8 pointer-events-none select-none hidden xl:block">寿司</span>
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
-          <p className="text-[11px] tracking-widest uppercase text-sp-kanji mb-6 font-light">Javite nam se</p>
+          <p className="mb-6 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Javite nam se</p>
           <h1 className="font-serif font-bold text-white leading-[0.92]" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', letterSpacing: '-0.02em' }}>
             Kontakt &<br /><span className="italic font-normal">ponuda</span>
           </h1>
@@ -25,7 +25,7 @@ export default function Kontakt() {
 
           {/* Info */}
           <div className="lg:col-span-4 lg:sticky lg:top-24 self-start">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-10 font-light">Informacije</p>
+            <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
             <div className="space-y-8 mb-12">
               {[
                 { href: 'tel:+38160000000', Icon: Phone, label: 'Telefon', val: '+381 60 000 0000' },
@@ -37,8 +37,8 @@ export default function Kontakt() {
                     <Icon size={13} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-1 font-light">{label}</p>
-                    <p className="text-[14px] text-[#111111] font-light">{val}</p>
+                    <p className="mb-1.5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">{label}</p>
+                    <p className="text-[16px] font-light leading-[1.6] text-[#111111]">{val}</p>
                   </div>
                 </a>
               ))}
@@ -47,8 +47,8 @@ export default function Kontakt() {
                   <MapPin size={13} className="text-stone-400" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-1 font-light">Lokacija</p>
-                  <p className="text-[14px] text-[#111111] font-light">Beograd, Srbija</p>
+                  <p className="mb-1.5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Lokacija</p>
+                  <p className="text-[16px] font-light leading-[1.6] text-[#111111]">Beograd, Srbija</p>
                 </div>
               </div>
             </div>
@@ -56,9 +56,9 @@ export default function Kontakt() {
             <div className="border-t border-stone-100 pt-8">
               <div className="flex items-center gap-3 mb-3">
                 <span className="w-2 h-2 rounded-full bg-green-400" />
-                <p className="text-[11px] tracking-widest uppercase text-stone-400 font-light">Dostupni smo</p>
+                <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Dostupni smo</p>
               </div>
-              <p className="text-stone-500 text-[13px] font-light leading-[1.8]">
+              <p className="text-[15px] font-light leading-[1.68] text-black/74">
                 Odgovaramo u roku od 2 sata.<br />Radimo svakog dana, 08–22h.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function Kontakt() {
 
           {/* Form */}
           <div className="lg:col-span-7">
-            <p className="text-[11px] tracking-widest uppercase text-stone-400 mb-10 font-light">Upit</p>
+            <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Upit</p>
             <ContactForm source="kontakt" />
           </div>
         </div>
