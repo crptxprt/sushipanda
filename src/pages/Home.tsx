@@ -13,6 +13,9 @@ import galleryChefAction from '../assets/gallery-chef-action.jpeg';
 import galleryLiveEvent from '../assets/gallery-live-event.jpg';
 import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
 import galleryAtmosphereStyling from '../assets/gallery-atmosphere-styling.png';
+import whyFreshSushi from '../assets/why-fresh-sushi.png';
+import whyProTeam from '../assets/why-pro-team.png';
+import whyFlexPackages from '../assets/why-flex-packages.png';
 
 const PROOF_STRIP = [
   'Premium sushi ketering',
@@ -30,17 +33,17 @@ const categories = [
 
 const whyItems = [
   {
-    img: 'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=300',
+    img: whyFreshSushi,
     title: 'Svež sushi',
     desc: 'Pripremamo isključivo sa svežim, pažljivo odabranim sastojcima za svaki event.',
   },
   {
-    img: 'https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=300',
+    img: whyProTeam,
     title: 'Profesionalna ekipa',
     desc: 'Iskusni tim iz restorana koji zna kako da isporuči savršeno iskustvo.',
   },
   {
-    img: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300',
+    img: whyFlexPackages,
     title: 'Fleksibilni paketi',
     desc: 'Prilagodljive opcije za grupe svih veličina — od 10 do 500+ gostiju.',
   },
@@ -263,7 +266,7 @@ export default function Home() {
       {/* ── WHY SUSHI PANDA — editorial proof section ────────────── */}
       <section ref={whyRef} className="relative overflow-hidden bg-white py-28">
         <div className="soft-petal right-[7%] top-[12%] hidden h-40 w-20 rotate-[24deg] opacity-25 lg:block" />
-        <div className="mx-auto grid max-w-[1320px] gap-14 px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-10">
+        <div className="mx-auto grid max-w-[1320px] gap-14 px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-10">
           <div className="lg:pr-8">
             <p className="mb-4 text-[11px] font-light uppercase tracking-widest text-stone-400">Zašto Sushi Panda</p>
             <h2
@@ -296,17 +299,19 @@ export default function Home() {
             {whyItems.map((item, i) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-[26px] border border-[#f1e7e2] bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-7 pb-8 pt-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(196,79,110,0.08)]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#f1e7e2] bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-8 pb-8 pt-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(196,79,110,0.08)]"
               >
-                <div className="mb-7 flex items-center justify-between">
+                <div className="mb-8 flex items-start justify-between gap-4">
                   <span className="font-serif text-[2.8rem] leading-none text-[#111111]/10">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <div className="h-16 w-16 overflow-hidden rounded-full border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
+                  <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border-4 border-white shadow-md transition-transform duration-300 group-hover:scale-105">
                     <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
                   </div>
                 </div>
-                <h3 className="mb-3 font-serif text-[1.28rem] font-bold text-[#111111]">{item.title}</h3>
+                <h3 className="mb-3 min-h-[5.2rem] font-serif text-[1.28rem] font-bold leading-[1.18] text-[#111111]">
+                  {item.title}
+                </h3>
                 <p className="text-[13px] font-light leading-[1.8] text-stone-500">{item.desc}</p>
               </div>
             ))}
