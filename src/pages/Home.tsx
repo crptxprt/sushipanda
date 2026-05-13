@@ -16,6 +16,10 @@ import galleryAtmosphereStyling from '../assets/gallery-atmosphere-styling.png';
 import whyFreshSushi from '../assets/why-fresh-sushi.png';
 import whyProTeam from '../assets/why-pro-team.png';
 import whyFlexPackages from '../assets/why-flex-packages.png';
+import categoryProslave from '../assets/category-proslave.png';
+import categorySlave from '../assets/category-slave.png';
+import categoryDevojackoMomacko from '../assets/category-devojacko-momacko.png';
+import categoryKorporativni from '../assets/category-korporativni.png';
 
 const PROOF_STRIP = [
   'Premium sushi ketering',
@@ -25,10 +29,10 @@ const PROOF_STRIP = [
 ];
 
 const categories = [
-  { num: '01', title: 'Proslave', sub: 'Rođendani & privatne žurke', path: '/ketering-proslave', img: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=900' },
-  { num: '02', title: 'Slave', sub: 'Tradicionalna okupljanja', path: '/ketering-slave', img: 'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=900' },
-  { num: '03', title: 'Devojačko & Momačko', sub: 'Zabavni eventi', path: '/ketering-devojacko-momacko', img: 'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=900' },
-  { num: '04', title: 'Korporativni', sub: 'Firme & poslovni eventi', path: '/ketering-korporativni', img: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=900' },
+  { num: '01', title: 'Proslave', sub: 'Rođendani & privatne žurke', path: '/ketering-proslave', img: categoryProslave },
+  { num: '02', title: 'Slave', sub: 'Tradicionalna okupljanja', path: '/ketering-slave', img: categorySlave },
+  { num: '03', title: 'Devojačko & Momačko', sub: 'Zabavni eventi', path: '/ketering-devojacko-momacko', img: categoryDevojackoMomacko },
+  { num: '04', title: 'Korporativni', sub: 'Firme & poslovni eventi', path: '/ketering-korporativni', img: categoryKorporativni },
 ];
 
 const whyItems = [
@@ -355,8 +359,8 @@ export default function Home() {
                 {/* Bottom text */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-serif font-bold text-white text-[1.15rem] mb-1">{cat.title}</h3>
-                  <p className="text-[12px] font-light uppercase tracking-[0.16em] text-white/72">{cat.sub}</p>
-                  <div className="mt-4 flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-[0.16em] text-sp-kanji opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <p className="text-[12px] font-light uppercase tracking-[0.16em] text-white">{cat.sub}</p>
+                  <div className="mt-4 flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-[0.16em] text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     Saznaj više <ArrowRight size={11} />
                   </div>
                 </div>
@@ -371,25 +375,25 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] overflow-hidden rounded-[40px] border border-[#241b1a] bg-[radial-gradient(circle_at_top_right,rgba(196,79,110,0.14),rgba(18,15,14,0)_28%),linear-gradient(135deg,#171211_0%,#0e0b0a_100%)] shadow-[0_36px_80px_rgba(12,9,8,0.22)]">
           <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
             <div className="flex flex-col justify-center p-8 lg:p-14">
-              <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-white/56">Ekskluzivna usluga</p>
+              <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-white">Ekskluzivna usluga</p>
               <h2
                 className="mb-5 font-serif font-bold text-white"
                 style={{ fontSize: 'clamp(2.2rem, 4.8vw, 4.2rem)', letterSpacing: '-0.025em', lineHeight: 0.96 }}
               >
                 Sushi chef
                 <br />
-                <span className="italic font-normal text-[#efd8dc]">na vašem eventu</span>
+                <span className="italic font-normal text-white">na vašem eventu</span>
               </h2>
-              <p className="max-w-[430px] text-[16px] font-light leading-[1.72] text-white/76 sm:text-[17px]">
+              <p className="max-w-[430px] text-[16px] font-light leading-[1.72] text-white sm:text-[17px]">
                 Sushi chef dolazi na lokaciju, priprema sushi pred gostima i pretvara ketering u
                 doživljaj koji podiže atmosferu, ritam servisa i premium utisak celog eventa.
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-[12px] uppercase tracking-[0.16em] text-white/78">
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-[12px] uppercase tracking-[0.16em] text-white">
                 <span>Live priprema</span>
-                <span className="text-[#c98b99]">•</span>
+                <span className="text-white/70">•</span>
                 <span>Premium postavka</span>
-                <span className="text-[#c98b99]">•</span>
+                <span className="text-white/70">•</span>
                 <span>Meni po meri</span>
               </div>
 
@@ -467,7 +471,7 @@ export default function Home() {
                 <img src={shot.src} alt={shot.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-85" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
-                  <p className="mb-2 text-[12px] uppercase tracking-[0.16em] text-white/74">Sushi Panda</p>
+                  <p className="mb-2 text-[12px] uppercase tracking-[0.16em] text-white">Sushi Panda</p>
                   <h3 className="font-serif text-[1.15rem] font-bold text-white">{shot.title}</h3>
                 </div>
               </div>
