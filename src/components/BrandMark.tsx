@@ -1,5 +1,5 @@
 import wordmark from '../assets/panda-catering-logo.png';
-import wordmarkWhite from '../assets/panda-sushi-wordmark-white.png';
+import wordmarkWhite from '../assets/panda-catering-whitelogo.png';
 
 interface BrandMarkProps {
   size?: 'sm' | 'md' | 'lg';
