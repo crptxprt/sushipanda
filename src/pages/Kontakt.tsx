@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { MessageCircle, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { MessageCircle, Phone, MapPin } from 'lucide-react';
 import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
 
 const processSteps = [
@@ -111,6 +111,22 @@ export default function Kontakt() {
                   ))}
                 </div>
 
+                <div className="mb-12 border-t border-stone-200 pt-8">
+                  <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako izgleda rezervacija</p>
+                  <div className="space-y-4">
+                    {processSteps.map((step) => (
+                      <div key={step.num} className="flex items-start gap-5 rounded-[24px] border border-white/80 bg-white/78 px-5 py-5">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#181214] text-[12px] tracking-[0.18em] text-white">
+                          {step.num}
+                        </div>
+                        <div className="pt-1">
+                          <p className="text-[1.1rem] font-medium leading-[1.3] tracking-[-0.02em] text-[#111111]">{step.title}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="border-t border-stone-200 pt-8">
                   <div className="mb-3 flex items-center gap-3">
                     <span className="h-2 w-2 rounded-full bg-green-400" />
@@ -124,28 +140,12 @@ export default function Kontakt() {
             </div>
 
             <div className="grid gap-8">
-              <div className="rounded-[34px] border border-[#eee3df] bg-[#f8f3ef] p-7 shadow-[0_20px_50px_rgba(145,111,102,0.06)] sm:p-8">
-                <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako izgleda rezervacija</p>
-                <div className="space-y-5">
-                  {processSteps.map((step) => (
-                    <div key={step.num} className="flex items-start gap-5 rounded-[24px] border border-white/70 bg-white/72 px-5 py-5">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#181214] text-[12px] tracking-[0.18em] text-white">
-                        {step.num}
-                      </div>
-                      <div className="pt-1">
-                        <p className="text-[1.15rem] font-medium leading-[1.3] tracking-[-0.02em] text-[#111111]">{step.title}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="overflow-hidden rounded-[30px] bg-stone-100">
-                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[280px] w-full object-cover" />
+              <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+                <div className="overflow-hidden rounded-[30px] bg-stone-100 shadow-[0_22px_55px_rgba(145,111,102,0.08)]">
+                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[560px] w-full object-cover" />
                 </div>
 
-                <div className="flex flex-col justify-between rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
+                <div className="flex min-h-[560px] flex-col justify-end rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
                   <div>
                     <p className="text-[12px] uppercase tracking-[0.18em] text-white/62">Sushi Panda catering</p>
                     <p className="mt-5 font-serif text-[clamp(1.85rem,3.7vw,3rem)] leading-[0.9] tracking-[-0.03em]">
@@ -157,21 +157,9 @@ export default function Kontakt() {
                   </div>
 
                   <div className="mt-10 border-t border-white/16 pt-7">
-                    <p className="text-[1.2rem] font-medium tracking-[-0.02em] text-white">Rezervišite termin na vreme.</p>
-                    <div className="mt-5 flex flex-col items-start gap-4">
-                      <a
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full bg-[#9f5d6f] px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#8c5161]"
-                      >
-                        WhatsApp
-                        <ArrowUpRight size={13} strokeWidth={1.6} />
-                      </a>
-                      <p className="max-w-[15rem] text-[14px] font-light leading-[1.65] text-white/62">
-                        Elegantna postavka. Profesionalan servis.
-                      </p>
-                    </div>
+                    <p className="max-w-[15rem] text-[14px] font-light leading-[1.65] text-white/62">
+                      Elegantna postavka. Profesionalan servis.
+                    </p>
                   </div>
                 </div>
               </div>
