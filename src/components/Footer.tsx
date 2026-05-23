@@ -1,4 +1,4 @@
-import { Phone, Instagram } from 'lucide-react';
+import { Phone, Instagram, MapPin } from 'lucide-react';
 import { navigate } from '../lib/router';
 import BrandMark from './BrandMark';
 
@@ -73,6 +73,7 @@ export default function Footer() {
             <ul className="space-y-5">
               <li><a href="tel:+38166404049" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Phone size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />+381 66 404 049</a></li>
               <li><a href="https://instagram.com/sushipandaofficial" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Instagram size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />@sushipandaofficial</a></li>
+              <li><span className="flex items-start gap-3 text-[16px] font-light leading-[1.68] text-white/82"><MapPin size={14} className="mt-1 shrink-0 text-sp-kanji" strokeWidth={1.5} />Karađorđeva 47, Kragujevac</span></li>
             </ul>
           </div>
         </div>
