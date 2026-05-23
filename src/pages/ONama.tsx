@@ -41,12 +41,12 @@ export default function ONama() {
 
       <section className="relative overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:pt-36 lg:pb-24">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[-120px] top-[8%] h-[460px] w-[460px] rounded-full bg-[#ece3de] opacity-80" />
-          <div className="absolute right-[8%] top-[16%] h-28 w-28 rounded-full border border-[#ead9d3] opacity-70" />
-          <div className="absolute right-[10%] top-[22%] h-52 w-28 rounded-full border border-[#e8d7d2] opacity-55 rotate-[18deg]" />
-          <div className="absolute right-[20%] top-[26%] h-40 w-18 rounded-full border border-[#ebe0db] opacity-45 rotate-[22deg]" />
-          <div className="absolute right-[18%] bottom-[12%] h-40 w-40 rounded-full bg-[#f1e6e2]/70 blur-3xl" />
-          <div className="absolute left-[54%] top-[18%] h-20 w-20 rounded-full bg-white/55 blur-2xl" />
+          <div className="absolute left-[-150px] top-[4%] h-[520px] w-[520px] rounded-full bg-[#eae1db] opacity-85" />
+          <div className="absolute right-[-40px] top-[14%] h-[360px] w-[360px] rounded-full bg-[#efe6e1]/75 blur-[2px]" />
+          <div className="absolute right-[8%] bottom-[8%] h-[220px] w-[220px] rounded-full bg-[#f2e7e2]/80 blur-3xl" />
+          <div className="absolute left-[52%] top-[20%] h-28 w-28 rounded-full bg-white/55 blur-3xl" />
+          <div className="absolute right-[18%] top-[26%] h-[260px] w-[120px] rounded-full bg-[#efe4de]/45 rotate-[18deg] blur-[1px]" />
+          <div className="absolute right-[14%] top-[18%] hidden h-40 w-16 rounded-full border border-[#eadfd9]/35 xl:block" />
         </div>
 
         <div className="relative max-w-[1320px] mx-auto px-4 lg:px-10">
