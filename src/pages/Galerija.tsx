@@ -21,18 +21,14 @@ export default function Galerija() {
 
       <section className="relative min-h-[430px] overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
         <div className="absolute top-0 left-[-100px] w-[500px] h-[600px] bg-sp-blob pointer-events-none select-none" style={{ borderRadius: '50%' }} />
-        <div className="relative z-10 mx-auto grid h-full max-w-[1320px] items-end gap-8 px-4 lg:px-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
           <div className="max-w-[44rem] pb-2">
-              <h1 className="font-serif font-bold leading-[0.9]" style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}>
-                Galerija
-              </h1>
-          </div>
-          <div className="hidden self-end justify-self-end pb-3 sm:block">
-            <p
-              className="max-w-[15rem] text-right font-serif italic text-stone-500"
-              style={{ fontSize: 'clamp(1.02rem, 1.45vw, 1.32rem)', lineHeight: 1.4, letterSpacing: '-0.01em' }}
-            >
-              Premium sushi vizuali.
+            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Vizual</p>
+            <h1 className="font-serif font-bold leading-[0.9]" style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}>
+              Galerija
+            </h1>
+            <p className="mt-6 max-w-[31rem] text-[16px] font-light leading-[1.7] text-stone-600 sm:text-[17px]">
+              Premium sushi ketering vizuali iz naše prakse.
             </p>
           </div>
         </div>

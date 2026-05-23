@@ -29,18 +29,13 @@ export default function Kontakt() {
           <div className="absolute right-[24%] top-[24%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.035] rotate-[18deg] blur-[16px]" />
         </div>
 
-        <div className="relative mx-auto grid h-full max-w-[1320px] items-end gap-8 px-4 lg:px-10 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
           <div className="max-w-[44rem] pb-2">
+            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Javite nam se</p>
             <h1 className="font-serif font-bold text-white leading-[0.9]" style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}>
               Kontakt &<br /><span className="italic font-normal">ponuda</span>
             </h1>
-          </div>
-
-          <div className="relative hidden h-full sm:block">
-            <p
-              className="absolute bottom-[14px] right-[3%] max-w-[16rem] text-right font-serif italic text-[#f3e6de]"
-              style={{ fontSize: 'clamp(1.04rem, 1.45vw, 1.32rem)', lineHeight: 1.42, letterSpacing: '-0.01em' }}
-            >
+            <p className="mt-6 max-w-[31rem] text-[16px] font-light leading-[1.7] text-white/72 sm:text-[17px]">
               Diskretna postavka. Premium servis.
             </p>
           </div>
