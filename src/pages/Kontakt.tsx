@@ -98,10 +98,9 @@ export default function Kontakt() {
                   </div>
                 </div>
 
-                <div className="mb-12 grid gap-3 sm:grid-cols-3">
+                <div className="mb-12 grid gap-3 sm:grid-cols-2">
                   {[
                     ['Instagram', '@sushipandaofficial'],
-                    ['Odgovor', 'u roku od 2h'],
                     ['Kapacitet', '10-500+ gostiju'],
                   ].map(([label, value]) => (
                     <div key={label} className="rounded-[20px] border border-white/80 bg-white/74 px-4 py-4">
@@ -145,8 +144,16 @@ export default function Kontakt() {
                   <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[560px] w-full object-cover" />
                 </div>
 
-                <div className="flex min-h-[560px] flex-col justify-end rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
-                  <div>
+                <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
+                  <div className="pointer-events-none absolute inset-0">
+                    <div className="absolute right-[14%] top-[12%] h-28 w-28 rounded-full border border-white/[0.08] blur-[1px]" />
+                    <div className="absolute right-[8%] top-[24%] h-44 w-20 rounded-full border border-white/[0.06] rotate-[18deg]" />
+                    <div className="absolute left-[12%] bottom-[18%] h-20 w-48 rounded-full border border-white/[0.05] rotate-[-14deg]" />
+                    <div className="absolute left-[22%] top-[18%] h-20 w-20 rounded-full bg-white/[0.03] blur-2xl" />
+                    <div className="absolute right-[18%] bottom-[10%] h-24 w-24 rounded-full bg-white/[0.02] blur-2xl" />
+                  </div>
+
+                  <div className="relative">
                     <p className="text-[12px] uppercase tracking-[0.18em] text-white/62">Sushi Panda catering</p>
                     <p className="mt-5 font-serif text-[clamp(1.85rem,3.7vw,3rem)] leading-[0.9] tracking-[-0.03em]">
                       Od privatnih proslava do većih događaja
@@ -156,7 +163,7 @@ export default function Kontakt() {
                     </p>
                   </div>
 
-                  <div className="mt-10 border-t border-white/16 pt-7">
+                  <div className="relative mt-10 border-t border-white/16 pt-7">
                     <p className="max-w-[15rem] text-[14px] font-light leading-[1.65] text-white/62">
                       Elegantna postavka. Profesionalan servis.
                     </p>
