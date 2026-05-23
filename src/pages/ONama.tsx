@@ -12,25 +12,25 @@ const teamMembers = [
     name: 'Ruslan',
     role: 'Vlasnik',
     image: teamRuslan,
-    description: 'Vodi Sushi Panda sa fokusom na organizaciju, iskustvo gostiju i standard usluge na svakom cateringu.',
+    description: 'Vodi Sushi Panda sa fokusom na organizaciju, iskustvo gostiju i standard usluge.',
   },
   {
     name: 'Denis',
     role: 'Šef kuvar',
     image: teamDenis,
-    description: 'Zadužen za ukuse, preciznost pripreme i premium prezentaciju svakog sushi menija.',
+    description: 'Zadužen za ukuse, preciznost pripreme i premium prezentaciju menija.',
   },
   {
     name: 'Pava',
     role: 'Šef kuvar',
     image: teamPava,
-    description: 'Brine o ritmu servisa, doslednosti kvaliteta i detaljima koji prave razliku na događaju.',
+    description: 'Brine o ritmu servisa, doslednosti kvaliteta i detaljima na događaju.',
   },
   {
     name: 'Misha',
     role: 'Kuvar',
     image: teamMisha,
-    description: 'Podržava tim u pripremi i postavci kako bi svaki catering protekao mirno, uredno i profesionalno.',
+    description: 'Podržava tim u pripremi i postavci da svaki catering protekne uredno i profesionalno.',
   },
 ];
 
@@ -44,6 +44,7 @@ export default function ONama() {
           <div className="absolute left-[-120px] top-[8%] h-[460px] w-[460px] rounded-full bg-[#ece3de] opacity-80" />
           <div className="absolute right-[8%] top-[16%] h-28 w-28 rounded-full border border-[#ead9d3] opacity-70" />
           <div className="absolute right-[10%] top-[22%] h-52 w-28 rounded-full border border-[#e8d7d2] opacity-55 rotate-[18deg]" />
+          <div className="absolute right-[20%] top-[26%] h-40 w-18 rounded-full border border-[#ebe0db] opacity-45 rotate-[22deg]" />
           <div className="absolute right-[18%] bottom-[12%] h-40 w-40 rounded-full bg-[#f1e6e2]/70 blur-3xl" />
           <div className="absolute left-[54%] top-[18%] h-20 w-20 rounded-full bg-white/55 blur-2xl" />
         </div>
@@ -86,10 +87,22 @@ export default function ONama() {
             {teamMembers.map((member) => (
               <article
                 key={member.name}
-                className="group overflow-hidden rounded-[28px] border border-[#eee3df] bg-[#fcfaf8] shadow-[0_20px_50px_rgba(145,111,102,0.07)] transition-transform duration-300 hover:-translate-y-1"
+                className={`group overflow-hidden rounded-[28px] border shadow-[0_20px_50px_rgba(145,111,102,0.07)] transition-transform duration-300 hover:-translate-y-1 ${
+                  member.role === 'Vlasnik'
+                    ? 'border-[#ead8d3] bg-[linear-gradient(180deg,#fdfaf7_0%,#f7eeea_100%)]'
+                    : 'border-[#eee3df] bg-[#fcfaf8]'
+                }`}
               >
-                <div className="relative overflow-hidden bg-[linear-gradient(180deg,#f7f4f1_0%,#efe7e2_100%)]">
+                <div
+                  className={`relative overflow-hidden ${
+                    member.role === 'Vlasnik'
+                      ? 'bg-[linear-gradient(180deg,#f8f3ef_0%,#efe5df_100%)]'
+                      : 'bg-[linear-gradient(180deg,#f7f4f1_0%,#efe7e2_100%)]'
+                  }`}
+                >
                   <div className="absolute inset-x-[18%] top-[8%] h-16 rounded-full bg-white/55 blur-2xl" />
+                  <div className="absolute inset-x-[26%] bottom-[14%] h-24 rounded-full bg-[#eadbd5]/45 blur-3xl" />
+                  <div className="absolute left-[20%] top-[22%] h-16 w-16 rounded-full bg-white/45 blur-2xl" />
                   <img
                     src={member.image}
                     alt={member.name}
