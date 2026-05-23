@@ -29,27 +29,22 @@ export default function Kontakt() {
           <div className="absolute right-[20%] top-[22%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.05] rotate-[18deg] blur-[10px]" />
         </div>
 
-        <div className="relative mx-auto grid h-full max-w-[1320px] items-center gap-8 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="relative mx-auto grid h-full max-w-[1320px] items-end gap-8 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="max-w-[36rem]">
-            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Javite nam se</p>
             <h1 className="font-serif font-bold text-white leading-[0.92]" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', letterSpacing: '-0.02em' }}>
               Kontakt &<br /><span className="italic font-normal">ponuda</span>
             </h1>
-            <p className="mt-5 max-w-[31rem] text-[16px] font-light leading-[1.68] text-white/72 sm:text-[17px]">
-              Za privatne proslave, slave i događaje na vašoj lokaciji organizujemo sushi catering u premium izdanju.
-            </p>
           </div>
 
-          <div className="relative min-h-[190px] lg:min-h-[220px]">
+          <div className="relative min-h-[190px] pb-2 lg:min-h-[220px]">
             <div className="absolute right-[6%] top-[2%] h-[270px] w-[270px] rounded-full bg-[#f1ddd5]/[0.08] blur-[12px]" />
             <div className="absolute right-[22%] top-[16%] h-[210px] w-[100px] rounded-full bg-[#e8cfd0]/[0.08] rotate-[24deg] blur-[14px]" />
             <div className="absolute right-[2%] top-[30%] h-[220px] w-[110px] rounded-full bg-[#f4e6df]/[0.04] rotate-[-18deg] blur-[12px]" />
             <div className="absolute right-[16%] bottom-[6%] h-[160px] w-[160px] rounded-full bg-[#f6eae4]/[0.05] blur-3xl" />
             <div className="absolute left-[14%] top-[28%] h-[112px] w-[112px] rounded-full bg-[#f1ddd6]/[0.04] blur-3xl" />
             <div className="absolute right-[15%] bottom-[10%] rounded-[24px] border border-white/8 bg-white/[0.035] px-6 py-4 backdrop-blur-sm">
-              <p className="text-[12px] uppercase tracking-[0.18em] text-white/60">Quiet luxury</p>
-              <p className="mt-3 max-w-[14rem] text-[1.05rem] font-medium leading-[1.28] tracking-[-0.02em] text-white/90">
-                Diskretna postavka, čist servis i premium utisak na lokaciji.
+              <p className="max-w-[14rem] text-[13px] uppercase tracking-[0.12em] text-white/62">
+                Diskretna postavka. Premium servis.
               </p>
             </div>
           </div>

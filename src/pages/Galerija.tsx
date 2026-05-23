@@ -21,16 +21,15 @@ export default function Galerija() {
 
       <section className="relative min-h-[430px] overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
         <div className="absolute top-0 left-[-100px] w-[500px] h-[600px] bg-sp-blob pointer-events-none select-none" style={{ borderRadius: '50%' }} />
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 relative z-10">
-          <div className="flex items-end justify-between">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
+          <div className="flex w-full items-end justify-between gap-10">
             <div>
-              <p className="mb-4 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Vizual</p>
               <h1 className="font-serif font-bold leading-[0.88]" style={{ fontSize: 'clamp(3.5rem, 10vw, 8rem)', letterSpacing: '-0.03em' }}>
                 Galerija
               </h1>
             </div>
-            <p className="hidden max-w-xs text-right text-[15px] font-light leading-[1.65] text-stone-600 sm:block">
-              Sushi ketering prezentacije i<br />premium vizuali iz naše prakse.
+            <p className="hidden max-w-[17rem] pb-2 text-right text-[13px] uppercase tracking-[0.12em] text-stone-500 sm:block">
+              Premium sushi ketering vizuali.
             </p>
           </div>
         </div>

@@ -49,17 +49,18 @@ export default function ONama() {
           <div className="absolute left-[58%] bottom-[12%] h-[180px] w-[180px] rounded-full bg-[#f4ebe6]/72 blur-3xl" />
         </div>
 
-        <div className="relative max-w-[1320px] mx-auto px-4 lg:px-10">
-          <div className="max-w-[44rem]">
-            <p className="mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">O nama</p>
+        <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
+          <div className="flex w-full items-end justify-between gap-10">
+            <div className="max-w-[44rem] pb-1">
             <h1
               className="font-serif font-bold leading-[0.9] text-[#111111]"
               style={{ fontSize: 'clamp(3.2rem, 8vw, 6.4rem)', letterSpacing: '-0.03em' }}
             >
               O nama
             </h1>
-            <p className="mt-8 max-w-[32rem] text-[18px] font-light leading-[1.72] text-black/74">
-              Tim koji stoji iza svakog Sushi Panda cateringa.
+            </div>
+            <p className="hidden max-w-[18rem] pb-2 text-right text-[13px] uppercase tracking-[0.12em] text-black/46 sm:block">
+              Tim iza svakog Sushi Panda eventa.
             </p>
           </div>
         </div>
