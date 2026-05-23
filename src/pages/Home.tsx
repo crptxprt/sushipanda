@@ -106,8 +106,8 @@ export default function Home() {
   const ctaRef = useRef<HTMLElement>(null);
   const [activeChefSlide, setActiveChefSlide] = useState(0);
   const whatsappLink =
-    'https://wa.me/381600000000?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.';
-  const phoneLink = 'tel:+381600000000';
+    'https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.';
+  const phoneLink = 'tel:+38166404049';
 
   const go = (path: string) => {
     navigate(path);
@@ -545,7 +545,7 @@ export default function Home() {
                 </div>
                 <p className="text-[12px] uppercase tracking-[0.16em] text-stone-500">Telefon</p>
                 <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pozovite nas</p>
-                <p className="mt-5 text-[1.35rem] font-medium tracking-[-0.02em] text-[#111111]">+381 60 000 0000</p>
+                <p className="mt-5 text-[1.35rem] font-medium tracking-[-0.02em] text-[#111111]">+381 66 404 049</p>
                 <p className="mt-3 max-w-[18rem] text-[15px] font-light leading-[1.65] text-black/72 sm:text-[16px]">
                   Za direktan razgovor i brzu potvrdu detalja.
                 </p>

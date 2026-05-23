@@ -88,7 +88,7 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
         </div>
         <div>
           <label className={labelClass}>Telefon *</label>
-          <input type="tel" name="phone" required value={form.phone} onChange={handleChange} placeholder="+381 60 000 0000" className={inputClass} />
+          <input type="tel" name="phone" required value={form.phone} onChange={handleChange} placeholder="+381 66 404 049" className={inputClass} />
         </div>
       </div>
 

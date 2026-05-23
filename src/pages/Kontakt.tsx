@@ -1,7 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
-import { Phone, Mail, Instagram, MapPin } from 'lucide-react';
+import { Phone, Instagram, MapPin } from 'lucide-react';
 
 export default function Kontakt() {
   return (
@@ -28,11 +28,10 @@ export default function Kontakt() {
             <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
             <div className="space-y-8 mb-12">
               {[
-                { href: 'tel:+38160000000', Icon: Phone, label: 'Telefon', val: '+381 60 000 0000' },
-                { href: 'mailto:info@sushipanda.rs', Icon: Mail, label: 'Email', val: 'info@sushipanda.rs' },
-                { href: '#', Icon: Instagram, label: 'Instagram', val: '@sushipanda.rs' },
+                { href: 'tel:+38166404049', Icon: Phone, label: 'Telefon', val: '+381 66 404 049' },
+                { href: 'https://instagram.com/sushipandaofficial', Icon: Instagram, label: 'Instagram', val: '@sushipandaofficial' },
               ].map(({ href, Icon, label, val }) => (
-                <a key={label} href={href} className="flex items-start gap-5 group">
+                <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined} className="flex items-start gap-5 group">
                   <div className="w-9 h-9 border border-stone-200 flex items-center justify-center shrink-0 group-hover:border-[#C44F6E] transition-colors" style={{ borderRadius: '50%' }}>
                     <Icon size={13} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
                   </div>

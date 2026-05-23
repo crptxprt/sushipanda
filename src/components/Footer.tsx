@@ -1,4 +1,4 @@
-import { Phone, Mail, Instagram } from 'lucide-react';
+import { Phone, Instagram } from 'lucide-react';
 import { navigate } from '../lib/router';
 import BrandMark from './BrandMark';
 
@@ -71,9 +71,8 @@ export default function Footer() {
           <div>
             <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Kontakt</p>
             <ul className="space-y-5">
-              <li><a href="tel:+38160000000" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Phone size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />+381 60 000 0000</a></li>
-              <li><a href="mailto:info@sushipanda.rs" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Mail size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />info@sushipanda.rs</a></li>
-              <li><a href="#" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Instagram size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />@sushipanda.rs</a></li>
+              <li><a href="tel:+38166404049" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Phone size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />+381 66 404 049</a></li>
+              <li><a href="https://instagram.com/sushipandaofficial" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Instagram size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />@sushipandaofficial</a></li>
             </ul>
           </div>
         </div>
