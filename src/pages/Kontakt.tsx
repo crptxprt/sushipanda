@@ -148,32 +148,29 @@ export default function Kontakt() {
                 <div className="flex flex-col justify-between rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
                   <div>
                     <p className="text-[12px] uppercase tracking-[0.18em] text-white/62">Sushi Panda catering</p>
-                    <p className="mt-5 font-serif text-[clamp(2rem,4vw,3.4rem)] leading-[0.98] tracking-[-0.03em]">
+                    <p className="mt-5 font-serif text-[clamp(1.85rem,3.7vw,3rem)] leading-[0.9] tracking-[-0.03em]">
                       Od privatnih proslava do većih događaja
                     </p>
-                    <p className="mt-5 text-[16px] font-light leading-[1.72] text-white/76 sm:text-[17px]">
+                    <p className="mt-7 text-[16px] font-light leading-[1.72] text-white/76 sm:text-[17px]">
                       Organizujemo kompletan sushi catering na vašoj lokaciji.
                     </p>
                   </div>
 
-                  <div className="mt-10 border-t border-white/10 pt-6">
+                  <div className="mt-10 border-t border-white/16 pt-7">
                     <p className="text-[1.2rem] font-medium tracking-[-0.02em] text-white">Rezervišite termin na vreme.</p>
-                    <div className="mt-5 flex flex-wrap gap-3">
+                    <div className="mt-5 flex flex-col items-start gap-4">
                       <a
                         href={whatsappLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full bg-[#C44F6E] px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#d36483]"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#9f5d6f] px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#8c5161]"
                       >
                         WhatsApp
                         <ArrowUpRight size={13} strokeWidth={1.6} />
                       </a>
-                      <a
-                        href={phoneLink}
-                        className="inline-flex items-center gap-2 rounded-full border border-white/18 px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-white transition-colors hover:border-white/40 hover:bg-white/6"
-                      >
-                        Pozovite nas
-                      </a>
+                      <p className="max-w-[15rem] text-[14px] font-light leading-[1.65] text-white/62">
+                        Elegantna postavka. Profesionalan servis.
+                      </p>
                     </div>
                   </div>
                 </div>
