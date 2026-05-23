@@ -2,85 +2,132 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { navigate } from '../lib/router';
 import { ArrowRight } from 'lucide-react';
+import teamRuslan from '../assets/team-ruslan.png';
+import teamDenis from '../assets/team-denis.png';
+import teamPava from '../assets/team-pava.png';
+import teamMisha from '../assets/team-misha.png';
+
+const teamMembers = [
+  {
+    name: 'Ruslan',
+    role: 'Vlasnik',
+    image: teamRuslan,
+    description: 'Vodi Sushi Panda sa fokusom na organizaciju, iskustvo gostiju i standard usluge na svakom cateringu.',
+  },
+  {
+    name: 'Denis',
+    role: 'Šef kuvar',
+    image: teamDenis,
+    description: 'Zadužen za ukuse, preciznost pripreme i premium prezentaciju svakog sushi menija.',
+  },
+  {
+    name: 'Pava',
+    role: 'Šef kuvar',
+    image: teamPava,
+    description: 'Brine o ritmu servisa, doslednosti kvaliteta i detaljima koji prave razliku na događaju.',
+  },
+  {
+    name: 'Misha',
+    role: 'Kuvar',
+    image: teamMisha,
+    description: 'Podržava tim u pripremi i postavci kako bi svaki catering protekao mirno, uredno i profesionalno.',
+  },
+];
 
 export default function ONama() {
   return (
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      {/* HERO */}
-      <section className="relative min-h-[75vh] bg-[#f7f5f2] overflow-hidden flex flex-col lg:flex-row">
-        {/* Blob */}
-        <div className="absolute top-[5%] left-[-140px] w-[600px] h-[700px] bg-sp-blob pointer-events-none select-none" style={{ borderRadius: '50%' }} />
-
-        {/* Left text */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-end pt-36 pb-16 lg:pb-24 px-8 sm:px-12 lg:px-16 xl:px-20 relative z-10">
-          <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Ko smo mi</p>
-          <h1 className="font-serif font-bold leading-[0.88] mb-8" style={{ fontSize: 'clamp(4rem, 10vw, 9rem)', letterSpacing: '-0.03em' }}>
-            O<br /><span className="italic font-normal">nama</span>
-          </h1>
-          <p className="max-w-sm text-[16px] font-light leading-[1.7] text-black/76">
-            Ekipa koja veruje da je sushi više od hrane — to je iskustvo.
-          </p>
+      <section className="relative overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:pt-36 lg:pb-24">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute left-[-120px] top-[8%] h-[460px] w-[460px] rounded-full bg-[#ece3de] opacity-80" />
+          <div className="absolute right-[8%] top-[16%] h-28 w-28 rounded-full border border-[#ead9d3] opacity-70" />
+          <div className="absolute right-[10%] top-[22%] h-52 w-28 rounded-full border border-[#e8d7d2] opacity-55 rotate-[18deg]" />
+          <div className="absolute right-[18%] bottom-[12%] h-40 w-40 rounded-full bg-[#f1e6e2]/70 blur-3xl" />
+          <div className="absolute left-[54%] top-[18%] h-20 w-20 rounded-full bg-white/55 blur-2xl" />
         </div>
 
-        {/* Right image */}
-        <div className="w-full lg:w-1/2 h-[45vw] lg:h-auto overflow-hidden bg-stone-200">
-          <img src="https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" className="w-full h-full object-cover" />
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section className="py-28 px-6 bg-white">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
-          <div>
-            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Naša priča</p>
-            <h2 className="font-serif font-bold leading-[1]" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.02em' }}>
-              Strast prema<br /><span className="italic font-normal">japanskoj kuhinji</span>
-            </h2>
-          </div>
-          <div className="space-y-5 text-[16px] font-light leading-[1.72] text-black/76">
-            <p>Sushi Panda je nastao iz ljubavi prema japanskoj kuhinji i želje da tu ljubav podelimo sa što više ljudi — na privatnim proslavama, firminim eventima i svim posebnim prilikama.</p>
-            <p>Naš tim čine iskusni sushi majstori koji su svoje znanje usavršavali u restoranima pre nego što su osnovali sopstveni ketering servis.</p>
-            <p>Verujemo da je hrana više od obroka — to je iskustvo. I upravo zato svaki event tretiramo sa pažnjom i profesionalnošću koji zaslužuje.</p>
+        <div className="relative max-w-[1320px] mx-auto px-4 lg:px-10">
+          <div className="max-w-[44rem]">
+            <p className="mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">O nama</p>
+            <h1
+              className="font-serif font-bold leading-[0.9] text-[#111111]"
+              style={{ fontSize: 'clamp(3.2rem, 8vw, 6.4rem)', letterSpacing: '-0.03em' }}
+            >
+              O nama
+            </h1>
+            <p className="mt-8 max-w-[32rem] text-[18px] font-light leading-[1.72] text-black/74">
+              Tim koji stoji iza svakog Sushi Panda cateringa.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="bg-[#111111]">
-        <div className="max-w-[1320px] mx-auto px-6 lg:px-14 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/6">
-          {[{ n: '200+', l: 'Uspešnih evenata' }, { n: '5k+', l: 'Zadovoljnih gostiju' }, { n: '5', l: 'Godina iskustva' }, { n: '15+', l: 'Vrsta sushija' }].map((s) => (
-            <div key={s.l} className="bg-[#111111] px-8 py-16 text-center">
-              <p className="font-serif font-bold text-[3.5rem] text-white mb-3 leading-none">{s.n}</p>
-              <p className="text-[12px] uppercase tracking-[0.18em] text-stone-400 font-light">{s.l}</p>
+      <section className="bg-white px-6 py-24">
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+          <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Naš tim</p>
+              <h2
+                className="font-serif font-bold leading-[0.98] text-[#111111]"
+                style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em' }}
+              >
+                Ljudi koji nose<br />
+                <span className="italic font-normal">Sushi Panda iskustvo</span>
+              </h2>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* IMAGE + FEATURES */}
-      <section className="py-28 px-6 bg-[#f7f5f2]">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="overflow-hidden bg-stone-200" style={{ borderRadius: '24px', aspectRatio: '4/3' }}>
-            <img src="https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" className="w-full h-full object-cover" />
+            <p className="max-w-[28rem] text-[16px] font-light leading-[1.72] text-black/72">
+              Od planiranja i pripreme do postavke na lokaciji, svaki događaj vodi tim koji zna kako premium catering treba da izgleda i funkcioniše.
+            </p>
           </div>
-          <div>
-            <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Naš pristup</p>
-            <h2 className="font-serif font-bold leading-[1] mb-10" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)', letterSpacing: '-0.02em' }}>
-              Premium. Precizno.<br /><span className="italic font-normal">Personalizovano.</span>
-            </h2>
-            {[{ t: 'Svež sushi', d: 'Isključivo sveže, pažljivo odabrani sastojci za svaki event.' }, { t: 'Profesionalna ekipa', d: 'Iskusni tim koji zna kako da isporuči savršen event.' }, { t: 'Kompletna usluga', d: 'Mi se brinemo za sve — ti se brineš o gostima.' }].map((item) => (
-              <div key={item.t} className="border-b border-stone-200 pb-6 mb-6">
-                <h4 className="font-serif font-bold text-[1.1rem] text-[#111111] mb-2">{item.t}</h4>
-                <p className="text-[15px] font-light leading-[1.65] text-black/74">{item.d}</p>
-              </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {teamMembers.map((member) => (
+              <article
+                key={member.name}
+                className="group overflow-hidden rounded-[28px] border border-[#eee3df] bg-[#fcfaf8] shadow-[0_20px_50px_rgba(145,111,102,0.07)] transition-transform duration-300 hover:-translate-y-1"
+              >
+                <div className="relative overflow-hidden bg-[linear-gradient(180deg,#f7f4f1_0%,#efe7e2_100%)]">
+                  <div className="absolute inset-x-[18%] top-[8%] h-16 rounded-full bg-white/55 blur-2xl" />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="relative h-[430px] w-full object-contain object-bottom pt-6"
+                  />
+                </div>
+                <div className="px-6 py-6">
+                  <p className="mb-3 text-[12px] uppercase tracking-[0.18em] text-[#C44F6E] font-light">{member.role}</p>
+                  <h3 className="font-serif text-[1.7rem] font-bold leading-[1] tracking-[-0.02em] text-[#111111]">
+                    {member.name}
+                  </h3>
+                  <p className="mt-4 text-[15px] font-light leading-[1.68] text-black/72">
+                    {member.description}
+                  </p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      <section className="bg-[#f7f5f2] px-6 py-20">
+        <div className="max-w-[980px] mx-auto px-4 lg:px-10">
+          <div className="relative overflow-hidden rounded-[34px] border border-[#eee2de] bg-[#fcfaf8] px-8 py-10 text-center shadow-[0_20px_50px_rgba(145,111,102,0.06)] sm:px-12 sm:py-12">
+            <div className="absolute left-[10%] top-[18%] h-24 w-24 rounded-full bg-[#f1e4df]/70 blur-2xl" />
+            <div className="absolute right-[12%] bottom-[18%] h-20 w-20 rounded-full bg-[#ead7d4]/70 blur-2xl" />
+            <p className="relative mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Naša filozofija</p>
+            <p
+              className="relative mx-auto max-w-[42rem] font-serif text-[#111111]"
+              style={{ fontSize: 'clamp(1.9rem, 4vw, 3.3rem)', lineHeight: 1.02, letterSpacing: '-0.03em' }}
+            >
+              Sve počinje od tima
+              <span className="block italic font-normal">od izbora sastojaka do postavke na lokaciji.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 px-6 bg-[#F0EDE7] text-center">
         <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Radimo zajedno?</p>
         <h2 className="font-serif font-bold text-[#111111] mb-12 leading-[1]" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}>
