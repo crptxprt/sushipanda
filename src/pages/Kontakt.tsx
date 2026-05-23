@@ -21,13 +21,12 @@ export default function Kontakt() {
 
       <section className="relative overflow-hidden bg-[#111111] px-6 py-24 lg:py-28">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-[-100px] top-[10%] h-[340px] w-[340px] rounded-full bg-[#2a2325]" />
-          <div className="absolute right-[-40px] top-[10%] h-[300px] w-[300px] rounded-full bg-[#221c1e]" />
-          <div className="absolute right-[16%] top-[18%] h-[220px] w-[220px] rounded-full bg-[#3b3134]/45 blur-3xl" />
-          <div className="absolute right-[10%] bottom-[2%] h-[260px] w-[180px] rounded-full bg-[#2a2325]/70 blur-[2px]" />
-          <div className="absolute left-[44%] top-[24%] h-28 w-28 rounded-full bg-white/[0.03] blur-3xl" />
-          <div className="absolute right-[20%] top-[24%] h-[220px] w-[92px] rounded-full bg-white/[0.03] rotate-[18deg] blur-[1px]" />
-          <div className="absolute right-[14%] top-[16%] hidden h-36 w-14 rounded-full border border-white/[0.05] xl:block" />
+          <div className="absolute left-[-110px] top-[8%] h-[360px] w-[360px] rounded-full bg-[#2b2324]" />
+          <div className="absolute right-[-60px] top-[8%] h-[320px] w-[320px] rounded-full bg-[#2a1f22]" />
+          <div className="absolute right-[14%] top-[16%] h-[250px] w-[250px] rounded-full bg-[#6f4a55]/28 blur-[110px]" />
+          <div className="absolute right-[8%] bottom-[0%] h-[300px] w-[220px] rounded-full bg-[#4b353d]/38 blur-[90px]" />
+          <div className="absolute left-[44%] top-[22%] h-32 w-32 rounded-full bg-[#f2e0d8]/[0.04] blur-3xl" />
+          <div className="absolute right-[20%] top-[22%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.05] rotate-[18deg] blur-[10px]" />
         </div>
 
         <div className="relative max-w-[1320px] mx-auto grid items-center gap-10 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
@@ -42,12 +41,11 @@ export default function Kontakt() {
           </div>
 
           <div className="relative min-h-[240px] lg:min-h-[300px]">
-            <div className="absolute right-[8%] top-[4%] h-[250px] w-[250px] rounded-full bg-[#f1e6e1]/[0.06] blur-[2px]" />
-            <div className="absolute right-[24%] top-[18%] h-[180px] w-[90px] rounded-full bg-[#efe3de]/[0.05] rotate-[24deg]" />
-            <div className="absolute right-[2%] top-[32%] h-[210px] w-[100px] rounded-full bg-white/[0.025] rotate-[-18deg]" />
-            <div className="absolute right-[18%] bottom-[8%] h-[140px] w-[140px] rounded-full bg-white/[0.03] blur-3xl" />
-            <div className="absolute left-[16%] top-[30%] h-[100px] w-[100px] rounded-full bg-white/[0.025] blur-2xl" />
-            <div className="absolute right-[14%] top-[14%] hidden h-36 w-14 rounded-full border border-white/[0.05] xl:block" />
+            <div className="absolute right-[6%] top-[2%] h-[270px] w-[270px] rounded-full bg-[#f1ddd5]/[0.08] blur-[12px]" />
+            <div className="absolute right-[22%] top-[16%] h-[210px] w-[100px] rounded-full bg-[#e8cfd0]/[0.08] rotate-[24deg] blur-[14px]" />
+            <div className="absolute right-[2%] top-[30%] h-[220px] w-[110px] rounded-full bg-[#f4e6df]/[0.04] rotate-[-18deg] blur-[12px]" />
+            <div className="absolute right-[16%] bottom-[6%] h-[160px] w-[160px] rounded-full bg-[#f6eae4]/[0.05] blur-3xl" />
+            <div className="absolute left-[14%] top-[28%] h-[112px] w-[112px] rounded-full bg-[#f1ddd6]/[0.04] blur-3xl" />
             <div className="absolute right-[15%] bottom-[12%] rounded-[24px] border border-white/8 bg-white/[0.035] px-6 py-5 backdrop-blur-sm">
               <p className="text-[12px] uppercase tracking-[0.18em] text-white/60">Quiet luxury</p>
               <p className="mt-3 max-w-[14rem] text-[1.15rem] font-medium leading-[1.3] tracking-[-0.02em] text-white/90">
