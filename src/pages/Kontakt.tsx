@@ -19,7 +19,7 @@ export default function Kontakt() {
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      <section className="relative min-h-[390px] overflow-hidden bg-[#111111] px-6 pt-28 pb-16 lg:min-h-[430px] lg:pt-32 lg:pb-20">
+      <section className="relative h-[430px] overflow-hidden bg-[#111111] px-6 pt-28 pb-16 lg:h-[470px] lg:pt-32 lg:pb-20">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute left-[-110px] top-[8%] h-[360px] w-[360px] rounded-full bg-[#2b2324]" />
           <div className="absolute right-[-60px] top-[8%] h-[320px] w-[320px] rounded-full bg-[#2a1f22]" />
@@ -29,7 +29,7 @@ export default function Kontakt() {
           <div className="absolute right-[20%] top-[22%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.05] rotate-[18deg] blur-[10px]" />
         </div>
 
-        <div className="relative max-w-[1320px] mx-auto grid items-center gap-8 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="relative mx-auto grid h-full max-w-[1320px] items-center gap-8 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="max-w-[36rem]">
             <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Javite nam se</p>
             <h1 className="font-serif font-bold text-white leading-[0.92]" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', letterSpacing: '-0.02em' }}>
