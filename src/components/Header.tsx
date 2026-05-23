@@ -112,10 +112,10 @@ export default function Header({ transparent = false }: HeaderProps) {
             <span onClick={() => go('/o-nama')} className={linkClass}>O nama</span>
             <span
               onClick={() => go('/kontakt')}
-              className={`text-[12px] tracking-[0.18em] uppercase font-light px-6 py-2.5 border transition-all duration-300 cursor-pointer ${
+              className={`rounded-full border px-7 py-2 text-[12px] tracking-[0.18em] uppercase font-light transition-all duration-300 cursor-pointer ${
                 opaque
-                  ? 'border-[#d9c6ca] text-[#111111] hover:bg-[#1b1416] hover:text-white hover:border-[#1b1416]'
-                  : 'border-[#d9c6ca] text-[#1b1416] hover:bg-[#1b1416] hover:text-white hover:border-[#1b1416]'
+                  ? 'border-[#d8c8ca] text-[#111111] hover:border-[#cdb7bb] hover:bg-[#f1e8e3] hover:text-[#111111]'
+                  : 'border-[#d8c8ca] text-[#1b1416] hover:border-[#d7c1c3] hover:bg-[#f3ebe6]/90 hover:text-[#1b1416]'
               }`}
             >
               Kontakt
