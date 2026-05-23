@@ -59,13 +59,13 @@ export default function Kontakt() {
       <section className="bg-white px-6 py-24">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
-            <div className="relative overflow-hidden rounded-[34px] border border-[#eee3df] bg-[#fcfaf8] px-7 py-10 shadow-[0_24px_60px_rgba(145,111,102,0.08)] sm:px-10 sm:py-12">
+            <div className="relative overflow-hidden rounded-[34px] border border-[#eee3df] bg-[#fcfaf8] px-7 py-8 shadow-[0_24px_60px_rgba(145,111,102,0.08)] sm:px-9 sm:py-9">
               <div className="absolute -right-10 top-10 h-40 w-40 rounded-full bg-[#f3e3de] blur-3xl opacity-70" />
               <div className="absolute left-[-20px] bottom-8 h-24 w-24 rounded-full bg-[#c44f6e]/10 blur-2xl" />
 
               <div className="relative">
-                <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
-                <div className="space-y-8 mb-12">
+                <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
+                <div className="space-y-6 mb-8">
                   <a href={phoneLink} className="flex items-start gap-5 group">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-stone-200 bg-white/90 transition-colors group-hover:border-[#C44F6E]" style={{ borderRadius: '50%' }}>
                       <Phone size={14} className="text-stone-400 transition-colors group-hover:text-[#C44F6E]" strokeWidth={1.5} />
@@ -110,30 +110,20 @@ export default function Kontakt() {
                   ))}
                 </div>
 
-                <div className="mb-12 border-t border-stone-200 pt-8">
-                  <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako izgleda rezervacija</p>
-                  <div className="space-y-4">
+                <div className="border-t border-stone-200 pt-6">
+                  <p className="mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako izgleda rezervacija</p>
+                  <div className="space-y-3">
                     {processSteps.map((step) => (
-                      <div key={step.num} className="flex items-start gap-5 rounded-[24px] border border-white/80 bg-white/78 px-5 py-5">
-                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#181214] text-[12px] tracking-[0.18em] text-white">
+                      <div key={step.num} className="flex items-start gap-4 rounded-[22px] border border-white/80 bg-white/78 px-4 py-4">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#181214] text-[11px] tracking-[0.18em] text-white">
                           {step.num}
                         </div>
-                        <div className="pt-1">
-                          <p className="text-[1.1rem] font-medium leading-[1.3] tracking-[-0.02em] text-[#111111]">{step.title}</p>
+                        <div className="pt-0.5">
+                          <p className="text-[1rem] font-medium leading-[1.25] tracking-[-0.02em] text-[#111111]">{step.title}</p>
                         </div>
                       </div>
                     ))}
                   </div>
-                </div>
-
-                <div className="border-t border-stone-200 pt-8">
-                  <div className="mb-3 flex items-center gap-3">
-                    <span className="h-2 w-2 rounded-full bg-green-400" />
-                    <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Dostupni smo</p>
-                  </div>
-                  <p className="text-[15px] font-light leading-[1.68] text-black/74">
-                    Odgovaramo brzo. Zvonite od 9 do 22 svaki dan
-                  </p>
                 </div>
               </div>
             </div>
@@ -141,10 +131,10 @@ export default function Kontakt() {
             <div className="grid gap-8">
               <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
                 <div className="overflow-hidden rounded-[30px] bg-stone-100 shadow-[0_22px_55px_rgba(145,111,102,0.08)]">
-                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[560px] w-full object-cover" />
+                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[430px] w-full object-cover" />
                 </div>
 
-                <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
+                <div className="relative flex min-h-[430px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-6 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-7">
                   <div className="pointer-events-none absolute inset-0">
                     <div className="absolute right-[12%] top-[10%] h-32 w-32 rounded-full border border-white/[0.12] blur-[2px]" />
                     <div className="absolute right-[6%] top-[22%] h-48 w-24 rounded-full border border-white/[0.1] rotate-[18deg] blur-[1px]" />
@@ -158,15 +148,15 @@ export default function Kontakt() {
 
                   <div className="relative">
                     <p className="text-[12px] uppercase tracking-[0.18em] text-white/62">Sushi Panda catering</p>
-                    <p className="mt-5 font-serif text-[clamp(1.85rem,3.7vw,3rem)] leading-[0.9] tracking-[-0.03em]">
+                    <p className="mt-4 font-serif text-[clamp(1.7rem,3.2vw,2.55rem)] leading-[0.9] tracking-[-0.03em]">
                       Od privatnih proslava do većih događaja
                     </p>
-                    <p className="mt-7 text-[16px] font-light leading-[1.72] text-white/76 sm:text-[17px]">
+                    <p className="mt-5 text-[15px] font-light leading-[1.65] text-white/76 sm:text-[16px]">
                       Organizujemo kompletan sushi catering na vašoj lokaciji.
                     </p>
                   </div>
 
-                  <div className="relative mt-10 border-t border-white/16 pt-7">
+                  <div className="relative mt-7 border-t border-white/16 pt-5">
                     <p className="max-w-[15rem] text-[14px] font-light leading-[1.65] text-white/62">
                       Elegantna postavka. Profesionalan servis.
                     </p>
