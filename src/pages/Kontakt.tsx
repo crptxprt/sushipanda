@@ -23,10 +23,10 @@ export default function Kontakt() {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute left-[-110px] top-[8%] h-[360px] w-[360px] rounded-full bg-[#2b2324]" />
           <div className="absolute right-[-60px] top-[8%] h-[320px] w-[320px] rounded-full bg-[#2a1f22]" />
-          <div className="absolute right-[18%] top-[14%] h-[250px] w-[250px] rounded-full bg-[#6f4a55]/24 blur-[120px]" />
-          <div className="absolute right-[4%] bottom-[2%] h-[300px] w-[220px] rounded-full bg-[#4b353d]/28 blur-[96px]" />
+          <div className="absolute right-[18%] top-[14%] h-[250px] w-[250px] rounded-full bg-[#6f4a55]/29 blur-[128px]" />
+          <div className="absolute right-[4%] bottom-[2%] h-[300px] w-[220px] rounded-full bg-[#4b353d]/33 blur-[104px]" />
           <div className="absolute left-[44%] top-[22%] h-32 w-32 rounded-full bg-[#f2e0d8]/[0.04] blur-3xl" />
-          <div className="absolute right-[24%] top-[24%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.035] rotate-[18deg] blur-[16px]" />
+          <div className="absolute right-[24%] top-[24%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.048] rotate-[18deg] blur-[20px]" />
         </div>
 
         <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">

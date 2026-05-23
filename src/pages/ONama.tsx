@@ -41,7 +41,7 @@ export default function ONama() {
 
       <section className="relative min-h-[430px] overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[-170px] top-[2%] h-[560px] w-[560px] rounded-full bg-[#ebe2dc] opacity-90" />
+          <div className="absolute left-[-215px] top-[2%] h-[520px] w-[520px] rounded-full bg-[#ebe2dc] opacity-88" />
           <div className="absolute right-[-70px] top-[10%] h-[420px] w-[420px] rounded-full bg-[#efe6e1]/82 blur-[3px]" />
           <div className="absolute right-[6%] bottom-[4%] h-[260px] w-[260px] rounded-full bg-[#f1e6e0]/85 blur-3xl" />
           <div className="absolute left-[50%] top-[18%] h-32 w-32 rounded-full bg-white/58 blur-3xl" />
