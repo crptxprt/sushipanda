@@ -4,9 +4,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { navigate } from '../lib/router';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
-import chefHero1 from '../assets/chef-hero-1.jpg';
-import chefHero2 from '../assets/chef-hero-2.jpg';
-import chefHero3 from '../assets/chef-hero-3.jpg';
 import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
 import chefPavaRaskovic from '../assets/chef-pava-raskovic.png';
 import galleryChefAction from '../assets/gallery-chef-action.jpeg';
@@ -20,6 +17,9 @@ import categoryProslave from '../assets/category-proslave.png';
 import categorySlave from '../assets/category-slave.png';
 import categoryDevojackoMomacko from '../assets/category-devojacko-momacko.png';
 import categoryKorporativni from '../assets/category-korporativni.png';
+import teamDenis from '../assets/team-denis.png';
+import teamPava from '../assets/team-pava.png';
+import teamMisha from '../assets/team-misha.png';
 
 const PROOF_STRIP = [
   'Premium sushi ketering',
@@ -200,15 +200,18 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="flex items-center gap-4 rounded-[20px] border border-[#eadfdb] bg-white/72 px-4 py-3 shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm w-fit">
+            <button
+              onClick={() => go('/o-nama')}
+              className="flex w-fit items-center gap-4 rounded-[20px] border border-[#eadfdb] bg-white/72 px-4 py-3 text-left shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#dccbc6] hover:bg-white/82"
+            >
               <div className="flex -space-x-3">
-                {[chefHero1, chefHero2, chefHero3].map((src, i) => (
+                {[teamDenis, teamPava, teamMisha].map((src, i) => (
                   <div
                     key={i}
                     className="h-10 w-10 rounded-full border-2 border-white overflow-hidden bg-[#f6f1eb]"
                     style={{ zIndex: 3 - i }}
                   >
-                    <img src={src} alt="" className="w-full h-full object-cover" />
+                    <img src={src} alt="" className="h-full w-full object-cover object-top" />
                   </div>
                 ))}
               </div>
@@ -216,7 +219,7 @@ export default function Home() {
                 <p className="text-[13px] text-stone-800 font-light">Naš tim kuvara i sushi majstora</p>
                 <p className="text-[12px] text-stone-500 font-light tracking-[0.04em]">Iskusna ekipa za evente svih formata</p>
               </div>
-            </div>
+            </button>
           </div>
 
           {/* ── RIGHT: Sushi hero image ── */}
