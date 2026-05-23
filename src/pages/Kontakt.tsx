@@ -23,30 +23,26 @@ export default function Kontakt() {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute left-[-110px] top-[8%] h-[360px] w-[360px] rounded-full bg-[#2b2324]" />
           <div className="absolute right-[-60px] top-[8%] h-[320px] w-[320px] rounded-full bg-[#2a1f22]" />
-          <div className="absolute right-[14%] top-[16%] h-[250px] w-[250px] rounded-full bg-[#6f4a55]/28 blur-[110px]" />
-          <div className="absolute right-[8%] bottom-[0%] h-[300px] w-[220px] rounded-full bg-[#4b353d]/38 blur-[90px]" />
+          <div className="absolute right-[18%] top-[14%] h-[250px] w-[250px] rounded-full bg-[#6f4a55]/24 blur-[120px]" />
+          <div className="absolute right-[4%] bottom-[2%] h-[300px] w-[220px] rounded-full bg-[#4b353d]/28 blur-[96px]" />
           <div className="absolute left-[44%] top-[22%] h-32 w-32 rounded-full bg-[#f2e0d8]/[0.04] blur-3xl" />
-          <div className="absolute right-[20%] top-[22%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.05] rotate-[18deg] blur-[10px]" />
+          <div className="absolute right-[24%] top-[24%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.035] rotate-[18deg] blur-[16px]" />
         </div>
 
-        <div className="relative mx-auto grid h-full max-w-[1320px] items-end gap-8 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="max-w-[36rem]">
-            <h1 className="font-serif font-bold text-white leading-[0.92]" style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', letterSpacing: '-0.02em' }}>
+        <div className="relative mx-auto grid h-full max-w-[1320px] items-end gap-8 px-4 lg:px-10 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="max-w-[44rem] pb-2">
+            <h1 className="font-serif font-bold text-white leading-[0.9]" style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}>
               Kontakt &<br /><span className="italic font-normal">ponuda</span>
             </h1>
           </div>
 
-          <div className="relative min-h-[190px] pb-2 lg:min-h-[220px]">
-            <div className="absolute right-[6%] top-[2%] h-[270px] w-[270px] rounded-full bg-[#f1ddd5]/[0.08] blur-[12px]" />
-            <div className="absolute right-[22%] top-[16%] h-[210px] w-[100px] rounded-full bg-[#e8cfd0]/[0.08] rotate-[24deg] blur-[14px]" />
-            <div className="absolute right-[2%] top-[30%] h-[220px] w-[110px] rounded-full bg-[#f4e6df]/[0.04] rotate-[-18deg] blur-[12px]" />
-            <div className="absolute right-[16%] bottom-[6%] h-[160px] w-[160px] rounded-full bg-[#f6eae4]/[0.05] blur-3xl" />
-            <div className="absolute left-[14%] top-[28%] h-[112px] w-[112px] rounded-full bg-[#f1ddd6]/[0.04] blur-3xl" />
-            <div className="absolute right-[15%] bottom-[10%] rounded-[24px] border border-white/8 bg-white/[0.035] px-6 py-4 backdrop-blur-sm">
-              <p className="max-w-[14rem] text-[13px] uppercase tracking-[0.12em] text-white/62">
-                Diskretna postavka. Premium servis.
-              </p>
-            </div>
+          <div className="relative hidden h-full sm:block">
+            <p
+              className="absolute bottom-[14px] right-[3%] max-w-[16rem] text-right font-serif italic text-[#f3e6de]"
+              style={{ fontSize: 'clamp(1.04rem, 1.45vw, 1.32rem)', lineHeight: 1.42, letterSpacing: '-0.01em' }}
+            >
+              Diskretna postavka. Premium servis.
+            </p>
           </div>
         </div>
       </section>
