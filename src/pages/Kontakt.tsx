@@ -23,98 +23,70 @@ export default function Kontakt() {
       </section>
 
       <section className="py-28 px-6 bg-white">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-4 lg:sticky lg:top-24 self-start">
-            <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
-            <div className="space-y-8 mb-12">
-              <a href={phoneLink} className="flex items-start gap-5 group">
-                <div className="w-9 h-9 border border-stone-200 flex items-center justify-center shrink-0 group-hover:border-[#C44F6E] transition-colors" style={{ borderRadius: '50%' }}>
-                  <Phone size={13} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="mb-1.5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Telefon</p>
-                  <p className="text-[16px] font-light leading-[1.6] text-[#111111]">{phoneLabel}</p>
-                </div>
-              </a>
+        <div className="max-w-[920px] mx-auto px-4 lg:px-10">
+          <div className="relative overflow-hidden rounded-[34px] border border-[#eee3df] bg-[#fcfaf8] px-7 py-10 shadow-[0_24px_60px_rgba(145,111,102,0.08)] sm:px-10 sm:py-12 lg:px-14 lg:py-14">
+            <div className="absolute -right-10 top-10 h-40 w-40 rounded-full bg-[#f3e3de] blur-3xl opacity-70" />
+            <div className="absolute left-[-20px] bottom-8 h-24 w-24 rounded-full bg-[#c44f6e]/10 blur-2xl" />
 
-              <a href={whatsappLink} target="_blank" rel="noreferrer" className="flex items-start gap-5 group">
-                <div className="w-9 h-9 border border-stone-200 flex items-center justify-center shrink-0 group-hover:border-[#C44F6E] transition-colors" style={{ borderRadius: '50%' }}>
-                  <MessageCircle size={13} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="mb-1.5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">WhatsApp</p>
-                  <p className="text-[16px] font-light leading-[1.6] text-[#111111]">{phoneLabel}</p>
-                </div>
-              </a>
+            <p className="relative mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">
+              Sushi catering u Kragujevcu
+            </p>
+            <h2
+              className="relative max-w-[34rem] font-serif text-[#111111]"
+              style={{ fontSize: 'clamp(2.4rem, 5vw, 4.6rem)', lineHeight: 0.95, letterSpacing: '-0.03em' }}
+            >
+              Rešili ste da poručite
+              <span className="block italic font-normal">ketering? Mi ćemo sve urediti kako treba.</span>
+            </h2>
+            <p className="relative mt-6 max-w-[34rem] text-[16px] font-light leading-[1.72] text-black/72 sm:text-[17px]">
+              Javite nam se direktno i dogovorićemo sve brzo, jasno i bez suvišnih koraka.
+            </p>
 
-              <div className="flex items-start gap-5">
-                <div className="w-9 h-9 border border-stone-200 flex items-center justify-center shrink-0" style={{ borderRadius: '50%' }}>
-                  <MapPin size={13} className="text-stone-400" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <p className="mb-1.5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Lokacija</p>
-                  <p className="text-[16px] font-light leading-[1.6] text-[#111111]">Karađorđeva 47</p>
-                  <p className="text-[16px] font-light leading-[1.6] text-[#111111]">Kragujevac, Srbija</p>
-                </div>
-              </div>
-            </div>
+            <div className="relative mt-12 h-px w-full bg-[#ede0dc]" />
 
-            <div className="border-t border-stone-100 pt-8">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="w-2 h-2 rounded-full bg-green-400" />
-                <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Dostupni smo</p>
-              </div>
-              <p className="text-[15px] font-light leading-[1.68] text-black/74">
-                Odgovaramo brzo. Zvonite od 9 do 22 svaki dan
-              </p>
-            </div>
-          </div>
-
-          <div className="hidden lg:block lg:col-span-1 relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-stone-100" />
-          </div>
-
-          <div className="lg:col-span-7">
-            <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kontakt</p>
-            <div className="rounded-[34px] border border-[#ede0dc] bg-[#f6eeea] p-5 shadow-[0_18px_42px_rgba(145,111,102,0.06)] lg:p-7">
-              <div className="grid gap-5 lg:grid-cols-2">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group rounded-[28px] border border-[#c75478] bg-[#c75478] px-8 py-8 text-white transition-all duration-300 hover:bg-[#bc4469]"
-                >
-                  <div className="mb-20">
-                    <div className="w-fit rounded-full border border-white/50 p-4 text-white">
-                      <MessageCircle size={22} strokeWidth={1.7} />
-                    </div>
+            <div className="relative mt-10">
+              <p className="mb-10 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
+              <div className="space-y-8 mb-12">
+                <a href={phoneLink} className="flex items-start gap-5 group">
+                  <div className="w-10 h-10 border border-stone-200 flex items-center justify-center shrink-0 bg-white/90 group-hover:border-[#C44F6E] transition-colors" style={{ borderRadius: '50%' }}>
+                    <Phone size={14} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
                   </div>
-                  <p className="text-[12px] uppercase tracking-[0.24em] text-white/80">WhatsApp</p>
-                  <p className="mt-5 text-[clamp(2.2rem,4vw,3.8rem)] font-medium leading-[0.96] tracking-[-0.04em]">Pišite na WhatsApp</p>
+                  <div>
+                    <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Telefon</p>
+                    <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">{phoneLabel}</p>
+                  </div>
                 </a>
 
-                <a
-                  href={phoneLink}
-                  className="group rounded-[28px] border border-[#e6d4ce] bg-[#fcfaf8] px-8 py-8 text-[#111111] transition-all duration-300 hover:border-[#C44F6E]"
-                >
-                  <div className="mb-20">
-                    <div className="w-fit rounded-full bg-[#f4e9e4] p-4 text-[#181214]">
-                      <Phone size={22} strokeWidth={1.7} />
-                    </div>
+                <a href={whatsappLink} target="_blank" rel="noreferrer" className="flex items-start gap-5 group">
+                  <div className="w-10 h-10 border border-stone-200 flex items-center justify-center shrink-0 bg-white/90 group-hover:border-[#C44F6E] transition-colors" style={{ borderRadius: '50%' }}>
+                    <MessageCircle size={14} className="text-stone-400 group-hover:text-[#C44F6E] transition-colors" strokeWidth={1.5} />
                   </div>
-                  <p className="text-[12px] uppercase tracking-[0.24em] text-stone-500">Telefon</p>
-                  <p className="mt-5 text-[clamp(2.2rem,4vw,3.8rem)] font-medium leading-[0.96] tracking-[-0.04em]">Pozovite nas</p>
-                  <p className="mt-8 text-[1.45rem] font-medium tracking-[-0.03em] text-[#111111] sm:text-[1.7rem]">{phoneLabel}</p>
+                  <div>
+                    <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">WhatsApp</p>
+                    <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">{phoneLabel}</p>
+                  </div>
                 </a>
+
+                <div className="flex items-start gap-5">
+                  <div className="w-10 h-10 border border-stone-200 flex items-center justify-center shrink-0 bg-white/90" style={{ borderRadius: '50%' }}>
+                    <MapPin size={14} className="text-stone-400" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Lokacija</p>
+                    <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">Karađorđeva 47</p>
+                    <p className="mt-2 text-[16px] font-light leading-[1.6] text-black/72">Kragujevac, Srbija</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="mt-5 rounded-[28px] border border-[#e6d4ce] bg-white/78 px-8 py-8">
-                <div className="mb-8 w-fit rounded-full bg-[#f4e9e4] p-4 text-[#181214]">
-                  <MapPin size={22} strokeWidth={1.7} />
+              <div className="border-t border-stone-200 pt-8">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="w-2 h-2 rounded-full bg-green-400" />
+                  <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Dostupni smo</p>
                 </div>
-                <p className="text-[12px] uppercase tracking-[0.24em] text-stone-500">Lokacija</p>
-                <p className="mt-5 font-serif text-[clamp(2.2rem,4vw,3.6rem)] leading-[0.96] tracking-[-0.04em] text-[#111111]">Karađorđeva 47</p>
-                <p className="mt-3 text-[16px] font-light leading-[1.65] text-black/74">Kragujevac, Srbija</p>
+                <p className="text-[15px] font-light leading-[1.68] text-black/74">
+                  Odgovaramo brzo. Zvonite od 9 do 22 svaki dan
+                </p>
               </div>
             </div>
           </div>
