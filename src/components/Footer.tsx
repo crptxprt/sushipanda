@@ -21,7 +21,7 @@ export default function Footer() {
   const go = (path: string) => { navigate(path); window.scrollTo({ top: 0 }); };
 
   return (
-    <footer className="relative overflow-hidden bg-[#111111] text-white">
+    <footer className="relative overflow-hidden bg-[#191617] text-white">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-20 top-12 h-56 w-56 rounded-full bg-[#c44f6e]/12 blur-3xl" />
         <div className="absolute right-[-60px] top-24 h-72 w-72 rounded-full bg-[#f0d3d9]/10 blur-3xl" />

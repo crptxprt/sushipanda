@@ -1,8 +1,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { MessageCircle, Phone, MapPin, ArrowUpRight } from 'lucide-react';
-import galleryChefAction from '../assets/gallery-chef-action.jpeg';
-import galleryLiveEvent from '../assets/gallery-live-event.jpg';
+import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
 
 const processSteps = [
   { num: '01', title: 'Pošaljite upit' },
@@ -22,10 +21,12 @@ export default function Kontakt() {
 
       <section className="relative overflow-hidden bg-[#111111] px-6 py-24 lg:py-28">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-[8%] top-[18%] h-36 w-36 rounded-full bg-[#c44f6e]/12 blur-3xl" />
-          <span className="absolute right-[38%] top-1/2 hidden -translate-y-1/2 select-none font-serif text-[160px] leading-none text-sp-kanji/7 xl:block">
-            寿司
-          </span>
+          <div className="absolute left-[8%] top-[18%] h-36 w-36 rounded-full bg-[#e8d8d2]/10 blur-3xl" />
+          <div className="absolute right-[18%] top-[16%] h-28 w-28 rounded-full border border-white/8 bg-[#f5ece7]/8 blur-[2px]" />
+          <div className="absolute right-[6%] top-[22%] h-56 w-32 rounded-full border border-[#eadcd6]/12 bg-[#f3e6e1]/6 rotate-[18deg] blur-[1px]" />
+          <div className="absolute right-[24%] bottom-[18%] h-40 w-40 rounded-full bg-[#f0ddd8]/8 blur-3xl" />
+          <div className="absolute right-[10%] bottom-[12%] h-24 w-56 rounded-full border border-white/7 bg-white/[0.02] rotate-[-16deg]" />
+          <div className="absolute right-[34%] top-1/2 hidden h-32 w-14 -translate-y-1/2 rounded-full border border-[#eedfd8]/10 xl:block" />
         </div>
 
         <div className="relative max-w-[1320px] mx-auto grid items-center gap-10 px-4 lg:px-10 lg:grid-cols-[0.92fr_1.08fr]">
@@ -39,27 +40,17 @@ export default function Kontakt() {
             </p>
           </div>
 
-          <div className="relative">
-            <div className="grid gap-4 sm:grid-cols-[1.15fr_0.85fr]">
-              <div className="group relative overflow-hidden rounded-[28px] bg-stone-200 shadow-[0_24px_60px_rgba(0,0,0,0.22)]">
-                <img src={galleryLiveEvent} alt="Sushi Panda catering setup" className="h-[250px] w-full object-cover transition-transform duration-700 group-hover:scale-105 lg:h-[300px]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/62 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-7">
-                  <p className="text-[12px] uppercase tracking-[0.18em] text-white/76">Premium setup</p>
-                  <p className="mt-3 max-w-[18rem] font-serif text-[1.8rem] leading-[0.98] text-white">Catering koji izgleda jednako dobro kao što se pamti.</p>
-                </div>
-              </div>
-
-              <div className="grid gap-4">
-                <div className="group relative overflow-hidden rounded-[24px] bg-stone-200">
-                  <img src={galleryChefAction} alt="Chef action" className="h-[143px] w-full object-cover transition-transform duration-700 group-hover:scale-105 lg:h-[176px]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" />
-                </div>
-                <div className="rounded-[24px] border border-white/10 bg-white/7 p-5 backdrop-blur-sm">
-                  <p className="text-[12px] uppercase tracking-[0.18em] text-white/66">Na lokaciji</p>
-                  <p className="mt-3 text-[1.25rem] font-medium leading-[1.2] tracking-[-0.02em] text-white">Live chef, postavka i servis u istom premium ritmu.</p>
-                </div>
-              </div>
+          <div className="relative min-h-[240px] lg:min-h-[300px]">
+            <div className="absolute right-[9%] top-[2%] h-[240px] w-[240px] rounded-full border border-[#eadbd5]/12 bg-gradient-to-b from-[#f6ede8]/10 to-white/[0.03] blur-[1px]" />
+            <div className="absolute right-[28%] top-[18%] h-[170px] w-[82px] rounded-full border border-[#f1e3dd]/10 bg-[#f7efe9]/6 rotate-[24deg]" />
+            <div className="absolute right-[3%] top-[28%] h-[210px] w-[92px] rounded-full border border-[#ead8d1]/10 bg-[#f2e6e0]/5 rotate-[-18deg]" />
+            <div className="absolute right-[18%] bottom-[8%] h-[120px] w-[120px] rounded-full bg-[#f3e6e1]/8 blur-2xl" />
+            <div className="absolute left-[18%] top-[30%] h-[90px] w-[90px] rounded-full bg-white/[0.03] blur-xl" />
+            <div className="absolute right-[15%] bottom-[12%] rounded-[24px] border border-white/10 bg-white/[0.04] px-6 py-5 backdrop-blur-sm">
+              <p className="text-[12px] uppercase tracking-[0.18em] text-white/60">Quiet luxury</p>
+              <p className="mt-3 max-w-[14rem] text-[1.15rem] font-medium leading-[1.3] tracking-[-0.02em] text-white/90">
+                Diskretna postavka, čist servis i premium utisak na lokaciji.
+              </p>
             </div>
           </div>
         </div>
@@ -107,6 +98,19 @@ export default function Kontakt() {
                   </div>
                 </div>
 
+                <div className="mb-12 grid gap-3 sm:grid-cols-3">
+                  {[
+                    ['Instagram', '@sushipandaofficial'],
+                    ['Odgovor', 'u roku od 2h'],
+                    ['Kapacitet', '10-500+ gostiju'],
+                  ].map(([label, value]) => (
+                    <div key={label} className="rounded-[20px] border border-white/80 bg-white/74 px-4 py-4">
+                      <p className="text-[11px] uppercase tracking-[0.16em] text-stone-500 font-light">{label}</p>
+                      <p className="mt-2 text-[15px] font-medium leading-[1.4] tracking-[-0.01em] text-[#111111]">{value}</p>
+                    </div>
+                  ))}
+                </div>
+
                 <div className="border-t border-stone-200 pt-8">
                   <div className="mb-3 flex items-center gap-3">
                     <span className="h-2 w-2 rounded-full bg-green-400" />
@@ -138,7 +142,7 @@ export default function Kontakt() {
 
               <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
                 <div className="overflow-hidden rounded-[30px] bg-stone-100">
-                  <img src={galleryChefAction} alt="Sushi chef preparing catering" className="h-full min-h-[280px] w-full object-cover" />
+                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[280px] w-full object-cover" />
                 </div>
 
                 <div className="flex flex-col justify-between rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
