@@ -101,7 +101,7 @@ export default function Kontakt() {
                 <div className="mb-12 grid gap-3 sm:grid-cols-2">
                   {[
                     ['Instagram', '@sushipandaofficial'],
-                    ['Kapacitet', '10-500+ gostiju'],
+                    ['Kapacitet', '10-50+ gostiju'],
                   ].map(([label, value]) => (
                     <div key={label} className="rounded-[20px] border border-white/80 bg-white/74 px-4 py-4">
                       <p className="text-[11px] uppercase tracking-[0.16em] text-stone-500 font-light">{label}</p>
@@ -146,11 +146,14 @@ export default function Kontakt() {
 
                 <div className="relative flex min-h-[560px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-7 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-8">
                   <div className="pointer-events-none absolute inset-0">
-                    <div className="absolute right-[14%] top-[12%] h-28 w-28 rounded-full border border-white/[0.08] blur-[1px]" />
-                    <div className="absolute right-[8%] top-[24%] h-44 w-20 rounded-full border border-white/[0.06] rotate-[18deg]" />
-                    <div className="absolute left-[12%] bottom-[18%] h-20 w-48 rounded-full border border-white/[0.05] rotate-[-14deg]" />
-                    <div className="absolute left-[22%] top-[18%] h-20 w-20 rounded-full bg-white/[0.03] blur-2xl" />
-                    <div className="absolute right-[18%] bottom-[10%] h-24 w-24 rounded-full bg-white/[0.02] blur-2xl" />
+                    <div className="absolute right-[12%] top-[10%] h-32 w-32 rounded-full border border-white/[0.12] blur-[2px]" />
+                    <div className="absolute right-[6%] top-[22%] h-48 w-24 rounded-full border border-white/[0.1] rotate-[18deg] blur-[1px]" />
+                    <div className="absolute left-[16%] top-[16%] h-24 w-24 rounded-full bg-white/[0.05] blur-3xl" />
+                    <div className="absolute right-[20%] top-[34%] h-28 w-28 rounded-full bg-white/[0.04] blur-3xl" />
+                    <div className="absolute left-[10%] bottom-[20%] h-24 w-52 rounded-full border border-white/[0.09] rotate-[-14deg] blur-[1px]" />
+                    <div className="absolute left-[18%] bottom-[8%] h-20 w-20 rounded-full bg-white/[0.04] blur-3xl" />
+                    <div className="absolute right-[12%] bottom-[14%] h-32 w-16 rounded-full border border-white/[0.08] rotate-[20deg]" />
+                    <div className="absolute right-[24%] bottom-[6%] h-24 w-24 rounded-full bg-white/[0.035] blur-3xl" />
                   </div>
 
                   <div className="relative">
