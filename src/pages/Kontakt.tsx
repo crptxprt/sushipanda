@@ -82,7 +82,9 @@ export default function Kontakt() {
                     </div>
                     <div>
                       <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">WhatsApp</p>
-                      <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">{phoneLabel}</p>
+                      <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] transition-opacity group-hover:opacity-75 sm:text-[1.6rem]">
+                        Napišite nam
+                      </p>
                     </div>
                   </a>
 
@@ -99,15 +101,21 @@ export default function Kontakt() {
                 </div>
 
                 <div className="mb-12 grid gap-3 sm:grid-cols-2">
-                  {[
-                    ['Instagram', '@sushipandaofficial'],
-                    ['Kapacitet', '10-50+ gostiju'],
-                  ].map(([label, value]) => (
-                    <div key={label} className="rounded-[20px] border border-white/80 bg-white/74 px-4 py-4">
-                      <p className="text-[11px] uppercase tracking-[0.16em] text-stone-500 font-light">{label}</p>
-                      <p className="mt-2 text-[15px] font-medium leading-[1.4] tracking-[-0.01em] text-[#111111]">{value}</p>
-                    </div>
-                  ))}
+                  <div className="rounded-[20px] border border-white/80 bg-white/74 px-4 py-4">
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-stone-500 font-light">Instagram</p>
+                    <a
+                      href="https://www.instagram.com/sushipandaofficial"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-2 inline-block text-[15px] font-medium leading-[1.4] tracking-[-0.01em] text-[#111111] transition-opacity hover:opacity-70 hover:underline underline-offset-4"
+                    >
+                      @sushipandaofficial
+                    </a>
+                  </div>
+                  <div className="rounded-[20px] border border-white/80 bg-white/74 px-4 py-4">
+                    <p className="text-[11px] uppercase tracking-[0.16em] text-stone-500 font-light">Kapacitet</p>
+                    <p className="mt-2 text-[15px] font-medium leading-[1.4] tracking-[-0.01em] text-[#111111]">10-50+ gostiju</p>
+                  </div>
                 </div>
 
                 <div className="border-t border-stone-200 pt-6">
@@ -136,14 +144,15 @@ export default function Kontakt() {
 
                 <div className="relative flex min-h-[430px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-6 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-7">
                   <div className="pointer-events-none absolute inset-0">
-                    <div className="absolute right-[12%] top-[10%] h-32 w-32 rounded-full border border-white/[0.12] blur-[2px]" />
-                    <div className="absolute right-[6%] top-[22%] h-48 w-24 rounded-full border border-white/[0.1] rotate-[18deg] blur-[1px]" />
-                    <div className="absolute left-[16%] top-[16%] h-24 w-24 rounded-full bg-white/[0.05] blur-3xl" />
-                    <div className="absolute right-[20%] top-[34%] h-28 w-28 rounded-full bg-white/[0.04] blur-3xl" />
-                    <div className="absolute left-[10%] bottom-[20%] h-24 w-52 rounded-full border border-white/[0.09] rotate-[-14deg] blur-[1px]" />
-                    <div className="absolute left-[18%] bottom-[8%] h-20 w-20 rounded-full bg-white/[0.04] blur-3xl" />
-                    <div className="absolute right-[12%] bottom-[14%] h-32 w-16 rounded-full border border-white/[0.08] rotate-[20deg]" />
-                    <div className="absolute right-[24%] bottom-[6%] h-24 w-24 rounded-full bg-white/[0.035] blur-3xl" />
+                    <div className="absolute right-[12%] top-[10%] h-32 w-32 rounded-full border border-white/[0.14] blur-[2px]" />
+                    <div className="absolute right-[6%] top-[22%] h-48 w-24 rounded-full border border-white/[0.12] rotate-[18deg] blur-[1px]" />
+                    <div className="absolute left-[16%] top-[16%] h-24 w-24 rounded-full bg-white/[0.06] blur-3xl" />
+                    <div className="absolute right-[20%] top-[34%] h-28 w-28 rounded-full bg-white/[0.05] blur-3xl" />
+                    <div className="absolute left-[10%] bottom-[20%] h-24 w-52 rounded-full border border-white/[0.11] rotate-[-14deg] blur-[1px]" />
+                    <div className="absolute left-[18%] bottom-[8%] h-20 w-20 rounded-full bg-white/[0.05] blur-3xl" />
+                    <div className="absolute right-[12%] bottom-[14%] h-32 w-16 rounded-full border border-white/[0.1] rotate-[20deg]" />
+                    <div className="absolute right-[24%] bottom-[6%] h-24 w-24 rounded-full bg-white/[0.045] blur-3xl" />
+                    <div className="absolute left-[42%] bottom-[12%] h-16 w-16 rounded-full border border-white/[0.08] blur-[1px]" />
                   </div>
 
                   <div className="relative">
