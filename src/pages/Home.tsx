@@ -49,7 +49,7 @@ const whyItems = [
   {
     img: whyFlexPackages,
     title: 'Fleksibilni paketi',
-    desc: 'Prilagodljive opcije za grupe svih veličina — od 10 do 500+ gostiju.',
+    desc: 'Prilagodljive opcije za grupe svih veličina — od 10 do 50+ gostiju.',
   },
 ];
 

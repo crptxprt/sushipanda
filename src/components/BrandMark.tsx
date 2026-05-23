@@ -1,4 +1,4 @@
-import wordmark from '../assets/panda-sushi-wordmark-color.png';
+import wordmark from '../assets/panda-catering-logo.png';
 import wordmarkWhite from '../assets/panda-sushi-wordmark-white.png';
 
 interface BrandMarkProps {
