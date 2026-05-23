@@ -39,7 +39,7 @@ export default function ONama() {
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      <section className="relative overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:pt-36 lg:pb-24">
+      <section className="relative min-h-[430px] overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-[-170px] top-[2%] h-[560px] w-[560px] rounded-full bg-[#ebe2dc] opacity-90" />
           <div className="absolute right-[-70px] top-[10%] h-[420px] w-[420px] rounded-full bg-[#efe6e1]/82 blur-[3px]" />

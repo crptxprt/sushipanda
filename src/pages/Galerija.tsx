@@ -19,7 +19,7 @@ export default function Galerija() {
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      <section className="pt-36 pb-20 px-6 bg-[#f7f5f2] relative overflow-hidden">
+      <section className="relative min-h-[430px] overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
         <div className="absolute top-0 left-[-100px] w-[500px] h-[600px] bg-sp-blob pointer-events-none select-none" style={{ borderRadius: '50%' }} />
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 relative z-10">
           <div className="flex items-end justify-between">

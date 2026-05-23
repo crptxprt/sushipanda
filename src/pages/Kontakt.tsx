@@ -19,7 +19,7 @@ export default function Kontakt() {
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      <section className="relative overflow-hidden bg-[#111111] px-6 py-24 lg:py-28">
+      <section className="relative min-h-[430px] overflow-hidden bg-[#111111] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute left-[-110px] top-[8%] h-[360px] w-[360px] rounded-full bg-[#2b2324]" />
           <div className="absolute right-[-60px] top-[8%] h-[320px] w-[320px] rounded-full bg-[#2a1f22]" />
