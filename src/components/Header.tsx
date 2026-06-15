@@ -58,7 +58,7 @@ export default function Header({ transparent = false }: HeaderProps) {
             </span>
 
             <div
-              className="relative"
+              className="relative pb-3 -mb-3"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
@@ -71,7 +71,7 @@ export default function Header({ transparent = false }: HeaderProps) {
               </span>
 
               <div
-                className={`absolute top-full left-0 mt-3 w-52 bg-white border border-black/6 shadow-lg transition-all duration-200 ${
+                className={`absolute top-full left-0 w-52 bg-white border border-black/6 shadow-lg transition-all duration-200 ${
                   dropdownOpen
                     ? 'opacity-100 translate-y-0 pointer-events-auto'
                     : 'opacity-0 -translate-y-2 pointer-events-none'
