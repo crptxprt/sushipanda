@@ -9,6 +9,12 @@ export interface PackageItem {
   items: string[];
 }
 
+export interface CateringVariant {
+  title: string;
+  description: string;
+  details: string[];
+}
+
 interface CateringPageLayoutProps {
   title: string;
   titleItalic?: string;
@@ -16,11 +22,12 @@ interface CateringPageLayoutProps {
   heroImage: string;
   intro: string;
   packages: PackageItem[];
+  variants?: CateringVariant[];
   formSource: string;
 }
 
 export default function CateringPageLayout({
-  title, titleItalic, subtitle, heroImage, intro, packages, formSource,
+  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource,
 }: CateringPageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
@@ -69,6 +76,32 @@ export default function CateringPageLayout({
       {/* PACKAGES */}
       <section className="pb-28 px-6 bg-[#f7f5f2]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+          {variants && variants.length > 0 && (
+            <div className="mb-14 grid grid-cols-1 gap-4 lg:grid-cols-2">
+              {variants.map((variant, index) => (
+                <div
+                  key={variant.title}
+                  className={`p-8 lg:p-10 ${index === 0 ? 'bg-white' : 'bg-[#f3ece7]'} border border-[#eadfd9]/80`}
+                  style={{ borderRadius: '20px' }}
+                >
+                  <p className="editorial-kicker mb-4 text-stone-500">Tip slave</p>
+                  <h3 className="serif-card-title mb-4 text-[#111111]">{variant.title}</h3>
+                  <p className="mb-7 max-w-[34rem] text-[15px] font-light leading-[1.72] text-black/72">
+                    {variant.description}
+                  </p>
+                  <ul className="space-y-3">
+                    {variant.details.map((detail) => (
+                      <li key={detail} className="flex items-start gap-3">
+                        <span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#C44F6E] shrink-0" />
+                        <span className="text-[14px] font-light leading-[1.68] text-black/74">{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          )}
+
           <div className="mb-14">
             <p className="editorial-kicker text-stone-500 mb-3">Paketi</p>
             <h2 className="section-display-small">
