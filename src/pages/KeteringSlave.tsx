@@ -2,22 +2,31 @@ import CateringPageLayout from '../components/CateringPageLayout';
 
 const variants = [
   {
+    label: 'POSNO',
     title: 'Posna slava',
-    description: 'Lagane i elegantne kombinacije koje poštuju slavsku trpezu, uz pažljivo biran sushi i priloge.',
+    description: 'Sushi meni bez mesa i mlečnih proizvoda, prilagođen za posne slave, Badnji dan i posne trpeze.',
     details: [
-      'Akcenat na lososu, tunjevini, povrću i posnim kombinacijama',
-      'Meni se prilagođava broju gostiju i ritmu posluženja',
-      'Prezentacija ostaje premium i uredna za slavski sto',
+      'Posni sushi setovi',
+      'Riba, povrće i biljni dodaci',
+      'Avokado, krastavac, tuna i losos opcije',
+      'Elegantna postavka za slavsku trpezu',
     ],
+    ctaText: 'Zatraži posnu ponudu',
+    ctaHref: 'https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20posna%20slava%20i%20Sushi%20Panda%20ponuda.',
   },
   {
+    label: 'MRSNO',
     title: 'Mrsna slava',
-    description: 'Bogatiji izbor rolnica, nigirija i toplih zalogaja za domaćine koji žele raznovrsniji catering sto.',
+    description: 'Bogati sushi setovi za klasičnu slavsku trpezu, sa premium rolnama, nigiri izborom i live chef opcijom.',
     details: [
-      'Širi izbor ukusa, tekstura i potpisnih Sushi Panda kombinacija',
-      'Moguće kombinovanje klasičnih i premium opcija u jednom meniju',
-      'Pogodno za porodična okupljanja i veći broj zvanica',
+      'Premium sushi setovi',
+      'Tempura i nigiri asortiman',
+      'Live sushi chef opcija',
+      'Kompletna postavka i dostava',
     ],
+    ctaText: 'Zatraži mrsnu ponudu',
+    ctaHref: 'https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20mrsna%20slava%20i%20Sushi%20Panda%20ponuda.',
+    dark: true,
   },
 ];
 
@@ -67,7 +76,9 @@ export default function KeteringSlave() {
       intro="Slava je posebna prilika koja spaja porodicu i prijatelje. Uz Sushi Panda ketering, obogatite vaš slavski sto autentičnim japanskim specijalitetima koji se prirodno uklapaju u svečanu atmosferu. Pripremamo i posne i mrsne varijante, u skladu sa tipom slave i brojem gostiju."
       packages={packages}
       variants={variants}
+      variantsTitle="Odaberi tip slave"
       formSource="slave"
+      showContactSection={false}
     />
   );
 }

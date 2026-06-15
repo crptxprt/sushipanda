@@ -2,6 +2,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ContactForm from './ContactForm';
 import { ArrowRight } from 'lucide-react';
+import { navigate } from '../lib/router';
 
 export interface PackageItem {
   name: string;
@@ -10,9 +11,14 @@ export interface PackageItem {
 }
 
 export interface CateringVariant {
+  label: string;
   title: string;
   description: string;
   details: string[];
+  ctaText: string;
+  ctaHref?: string;
+  ctaPath?: string;
+  dark?: boolean;
 }
 
 interface CateringPageLayoutProps {
@@ -24,10 +30,12 @@ interface CateringPageLayoutProps {
   packages: PackageItem[];
   variants?: CateringVariant[];
   formSource: string;
+  variantsTitle?: string;
+  showContactSection?: boolean;
 }
 
 export default function CateringPageLayout({
-  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource,
+  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource, variantsTitle, showContactSection = true,
 }: CateringPageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
@@ -58,6 +66,73 @@ export default function CateringPageLayout({
         </div>
       </section>
 
+      {variants && variants.length > 0 && (
+        <section className="bg-[#f7f5f2] px-6 py-20 lg:py-24">
+          <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+            <div className="mb-12 lg:mb-14">
+              <p className="editorial-kicker text-stone-500 mb-3">Izbor menija</p>
+              <h2 className="section-display-small">{variantsTitle ?? 'Odaberi varijantu'}</h2>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              {variants.map((variant) => (
+                <div
+                  key={variant.title}
+                  className={`relative overflow-hidden p-8 lg:p-10 ${variant.dark ? 'bg-[#111111] text-white' : 'bg-white text-[#111111]'}`}
+                  style={{ borderRadius: '20px' }}
+                >
+                  <div
+                    className={`mb-7 inline-flex rounded-full px-4 py-1.5 text-[11px] uppercase tracking-[0.18em] ${
+                      variant.dark ? 'bg-white/10 text-white' : 'bg-[#f3e7e2] text-[#9d6070]'
+                    }`}
+                  >
+                    {variant.label}
+                  </div>
+
+                  <h3 className={`serif-card-title mb-4 ${variant.dark ? 'text-white' : 'text-[#111111]'}`}>
+                    {variant.title}
+                  </h3>
+                  <p className={`mb-8 max-w-[34rem] text-[15px] font-light leading-[1.72] ${variant.dark ? 'text-white/74' : 'text-black/72'}`}>
+                    {variant.description}
+                  </p>
+
+                  <ul className="space-y-4 mb-10">
+                    {variant.details.map((detail) => (
+                      <li key={detail} className="flex items-start gap-4">
+                        <ArrowRight size={12} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
+                        <span className={`text-[15px] font-light leading-[1.68] ${variant.dark ? 'text-white/78' : 'text-black/76'}`}>
+                          {detail}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    onClick={() => {
+                      if (variant.ctaHref) {
+                        window.open(variant.ctaHref, '_blank', 'noopener,noreferrer');
+                        return;
+                      }
+
+                      if (variant.ctaPath) {
+                        navigate(variant.ctaPath);
+                      }
+                    }}
+                    className={`w-full rounded-full py-4 text-[12px] uppercase tracking-[0.18em] transition-all duration-300 font-light ${
+                      variant.dark
+                        ? 'bg-[#C44F6E] text-white hover:bg-[#D8748D]'
+                        : 'border border-sp-dark text-[#111111] hover:bg-[#111111] hover:text-white'
+                    }`}
+                  >
+                    {variant.ctaText}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* INTRO */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -76,32 +151,6 @@ export default function CateringPageLayout({
       {/* PACKAGES */}
       <section className="pb-28 px-6 bg-[#f7f5f2]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
-          {variants && variants.length > 0 && (
-            <div className="mb-14 grid grid-cols-1 gap-4 lg:grid-cols-2">
-              {variants.map((variant, index) => (
-                <div
-                  key={variant.title}
-                  className={`p-8 lg:p-10 ${index === 0 ? 'bg-white' : 'bg-[#f3ece7]'} border border-[#eadfd9]/80`}
-                  style={{ borderRadius: '20px' }}
-                >
-                  <p className="editorial-kicker mb-4 text-stone-500">Tip slave</p>
-                  <h3 className="serif-card-title mb-4 text-[#111111]">{variant.title}</h3>
-                  <p className="mb-7 max-w-[34rem] text-[15px] font-light leading-[1.72] text-black/72">
-                    {variant.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {variant.details.map((detail) => (
-                      <li key={detail} className="flex items-start gap-3">
-                        <span className="mt-[9px] h-[5px] w-[5px] rounded-full bg-[#C44F6E] shrink-0" />
-                        <span className="text-[14px] font-light leading-[1.68] text-black/74">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          )}
-
           <div className="mb-14">
             <p className="editorial-kicker text-stone-500 mb-3">Paketi</p>
             <h2 className="section-display-small">
@@ -146,7 +195,14 @@ export default function CateringPageLayout({
                 </ul>
 
                 <button
-                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => {
+                    if (showContactSection) {
+                      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                      return;
+                    }
+
+                    navigate('/kontakt');
+                  }}
                   className={`w-full rounded-full py-4 text-[12px] uppercase tracking-[0.18em] transition-all duration-300 font-light ${
                     i === 1
                       ? 'bg-[#C44F6E] text-white hover:bg-[#D8748D]'
@@ -162,26 +218,28 @@ export default function CateringPageLayout({
       </section>
 
       {/* CTA FORM */}
-      <section id="contact-form" className="py-28 px-6 bg-[#111111]">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          <div className="lg:sticky lg:top-28">
-            <p className="editorial-kicker mb-7 text-sp-kanji">Kontakt</p>
-            <h2
-              className="section-display text-white mb-6"
-            >
-              Zatraži<br />
-              <span className="italic font-normal">ponudu</span>
-            </h2>
-            <div className="w-10 h-px bg-white/20 mb-8" />
-            <p className="max-w-xs text-[16px] font-light leading-[1.72] text-white/76">
-              Pošalji nam upit i pripremićemo personalizovanu ponudu za tvoj događaj.
-            </p>
+      {showContactSection && (
+        <section id="contact-form" className="py-28 px-6 bg-[#111111]">
+          <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <div className="lg:sticky lg:top-28">
+              <p className="editorial-kicker mb-7 text-sp-kanji">Kontakt</p>
+              <h2
+                className="section-display text-white mb-6"
+              >
+                Zatraži<br />
+                <span className="italic font-normal">ponudu</span>
+              </h2>
+              <div className="w-10 h-px bg-white/20 mb-8" />
+              <p className="max-w-xs text-[16px] font-light leading-[1.72] text-white/76">
+                Pošalji nam upit i pripremićemo personalizovanu ponudu za tvoj događaj.
+              </p>
+            </div>
+            <div className="bg-[#f7f5f2] p-8 lg:p-12" style={{ borderRadius: '20px' }}>
+              <ContactForm source={formSource} />
+            </div>
           </div>
-          <div className="bg-[#f7f5f2] p-8 lg:p-12" style={{ borderRadius: '20px' }}>
-            <ContactForm source={formSource} />
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <Footer />
     </div>
