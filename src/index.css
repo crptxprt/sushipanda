@@ -65,6 +65,34 @@
     font-weight: 700;
   }
 
+  .inner-hero-display {
+    font-size: clamp(4rem, 8.4vw, 7.25rem);
+    line-height: 0.84;
+    letter-spacing: -0.042em;
+    font-weight: 700;
+  }
+
+  .section-display-medium {
+    font-size: clamp(2.35rem, 4.9vw, 4.35rem);
+    line-height: 0.92;
+    letter-spacing: -0.034em;
+    font-weight: 700;
+  }
+
+  .section-display-small {
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    line-height: 0.94;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+
+  .serif-card-title {
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.02;
+    letter-spacing: -0.026em;
+    font-weight: 700;
+  }
+
   .editorial-kicker {
     font-size: 0.72rem;
     letter-spacing: 0.24em;

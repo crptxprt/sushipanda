@@ -32,8 +32,8 @@ export default function SushiChef() {
         <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[160px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden xl:block">司</span>
 
         <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-20 w-full">
-          <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Ekskluzivna usluga</p>
-          <h1 className="font-serif font-bold text-white leading-[0.92]" style={{ fontSize: 'clamp(3rem, 8vw, 7rem)', letterSpacing: '-0.02em' }}>
+          <p className="editorial-kicker mb-5 text-sp-kanji">Ekskluzivna usluga</p>
+          <h1 className="inner-hero-display text-white">
             Sushi chef<br /><span className="italic font-normal">na vašem eventi</span>
           </h1>
         </div>
@@ -43,8 +43,8 @@ export default function SushiChef() {
       <section className="py-28 px-6 bg-white">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div>
-            <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Šta dobijate</p>
-            <h2 className="font-serif font-bold mb-8 leading-[1]" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', letterSpacing: '-0.02em' }}>
+            <p className="editorial-kicker mb-8 text-stone-500">Šta dobijate</p>
+            <h2 className="section-display-medium mb-8">
               Iskustvo koje<br /><span className="italic font-normal">se pamti</span>
             </h2>
             <div className="w-10 h-px bg-[#C44F6E] mb-8" />
@@ -70,14 +70,14 @@ export default function SushiChef() {
       <section className="py-28 px-6 bg-[#f7f5f2]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
           <div className="mb-16">
-            <p className="mb-3 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako funkcioniše</p>
-            <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>Proces u 3 koraka</h2>
+            <p className="editorial-kicker mb-3 text-stone-500">Kako funkcioniše</p>
+            <h2 className="section-display-small">Proces u 3 koraka</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {steps.map((s) => (
               <div key={s.num} className="bg-white p-10 lg:p-12" style={{ borderRadius: '20px' }}>
                 <p className="font-serif font-bold text-[5rem] leading-none mb-6 select-none text-black/6">{s.num}</p>
-                <h3 className="font-serif font-bold text-[1.3rem] text-[#111111] mb-4">{s.title}</h3>
+                <h3 className="serif-card-title text-[#111111] mb-4">{s.title}</h3>
                 <p className="text-[15px] font-light leading-[1.68] text-black/74">{s.desc}</p>
               </div>
             ))}
@@ -89,8 +89,8 @@ export default function SushiChef() {
       <section className="py-28 px-6 bg-[#F0EDE7]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Rezervacija</p>
-            <h2 className="font-serif font-bold text-[#111111] mb-5 leading-[1]" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' }}>
+            <p className="editorial-kicker mb-7 text-stone-500">Rezervacija</p>
+            <h2 className="section-display-medium text-[#111111] mb-5">
               Zatraži<br /><span className="italic font-normal">chefa</span>
             </h2>
             <div className="w-10 h-px bg-[#C44F6E] mb-8" />

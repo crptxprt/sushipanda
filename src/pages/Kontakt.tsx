@@ -31,8 +31,8 @@ export default function Kontakt() {
 
         <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
           <div className="max-w-[44rem] pb-2">
-            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Javite nam se</p>
-            <h1 className="font-serif font-bold text-white leading-[0.9]" style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}>
+            <p className="editorial-kicker mb-5 text-sp-kanji">Javite nam se</p>
+            <h1 className="inner-hero-display text-white">
               Kontakt &<br /><span className="italic font-normal">ponuda</span>
             </h1>
             <p className="mt-6 max-w-[31rem] text-[16px] font-light leading-[1.7] text-white/72 sm:text-[17px]">
@@ -50,14 +50,14 @@ export default function Kontakt() {
               <div className="absolute left-[-20px] bottom-8 h-24 w-24 rounded-full bg-[#c44f6e]/10 blur-2xl" />
 
               <div className="relative">
-                <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Informacije</p>
+                <p className="editorial-kicker mb-8 text-stone-500">Informacije</p>
                 <div className="space-y-6 mb-8">
                   <a href={phoneLink} className="flex items-start gap-5 group">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-stone-200 bg-white/90 transition-colors group-hover:border-[#C44F6E]" style={{ borderRadius: '50%' }}>
                       <Phone size={14} className="text-stone-400 transition-colors group-hover:text-[#C44F6E]" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Telefon</p>
+                      <p className="editorial-kicker mb-2 text-stone-500">Telefon</p>
                       <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">{phoneLabel}</p>
                     </div>
                   </a>
@@ -67,7 +67,7 @@ export default function Kontakt() {
                       <MessageCircle size={14} className="text-stone-400 transition-colors group-hover:text-[#C44F6E]" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">WhatsApp</p>
+                      <p className="editorial-kicker mb-2 text-stone-500">WhatsApp</p>
                       <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] transition-opacity group-hover:opacity-75 sm:text-[1.6rem]">
                         Napišite nam
                       </p>
@@ -79,7 +79,7 @@ export default function Kontakt() {
                       <MapPin size={14} className="text-stone-400" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <p className="mb-2 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Lokacija</p>
+                      <p className="editorial-kicker mb-2 text-stone-500">Lokacija</p>
                       <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">Karađorđeva 47</p>
                       <p className="mt-2 text-[16px] font-light leading-[1.6] text-black/72">Kragujevac, Srbija</p>
                     </div>
@@ -105,7 +105,7 @@ export default function Kontakt() {
                 </div>
 
                 <div className="border-t border-stone-200 pt-6">
-                  <p className="mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Kako izgleda rezervacija</p>
+                  <p className="editorial-kicker mb-6 text-stone-500">Kako izgleda rezervacija</p>
                   <div className="space-y-3">
                     {processSteps.map((step) => (
                       <div key={step.num} className="flex items-start gap-4 rounded-[22px] border border-white/80 bg-white/78 px-4 py-4">
@@ -142,8 +142,8 @@ export default function Kontakt() {
                   </div>
 
                   <div className="relative">
-                    <p className="text-[12px] uppercase tracking-[0.18em] text-white/62">Sushi Panda catering</p>
-                    <p className="mt-4 font-serif text-[clamp(1.7rem,3.2vw,2.55rem)] leading-[0.9] tracking-[-0.03em]">
+                    <p className="editorial-kicker text-white/62">Sushi Panda catering</p>
+                    <p className="section-display-small mt-4 text-white">
                       Od privatnih proslava do većih događaja
                     </p>
                     <p className="mt-5 text-[15px] font-light leading-[1.65] text-white/76 sm:text-[16px]">

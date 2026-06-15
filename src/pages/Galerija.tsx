@@ -23,8 +23,8 @@ export default function Galerija() {
         <div className="absolute top-0 left-[-100px] w-[500px] h-[600px] bg-sp-blob pointer-events-none select-none" style={{ borderRadius: '50%' }} />
         <div className="relative z-10 mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
           <div className="max-w-[44rem] pb-2">
-            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Vizual</p>
-            <h1 className="font-serif font-bold leading-[0.9]" style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}>
+            <p className="editorial-kicker mb-5 text-stone-500">Vizual</p>
+            <h1 className="inner-hero-display">
               Galerija
             </h1>
             <p className="mt-6 max-w-[31rem] text-[16px] font-light leading-[1.7] text-stone-600 sm:text-[17px]">
@@ -49,8 +49,8 @@ export default function Galerija() {
       <section className="py-24 px-6 bg-[#111111] text-center relative overflow-hidden">
         <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-serif text-[200px] leading-none text-sp-kanji/6 pointer-events-none select-none">寿</span>
         <div className="relative z-10">
-          <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-400 font-light">Impresioniran?</p>
-          <h2 className="font-serif font-bold text-white mb-10 leading-[1]" style={{ fontSize: 'clamp(2rem, 5vw, 4.5rem)', letterSpacing: '-0.02em' }}>
+          <p className="editorial-kicker mb-8 text-stone-400">Impresioniran?</p>
+          <h2 className="section-display-medium text-white mb-10">
             Organizujmo tvoj<br /><span className="italic font-normal">sushi event</span>
           </h2>
           <button onClick={() => navigate('/kontakt')} className="bg-[#C44F6E] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">

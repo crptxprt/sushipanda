@@ -51,10 +51,9 @@ export default function ONama() {
 
         <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
           <div className="max-w-[44rem] pb-2">
-            <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">O nama</p>
+            <p className="editorial-kicker mb-5 text-stone-500">O nama</p>
             <h1
-              className="font-serif font-bold leading-[0.9] text-[#111111]"
-              style={{ fontSize: 'clamp(3.35rem, 8vw, 6.1rem)', letterSpacing: '-0.03em' }}
+              className="inner-hero-display text-[#111111]"
             >
               O nama
             </h1>
@@ -69,10 +68,9 @@ export default function ONama() {
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
           <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="mb-5 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Naš tim</p>
+              <p className="editorial-kicker mb-5 text-stone-500">Naš tim</p>
               <h2
-                className="font-serif font-bold leading-[0.98] text-[#111111]"
-                style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em' }}
+                className="section-display-medium text-[#111111]"
               >
                 Ljudi koji nose<br />
                 <span className="italic font-normal">Sushi Panda iskustvo</span>
@@ -110,8 +108,8 @@ export default function ONama() {
                   />
                 </div>
                 <div className="px-6 py-6">
-                  <p className="mb-3 text-[12px] uppercase tracking-[0.18em] text-[#C44F6E] font-light">{member.role}</p>
-                  <h3 className="font-serif text-[1.7rem] font-bold leading-[1] tracking-[-0.02em] text-[#111111]">
+                  <p className="editorial-kicker mb-3 text-[#C44F6E]">{member.role}</p>
+                  <h3 className="serif-card-title text-[#111111]">
                     {member.name}
                   </h3>
                   <p className="mt-4 text-[15px] font-light leading-[1.68] text-black/72">
@@ -129,10 +127,9 @@ export default function ONama() {
           <div className="relative overflow-hidden rounded-[34px] border border-[#eee2de] bg-[#fcfaf8] px-8 py-10 text-center shadow-[0_20px_50px_rgba(145,111,102,0.06)] sm:px-12 sm:py-12">
             <div className="absolute left-[10%] top-[18%] h-24 w-24 rounded-full bg-[#f1e4df]/70 blur-2xl" />
             <div className="absolute right-[12%] bottom-[18%] h-20 w-20 rounded-full bg-[#ead7d4]/70 blur-2xl" />
-            <p className="relative mb-6 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Naša filozofija</p>
+            <p className="editorial-kicker relative mb-6 text-stone-500">Naša filozofija</p>
             <p
-              className="relative mx-auto max-w-[42rem] font-serif text-[#111111]"
-              style={{ fontSize: 'clamp(1.9rem, 4vw, 3.3rem)', lineHeight: 1.02, letterSpacing: '-0.03em' }}
+              className="section-display-small relative mx-auto max-w-[42rem] text-[#111111]"
             >
               Sve počinje od tima
               <span className="block italic font-normal">od izbora sastojaka do postavke na lokaciji.</span>
@@ -142,8 +139,8 @@ export default function ONama() {
       </section>
 
       <section className="py-24 px-6 bg-[#F0EDE7] text-center">
-        <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">Radimo zajedno?</p>
-        <h2 className="font-serif font-bold text-[#111111] mb-12 leading-[1]" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', letterSpacing: '-0.02em' }}>
+        <p className="editorial-kicker mb-7 text-stone-500">Radimo zajedno?</p>
+        <h2 className="section-display text-[#111111] mb-12">
           Planiraš <span className="italic font-normal">sushi event?</span>
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-5">

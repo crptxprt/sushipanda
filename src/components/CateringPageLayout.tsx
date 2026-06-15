@@ -40,15 +40,14 @@ export default function CateringPageLayout({
         </span>
 
         <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-16 w-full">
-          <p className="text-[12px] tracking-[0.18em] uppercase text-sp-kanji mb-4 font-light">Sushi Panda Ketering</p>
+          <p className="editorial-kicker text-sp-kanji mb-4">Sushi Panda Ketering</p>
           <h1
-            className="font-serif font-bold text-white leading-[0.92]"
-            style={{ fontSize: 'clamp(2.8rem, 7vw, 6.5rem)', letterSpacing: '-0.02em' }}
+            className="inner-hero-display text-white"
           >
             {title}
             {titleItalic && <><br /><span className="italic font-normal">{titleItalic}</span></>}
           </h1>
-          <p className="mt-4 text-[12px] font-light uppercase tracking-[0.18em] text-white/62">{subtitle}</p>
+          <p className="editorial-kicker mt-4 text-white/62">{subtitle}</p>
         </div>
       </section>
 
@@ -71,8 +70,8 @@ export default function CateringPageLayout({
       <section className="pb-28 px-6 bg-[#f7f5f2]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
           <div className="mb-14">
-            <p className="text-[12px] tracking-[0.18em] uppercase text-stone-500 mb-3 font-light">Paketi</p>
-            <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>
+            <p className="editorial-kicker text-stone-500 mb-3">Paketi</p>
+            <h2 className="section-display-small">
               Odaberi paket
             </h2>
           </div>
@@ -93,7 +92,7 @@ export default function CateringPageLayout({
                 <p className={`font-serif font-bold text-[4.5rem] leading-none mb-1 select-none ${i === 1 ? 'text-white/8' : 'text-black/6'}`}>
                   {String(i + 1).padStart(2, '0')}
                 </p>
-                <h3 className={`font-serif font-bold text-[1.5rem] mb-1 ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
+                <h3 className={`serif-card-title mb-1 ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
                   {pkg.name}
                 </h3>
                 <p className={`mb-9 text-[12px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/60' : 'text-stone-500'}`}>
@@ -133,10 +132,9 @@ export default function CateringPageLayout({
       <section id="contact-form" className="py-28 px-6 bg-[#111111]">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <div className="lg:sticky lg:top-28">
-            <p className="mb-7 text-[12px] uppercase tracking-[0.18em] text-sp-kanji font-light">Kontakt</p>
+            <p className="editorial-kicker mb-7 text-sp-kanji">Kontakt</p>
             <h2
-              className="font-serif font-bold text-white mb-6 leading-[1]"
-              style={{ fontSize: 'clamp(2.5rem, 5.5vw, 5rem)', letterSpacing: '-0.02em' }}
+              className="section-display text-white mb-6"
             >
               Zatraži<br />
               <span className="italic font-normal">ponudu</span>

@@ -42,14 +42,14 @@ export default function Footer() {
             <p className="max-w-sm text-[16px] font-light leading-[1.72] text-white/78">
               Savremen sushi catering za privatne proslave, slave i korporativne događaje u Kragujevcu.
             </p>
-            <button onClick={() => go('/kontakt')} className="mt-8 inline-block rounded-full border border-[#e2c1ca]/30 px-7 py-3 text-[12px] font-light uppercase tracking-[0.22em] text-white transition-all duration-300 hover:border-[#C44F6E] hover:bg-[#C44F6E] hover:text-white">
+            <button onClick={() => go('/kontakt')} className="mt-8 inline-block rounded-full border border-[#e2c1ca]/30 px-7 py-3 text-[12px] font-light uppercase tracking-[0.24em] text-white transition-all duration-300 hover:border-[#C44F6E] hover:bg-[#C44F6E] hover:text-white">
               Zatraži ponudu
             </button>
           </div>
 
           {/* Ketering */}
           <div>
-            <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Ketering</p>
+            <p className="editorial-kicker mb-6 text-stone-400">Ketering</p>
             <ul className="space-y-4">
               {keteringLinks.map((l) => (
                 <li key={l.path}><button onClick={() => go(l.path)} className="text-[16px] font-light leading-[1.65] tracking-[0.01em] text-white/82 transition-colors hover:text-white">{l.label}</button></li>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Navigacija</p>
+            <p className="editorial-kicker mb-6 text-stone-400">Navigacija</p>
             <ul className="space-y-4">
               {quickLinks.map((l) => (
                 <li key={l.path}><button onClick={() => go(l.path)} className="text-[16px] font-light leading-[1.65] tracking-[0.01em] text-white/82 transition-colors hover:text-white">{l.label}</button></li>
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="mb-6 text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Kontakt</p>
+            <p className="editorial-kicker mb-6 text-stone-400">Kontakt</p>
             <ul className="space-y-5">
               <li><a href="tel:+38166404049" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Phone size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />+381 66 404 049</a></li>
               <li><a href="https://instagram.com/sushipandaofficial" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-[16px] font-light leading-[1.68] text-white/82 transition-colors hover:text-white"><Instagram size={14} className="shrink-0 text-sp-kanji" strokeWidth={1.5} />@sushipandaofficial</a></li>
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/8 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[12px] font-light uppercase tracking-[0.22em] text-stone-400">Sushi Panda &copy; {new Date().getFullYear()}</p>
+          <p className="text-[12px] font-light uppercase tracking-[0.24em] text-stone-400">Sushi Panda &copy; {new Date().getFullYear()}</p>
           <p className="text-[13px] font-light tracking-[0.06em] text-stone-400">Elegant sushi catering za događaje u Kragujevcu</p>
         </div>
       </div>
