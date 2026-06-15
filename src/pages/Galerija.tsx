@@ -1,17 +1,64 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { navigate } from '../lib/router';
+import gallery01 from '../assets/gallery/gallery-01.avif';
+import gallery02 from '../assets/gallery/gallery-02.avif';
+import gallery04 from '../assets/gallery/gallery-04.avif';
+import gallery05 from '../assets/gallery/gallery-05.avif';
+import gallery06 from '../assets/gallery/gallery-06.avif';
+import gallery07 from '../assets/gallery/gallery-07.avif';
+import gallery08 from '../assets/gallery/gallery-08.avif';
+import gallery09 from '../assets/gallery/gallery-09.avif';
 
 const images = [
-  { src: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1200', size: 'large' },
-  { src: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=800', size: 'normal' },
-  { src: 'https://images.pexels.com/photos/1148087/pexels-photo-1148087.jpeg?auto=compress&cs=tinysrgb&w=800', size: 'normal' },
-  { src: 'https://images.pexels.com/photos/3475610/pexels-photo-3475610.jpeg?auto=compress&cs=tinysrgb&w=900', size: 'tall' },
-  { src: 'https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=800', size: 'normal' },
-  { src: 'https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=800', size: 'normal' },
-  { src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', size: 'wide' },
-  { src: 'https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=800', size: 'normal' },
-  { src: 'https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600', size: 'normal' },
+  {
+    src: gallery01,
+    alt: 'Elegant Sushi Panda serving on a bright marble table',
+    className: 'aspect-[4/3] md:aspect-[16/10] xl:col-span-7 xl:row-span-5',
+    imageClassName: 'object-[62%_52%]',
+  },
+  {
+    src: gallery05,
+    alt: 'Signature catering platter filled with premium sushi rolls',
+    className: 'aspect-[4/5] xl:col-span-5 xl:row-span-5',
+    imageClassName: 'object-center',
+  },
+  {
+    src: gallery04,
+    alt: 'Refined sushi selection presented in a dark editorial close-up',
+    className: 'aspect-[4/3] xl:col-span-4 xl:row-span-4',
+    imageClassName: 'object-center',
+  },
+  {
+    src: gallery02,
+    alt: 'Colorful Sushi Panda rolls served in intimate evening light',
+    className: 'aspect-[3/4] xl:col-span-3 xl:row-span-4',
+    imageClassName: 'object-center',
+  },
+  {
+    src: gallery07,
+    alt: 'Sushi catering arranged for a festive table setting',
+    className: 'aspect-[4/5] xl:col-span-5 xl:row-span-4',
+    imageClassName: 'object-center',
+  },
+  {
+    src: gallery08,
+    alt: 'Guests enjoying Sushi Panda catering during an event',
+    className: 'aspect-[16/10] xl:col-span-5 xl:row-span-4',
+    imageClassName: 'object-center',
+  },
+  {
+    src: gallery06,
+    alt: 'Minimal sushi plate with soy detail in soft natural light',
+    className: 'aspect-[4/3] xl:col-span-4 xl:row-span-4',
+    imageClassName: 'object-center',
+  },
+  {
+    src: gallery09,
+    alt: 'A generous Sushi Panda selection packaged for private gatherings',
+    className: 'aspect-[3/4] xl:col-span-3 xl:row-span-4',
+    imageClassName: 'object-center',
+  },
 ];
 
 export default function Galerija() {
@@ -36,10 +83,41 @@ export default function Galerija() {
 
       <section className="pb-28 px-6">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3">
+          <div className="mb-14 flex flex-col gap-6 border-b border-stone-200/90 pb-10 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-[30rem]">
+              <p className="editorial-kicker mb-4 text-stone-500">Odabrani kadrovi</p>
+              <p className="text-[15px] font-light leading-[1.9] text-stone-600 sm:text-[16px]">
+                Ketering koji izgleda čisto, bogato i spremno za događaj. Fokus je na serviranju,
+                atmosferi i detaljima koji prave premium utisak.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-6 text-left sm:grid-cols-3">
+              {[
+                { value: 'Privatne proslave', label: 'postavka i posluženje' },
+                { value: 'Korporativni eventi', label: 'precizan vizuelni ritam' },
+                { value: 'Premium detalji', label: 'sushi kao centerpiece' },
+              ].map((item) => (
+                <div key={item.value}>
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-stone-400">{item.label}</p>
+                  <p className="mt-2 font-serif text-[22px] italic leading-none text-stone-900">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:auto-rows-[96px] xl:grid-cols-12 xl:gap-5">
             {images.map((img, i) => (
-              <div key={i} className={`break-inside-avoid overflow-hidden bg-stone-200 ${img.size === 'large' ? 'aspect-[4/3]' : img.size === 'tall' ? 'aspect-[3/4]' : img.size === 'wide' ? 'aspect-[16/9]' : 'aspect-square'}`} style={{ borderRadius: '16px' }}>
-                <img src={img.src} alt={`Sushi Panda ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div
+                key={i}
+                className={`group overflow-hidden bg-stone-200 shadow-[0_22px_50px_rgba(28,25,23,0.08)] ${img.className}`}
+                style={{ borderRadius: '22px' }}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className={`h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04] ${img.imageClassName}`}
+                />
               </div>
             ))}
           </div>
