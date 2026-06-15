@@ -155,7 +155,7 @@ export default function Home() {
           <div className="w-full flex flex-col justify-center py-12 lg:py-0 lg:pr-10">
 
             {/* Overline */}
-            <p className="mb-8 text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light">
+            <p className="editorial-kicker mb-8 text-stone-500">
               — Premium Sushi Catering, Kragujevac
             </p>
 
@@ -275,10 +275,9 @@ export default function Home() {
         <div className="soft-petal right-[7%] top-[12%] hidden h-40 w-20 rotate-[24deg] opacity-25 lg:block" />
         <div className="mx-auto grid max-w-[1320px] gap-14 px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-10">
           <div className="lg:pr-8">
-            <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Zašto Sushi Panda</p>
+            <p className="editorial-kicker mb-4 text-stone-500">Zašto Sushi Panda</p>
             <h2
-              className="mb-6 font-serif font-bold text-[#111111]"
-              style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', letterSpacing: '-0.02em', lineHeight: 0.96 }}
+              className="section-display mb-6 text-[#111111]"
             >
               Premium servis,
               <br />
@@ -331,8 +330,8 @@ export default function Home() {
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
           <div className="mb-16 grid gap-10 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
             <div>
-              <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Usluge</p>
-              <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', letterSpacing: '-0.01em' }}>
+              <p className="editorial-kicker mb-4 text-stone-500">Usluge</p>
+              <h2 className="section-display">
                 Vrste ketering evenata
               </h2>
             </div>
@@ -378,10 +377,9 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] overflow-hidden rounded-[40px] border border-[#241b1a] bg-[radial-gradient(circle_at_top_right,rgba(196,79,110,0.14),rgba(18,15,14,0)_28%),linear-gradient(135deg,#171211_0%,#0e0b0a_100%)] shadow-[0_36px_80px_rgba(12,9,8,0.22)]">
           <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
             <div className="flex flex-col justify-center p-8 lg:p-14">
-              <p className="mb-4 text-[12px] font-light uppercase tracking-[0.18em] text-white">Ekskluzivna usluga</p>
+              <p className="editorial-kicker mb-4 text-white">Ekskluzivna usluga</p>
               <h2
-                className="mb-5 font-serif font-bold text-white"
-                style={{ fontSize: 'clamp(2.2rem, 4.8vw, 4.2rem)', letterSpacing: '-0.025em', lineHeight: 0.96 }}
+                className="section-display mb-5 text-white"
               >
                 Sushi chef
                 <br />
@@ -447,8 +445,8 @@ export default function Home() {
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
           <div className="mb-14 flex items-end justify-between">
             <div>
-              <p className="mb-3 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Naš rad</p>
-              <h2 className="font-serif font-bold" style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)', letterSpacing: '-0.01em' }}>
+              <p className="editorial-kicker mb-3 text-stone-500">Naš rad</p>
+              <h2 className="section-display">
                 Galerija
               </h2>
               <p className="mt-4 max-w-md text-[16px] font-light leading-[1.7] text-black/74">
@@ -502,10 +500,9 @@ export default function Home() {
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
-            <p className="mb-7 text-[12px] font-light uppercase tracking-[0.18em] text-stone-500">Kontakt</p>
+            <p className="editorial-kicker mb-7 text-stone-500">Kontakt</p>
             <h2
-              className="mb-5 font-serif font-bold leading-[1] text-[#111111]"
-              style={{ fontSize: 'clamp(2.4rem, 4.8vw, 4.2rem)', letterSpacing: '-0.02em' }}
+              className="section-display mb-5 text-[#111111]"
             >
               Planiraš<br />
               <span className="italic font-normal">događaj?</span>
