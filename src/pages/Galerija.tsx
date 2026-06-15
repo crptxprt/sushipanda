@@ -9,6 +9,7 @@ import gallery06 from '../assets/gallery/gallery-06.avif';
 import gallery07 from '../assets/gallery/gallery-07.avif';
 import gallery08 from '../assets/gallery/gallery-08.avif';
 import gallery09 from '../assets/gallery/gallery-09.avif';
+import gallery10 from '../assets/gallery/gallery-10.jpg';
 
 const images = [
   {
@@ -58,6 +59,12 @@ const images = [
     alt: 'A generous Sushi Panda selection packaged for private gatherings',
     size: 'normal',
     imageClassName: 'object-[55%_50%]',
+  },
+  {
+    src: gallery10,
+    alt: 'Layered Sushi Panda selection presented in a clean premium box set',
+    size: 'normal',
+    imageClassName: 'object-center',
   },
 ];
 
