@@ -37,7 +37,7 @@ interface CateringPageLayoutProps {
 }
 
 export default function CateringPageLayout({
-  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource, variantsTitle, showContactSection = false,
+  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource, variantsTitle, showContactSection = true,
 }: CateringPageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
@@ -164,7 +164,7 @@ export default function CateringPageLayout({
             {packages.map((pkg, i) => (
               <div
                 key={i}
-                className={`relative flex h-full flex-col p-10 lg:p-12 ${i === 1 ? 'bg-[#111111] text-white' : 'bg-white'}`}
+                className={`relative flex min-h-[360px] h-full flex-col p-10 lg:min-h-[390px] lg:p-12 ${i === 1 ? 'bg-[#111111] text-white' : 'bg-white'}`}
                 style={{ borderRadius: '20px' }}
               >
                 {i === 1 && (
@@ -176,40 +176,28 @@ export default function CateringPageLayout({
                 <p className={`font-serif font-bold text-[4.5rem] leading-none mb-1 select-none ${i === 1 ? 'text-white/8' : 'text-black/6'}`}>
                   {String(i + 1).padStart(2, '0')}
                 </p>
-                <h3 className={`serif-card-title mb-1 ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
+                <h3 className={`serif-card-title mb-2 ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
                   {pkg.name}
                 </h3>
-                <p className={`mb-9 text-[12px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/60' : 'text-stone-500'}`}>
+                <p className={`text-[12px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/60' : 'text-stone-500'}`}>
                   {pkg.guests}
                 </p>
 
-                <div className={`w-full h-px mb-9 ${i === 1 ? 'bg-white/12' : 'bg-stone-100'}`} />
-
-                <ul className="space-y-4 mb-10">
-                  {pkg.items.map((item, j) => (
-                    <li key={j} className="flex items-start gap-4">
-                      <ArrowRight size={12} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
-                      <span className={`text-[15px] font-light leading-[1.68] ${i === 1 ? 'text-white/78' : 'text-black/76'}`}>
-                        {item}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className={`mt-auto border-t pt-8 ${i === 1 ? 'border-white/12' : 'border-stone-100'}`}>
-                  <p className={`text-[11px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/48' : 'text-stone-500'}`}>
-                    {pkg.priceNote ?? 'okvirna cena'}
-                  </p>
-                  <p className={`mt-3 font-serif text-[2rem] leading-none tracking-[-0.03em] ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
+                <div className="mt-auto pt-14">
+                  <p className={`font-serif text-[2.15rem] leading-none tracking-[-0.03em] ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
                     {pkg.price}
                   </p>
-                  <p className={`mt-3 text-[13px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/56' : 'text-stone-500'}`}>
-                    po osobi
+                  <p className={`mt-4 text-[11px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/48' : 'text-stone-500'}`}>
+                    {pkg.priceNote ?? 'okvirna cena'}
                   </p>
                 </div>
               </div>
             ))}
           </div>
+
+          <p className="mx-auto mt-10 max-w-[52rem] text-center text-[15px] font-light leading-[1.75] text-black/66">
+            Sve ponude uključuju dostavu, postavljanje, soja sos, wasabi, đumbir i sushi meni po dogovoru.
+          </p>
         </div>
       </section>
 

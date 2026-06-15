@@ -32,7 +32,7 @@ const variants = [
 
 const packages = [
   {
-    name: 'Mini',
+    name: 'MINI',
     guests: 'do 10 osoba',
     price: '1.200 RSD / osoba',
     items: [
@@ -43,7 +43,7 @@ const packages = [
     ],
   },
   {
-    name: 'Standard',
+    name: 'STANDARD',
     guests: '10–30 osoba',
     price: '1.100 RSD / osoba',
     items: [
@@ -55,7 +55,7 @@ const packages = [
     ],
   },
   {
-    name: 'Premium',
+    name: 'PREMIUM',
     guests: '30+ osoba',
     price: '1.000 RSD / osoba',
     items: [
@@ -81,7 +81,6 @@ export default function KeteringSlave() {
       variants={variants}
       variantsTitle="Odaberi tip slave"
       formSource="slave"
-      showContactSection={false}
     />
   );
 }
