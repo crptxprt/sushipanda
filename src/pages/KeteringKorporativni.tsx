@@ -2,8 +2,9 @@ import CateringPageLayout from '../components/CateringPageLayout';
 
 const packages = [
   {
-    name: 'Business',
+    name: 'Mini',
     guests: 'do 10 osoba',
+    price: '1.200 RSD / osoba',
     items: [
       '5 vrsta sushija po izboru',
       'Elegantna poslovna prezentacija',
@@ -12,8 +13,9 @@ const packages = [
     ],
   },
   {
-    name: 'Corporate',
-    guests: 'do 20 osoba',
+    name: 'Standard',
+    guests: '10–30 osoba',
+    price: '1.100 RSD / osoba',
     items: [
       '8 vrsta sushija po izboru',
       'Branded prezentacija po zahtevu',
@@ -23,8 +25,9 @@ const packages = [
     ],
   },
   {
-    name: 'Enterprise',
-    guests: '50+ osoba',
+    name: 'Premium',
+    guests: '30+ osoba',
+    price: '1.000 RSD / osoba',
     items: [
       'Neograničen asortiman sushija',
       'Live sushi stanica sa cheom',

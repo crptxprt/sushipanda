@@ -8,6 +8,8 @@ export interface PackageItem {
   name: string;
   guests: string;
   items: string[];
+  price: string;
+  priceNote?: string;
 }
 
 export interface CateringVariant {
@@ -35,7 +37,7 @@ interface CateringPageLayoutProps {
 }
 
 export default function CateringPageLayout({
-  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource, variantsTitle, showContactSection = true,
+  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource, variantsTitle, showContactSection = false,
 }: CateringPageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
@@ -162,7 +164,7 @@ export default function CateringPageLayout({
             {packages.map((pkg, i) => (
               <div
                 key={i}
-                className={`relative p-10 lg:p-12 ${i === 1 ? 'bg-[#111111] text-white' : 'bg-white'}`}
+                className={`relative flex h-full flex-col p-10 lg:p-12 ${i === 1 ? 'bg-[#111111] text-white' : 'bg-white'}`}
                 style={{ borderRadius: '20px' }}
               >
                 {i === 1 && (
@@ -194,23 +196,17 @@ export default function CateringPageLayout({
                   ))}
                 </ul>
 
-                <button
-                  onClick={() => {
-                    if (showContactSection) {
-                      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
-                      return;
-                    }
-
-                    navigate('/kontakt');
-                  }}
-                  className={`w-full rounded-full py-4 text-[12px] uppercase tracking-[0.18em] transition-all duration-300 font-light ${
-                    i === 1
-                      ? 'bg-[#C44F6E] text-white hover:bg-[#D8748D]'
-                      : 'border border-sp-dark text-[#111111] hover:bg-[#111111] hover:text-white'
-                  }`}
-                >
-                  Zatraži cenu
-                </button>
+                <div className={`mt-auto border-t pt-8 ${i === 1 ? 'border-white/12' : 'border-stone-100'}`}>
+                  <p className={`text-[11px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/48' : 'text-stone-500'}`}>
+                    {pkg.priceNote ?? 'okvirna cena'}
+                  </p>
+                  <p className={`mt-3 font-serif text-[2rem] leading-none tracking-[-0.03em] ${i === 1 ? 'text-white' : 'text-[#111111]'}`}>
+                    {pkg.price}
+                  </p>
+                  <p className={`mt-3 text-[13px] uppercase tracking-[0.18em] font-light ${i === 1 ? 'text-white/56' : 'text-stone-500'}`}>
+                    po osobi
+                  </p>
+                </div>
               </div>
             ))}
           </div>

@@ -34,6 +34,7 @@ const packages = [
   {
     name: 'Mini',
     guests: 'do 10 osoba',
+    price: '1.200 RSD / osoba',
     items: [
       '5 vrsta sushija po izboru',
       'Traditcionalne kombinacije',
@@ -43,7 +44,8 @@ const packages = [
   },
   {
     name: 'Standard',
-    guests: 'do 20 osoba',
+    guests: '10–30 osoba',
+    price: '1.100 RSD / osoba',
     items: [
       '8 vrsta sushija po izboru',
       'Maki, nigiri i inside-out rolice',
@@ -54,7 +56,8 @@ const packages = [
   },
   {
     name: 'Premium',
-    guests: '50+ osoba',
+    guests: '30+ osoba',
+    price: '1.000 RSD / osoba',
     items: [
       'Neograničen izbor sushija',
       'Live sushi stanica',
