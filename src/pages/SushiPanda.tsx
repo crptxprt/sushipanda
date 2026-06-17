@@ -144,17 +144,17 @@ export default function SushiPanda() {
       <main className="px-6 pb-24 pt-6 sm:pt-8">
         <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-white px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
           <div className="mx-auto max-w-[1320px]">
-            <div className="relative grid min-h-[84vh] items-center gap-10 lg:grid-cols-[0.52fr_0.48fr]">
+            <div className="relative grid min-h-[84vh] items-center gap-10 lg:grid-cols-[0.44fr_0.56fr]">
               <div className="pointer-events-none absolute inset-0 opacity-[0.045]">
                 <img src={pandaSymbolColor} alt="" className="absolute left-[34%] top-[34%] w-24 opacity-[0.04]" />
                 <img src={pandaSymbolColor} alt="" className="absolute right-[8%] bottom-[18%] w-16 opacity-[0.04]" />
                 <img src={pandaSymbolColor} alt="" className="absolute left-[6%] bottom-[26%] w-14 opacity-[0.04]" />
               </div>
 
-              <div className="relative z-10 max-w-[36rem] py-4 lg:py-8">
-                <h1 className="font-sans text-[4.6rem] font-black leading-[0.84] tracking-[-0.08em] text-[#111111] sm:text-[6rem] lg:text-[8.3rem]">
-                  sushi
-                  <span className="block">panda</span>
+              <div className="relative z-10 max-w-[38rem] py-4 lg:py-8">
+                <h1 className="font-sans text-[4.9rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[6.4rem] lg:text-[9rem]">
+                  SUSHI
+                  <span className="block">PANDA</span>
                 </h1>
                 <p className="mt-6 max-w-[25rem] text-[18px] font-semibold leading-[1.5] text-black/72 sm:text-[20px]">
                   Premijalni servis dostave
@@ -205,12 +205,12 @@ export default function SushiPanda() {
 
               <div className="hidden lg:block" />
 
-              <div className="pointer-events-none absolute right-[-36px] top-1/2 z-0 h-[420px] w-[420px] -translate-y-1/2 sm:right-[-80px] sm:h-[520px] sm:w-[520px] lg:right-[-320px] lg:h-[950px] lg:w-[950px] xl:right-[-360px] xl:h-[1020px] xl:w-[1020px] 2xl:right-[-420px] 2xl:h-[1100px] 2xl:w-[1100px]">
-                <div className="absolute left-[16%] right-[22%] bottom-[10%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
+              <div className="pointer-events-none absolute right-[-120px] top-[58%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-170px] sm:h-[470px] sm:w-[470px] lg:right-[-400px] lg:top-[60%] lg:h-[860px] lg:w-[860px] xl:right-[-460px] xl:h-[930px] xl:w-[930px] 2xl:right-[-520px] 2xl:h-[990px] 2xl:w-[990px]">
+                <div className="absolute left-[18%] right-[26%] bottom-[9%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
                 <img
                   src={pandaSymbolColor}
                   alt="Sushi Panda mascot"
-                  className="absolute inset-0 h-full w-full object-contain drop-shadow-[0_30px_44px_rgba(0,0,0,0.16)]"
+                  className="absolute inset-0 h-full w-full object-contain object-center drop-shadow-[0_30px_44px_rgba(0,0,0,0.16)]"
                 />
               </div>
             </div>
