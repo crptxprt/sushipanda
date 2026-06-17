@@ -25,8 +25,8 @@ export default function SushiChef() {
 
       {/* HERO */}
       <section className="relative h-[62vh] min-h-[460px] flex items-end overflow-hidden bg-[#111111]">
-        <img src={heroSushiChef} alt="Sushi chef" className="absolute inset-0 w-full h-full object-cover opacity-40" style={{ objectPosition: 'center 40%' }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/20" />
+        <img src={heroSushiChef} alt="Sushi chef" className="absolute inset-0 w-full h-full object-cover opacity-50" style={{ objectPosition: 'center 40%' }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/10" />
 
         <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[140px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden lg:block">司</span>
 

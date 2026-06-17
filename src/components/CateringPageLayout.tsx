@@ -44,8 +44,8 @@ export default function CateringPageLayout({
 
       {/* HERO */}
       <section className="relative h-[62vh] min-h-[460px] flex items-end overflow-hidden bg-[#111111]">
-        <img src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover opacity-40" style={{ objectPosition: 'center 40%' }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/20" />
+        <img src={heroImage} alt={title} className="absolute inset-0 w-full h-full object-cover opacity-50" style={{ objectPosition: 'center 40%' }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/10" />
 
         {/* Kanji */}
         <span
