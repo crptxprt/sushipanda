@@ -1,7 +1,7 @@
 import { Bike, Fish, Gift, MapPin, ShieldCheck, Sparkles, Sprout } from 'lucide-react';
 import { navigate } from '../lib/router';
-import heroSushiBrandBg from '../assets/hero-sushi-brand-bg.png';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
+import pandaSymbolColor from '../assets/panda-sushi-symbol-color.png';
 import pandaWordmarkColor from '../assets/panda-sushi-wordmark-color.png';
 import galleryChefAction from '../assets/gallery-chef-action.jpeg';
 import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
@@ -141,72 +141,92 @@ function SerbiaOutline() {
 
 export default function SushiPanda() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#edf5ff]">
+    <div className="min-h-screen overflow-x-hidden bg-[#f5f8fc]">
       <main className="px-6 pb-24 pt-6 sm:pt-8">
-        <section
-          className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#1f1f22] bg-cover bg-center px-6 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-10 sm:py-16 lg:px-16 lg:py-20"
-          style={{ backgroundImage: `linear-gradient(rgba(18,18,20,0.76), rgba(18,18,20,0.76)), url(${heroSushiBrandBg})` }}
-        >
+        <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-white px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
           <div className="mx-auto max-w-[1320px]">
             <div className="relative z-20 mb-10 flex items-center justify-between gap-4">
               <button
                 onClick={() => navigate('/')}
-                className="rounded-full border border-white/12 bg-white/6 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-white/86 transition-colors hover:bg-white/10"
+                className="rounded-full border border-black/8 bg-white px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-black/72 transition-colors hover:bg-black/[0.03]"
               >
                 Nazad na catering
               </button>
               <button
                 onClick={() => navigate('/kontakt')}
-                className="rounded-full border border-white/12 bg-white px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#111111] transition-colors hover:bg-[#f2f2f2]"
+                className="rounded-full border border-black/8 bg-[#111111] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#252525]"
               >
                 Kontakt
               </button>
             </div>
 
-            <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-              <div className="pt-2">
-                <h1 className="font-sans text-[4.5rem] font-black uppercase leading-[0.84] tracking-[-0.08em] text-white sm:text-[5.8rem] lg:text-[7.5rem]">
-                  sushi
-                  <span className="block">panda</span>
-                </h1>
-                <p className="mt-6 max-w-[20rem] text-[18px] font-semibold leading-[1.45] text-white/88 sm:text-[20px]">
-                  Premium servis dostave sushija nove generacije u Srbiji.
-                </p>
+            <div className="relative grid min-h-[84vh] items-center gap-10 lg:grid-cols-[0.52fr_0.48fr]">
+              <div className="pointer-events-none absolute inset-0 opacity-[0.045]">
+                <div className="absolute left-[10%] top-[18%] h-24 w-24 rounded-full border border-black" />
+                <div className="absolute left-[22%] top-[42%] h-20 w-20 rounded-full border border-black" />
+                <div className="absolute left-[46%] top-[14%] h-32 w-32 rounded-full border border-black" />
+                <div className="absolute right-[12%] top-[24%] h-28 w-28 rounded-full border border-black" />
+                <div className="absolute left-[16%] bottom-[14%] h-16 w-16 rounded-full border border-black" />
+                <div className="absolute right-[36%] bottom-[8%] h-24 w-24 rounded-full border border-black" />
+                <img src={pandaSymbolColor} alt="" className="absolute left-[34%] top-[34%] w-24 opacity-[0.04]" />
+                <img src={pandaSymbolColor} alt="" className="absolute right-[8%] bottom-[18%] w-16 opacity-[0.04]" />
+                <img src={pandaSymbolColor} alt="" className="absolute left-[6%] bottom-[26%] w-14 opacity-[0.04]" />
               </div>
 
-              <div className="flex justify-start lg:justify-end">
-                <div className="max-w-[26rem]">
-                  <p className="font-sans text-[1.9rem] font-black uppercase leading-[0.96] tracking-[-0.06em] text-white sm:text-[2.8rem]">
-                    Osnovan u
-                  </p>
-                  <p className="mt-1 font-sans text-[4.4rem] font-black leading-[0.88] tracking-[-0.08em] text-white sm:text-[5.8rem]">
-                    2025
-                  </p>
-                  <p className="font-sans text-[2.2rem] font-black uppercase leading-[0.96] tracking-[-0.06em] text-white sm:text-[3.1rem]">
-                    godine u Srbiji
-                  </p>
+              <div className="relative z-10 max-w-[34rem] py-4 lg:py-8">
+                <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">
+                  Premium Sushi Delivery
+                </p>
+                <h1 className="font-sans text-[3.8rem] font-black leading-[0.9] tracking-[-0.07em] text-[#111111] sm:text-[5rem] lg:text-[6.8rem]">
+                  Sushi Panda
+                </h1>
+                <p className="mt-6 max-w-[30rem] text-[17px] font-medium leading-[1.7] text-black/62 sm:text-[19px]">
+                  Premium sushi delivery in Serbia.
+                  <br />
+                  Fresh ingredients, large portions and fast delivery.
+                </p>
 
-                  <div className="mt-10">
-                    <p className="font-sans text-[3.2rem] font-black leading-[0.9] tracking-[-0.08em] text-white sm:text-[4.5rem]">
-                      već u
-                    </p>
-                    <div className="mt-1 flex items-end gap-3">
-                      <span className="font-sans text-[4.8rem] font-black leading-[0.84] tracking-[-0.08em] text-white sm:text-[6.4rem]">
-                        3
-                      </span>
-                      <span className="pb-2 font-sans text-[1.35rem] font-black uppercase leading-[1] tracking-[-0.04em] text-white sm:text-[1.7rem]">
-                        grada
-                      </span>
-                    </div>
-                    <p className="mt-3 max-w-[18rem] text-[16px] font-semibold leading-[1.5] text-white/78">
-                      Kragujevac, Kraljevo i Jagodina.
-                    </p>
-                  </div>
+                <div className="mt-9 flex flex-wrap gap-4">
+                  <button
+                    onClick={() => navigate('/kontakt')}
+                    className="rounded-full bg-[#111111] px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#2b2b2b]"
+                  >
+                    Order Now
+                  </button>
+                  <button
+                    onClick={() => navigate('/galerija')}
+                    className="rounded-full border border-black/10 bg-white px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/72 transition-colors hover:bg-black/[0.03]"
+                  >
+                    View Menu
+                  </button>
+                </div>
+
+                <div className="mt-10 flex flex-wrap gap-3">
+                  {['Founded 2025', '3 cities', 'Serbia'].map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-black/8 bg-[#fafbfc] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-black/48"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative z-10 flex min-h-[380px] items-center justify-center overflow-visible lg:min-h-[720px] lg:justify-end">
+                <div className="relative h-[360px] w-full max-w-[560px] sm:h-[440px] sm:max-w-[640px] lg:h-[760px] lg:max-w-[760px]">
+                  <div className="absolute right-[4%] top-1/2 h-[74%] w-[74%] -translate-y-1/2 rounded-full bg-[#ff4a22]" />
+                  <div className="absolute right-[10%] bottom-[10%] h-20 w-[56%] rounded-[999px] bg-black/10 blur-[32px]" />
+                  <img
+                    src={pandaSymbolColor}
+                    alt="Sushi Panda mascot"
+                    className="absolute right-[-10%] top-1/2 z-10 w-[96%] max-w-none -translate-y-1/2 object-contain drop-shadow-[0_28px_45px_rgba(0,0,0,0.14)] sm:right-[-14%] lg:right-[-18%] lg:w-[112%]"
+                  />
                 </div>
               </div>
             </div>
-            </div>
-          </section>
+          </div>
+        </section>
 
         <div className="mx-auto mt-10 max-w-[1320px]">
           <section className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
