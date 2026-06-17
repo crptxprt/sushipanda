@@ -141,7 +141,7 @@ function SerbiaOutline() {
 export default function SushiPanda() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f5f8fc]">
-      <main className="px-6 pb-24 pt-6 sm:pt-8">
+      <main className="px-6 pb-24 pt-0">
         <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-white px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
           <div className="mx-auto max-w-[1320px]">
             <div className="relative grid min-h-[84vh] items-center gap-10 lg:grid-cols-[0.44fr_0.56fr]">
@@ -152,14 +152,14 @@ export default function SushiPanda() {
               </div>
 
               <div className="relative z-10 max-w-[38rem] py-4 lg:py-8">
-                <h1 className="font-sans text-[4.9rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[6.4rem] lg:text-[9rem]">
+                <h1 className="font-sans text-[4.4rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[5.8rem] lg:text-[8.2rem]">
                   SUSHI
                   <span className="block">PANDA</span>
                 </h1>
                 <p className="mt-6 max-w-[25rem] text-[18px] font-semibold leading-[1.5] text-black/72 sm:text-[20px]">
-                  Premijalni servis dostave
+                  Premijalna sushi dostava
                   <br />
-                  jela japanske kuhinje
+                  u Srbiji
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-4">
@@ -205,7 +205,7 @@ export default function SushiPanda() {
 
               <div className="hidden lg:block" />
 
-              <div className="pointer-events-none absolute right-[-120px] top-[58%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-170px] sm:h-[470px] sm:w-[470px] lg:right-[-400px] lg:top-[60%] lg:h-[860px] lg:w-[860px] xl:right-[-460px] xl:h-[930px] xl:w-[930px] 2xl:right-[-520px] 2xl:h-[990px] 2xl:w-[990px]">
+              <div className="pointer-events-none absolute right-[-160px] top-[62%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-220px] sm:h-[470px] sm:w-[470px] lg:right-[-455px] lg:top-[64%] lg:h-[860px] lg:w-[860px] xl:right-[-515px] xl:h-[930px] xl:w-[930px] 2xl:right-[-575px] 2xl:h-[990px] 2xl:w-[990px]">
                 <div className="absolute left-[18%] right-[26%] bottom-[9%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
                 <img
                   src={pandaSymbolColor}
