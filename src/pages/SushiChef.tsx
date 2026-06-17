@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { navigate } from '../lib/router';
 import heroSushiChef from '../assets/heroes/hero-sushi-chef.png';
+import chefExperience from '../assets/chef-experience.png';
 
 const highlights = [
   'Chef priprema sushi uživo pred gostima',
@@ -60,7 +61,7 @@ export default function SushiChef() {
             </ul>
           </div>
           <div className="overflow-hidden bg-stone-200" style={{ borderRadius: '24px', aspectRatio: '3/4' }}>
-            <img src="https://images.pexels.com/photos/2802527/pexels-photo-2802527.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" className="w-full h-full object-cover" />
+            <img src={chefExperience} alt="Sushi chef priprema premium sastojke za događaj" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
