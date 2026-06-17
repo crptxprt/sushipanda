@@ -173,17 +173,18 @@ export default function SushiPanda() {
                 <img src={pandaSymbolColor} alt="" className="absolute left-[6%] bottom-[26%] w-14 opacity-[0.04]" />
               </div>
 
-              <div className="relative z-10 max-w-[34rem] py-4 lg:py-8">
+              <div className="relative z-10 max-w-[36rem] py-4 lg:py-8">
                 <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">
                   Premium Sushi Delivery
                 </p>
-                <h1 className="font-sans text-[3.8rem] font-black leading-[0.9] tracking-[-0.07em] text-[#111111] sm:text-[5rem] lg:text-[6.8rem]">
-                  Sushi Panda
+                <h1 className="font-sans text-[4.6rem] font-black leading-[0.84] tracking-[-0.08em] text-[#111111] sm:text-[6rem] lg:text-[8.3rem]">
+                  sushi
+                  <span className="block">panda</span>
                 </h1>
-                <p className="mt-6 max-w-[30rem] text-[17px] font-medium leading-[1.7] text-black/62 sm:text-[19px]">
-                  Premium sushi delivery in Serbia.
+                <p className="mt-6 max-w-[25rem] text-[18px] font-semibold leading-[1.5] text-black/72 sm:text-[20px]">
+                  Premijalni servis dostave
                   <br />
-                  Fresh ingredients, large portions and fast delivery.
+                  jela japanske kuhinje
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-4">
@@ -201,26 +202,39 @@ export default function SushiPanda() {
                   </button>
                 </div>
 
-                <div className="mt-10 flex flex-wrap gap-3">
-                  {['Founded 2025', '3 cities', 'Serbia'].map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-black/8 bg-[#fafbfc] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-black/48"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                <div className="mt-10 space-y-5">
+                  <div>
+                    <p className="font-sans text-[1.8rem] font-black uppercase leading-[0.96] tracking-[-0.05em] text-[#111111] sm:text-[2.5rem]">
+                      Osnovan u Srbiji
+                    </p>
+                    <div className="mt-1 flex items-end gap-3">
+                      <span className="font-sans text-[4rem] font-black leading-[0.86] tracking-[-0.08em] text-[#111111] sm:text-[5rem]">
+                        2025
+                      </span>
+                      <span className="pb-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-black/42">
+                        godina
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="font-sans text-[1.8rem] font-black uppercase leading-[0.96] tracking-[-0.05em] text-[#111111] sm:text-[2.5rem]">
+                      Već u 3 grada
+                    </p>
+                    <p className="mt-2 text-[15px] font-semibold leading-[1.5] text-black/54">
+                      Kragujevac, Kraljevo i Jagodina
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className="relative z-10 flex min-h-[380px] items-center justify-center overflow-visible lg:min-h-[720px] lg:justify-end">
-                <div className="relative h-[360px] w-full max-w-[560px] sm:h-[440px] sm:max-w-[640px] lg:h-[760px] lg:max-w-[760px]">
-                  <div className="absolute right-[4%] top-1/2 h-[74%] w-[74%] -translate-y-1/2 rounded-full bg-[#ff4a22]" />
-                  <div className="absolute right-[10%] bottom-[10%] h-20 w-[56%] rounded-[999px] bg-black/10 blur-[32px]" />
+                <div className="relative h-[420px] w-full max-w-[680px] sm:h-[520px] sm:max-w-[760px] lg:h-[860px] lg:max-w-[980px]">
+                  <div className="absolute right-[8%] bottom-[10%] h-20 w-[56%] rounded-[999px] bg-black/10 blur-[32px]" />
                   <img
                     src={pandaSymbolColor}
                     alt="Sushi Panda mascot"
-                    className="absolute right-[-10%] top-1/2 z-10 w-[96%] max-w-none -translate-y-1/2 object-contain drop-shadow-[0_28px_45px_rgba(0,0,0,0.14)] sm:right-[-14%] lg:right-[-18%] lg:w-[112%]"
+                    className="absolute right-[-28%] top-1/2 z-10 w-[132%] max-w-none -translate-y-1/2 object-contain drop-shadow-[0_28px_45px_rgba(0,0,0,0.14)] sm:right-[-34%] sm:w-[138%] lg:right-[-42%] lg:w-[152%]"
                   />
                 </div>
               </div>
