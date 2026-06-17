@@ -13,6 +13,7 @@ const keteringLinks = [
 const quickLinks = [
   { label: 'Početna', path: '/' },
   { label: 'Galerija', path: '/galerija' },
+  { label: 'Sushi Panda', path: '/sushi-panda' },
   { label: 'O nama', path: '/o-nama' },
   { label: 'Kontakt', path: '/kontakt' },
 ];

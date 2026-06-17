@@ -9,9 +9,11 @@ import SushiChef from './pages/SushiChef';
 import Galerija from './pages/Galerija';
 import ONama from './pages/ONama';
 import Kontakt from './pages/Kontakt';
+import SushiPanda from './pages/SushiPanda';
 
 const routes: Record<string, React.ComponentType> = {
   '/': Home,
+  '/sushi-panda': SushiPanda,
   '/ketering-proslave': KeteringProslave,
   '/ketering-slave': KeteringSlave,
   '/ketering-devojacko-momacko': KeteringDevojackoMomacko,
