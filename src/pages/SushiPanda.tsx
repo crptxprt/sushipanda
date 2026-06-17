@@ -177,35 +177,11 @@ export default function SushiPanda() {
                   </button>
                 </div>
 
-                <div className="mt-10 space-y-5">
-                  <div>
-                    <p className="font-sans text-[1.8rem] font-black uppercase leading-[0.96] tracking-[-0.05em] text-[#111111] sm:text-[2.5rem]">
-                      Osnovan u Srbiji
-                    </p>
-                    <div className="mt-1 flex items-end gap-3">
-                      <span className="font-sans text-[4rem] font-black leading-[0.86] tracking-[-0.08em] text-[#111111] sm:text-[5rem]">
-                        2025
-                      </span>
-                      <span className="pb-2 text-[13px] font-semibold uppercase tracking-[0.18em] text-black/42">
-                        godina
-                      </span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <p className="font-sans text-[1.8rem] font-black uppercase leading-[0.96] tracking-[-0.05em] text-[#111111] sm:text-[2.5rem]">
-                      Već u 3 grada
-                    </p>
-                    <p className="mt-2 text-[15px] font-semibold leading-[1.5] text-black/54">
-                      Kragujevac, Kraljevo i Jagodina
-                    </p>
-                  </div>
-                </div>
               </div>
 
               <div className="hidden lg:block" />
 
-              <div className="pointer-events-none absolute right-[-160px] top-[62%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-220px] sm:h-[470px] sm:w-[470px] lg:right-[-455px] lg:top-[64%] lg:h-[860px] lg:w-[860px] xl:right-[-515px] xl:h-[930px] xl:w-[930px] 2xl:right-[-575px] 2xl:h-[990px] 2xl:w-[990px]">
+              <div className="pointer-events-none absolute right-[-200px] top-[47%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-260px] sm:h-[470px] sm:w-[470px] lg:right-[-520px] lg:top-[46%] lg:h-[860px] lg:w-[860px] xl:right-[-585px] xl:h-[930px] xl:w-[930px] 2xl:right-[-650px] 2xl:h-[990px] 2xl:w-[990px]">
                 <div className="absolute left-[18%] right-[26%] bottom-[9%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
                 <img
                   src={pandaSymbolColor}
@@ -218,6 +194,26 @@ export default function SushiPanda() {
         </section>
 
         <div className="mx-auto mt-10 max-w-[1320px]">
+          <section className="grid gap-4 sm:grid-cols-3">
+            {[
+              { value: '2025', label: 'Osnovan u Srbiji' },
+              { value: '3 grada', label: 'Već aktivni' },
+              { value: 'Kragujevac · Kraljevo · Jagodina', label: 'Aktivne lokacije' },
+            ].map((item) => (
+              <article
+                key={item.label}
+                className="rounded-[28px] border border-white/75 bg-white px-6 py-6 shadow-[0_18px_40px_rgba(103,131,160,0.08)]"
+              >
+                <p className="font-sans text-[2rem] font-black leading-[0.92] tracking-[-0.05em] text-[#111111]">
+                  {item.value}
+                </p>
+                <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/42">
+                  {item.label}
+                </p>
+              </article>
+            ))}
+          </section>
+
           <section className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="rounded-[36px] border border-white/75 bg-white px-8 py-8 shadow-[0_20px_48px_rgba(103,131,160,0.08)] sm:px-10 sm:py-10">
               <div className="flex min-h-[360px] items-center justify-center rounded-[999px] bg-[linear-gradient(180deg,#f7fbff_0%,#e9f1fb_100%)] shadow-[inset_0_0_0_1px_rgba(217,231,245,0.85)]">
@@ -237,18 +233,6 @@ export default function SushiPanda() {
                 Počeli smo u Kragujevcu, širimo se pažljivo i gradimo mrežu grad po grad, bez žurbe i bez kompromisa oko kvaliteta.
               </p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {[
-                  { value: '2025', label: 'početak Panda priče' },
-                  { value: '3', label: 'aktivna grada' },
-                  { value: 'Srbija', label: 'prvo tržište rasta' },
-                ].map((item) => (
-                  <div key={item.label} className="rounded-[28px] border border-[#dce8f5] bg-[#f8fbff] px-5 py-5">
-                    <p className="font-sans text-[2rem] font-black leading-none tracking-[-0.05em] text-[#111111]">{item.value}</p>
-                    <p className="mt-3 text-[12px] font-medium uppercase tracking-[0.18em] text-stone-400">{item.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </section>
 
