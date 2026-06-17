@@ -162,19 +162,24 @@ export default function SushiPanda() {
                   u Srbiji
                 </p>
 
-                <div className="mt-9 flex flex-wrap gap-4">
-                  <button
-                    onClick={() => navigate('/kontakt')}
-                    className="rounded-full bg-[#111111] px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#2b2b2b]"
-                  >
-                    Order Now
-                  </button>
-                  <button
-                    onClick={() => navigate('/galerija')}
-                    className="rounded-full border border-black/10 bg-white px-8 py-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/72 transition-colors hover:bg-black/[0.03]"
-                  >
-                    View Menu
-                  </button>
+                <div className="mt-10 space-y-6">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">
+                      Osnovan u Srbiji
+                    </p>
+                    <p className="mt-2 font-sans text-[4rem] font-black leading-[0.86] tracking-[-0.08em] text-[#111111] sm:text-[5rem]">
+                      2025
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">
+                      Već u 3 grada
+                    </p>
+                    <p className="mt-2 text-[15px] font-semibold leading-[1.5] text-black/58 sm:text-[16px]">
+                      Kragujevac · Kraljevo · Jagodina
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -193,26 +198,6 @@ export default function SushiPanda() {
         </section>
 
         <div className="mx-auto mt-10 max-w-[1320px]">
-          <section className="grid gap-4 sm:grid-cols-3">
-            {[
-              { value: '2025', label: 'Osnovan u Srbiji' },
-              { value: '3 grada', label: 'Već u 3 grada' },
-              { value: 'Kragujevac · Kraljevo · Jagodina', label: 'Aktivne lokacije' },
-            ].map((item) => (
-              <article
-                key={item.label}
-                className="rounded-[28px] border border-white/75 bg-white px-6 py-6 shadow-[0_18px_40px_rgba(103,131,160,0.08)]"
-              >
-                <p className="font-sans text-[2rem] font-black leading-[0.92] tracking-[-0.05em] text-[#111111]">
-                  {item.value}
-                </p>
-                <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-black/42">
-                  {item.label}
-                </p>
-              </article>
-            ))}
-          </section>
-
           <section className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="rounded-[36px] border border-white/75 bg-white px-8 py-8 shadow-[0_20px_48px_rgba(103,131,160,0.08)] sm:px-10 sm:py-10">
               <div className="flex min-h-[360px] items-center justify-center rounded-[999px] bg-[linear-gradient(180deg,#f7fbff_0%,#e9f1fb_100%)] shadow-[inset_0_0_0_1px_rgba(217,231,245,0.85)]">
