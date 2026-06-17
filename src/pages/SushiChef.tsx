@@ -23,15 +23,15 @@ export default function SushiChef() {
       <Header />
 
       {/* HERO */}
-      <section className="relative h-[68vh] min-h-[500px] flex items-end overflow-hidden bg-[#111111]">
+      <section className="relative h-[62vh] min-h-[460px] flex items-end overflow-hidden bg-[#111111]">
         <img src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Sushi chef" className="absolute inset-0 w-full h-full object-cover opacity-35" style={{ objectPosition: 'center 25%' }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
 
-        <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[160px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden xl:block">司</span>
+        <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[140px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden lg:block">司</span>
 
-        <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-20 w-full">
-          <p className="editorial-kicker mb-5 text-sp-kanji">Ekskluzivna usluga</p>
+        <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-16 w-full">
+          <p className="editorial-kicker text-sp-kanji mb-4">Ekskluzivna usluga</p>
           <h1 className="inner-hero-display text-white">
             Sushi chef<br /><span className="italic font-normal">na vašem eventi</span>
           </h1>
