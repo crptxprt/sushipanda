@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { navigate } from '../lib/router';
+import { getCurrentSection, navigate } from '../lib/router';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
 import chefPavaRaskovic from '../assets/chef-pava-raskovic.png';
@@ -103,6 +103,7 @@ const chefSlides = [
 
 export default function Home() {
   const whyRef = useRef<HTMLElement>(null);
+  const cateringOptionsRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
   const [activeChefSlide, setActiveChefSlide] = useState(0);
   const whatsappLink =
@@ -120,6 +121,16 @@ export default function Home() {
     }, 5000);
 
     return () => window.clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    if (getCurrentSection() !== 'ketering-opcije') return;
+
+    const frameId = window.requestAnimationFrame(() => {
+      cateringOptionsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    return () => window.cancelAnimationFrame(frameId);
   }, []);
 
   const currentChefSlide = chefSlides[activeChefSlide];
@@ -182,7 +193,7 @@ export default function Home() {
                 Zatraži ponudu
               </button>
               <button
-                onClick={() => whyRef.current?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/', 'ketering-opcije')}
                 className="text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
               >
                 Pogledaj opcije
@@ -326,7 +337,7 @@ export default function Home() {
       </section>
 
       {/* ── KATEGORIJE ──────────────────────────────────────────────── */}
-      <section className="bg-[#f7f5f2] px-6 py-28">
+      <section ref={cateringOptionsRef} className="bg-[#f7f5f2] px-6 py-28">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
           <div className="mb-16 grid gap-10 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
             <div>
