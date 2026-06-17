@@ -1,4 +1,5 @@
 import CateringPageLayout from '../components/CateringPageLayout';
+import heroSlave from '../assets/heroes/hero-slave.png';
 
 const variants = [
   {
@@ -75,7 +76,7 @@ export default function KeteringSlave() {
       title="Ketering za"
       titleItalic="slave"
       subtitle="Tradicionalna slavska atmosfera sa modernim sushi iskustvom"
-      heroImage="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      heroImage={heroSlave}
       intro="Slava je posebna prilika koja spaja porodicu i prijatelje. Uz Sushi Panda ketering, obogatite vaš slavski sto autentičnim japanskim specijalitetima koji se prirodno uklapaju u svečanu atmosferu. Pripremamo i posne i mrsne varijante, u skladu sa tipom slave i brojem gostiju."
       packages={packages}
       variants={variants}

@@ -1,4 +1,5 @@
 import CateringPageLayout from '../components/CateringPageLayout';
+import heroKorporativni from '../assets/heroes/hero-korporativni.png';
 
 const packages = [
   {
@@ -45,7 +46,7 @@ export default function KeteringKorporativni() {
       title="Korporativni"
       titleItalic="eventi"
       subtitle="Profesionalan sushi ketering za firme i poslovne prilike"
-      heroImage="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      heroImage={heroKorporativni}
       intro="Korporativni eventi zahtevaju savršenu prezentaciju i profesionalnu uslugu. Sushi Panda donosia premium gastronomsko iskustvo koje ostavlja trajan utisak na vaše partnere, klijente i zaposlene."
       packages={packages}
       formSource="korporativni"

@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { navigate } from '../lib/router';
+import heroSushiChef from '../assets/heroes/hero-sushi-chef.png';
 
 const highlights = [
   'Chef priprema sushi uživo pred gostima',
@@ -24,9 +25,8 @@ export default function SushiChef() {
 
       {/* HERO */}
       <section className="relative h-[62vh] min-h-[460px] flex items-end overflow-hidden bg-[#111111]">
-        <img src="https://images.pexels.com/photos/3338497/pexels-photo-3338497.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Sushi chef" className="absolute inset-0 w-full h-full object-cover opacity-35" style={{ objectPosition: 'center 25%' }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/15" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+        <img src={heroSushiChef} alt="Sushi chef" className="absolute inset-0 w-full h-full object-cover opacity-40" style={{ objectPosition: 'center 40%' }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/20" />
 
         <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[140px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden lg:block">司</span>
 

@@ -1,4 +1,5 @@
 import CateringPageLayout from '../components/CateringPageLayout';
+import heroProslave from '../assets/heroes/hero-proslave.png';
 
 const packages = [
   {
@@ -45,7 +46,7 @@ export default function KeteringProslave() {
       title="Ketering za"
       titleItalic="proslave"
       subtitle="Neka tvoj rođendan ili privatna žurka bude nezaboravna"
-      heroImage="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      heroImage={heroProslave}
       intro="Svaki povod za slavlje zaslužuje vrhunsku hranu. Naš sushi ketering za proslave donosi autentičan japanski ukus direktno na vaš sto — uz profesionalnu organizaciju i prezentaciju koja oduševljava goste."
       packages={packages}
       formSource="proslave"
