@@ -1,17 +1,6 @@
-import {
-  ArrowRight,
-  Bike,
-  Fish,
-  Gift,
-  MapPin,
-  ShieldCheck,
-  Sparkles,
-  Sprout,
-} from 'lucide-react';
+import { Bike, Fish, Gift, MapPin, ShieldCheck, Sparkles, Sprout } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { navigate } from '../lib/router';
-import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import pandaWordmarkColor from '../assets/panda-sushi-wordmark-color.png';
 import galleryChefAction from '../assets/gallery-chef-action.jpeg';
 import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
@@ -98,9 +87,9 @@ const cities = [
   },
   {
     name: 'Jagodina',
-    status: 'Uskoro',
-    description: 'Sledeća tačka širenja mreže i naredni korak u razvoju Panda prisustva.',
-    tone: 'soon',
+    status: 'Aktivno',
+    description: 'Treći grad u kome Panda već gradi prisustvo i prepoznatljiv vizuelni identitet.',
+    tone: 'active',
   },
 ];
 
@@ -108,7 +97,7 @@ function SerbiaOutline() {
   const pins = [
     { label: 'Kragujevac', top: '57%', left: '46%', tone: 'active' },
     { label: 'Kraljevo', top: '65%', left: '36%', tone: 'active' },
-    { label: 'Jagodina', top: '49%', left: '55%', tone: 'soon' },
+    { label: 'Jagodina', top: '49%', left: '55%', tone: 'active' },
   ];
 
   return (
@@ -156,64 +145,53 @@ export default function SushiPanda() {
 
       <main className="px-6 pt-28 pb-24 sm:pt-32">
         <div className="mx-auto max-w-[1320px]">
-          <section className="relative overflow-hidden rounded-[40px] border border-white/75 bg-white px-8 py-10 shadow-[0_24px_60px_rgba(103,131,160,0.10)] sm:px-12 sm:py-12 lg:px-14 lg:py-14">
-            <div className="absolute left-[-40px] top-[-30px] h-48 w-48 rounded-full bg-[#f4f8fe]" />
-            <div className="absolute right-[10%] top-[14%] h-20 w-20 rounded-full bg-[#f5f9ff]" />
-            <div className="absolute right-[12%] bottom-[10%] h-28 w-28 rounded-full bg-[#f3f8ff]" />
+          <section className="relative overflow-hidden rounded-[34px] bg-[#1f1f22] px-8 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-12 sm:py-16 lg:px-16 lg:py-20">
+            <div className="absolute inset-0">
+              <div className="absolute left-[-18%] top-[-20%] h-[180%] w-[52%] rounded-full border border-[#d86b3f]/35" />
+              <div className="absolute left-[8%] top-[-26%] h-[190%] w-[58%] rounded-full border border-[#d86b3f]/28" />
+              <div className="absolute left-[34%] top-[-24%] h-[190%] w-[54%] rounded-full border border-[#d86b3f]/22" />
+              <div className="absolute left-[58%] top-[-26%] h-[190%] w-[50%] rounded-full border border-[#d86b3f]/18" />
+            </div>
 
-            <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div className="relative z-10">
-                <p className="mb-6 text-[12px] font-medium uppercase tracking-[0.24em] text-stone-400">Sushi Panda</p>
-                <h1 className="max-w-[12ch] font-sans text-[3rem] font-black leading-[0.96] tracking-[-0.05em] text-[#111111] sm:text-[4rem] lg:text-[5.2rem]">
-                  Sushi Panda nije samo sushi
+            <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div className="pt-2">
+                <h1 className="font-sans text-[4.5rem] font-black uppercase leading-[0.84] tracking-[-0.08em] text-white sm:text-[5.8rem] lg:text-[7.5rem]">
+                  sushi
+                  <span className="block">panda</span>
                 </h1>
-                <p className="mt-5 max-w-[32rem] text-[15px] font-medium leading-[1.72] text-stone-700 sm:text-[17px]">
-                  To je ljubav prema detalju, briga o ukusu i moderan sushi doživljaj koji raste zajedno sa gradovima u kojima smo prisutni.
+                <p className="mt-6 max-w-[20rem] text-[18px] font-semibold leading-[1.45] text-white/88 sm:text-[20px]">
+                  Premium servis dostave sushija nove generacije u Srbiji.
                 </p>
-
-                <div className="mt-7 flex flex-wrap gap-3">
-                  {['Kragujevac', 'Kraljevo', 'Jagodina uskoro'].map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-full border border-[#dce8f5] bg-[#f7fbff] px-4 py-2 text-[11px] font-medium uppercase tracking-[0.2em] text-stone-500"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-9 flex flex-wrap items-center gap-4">
-                  <button
-                    onClick={() => navigate('/kontakt')}
-                    className="rounded-full bg-[#111111] px-8 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#d35d7b]"
-                  >
-                    Kontaktiraj nas
-                  </button>
-                  <button
-                    onClick={() => navigate('/galerija')}
-                    className="group inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-stone-500 transition-colors hover:text-[#111111]"
-                  >
-                    Pogledaj vizuelni svet
-                    <ArrowRight size={12} strokeWidth={1.8} className="transition-transform group-hover:translate-x-1" />
-                  </button>
-                </div>
               </div>
 
-              <div className="relative z-10 flex items-center justify-center">
-                <div className="relative flex h-[360px] w-full max-w-[610px] items-center justify-center overflow-hidden rounded-[34px] bg-[linear-gradient(180deg,#f7fbff_0%,#eaf2fc_100%)] sm:h-[430px]">
-                  <div className="absolute right-[10%] top-[8%] h-[240px] w-[240px] rounded-full bg-white/80" />
-                  <div className="absolute left-[12%] bottom-[10%] h-[90px] w-[90px] rounded-full bg-white/60 blur-xl" />
-                  <div className="absolute left-[14%] top-[14%] rounded-full border border-[#dce8f5] bg-white/90 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-stone-400 shadow-[0_10px_24px_rgba(96,129,164,0.10)]">
-                    Premium ukus
+              <div className="flex justify-start lg:justify-end">
+                <div className="max-w-[26rem]">
+                  <p className="font-sans text-[1.9rem] font-black uppercase leading-[0.96] tracking-[-0.06em] text-white sm:text-[2.8rem]">
+                    Osnovan u
+                  </p>
+                  <p className="mt-1 font-sans text-[4.4rem] font-black leading-[0.88] tracking-[-0.08em] text-white sm:text-[5.8rem]">
+                    2025
+                  </p>
+                  <p className="font-sans text-[2.2rem] font-black uppercase leading-[0.96] tracking-[-0.06em] text-white sm:text-[3.1rem]">
+                    godine u Srbiji
+                  </p>
+
+                  <div className="mt-10">
+                    <p className="font-sans text-[3.2rem] font-black leading-[0.9] tracking-[-0.08em] text-white sm:text-[4.5rem]">
+                      već u
+                    </p>
+                    <div className="mt-1 flex items-end gap-3">
+                      <span className="font-sans text-[4.8rem] font-black leading-[0.84] tracking-[-0.08em] text-white sm:text-[6.4rem]">
+                        3
+                      </span>
+                      <span className="pb-2 font-sans text-[1.35rem] font-black uppercase leading-[1] tracking-[-0.04em] text-white sm:text-[1.7rem]">
+                        grada
+                      </span>
+                    </div>
+                    <p className="mt-3 max-w-[18rem] text-[16px] font-semibold leading-[1.5] text-white/78">
+                      Kragujevac, Kraljevo i Jagodina.
+                    </p>
                   </div>
-                  <div className="absolute right-[14%] bottom-[14%] rounded-full border border-[#dce8f5] bg-white/90 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-stone-400 shadow-[0_10px_24px_rgba(96,129,164,0.10)]">
-                    Savremen brend
-                  </div>
-                  <img
-                    src={heroSushiNigiri}
-                    alt="Sushi Panda hero"
-                    className="relative z-10 max-h-[85%] w-auto object-contain drop-shadow-[0_30px_40px_rgba(87,87,87,0.20)]"
-                  />
                 </div>
               </div>
             </div>
@@ -240,9 +218,9 @@ export default function SushiPanda() {
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
-                  { value: '2024', label: 'početak Panda priče' },
-                  { value: '2', label: 'aktivna grada' },
-                  { value: '1', label: 'grad uskoro' },
+                  { value: '2025', label: 'početak Panda priče' },
+                  { value: '3', label: 'aktivna grada' },
+                  { value: 'Srbija', label: 'prvo tržište rasta' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-[28px] border border-[#dce8f5] bg-[#f8fbff] px-5 py-5">
                     <p className="font-sans text-[2rem] font-black leading-none tracking-[-0.05em] text-[#111111]">{item.value}</p>
