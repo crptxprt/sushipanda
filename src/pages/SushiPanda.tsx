@@ -145,8 +145,8 @@ export default function SushiPanda() {
       <Header />
 
       <main className="px-6 pt-28 pb-24 sm:pt-32">
-        <div className="mx-auto max-w-[1320px]">
-          <section className="relative overflow-hidden rounded-[34px] bg-[#1f1f22] px-8 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-12 sm:py-16 lg:px-16 lg:py-20">
+        <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#1f1f22] px-6 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+          <div className="mx-auto max-w-[1320px]">
             <div className="absolute inset-0">
               <div className="absolute left-[-18%] top-[-20%] h-[180%] w-[52%] rounded-full border border-[#d86b3f]/35" />
               <div className="absolute left-[8%] top-[-26%] h-[190%] w-[58%] rounded-full border border-[#d86b3f]/28" />
@@ -196,8 +196,10 @@ export default function SushiPanda() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
+        <div className="mx-auto mt-10 max-w-[1320px]">
           <section className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
             <div className="rounded-[36px] border border-white/75 bg-white px-8 py-8 shadow-[0_20px_48px_rgba(103,131,160,0.08)] sm:px-10 sm:py-10">
               <div className="flex min-h-[360px] items-center justify-center rounded-[999px] bg-[linear-gradient(180deg,#f7fbff_0%,#e9f1fb_100%)] shadow-[inset_0_0_0_1px_rgba(217,231,245,0.85)]">
