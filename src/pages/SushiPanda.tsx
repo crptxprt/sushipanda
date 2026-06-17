@@ -151,7 +151,7 @@ export default function SushiPanda() {
                 <img src={pandaSymbolColor} alt="" className="absolute left-[6%] bottom-[26%] w-14 opacity-[0.04]" />
               </div>
 
-              <div className="relative z-10 max-w-[38rem] py-4 lg:py-8">
+              <div className="relative z-10 max-w-[38rem] py-4 lg:-translate-y-[100px] lg:py-8">
                 <h1 className="font-sans text-[4.4rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[5.8rem] lg:text-[8.2rem]">
                   SUSHI
                   <span className="block">PANDA</span>
@@ -176,12 +176,11 @@ export default function SushiPanda() {
                     View Menu
                   </button>
                 </div>
-
               </div>
 
               <div className="hidden lg:block" />
 
-              <div className="pointer-events-none absolute right-[-200px] top-[47%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-260px] sm:h-[470px] sm:w-[470px] lg:right-[-520px] lg:top-[46%] lg:h-[860px] lg:w-[860px] xl:right-[-585px] xl:h-[930px] xl:w-[930px] 2xl:right-[-650px] 2xl:h-[990px] 2xl:w-[990px]">
+              <div className="pointer-events-none absolute right-[-240px] top-[41%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-300px] sm:h-[470px] sm:w-[470px] lg:right-[-560px] lg:top-[38%] lg:h-[860px] lg:w-[860px] xl:right-[-620px] xl:h-[930px] xl:w-[930px] 2xl:right-[-690px] 2xl:h-[990px] 2xl:w-[990px]">
                 <div className="absolute left-[18%] right-[26%] bottom-[9%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
                 <img
                   src={pandaSymbolColor}
@@ -197,7 +196,7 @@ export default function SushiPanda() {
           <section className="grid gap-4 sm:grid-cols-3">
             {[
               { value: '2025', label: 'Osnovan u Srbiji' },
-              { value: '3 grada', label: 'Već aktivni' },
+              { value: '3 grada', label: 'Već u 3 grada' },
               { value: 'Kragujevac · Kraljevo · Jagodina', label: 'Aktivne lokacije' },
             ].map((item) => (
               <article
