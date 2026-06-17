@@ -1,6 +1,5 @@
 import { Bike, Fish, Gift, MapPin, ShieldCheck, Sparkles, Sprout } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { navigate } from '../lib/router';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import pandaWordmarkColor from '../assets/panda-sushi-wordmark-color.png';
 import galleryChefAction from '../assets/gallery-chef-action.jpeg';
@@ -142,11 +141,24 @@ function SerbiaOutline() {
 export default function SushiPanda() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#edf5ff]">
-      <Header />
-
-      <main className="px-6 pt-28 pb-24 sm:pt-32">
+      <main className="px-6 pb-24 pt-6 sm:pt-8">
         <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#1f1f22] px-6 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
           <div className="mx-auto max-w-[1320px]">
+            <div className="relative z-20 mb-10 flex items-center justify-between gap-4">
+              <button
+                onClick={() => navigate('/')}
+                className="rounded-full border border-white/12 bg-white/6 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.18em] text-white/86 transition-colors hover:bg-white/10"
+              >
+                Nazad na catering
+              </button>
+              <button
+                onClick={() => navigate('/kontakt')}
+                className="rounded-full border border-white/12 bg-white px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#111111] transition-colors hover:bg-[#f2f2f2]"
+              >
+                Kontakt
+              </button>
+            </div>
+
             <div className="absolute inset-0">
               <div className="absolute left-[-18%] top-[-20%] h-[180%] w-[52%] rounded-full border border-[#d86b3f]/35" />
               <div className="absolute left-[8%] top-[-26%] h-[190%] w-[58%] rounded-full border border-[#d86b3f]/28" />
@@ -196,8 +208,8 @@ export default function SushiPanda() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+            </div>
+          </section>
 
         <div className="mx-auto mt-10 max-w-[1320px]">
           <section className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
@@ -354,8 +366,6 @@ export default function SushiPanda() {
           </section>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 }

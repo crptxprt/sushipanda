@@ -109,7 +109,6 @@ export default function Header({ transparent = false }: HeaderProps) {
 
           {/* Right */}
           <div className="flex items-center justify-end gap-8">
-            <span onClick={() => go('/sushi-panda')} className={linkClass}>Sushi Panda</span>
             <span onClick={() => go('/o-nama')} className={linkClass}>O nama</span>
             <span
               onClick={() => go('/kontakt')}
@@ -152,7 +151,6 @@ export default function Header({ transparent = false }: HeaderProps) {
           {[
             { label: 'Početna', path: '/' },
             { label: 'Galerija', path: '/galerija' },
-            { label: 'Sushi Panda', path: '/sushi-panda' },
             { label: 'O nama', path: '/o-nama' },
             { label: 'Kontakt', path: '/kontakt' },
           ].map((l) => (
