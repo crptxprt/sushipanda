@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ContactForm from '../components/ContactForm';
 import { ArrowRight } from 'lucide-react';
 import { navigate } from '../lib/router';
 
@@ -85,25 +84,39 @@ export default function SushiChef() {
         </div>
       </section>
 
-      {/* FORM */}
+      {/* CONTACT CTA */}
       <section className="py-28 px-6 bg-[#F0EDE7]">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          <div className="lg:sticky lg:top-28">
-            <p className="editorial-kicker mb-7 text-stone-500">Rezervacija</p>
-            <h2 className="section-display-medium text-[#111111] mb-5">
-              Zatraži<br /><span className="italic font-normal">chefa</span>
-            </h2>
-            <div className="w-10 h-px bg-[#C44F6E] mb-8" />
-            <p className="mb-8 max-w-sm text-[16px] font-light leading-[1.72] text-black/76">
-              Pošalji nam upit i dogovorićemo sve detalje za sushi chefa na tvom eventi.
-            </p>
-            <button onClick={() => navigate('/kontakt')} className="group inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#C44F6E] transition-colors font-light">
-              Ili poseti kontakt stranicu
-              <ArrowRight size={12} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-          <div className="bg-white p-8 lg:p-12" style={{ borderRadius: '20px' }}>
-            <ContactForm source="sushi-chef" />
+        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+          <div className="relative overflow-hidden border border-[#e4d8d2] bg-white px-8 py-12 sm:px-10 lg:px-14 lg:py-16 shadow-[0_24px_55px_rgba(120,92,84,0.08)]" style={{ borderRadius: '28px' }}>
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute left-[5%] top-[12%] h-36 w-36 rounded-full bg-[#f2e8e2] blur-3xl" />
+              <div className="absolute right-[8%] bottom-[12%] h-44 w-44 rounded-full bg-[#C44F6E]/10 blur-3xl" />
+            </div>
+
+            <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+              <div>
+                <p className="editorial-kicker mb-6 text-stone-500">Kontakt</p>
+                <h2 className="section-display-medium text-[#111111] mb-5">
+                  Rezerviši<br /><span className="italic font-normal">sushi chefa</span>
+                </h2>
+                <div className="w-10 h-px bg-[#C44F6E] mb-8" />
+                <p className="max-w-[36rem] text-[16px] font-light leading-[1.75] text-black/74">
+                  Ako želiš live sushi iskustvo na događaju, javi nam termin, broj gostiju i tip eventa. Pripremićemo predlog organizacije i nastupa chefa na licu mesta.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start gap-4 lg:items-end">
+                <button
+                  onClick={() => navigate('/kontakt')}
+                  className="rounded-full bg-[#111111] px-10 py-4 text-[12px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#C44F6E]"
+                >
+                  Javi nam se
+                </button>
+                <p className="text-[13px] font-light leading-[1.7] text-black/52 lg:max-w-[17rem] lg:text-right">
+                  Kontakt preko stranice, telefona ili WhatsApp-a za brzi dogovor oko termina.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

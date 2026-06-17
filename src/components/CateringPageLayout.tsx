@@ -1,6 +1,5 @@
 import Header from './Header';
 import Footer from './Footer';
-import ContactForm from './ContactForm';
 import { ArrowRight } from 'lucide-react';
 import { navigate } from '../lib/router';
 
@@ -201,25 +200,42 @@ export default function CateringPageLayout({
         </div>
       </section>
 
-      {/* CTA FORM */}
+      {/* CONTACT CTA */}
       {showContactSection && (
-        <section id="contact-form" className="py-28 px-6 bg-[#111111]">
-          <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-            <div className="lg:sticky lg:top-28">
-              <p className="editorial-kicker mb-7 text-sp-kanji">Kontakt</p>
-              <h2
-                className="section-display text-white mb-6"
-              >
-                Zatraži<br />
-                <span className="italic font-normal">ponudu</span>
-              </h2>
-              <div className="w-10 h-px bg-white/20 mb-8" />
-              <p className="max-w-xs text-[16px] font-light leading-[1.72] text-white/76">
-                Pošalji nam upit i pripremićemo personalizovanu ponudu za tvoj događaj.
-              </p>
-            </div>
-            <div className="bg-[#f7f5f2] p-8 lg:p-12" style={{ borderRadius: '20px' }}>
-              <ContactForm source={formSource} />
+        <section className="py-28 px-6 bg-[#111111]">
+          <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+            <div className="relative overflow-hidden border border-white/8 bg-[#151212] px-8 py-12 sm:px-10 lg:px-14 lg:py-16" style={{ borderRadius: '28px' }}>
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute left-[-5%] top-[18%] h-40 w-40 rounded-full bg-white/[0.04] blur-3xl" />
+                <div className="absolute right-[8%] top-[8%] h-52 w-52 rounded-full bg-[#C44F6E]/10 blur-3xl" />
+                <div className="absolute right-[14%] bottom-[10%] h-28 w-28 rounded-full border border-white/[0.08]" />
+              </div>
+
+              <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+                <div>
+                  <p className="editorial-kicker mb-6 text-sp-kanji">Kontakt</p>
+                  <h2 className="section-display text-white mb-6">
+                    Hajde da isplaniramo<br />
+                    <span className="italic font-normal">vaš događaj</span>
+                  </h2>
+                  <div className="w-10 h-px bg-white/20 mb-8" />
+                  <p className="max-w-[36rem] text-[16px] font-light leading-[1.75] text-white/74">
+                    Recite nam broj gostiju, tip događaja i željeni termin. Pripremićemo predlog sushi menija i organizaciju koja odgovara vašem prostoru i ritmu događaja.
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-start gap-4 lg:items-end">
+                  <button
+                    onClick={() => navigate('/kontakt')}
+                    className="rounded-full bg-[#C44F6E] px-10 py-4 text-[12px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#D8748D]"
+                  >
+                    Javi nam se
+                  </button>
+                  <p className="text-[13px] font-light leading-[1.7] text-white/48 lg:max-w-[16rem] lg:text-right">
+                    Brz odgovor preko telefona, WhatsApp-a ili dogovora kroz kontakt stranicu.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
