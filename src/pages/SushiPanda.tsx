@@ -1,6 +1,7 @@
 import { Bike, Fish, Gift, MapPin, ShieldCheck, Sparkles, Sprout } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import pandaWordmarkColor from '../assets/panda-sushi-wordmark-color.png';
 import galleryChefAction from '../assets/gallery-chef-action.jpeg';
 import galleryDetailIngredients from '../assets/gallery-detail-ingredients.png';
