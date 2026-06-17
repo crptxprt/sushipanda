@@ -202,24 +202,23 @@ export default function CateringPageLayout({
 
       {/* CONTACT CTA */}
       {showContactSection && (
-        <section className="py-28 px-6 bg-[#111111]">
+        <section className="py-28 px-6 bg-[#F0EDE7]">
           <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
-            <div className="relative overflow-hidden border border-white/8 bg-[#151212] px-8 py-12 sm:px-10 lg:px-14 lg:py-16" style={{ borderRadius: '28px' }}>
+            <div className="relative overflow-hidden border border-[#e4d8d2] bg-white px-8 py-12 sm:px-10 lg:px-14 lg:py-16 shadow-[0_24px_55px_rgba(120,92,84,0.08)]" style={{ borderRadius: '28px' }}>
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute left-[-5%] top-[18%] h-40 w-40 rounded-full bg-white/[0.04] blur-3xl" />
-                <div className="absolute right-[8%] top-[8%] h-52 w-52 rounded-full bg-[#C44F6E]/10 blur-3xl" />
-                <div className="absolute right-[14%] bottom-[10%] h-28 w-28 rounded-full border border-white/[0.08]" />
+                <div className="absolute left-[5%] top-[12%] h-36 w-36 rounded-full bg-[#f2e8e2] blur-3xl" />
+                <div className="absolute right-[8%] bottom-[12%] h-44 w-44 rounded-full bg-[#C44F6E]/10 blur-3xl" />
               </div>
 
               <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                 <div>
-                  <p className="editorial-kicker mb-6 text-sp-kanji">Kontakt</p>
-                  <h2 className="section-display text-white mb-6">
+                  <p className="editorial-kicker mb-6 text-stone-500">Kontakt</p>
+                  <h2 className="section-display-medium text-[#111111] mb-5">
                     Hajde da isplaniramo<br />
                     <span className="italic font-normal">vaš događaj</span>
                   </h2>
-                  <div className="w-10 h-px bg-white/20 mb-8" />
-                  <p className="max-w-[36rem] text-[16px] font-light leading-[1.75] text-white/74">
+                  <div className="w-10 h-px bg-[#C44F6E] mb-8" />
+                  <p className="max-w-[36rem] text-[16px] font-light leading-[1.75] text-black/74">
                     Recite nam broj gostiju, tip događaja i željeni termin. Pripremićemo predlog sushi menija i organizaciju koja odgovara vašem prostoru i ritmu događaja.
                   </p>
                 </div>
@@ -227,12 +226,12 @@ export default function CateringPageLayout({
                 <div className="flex flex-col items-start gap-4 lg:items-end">
                   <button
                     onClick={() => navigate('/kontakt')}
-                    className="rounded-full bg-[#C44F6E] px-10 py-4 text-[12px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#D8748D]"
+                    className="rounded-full bg-[#111111] px-10 py-4 text-[12px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#C44F6E]"
                   >
                     Javi nam se
                   </button>
-                  <p className="text-[13px] font-light leading-[1.7] text-white/48 lg:max-w-[16rem] lg:text-right">
-                    Brz odgovor preko telefona, WhatsApp-a ili dogovora kroz kontakt stranicu.
+                  <p className="text-[13px] font-light leading-[1.7] text-black/52 lg:max-w-[17rem] lg:text-right">
+                    Kontakt preko stranice, telefona ili WhatsApp-a za brzi dogovor oko termina.
                   </p>
                 </div>
               </div>
