@@ -1,5 +1,6 @@
 import { Bike, Fish, Gift, MapPin, ShieldCheck, Sparkles, Sprout } from 'lucide-react';
 import { navigate } from '../lib/router';
+import heroSushiBrandBg from '../assets/hero-sushi-brand-bg.png';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import pandaWordmarkColor from '../assets/panda-sushi-wordmark-color.png';
 import galleryChefAction from '../assets/gallery-chef-action.jpeg';
@@ -142,7 +143,10 @@ export default function SushiPanda() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#edf5ff]">
       <main className="px-6 pb-24 pt-6 sm:pt-8">
-        <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#1f1f22] px-6 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+        <section
+          className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-[#1f1f22] bg-cover bg-center px-6 py-14 shadow-[0_30px_70px_rgba(23,27,34,0.18)] sm:px-10 sm:py-16 lg:px-16 lg:py-20"
+          style={{ backgroundImage: `linear-gradient(rgba(18,18,20,0.76), rgba(18,18,20,0.76)), url(${heroSushiBrandBg})` }}
+        >
           <div className="mx-auto max-w-[1320px]">
             <div className="relative z-20 mb-10 flex items-center justify-between gap-4">
               <button
@@ -157,13 +161,6 @@ export default function SushiPanda() {
               >
                 Kontakt
               </button>
-            </div>
-
-            <div className="absolute inset-0">
-              <div className="absolute left-[-18%] top-[-20%] h-[180%] w-[52%] rounded-full border border-[#d86b3f]/35" />
-              <div className="absolute left-[8%] top-[-26%] h-[190%] w-[58%] rounded-full border border-[#d86b3f]/28" />
-              <div className="absolute left-[34%] top-[-24%] h-[190%] w-[54%] rounded-full border border-[#d86b3f]/22" />
-              <div className="absolute left-[58%] top-[-26%] h-[190%] w-[50%] rounded-full border border-[#d86b3f]/18" />
             </div>
 
             <div className="relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
