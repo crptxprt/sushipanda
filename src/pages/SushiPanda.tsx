@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Bike, Fish, Gift, MapPin, ShieldCheck, Sparkles, Sprout } from 'lucide-react';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import pandaSymbolColor from '../assets/panda-sushi-symbol-color.png';
@@ -139,64 +140,200 @@ function SerbiaOutline() {
 }
 
 export default function SushiPanda() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % 4);
+    }, 7000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#f5f8fc]">
       <main className="px-6 pb-24 pt-0">
         <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-white px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
           <div className="mx-auto max-w-[1320px]">
-            <div className="relative grid min-h-[92vh] items-center gap-10 lg:grid-cols-[0.44fr_0.56fr]">
-              <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                <svg className="absolute right-[-6%] top-[-8%] h-[120%] w-[88%] opacity-[0.09]" viewBox="0 0 1200 1200" fill="none" aria-hidden="true">
-                  <path d="M210 1180C240 740 460 420 1030 40" stroke="#ff4a22" strokeWidth="1.2" />
-                  <path d="M390 1190C420 760 620 470 1120 120" stroke="#ff4a22" strokeWidth="1.2" />
-                  <path d="M560 1200C590 780 760 520 1180 220" stroke="#ff4a22" strokeWidth="1.2" />
-                  <path d="M730 1200C760 820 900 590 1210 330" stroke="#ff4a22" strokeWidth="1.2" />
-                  <path d="M880 1180C910 860 1010 660 1230 440" stroke="#ff4a22" strokeWidth="1.2" />
-                  <path d="M1010 1150C1040 900 1100 760 1240 560" stroke="#ff4a22" strokeWidth="1.2" />
-                </svg>
-              </div>
+            <div className="relative min-h-[92vh] overflow-hidden rounded-[36px] bg-white">
+              {[0, 1, 2, 3].map((slide) => (
+                <div
+                  key={slide}
+                  className={`absolute inset-0 transition-all duration-700 ease-out ${
+                    activeSlide === slide
+                      ? 'translate-x-0 opacity-100'
+                      : slide < activeSlide
+                        ? '-translate-x-[8%] opacity-0'
+                        : 'translate-x-[8%] opacity-0'
+                  }`}
+                >
+                  {slide === 0 && (
+                    <div className="relative h-full overflow-hidden bg-white">
+                      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                        <svg className="absolute right-[-8%] top-[-8%] h-[118%] w-[88%] opacity-[0.08]" viewBox="0 0 1200 1200" fill="none" aria-hidden="true">
+                          <path d="M210 1180C240 740 460 420 1030 40" stroke="#ff4a22" strokeWidth="1" />
+                          <path d="M390 1190C420 760 620 470 1120 120" stroke="#ff4a22" strokeWidth="1" />
+                          <path d="M560 1200C590 780 760 520 1180 220" stroke="#ff4a22" strokeWidth="1" />
+                          <path d="M730 1200C760 820 900 590 1210 330" stroke="#ff4a22" strokeWidth="1" />
+                          <path d="M880 1180C910 860 1010 660 1230 440" stroke="#ff4a22" strokeWidth="1" />
+                        </svg>
+                      </div>
 
-              <div className="relative z-10 max-w-[38rem] py-4 lg:-translate-y-[120px] lg:py-8">
-                <h1 className="font-sans text-[4.4rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[5.8rem] lg:text-[8.2rem]">
-                  SUSHI
-                  <span className="block">PANDA</span>
-                </h1>
-                <p className="mt-6 max-w-[25rem] text-[18px] font-semibold leading-[1.5] text-black/72 sm:text-[20px]">
-                  Premijalna sushi dostava
-                  <br />
-                  u Srbiji
-                </p>
+                      <div className="relative grid min-h-[92vh] items-center gap-10 lg:grid-cols-[0.44fr_0.56fr]">
+                        <div className="relative z-10 max-w-[38rem] py-4 lg:-translate-y-[120px] lg:py-8">
+                          <h1 className="font-sans text-[4.4rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[5.8rem] lg:text-[8.2rem]">
+                            SUSHI
+                            <span className="block">PANDA</span>
+                          </h1>
+                          <p className="mt-6 max-w-[25rem] text-[18px] font-semibold leading-[1.5] text-black/72 sm:text-[20px]">
+                            Premijalna sushi dostava
+                            <br />
+                            u Srbiji
+                          </p>
 
-                <div className="mt-10 space-y-6">
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">
-                      Osnovan u Srbiji
-                    </p>
-                    <p className="mt-2 font-sans text-[4rem] font-black leading-[0.86] tracking-[-0.08em] text-[#111111] sm:text-[5rem]">
-                      2025
-                    </p>
-                  </div>
+                          <div className="mt-10 space-y-6">
+                            <div>
+                              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">Osnovan u Srbiji</p>
+                              <p className="mt-2 font-sans text-[4rem] font-black leading-[0.86] tracking-[-0.08em] text-[#111111] sm:text-[5rem]">2025</p>
+                            </div>
+                            <div>
+                              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">Već u 3 grada</p>
+                              <p className="mt-2 text-[15px] font-semibold leading-[1.5] text-black/58 sm:text-[16px]">Kragujevac · Kraljevo · Jagodina</p>
+                            </div>
+                          </div>
+                        </div>
 
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">
-                      Već u 3 grada
-                    </p>
-                    <p className="mt-2 text-[15px] font-semibold leading-[1.5] text-black/58 sm:text-[16px]">
-                      Kragujevac · Kraljevo · Jagodina
-                    </p>
-                  </div>
+                        <div className="hidden lg:block" />
+
+                        <div className="pointer-events-none absolute right-[-170px] top-[44%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-220px] sm:h-[470px] sm:w-[470px] lg:right-[-420px] lg:top-[44%] lg:h-[980px] lg:w-[980px] xl:right-[-480px] xl:h-[1040px] xl:w-[1040px] 2xl:right-[-540px] 2xl:h-[1100px] 2xl:w-[1100px]">
+                          <div className="absolute left-[20%] right-[24%] bottom-[11%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
+                          <img
+                            src={pandaSymbolColor}
+                            alt="Sushi Panda mascot"
+                            className="absolute inset-0 h-full w-full object-contain object-center drop-shadow-[0_30px_44px_rgba(0,0,0,0.16)]"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {slide === 1 && (
+                    <div className="relative h-full overflow-hidden bg-white">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_40%,rgba(255,74,34,0.06),transparent_24%)]" />
+                      <div className="grid min-h-[92vh] items-center gap-12 lg:grid-cols-[0.48fr_0.52fr]">
+                        <div className="relative z-10 max-w-[34rem] lg:-translate-y-[60px]">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">Panda u Srbiji</p>
+                          <p className="mt-5 font-sans text-[4.2rem] font-black uppercase leading-[0.84] tracking-[-0.08em] text-[#111111] sm:text-[5.6rem] lg:text-[7.8rem]">2025</p>
+                          <p className="mt-4 font-sans text-[2rem] font-black uppercase leading-[0.92] tracking-[-0.05em] text-[#111111] sm:text-[2.8rem]">3 grada</p>
+                          <div className="mt-8 space-y-3 text-[17px] font-semibold leading-[1.5] text-black/62 sm:text-[19px]">
+                            <p>Kragujevac</p>
+                            <p>Kraljevo</p>
+                            <p>Jagodina</p>
+                          </div>
+                        </div>
+
+                        <div className="relative flex min-h-[520px] items-center justify-center">
+                          <svg viewBox="0 0 420 540" className="w-full max-w-[380px] opacity-95" aria-hidden="true">
+                            <path
+                              d="M190 18L225 34L252 67L285 82L300 112L292 146L316 180L309 212L330 246L319 283L293 315L296 355L277 393L284 430L266 460L236 478L210 519L176 506L155 472L126 461L112 430L88 398L93 359L72 331L78 291L60 257L75 223L101 199L100 162L128 132L143 98L168 83L176 50L190 18Z"
+                              fill="#fff"
+                              stroke="#111111"
+                              strokeOpacity="0.08"
+                              strokeWidth="8"
+                              strokeLinejoin="round"
+                            />
+                            <circle cx="190" cy="322" r="10" fill="#ff4a22" />
+                            <circle cx="156" cy="374" r="10" fill="#ff4a22" />
+                            <circle cx="228" cy="270" r="10" fill="#ff4a22" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {slide === 2 && (
+                    <div className="relative h-full overflow-hidden bg-white">
+                      <div className="grid min-h-[92vh] items-center gap-12 lg:grid-cols-[0.46fr_0.54fr]">
+                        <div className="relative z-10 max-w-[34rem] lg:-translate-y-[60px]">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">Panda filozofija</p>
+                          <h2 className="mt-5 font-sans text-[4rem] font-black uppercase leading-[0.84] tracking-[-0.08em] text-[#111111] sm:text-[5rem] lg:text-[7rem]">
+                            Sveže.
+                            <span className="block">Brzo.</span>
+                            <span className="block text-[#ff4a22]">Pošteno.</span>
+                          </h2>
+                        </div>
+
+                        <div className="grid gap-5 sm:grid-cols-3">
+                          {[
+                            { title: 'Sveže', copy: 'Čisti sastojci i dosledan kvalitet u svakoj porudžbini.' },
+                            { title: 'Brzo', copy: 'Jasan servis i ritam dostave prilagođen svakodnevnom gradu.' },
+                            { title: 'Pošteno', copy: 'Velike porcije, iskren ukus i brend koji raste bez buke.' },
+                          ].map((item, index) => (
+                            <div
+                              key={item.title}
+                              className="rounded-[30px] border border-black/6 bg-[#fcfcfd] px-6 py-7 shadow-[0_18px_30px_rgba(15,23,42,0.05)]"
+                            >
+                              <div className="mb-5 h-1.5 w-14 rounded-full bg-[#ff4a22]" style={{ opacity: 1 - index * 0.18 }} />
+                              <p className="font-sans text-[1.9rem] font-black leading-[0.95] tracking-[-0.05em] text-[#111111]">{item.title}</p>
+                              <p className="mt-4 text-[15px] font-medium leading-[1.72] text-black/58">{item.copy}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {slide === 3 && (
+                    <div className="relative h-full overflow-hidden bg-white">
+                      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                        <svg className="absolute right-[6%] top-[12%] h-[76%] w-[34%] opacity-[0.09]" viewBox="0 0 400 900" fill="none" aria-hidden="true">
+                          <path d="M30 850C80 640 160 460 370 60" stroke="#ff4a22" strokeWidth="1.2" />
+                          <path d="M100 860C150 660 220 500 390 160" stroke="#ff4a22" strokeWidth="1.2" />
+                          <path d="M170 880C210 700 270 560 400 260" stroke="#ff4a22" strokeWidth="1.2" />
+                        </svg>
+                      </div>
+                      <div className="grid min-h-[92vh] items-center gap-12 lg:grid-cols-[0.46fr_0.54fr]">
+                        <div className="relative z-10 max-w-[34rem] lg:-translate-y-[60px]">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-black/42">Rastemo</p>
+                          <h2 className="mt-5 font-sans text-[4rem] font-black uppercase leading-[0.84] tracking-[-0.08em] text-[#111111] sm:text-[5rem] lg:text-[7rem]">
+                            Mreža koja
+                            <span className="block">tek počinje</span>
+                          </h2>
+                        </div>
+
+                        <div className="space-y-4">
+                          {[
+                            ['2025', 'Kragujevac'],
+                            ['2025', 'Kraljevo'],
+                            ['2026', 'Jagodina'],
+                            ['2026', 'Novi gradovi'],
+                          ].map(([year, city]) => (
+                            <div
+                              key={`${year}-${city}`}
+                              className="flex items-center justify-between rounded-[26px] border border-black/6 bg-[#fcfcfd] px-6 py-5 shadow-[0_18px_30px_rgba(15,23,42,0.05)]"
+                            >
+                              <span className="font-sans text-[1.8rem] font-black tracking-[-0.05em] text-[#111111]">{year}</span>
+                              <span className="text-[15px] font-semibold uppercase tracking-[0.16em] text-black/52">{city}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
+              ))}
 
-              <div className="hidden lg:block" />
-
-              <div className="pointer-events-none absolute right-[-170px] top-[44%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-220px] sm:h-[470px] sm:w-[470px] lg:right-[-420px] lg:top-[44%] lg:h-[980px] lg:w-[980px] xl:right-[-480px] xl:h-[1040px] xl:w-[1040px] 2xl:right-[-540px] 2xl:h-[1100px] 2xl:w-[1100px]">
-                <div className="absolute left-[20%] right-[24%] bottom-[11%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
-                <img
-                  src={pandaSymbolColor}
-                  alt="Sushi Panda mascot"
-                  className="absolute inset-0 h-full w-full object-contain object-center drop-shadow-[0_30px_44px_rgba(0,0,0,0.16)]"
-                />
+              <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
+                {[0, 1, 2, 3].map((slide) => (
+                  <button
+                    key={slide}
+                    aria-label={`Go to slide ${slide + 1}`}
+                    onClick={() => setActiveSlide(slide)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${
+                      activeSlide === slide ? 'w-10 bg-[#ff4a22]' : 'w-2.5 bg-black/14'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -221,7 +358,6 @@ export default function SushiPanda() {
               <p className="mt-4 max-w-[40rem] text-[16px] font-medium leading-[1.72] text-stone-700">
                 Počeli smo u Kragujevcu, širimo se pažljivo i gradimo mrežu grad po grad, bez žurbe i bez kompromisa oko kvaliteta.
               </p>
-
             </div>
           </section>
 
