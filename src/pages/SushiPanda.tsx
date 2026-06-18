@@ -144,14 +144,19 @@ export default function SushiPanda() {
       <main className="px-6 pb-24 pt-0">
         <section className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-white px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-16">
           <div className="mx-auto max-w-[1320px]">
-            <div className="relative grid min-h-[84vh] items-center gap-10 lg:grid-cols-[0.44fr_0.56fr]">
-              <div className="pointer-events-none absolute inset-0 opacity-[0.045]">
-                <img src={pandaSymbolColor} alt="" className="absolute left-[34%] top-[34%] w-24 opacity-[0.04]" />
-                <img src={pandaSymbolColor} alt="" className="absolute right-[8%] bottom-[18%] w-16 opacity-[0.04]" />
-                <img src={pandaSymbolColor} alt="" className="absolute left-[6%] bottom-[26%] w-14 opacity-[0.04]" />
+            <div className="relative grid min-h-[92vh] items-center gap-10 lg:grid-cols-[0.44fr_0.56fr]">
+              <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                <svg className="absolute right-[-6%] top-[-8%] h-[120%] w-[88%] opacity-[0.09]" viewBox="0 0 1200 1200" fill="none" aria-hidden="true">
+                  <path d="M210 1180C240 740 460 420 1030 40" stroke="#ff4a22" strokeWidth="1.2" />
+                  <path d="M390 1190C420 760 620 470 1120 120" stroke="#ff4a22" strokeWidth="1.2" />
+                  <path d="M560 1200C590 780 760 520 1180 220" stroke="#ff4a22" strokeWidth="1.2" />
+                  <path d="M730 1200C760 820 900 590 1210 330" stroke="#ff4a22" strokeWidth="1.2" />
+                  <path d="M880 1180C910 860 1010 660 1230 440" stroke="#ff4a22" strokeWidth="1.2" />
+                  <path d="M1010 1150C1040 900 1100 760 1240 560" stroke="#ff4a22" strokeWidth="1.2" />
+                </svg>
               </div>
 
-              <div className="relative z-10 max-w-[38rem] py-4 lg:-translate-y-[100px] lg:py-8">
+              <div className="relative z-10 max-w-[38rem] py-4 lg:-translate-y-[120px] lg:py-8">
                 <h1 className="font-sans text-[4.4rem] font-black uppercase leading-[0.82] tracking-[-0.085em] text-[#111111] sm:text-[5.8rem] lg:text-[8.2rem]">
                   SUSHI
                   <span className="block">PANDA</span>
@@ -185,8 +190,8 @@ export default function SushiPanda() {
 
               <div className="hidden lg:block" />
 
-              <div className="pointer-events-none absolute right-[-240px] top-[41%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-300px] sm:h-[470px] sm:w-[470px] lg:right-[-560px] lg:top-[38%] lg:h-[860px] lg:w-[860px] xl:right-[-620px] xl:h-[930px] xl:w-[930px] 2xl:right-[-690px] 2xl:h-[990px] 2xl:w-[990px]">
-                <div className="absolute left-[18%] right-[26%] bottom-[9%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
+              <div className="pointer-events-none absolute right-[-170px] top-[44%] z-0 h-[380px] w-[380px] -translate-y-1/2 sm:right-[-220px] sm:h-[470px] sm:w-[470px] lg:right-[-420px] lg:top-[44%] lg:h-[980px] lg:w-[980px] xl:right-[-480px] xl:h-[1040px] xl:w-[1040px] 2xl:right-[-540px] 2xl:h-[1100px] 2xl:w-[1100px]">
+                <div className="absolute left-[20%] right-[24%] bottom-[11%] h-20 rounded-[999px] bg-black/10 blur-[34px]" />
                 <img
                   src={pandaSymbolColor}
                   alt="Sushi Panda mascot"
