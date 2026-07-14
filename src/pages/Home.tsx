@@ -59,7 +59,7 @@ const galleryShots = [
     src: 'https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=1200',
     title: 'Premium serving',
     copy: 'Luksuzna sushi postavka za događaje koji treba da ostave utisak.',
-    className: 'col-span-2 lg:col-span-1 lg:row-span-2 min-h-[320px] lg:min-h-0',
+    className: 'aspect-[1.1/1]',
   },
   {
     src: galleryChefAction,
@@ -143,7 +143,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════
           HERO  —  inspired by Sushi Samurai reference
       ══════════════════════════════════════════════════════════════ */}
-      <section className="screen-min-h relative flex flex-col overflow-hidden bg-[#f7f5f2]">
+      <section className="relative flex min-h-0 flex-col overflow-hidden bg-[#f7f5f2] lg:screen-min-h">
         <div className="soft-petal left-[48%] top-[17%] hidden h-44 w-22 rotate-[16deg] opacity-28 xl:block" />
         <div className="soft-petal right-[11%] top-[21%] hidden h-32 w-18 rotate-[22deg] opacity-20 lg:block" />
         <div className="rose-orb left-[46%] top-[60%] hidden h-40 w-40 opacity-20 xl:block" />
@@ -161,7 +161,7 @@ export default function Home() {
         />
 
         {/* Main flex content */}
-        <div className="screen-min-h relative z-10 mx-auto grid w-full max-w-[1320px] gap-8 px-4 pb-10 pt-[90px] sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-2 lg:px-10">
+        <div className="relative z-10 mx-auto grid w-full max-w-[1320px] gap-8 px-4 pb-10 pt-[90px] sm:px-6 lg:screen-min-h lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-2 lg:px-10">
 
           {/* ── LEFT: Headline + CTA ── */}
           <div className="flex w-full flex-col justify-center py-8 sm:py-12 lg:py-0 lg:pr-10">
@@ -235,7 +235,7 @@ export default function Home() {
           </div>
 
           {/* ── RIGHT: Sushi hero image ── */}
-          <div className="relative mt-2 flex w-full items-center justify-center sm:mt-4 lg:-ml-12 lg:mt-0 lg:justify-end">
+          <div className="relative mt-2 hidden w-full items-center justify-center sm:mt-4 lg:-ml-12 lg:mt-0 lg:flex lg:justify-end">
             <div
               className="absolute left-[8%] top-1/2 hidden -translate-y-1/2 xl:flex flex-col items-center gap-4 z-0"
               style={{ writingMode: 'vertical-rl' }}
