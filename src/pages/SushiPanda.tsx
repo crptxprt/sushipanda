@@ -73,7 +73,7 @@ const journeyCities = [
     label: 'aktivno',
     top: '55%',
     left: '20%',
-    mobileTop: '57%',
+    mobileTop: '50%',
     mobileLeft: '35%',
     delay: '360ms',
   },
