@@ -318,7 +318,7 @@ export default function SushiPanda() {
                   ))}
 
                   <div
-                    className="absolute bottom-1 right-[-2px] z-30 flex items-end lg:hidden"
+                    className="absolute bottom-[-16px] left-[-16px] z-30 flex items-end lg:hidden sm:bottom-[-20px] sm:left-[-10px]"
                     style={{
                       opacity: heroReady ? 1 : 0,
                       transform: heroReady ? 'translateY(0)' : 'translateY(10px)',
@@ -327,7 +327,7 @@ export default function SushiPanda() {
                     }}
                   >
                     <div
-                      className="absolute bottom-[54px] right-[72px] w-[126px] rounded-[14px] border border-black/5 bg-white px-3 py-2 shadow-[0_10px_24px_rgba(15,23,42,0.10)]"
+                      className="absolute bottom-[100px] left-[140px] w-[134px] rounded-[14px] border border-black/5 bg-white px-3 py-2 shadow-[0_10px_24px_rgba(15,23,42,0.10)] sm:bottom-[120px] sm:left-[168px] sm:w-[154px]"
                       style={{ animation: heroReady ? 'pandaNotificationFloat 3s ease-in-out 1.1s infinite' : 'none' }}
                     >
                       <p className="text-[10px] font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111]">Sushi Panda stiže brzo! 👋</p>
@@ -335,7 +335,7 @@ export default function SushiPanda() {
                     <img
                       src={pandaMascotScooter}
                       alt="Sushi Panda mascot"
-                      className="w-[98px] object-contain drop-shadow-[0_12px_18px_rgba(15,23,42,0.16)] sm:w-[124px]"
+                      className="w-[190px] object-contain drop-shadow-[0_16px_24px_rgba(15,23,42,0.18)] sm:w-[230px]"
                     />
                   </div>
 
