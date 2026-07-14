@@ -45,7 +45,7 @@ export default function Header({ transparent = false }: HeaderProps) {
         opaque ? 'bg-[rgba(248,243,241,0.92)] backdrop-blur-md border-b border-[#d8c7c8]/50 shadow-[0_10px_30px_rgba(46,27,35,0.04)]' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-[1320px] mx-auto px-6 lg:px-10 h-[70px] flex items-center">
+      <div className="mx-auto flex h-[70px] max-w-[1320px] items-center px-4 sm:px-6 lg:px-10">
 
         {/* ── Desktop: 3-column split nav ── */}
         <div className="hidden lg:grid grid-cols-3 items-center w-full">
@@ -124,7 +124,7 @@ export default function Header({ transparent = false }: HeaderProps) {
         </div>
 
         {/* ── Mobile ── */}
-        <div className="lg:hidden flex items-center justify-between w-full">
+        <div className="flex w-full items-center justify-between lg:hidden">
           <button
             onClick={() => go('/')}
             className="focus:outline-none"
@@ -143,11 +143,11 @@ export default function Header({ transparent = false }: HeaderProps) {
 
       {/* Mobile drawer */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? 'max-h-screen' : 'max-h-0'
+        className={`overflow-hidden transition-all duration-300 lg:hidden ${
+          mobileOpen ? 'max-h-[calc(100svh-70px)]' : 'max-h-0'
         }`}
       >
-        <div className="bg-white border-t border-black/6 px-6 py-8 space-y-px">
+        <div className="max-h-[calc(100svh-70px)] overflow-y-auto border-t border-black/6 bg-white px-4 py-6 sm:px-6 sm:py-8">
           {[
             { label: 'Početna', path: '/' },
             { label: 'Galerija', path: '/galerija' },

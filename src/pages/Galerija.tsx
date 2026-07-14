@@ -73,24 +73,24 @@ export default function Galerija() {
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      <section className="relative min-h-[430px] overflow-hidden bg-[#f7f5f2] px-6 pt-32 pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
-        <div className="absolute top-0 left-[-100px] w-[500px] h-[600px] bg-sp-blob pointer-events-none select-none" style={{ borderRadius: '50%' }} />
-        <div className="relative z-10 mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
+      <section className="relative min-h-[380px] overflow-hidden bg-[#f7f5f2] px-4 pt-28 pb-16 sm:px-6 sm:pt-32 sm:pb-20 lg:min-h-[470px] lg:pt-36 lg:pb-24">
+        <div className="absolute left-[-140px] top-0 h-[420px] w-[420px] bg-sp-blob pointer-events-none select-none sm:left-[-100px] sm:h-[600px] sm:w-[500px]" style={{ borderRadius: '50%' }} />
+        <div className="relative z-10 mx-auto flex h-full max-w-[1320px] items-end px-0 lg:px-10">
           <div className="max-w-[44rem] pb-2">
             <p className="editorial-kicker mb-5 text-stone-500">Vizual</p>
-            <h1 className="inner-hero-display">
+            <h1 className="catering-hero-display">
               Galerija
             </h1>
-            <p className="mt-6 max-w-[31rem] text-[16px] font-light leading-[1.7] text-stone-600 sm:text-[17px]">
+            <p className="catering-body mt-6 max-w-[31rem] text-stone-600">
               Premium sushi ketering vizuali iz naše prakse.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="pb-28 px-6">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
-          <div className="columns-1 gap-4 space-y-4 sm:columns-2 lg:columns-3 lg:gap-5 lg:space-y-5">
+      <section className="px-4 pb-16 sm:px-6 sm:pb-24 lg:pb-28">
+        <div className="mx-auto max-w-[1320px] px-0 lg:px-10">
+          <div className="columns-1 gap-3 space-y-3 sm:columns-2 sm:gap-4 sm:space-y-4 lg:columns-3 lg:gap-5 lg:space-y-5">
             {images.map((img, i) => (
               <div
                 key={i}
@@ -116,11 +116,11 @@ export default function Galerija() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-[#111111] text-center relative overflow-hidden">
+      <section className="relative overflow-hidden bg-[#111111] px-4 py-20 text-center sm:px-6 sm:py-24">
         <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 font-serif text-[200px] leading-none text-sp-kanji/6 pointer-events-none select-none">寿</span>
         <div className="relative z-10">
           <p className="editorial-kicker mb-8 text-stone-400">Impresioniran?</p>
-          <h2 className="section-display-medium text-white mb-10">
+          <h2 className="catering-section-display-medium text-white mb-10">
             Organizujmo tvoj<br /><span className="italic font-normal">sushi event</span>
           </h2>
           <button onClick={() => navigate('/kontakt')} className="bg-[#C44F6E] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">
@@ -129,7 +129,7 @@ export default function Galerija() {
         </div>
       </section>
 
-      <Footer />
+      <Footer variant="catering" />
     </div>
   );
 }

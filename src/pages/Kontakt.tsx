@@ -19,7 +19,7 @@ export default function Kontakt() {
     <div className="min-h-screen bg-[#f7f5f2] overflow-x-hidden">
       <Header />
 
-      <section className="relative h-[430px] overflow-hidden bg-[#111111] px-6 pt-28 pb-16 lg:h-[470px] lg:pt-32 lg:pb-20">
+      <section className="relative min-h-[380px] overflow-hidden bg-[#111111] px-4 pt-28 pb-16 sm:px-6 sm:pt-32 sm:pb-20 lg:h-[470px] lg:pt-32 lg:pb-20">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute left-[-110px] top-[8%] h-[360px] w-[360px] rounded-full bg-[#2b2324]" />
           <div className="absolute right-[-60px] top-[8%] h-[320px] w-[320px] rounded-full bg-[#2a1f22]" />
@@ -29,21 +29,21 @@ export default function Kontakt() {
           <div className="absolute right-[24%] top-[24%] h-[240px] w-[110px] rounded-full bg-[#f0ddd7]/[0.048] rotate-[18deg] blur-[20px]" />
         </div>
 
-        <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-4 lg:px-10">
+        <div className="relative mx-auto flex h-full max-w-[1320px] items-end px-0 lg:px-10">
           <div className="max-w-[44rem] pb-2">
             <p className="editorial-kicker mb-5 text-sp-kanji">Javite nam se</p>
-            <h1 className="inner-hero-display text-white">
+            <h1 className="catering-hero-display text-white">
               Kontakt &<br /><span className="italic font-normal">ponuda</span>
             </h1>
-            <p className="mt-6 max-w-[31rem] text-[16px] font-light leading-[1.7] text-white/72 sm:text-[17px]">
+            <p className="catering-body mt-6 max-w-[31rem] text-white/72">
               Diskretna postavka. Premium servis.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+        <div className="mx-auto max-w-[1320px] px-0 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
             <div className="relative overflow-hidden rounded-[34px] border border-[#eee3df] bg-[#fcfaf8] px-7 py-8 shadow-[0_24px_60px_rgba(145,111,102,0.08)] sm:px-9 sm:py-9">
               <div className="absolute -right-10 top-10 h-40 w-40 rounded-full bg-[#f3e3de] blur-3xl opacity-70" />
@@ -58,7 +58,7 @@ export default function Kontakt() {
                     </div>
                     <div>
                       <p className="editorial-kicker mb-2 text-stone-500">Telefon</p>
-                      <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">{phoneLabel}</p>
+                      <p className="catering-card-title text-[#111111]">{phoneLabel}</p>
                     </div>
                   </a>
 
@@ -68,7 +68,7 @@ export default function Kontakt() {
                     </div>
                     <div>
                       <p className="editorial-kicker mb-2 text-stone-500">WhatsApp</p>
-                      <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] transition-opacity group-hover:opacity-75 sm:text-[1.6rem]">
+                      <p className="catering-card-title text-[#111111] transition-opacity group-hover:opacity-75">
                         Napišite nam
                       </p>
                     </div>
@@ -80,8 +80,8 @@ export default function Kontakt() {
                     </div>
                     <div>
                       <p className="editorial-kicker mb-2 text-stone-500">Lokacija</p>
-                      <p className="text-[1.35rem] font-medium leading-[1.2] tracking-[-0.02em] text-[#111111] sm:text-[1.6rem]">Karađorđeva 47</p>
-                      <p className="mt-2 text-[16px] font-light leading-[1.6] text-black/72">Kragujevac, Srbija</p>
+                      <p className="catering-card-title text-[#111111]">Karađorđeva 47</p>
+                      <p className="catering-body-small mt-2 text-black/72">Kragujevac, Srbija</p>
                     </div>
                   </div>
                 </div>
@@ -125,10 +125,10 @@ export default function Kontakt() {
             <div className="grid gap-8">
               <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
                 <div className="overflow-hidden rounded-[30px] bg-stone-100 shadow-[0_22px_55px_rgba(145,111,102,0.08)]">
-                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[430px] w-full object-cover" />
+                  <img src={galleryDetailIngredients} alt="Elegant sushi serving detail" className="h-full min-h-[260px] w-full object-cover sm:min-h-[430px]" />
                 </div>
 
-                <div className="relative flex min-h-[430px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-6 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:p-7">
+                <div className="relative flex min-h-[280px] flex-col justify-end overflow-hidden rounded-[30px] bg-[#181214] p-6 text-white shadow-[0_26px_60px_rgba(24,18,20,0.18)] sm:min-h-[430px] sm:p-7">
                   <div className="pointer-events-none absolute inset-0">
                     <div className="absolute right-[12%] top-[10%] h-32 w-32 rounded-full border border-white/[0.14] blur-[2px]" />
                     <div className="absolute right-[6%] top-[22%] h-48 w-24 rounded-full border border-white/[0.12] rotate-[18deg] blur-[1px]" />
@@ -143,16 +143,16 @@ export default function Kontakt() {
 
                   <div className="relative">
                     <p className="editorial-kicker text-white/62">Sushi Panda catering</p>
-                    <p className="section-display-small mt-4 text-white">
+                    <p className="catering-section-display-small mt-4 text-white">
                       Od privatnih proslava do većih događaja
                     </p>
-                    <p className="mt-5 text-[15px] font-light leading-[1.65] text-white/76 sm:text-[16px]">
+                    <p className="catering-body-small mt-5 text-white/76">
                       Organizujemo kompletan sushi catering na vašoj lokaciji.
                     </p>
                   </div>
 
                   <div className="relative mt-7 border-t border-white/16 pt-5">
-                    <p className="max-w-[15rem] text-[14px] font-light leading-[1.65] text-white/62">
+                    <p className="catering-body-small max-w-[15rem] text-white/62">
                       Elegantna postavka. Profesionalan servis.
                     </p>
                   </div>
@@ -163,13 +163,13 @@ export default function Kontakt() {
         </div>
       </section>
 
-      <section className="bg-white px-6 pb-20">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+      <section className="bg-white px-4 pb-16 sm:px-6 sm:pb-20">
+        <div className="mx-auto max-w-[1320px] px-0 lg:px-10">
           <div className="h-px w-full bg-stone-200" />
         </div>
       </section>
 
-      <Footer />
+      <Footer variant="catering" />
     </div>
   );
 }

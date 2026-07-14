@@ -24,6 +24,21 @@ const routes: Record<string, React.ComponentType> = {
   '/kontakt': Kontakt,
 };
 
+const MAIN_SITE_TITLE = 'Sushi Panda — Premijalna sushi dostava u Srbiji';
+const CATERING_SITE_TITLE = 'Sushi catering za Kragujevac';
+
+function getPageTitle(path: string) {
+  if (
+    path === '/' ||
+    path.startsWith('/ketering-') ||
+    path === '/sushi-chef'
+  ) {
+    return CATERING_SITE_TITLE;
+  }
+
+  return MAIN_SITE_TITLE;
+}
+
 export default function App() {
   const [path, setPath] = useState(getCurrentPath);
 
@@ -32,6 +47,10 @@ export default function App() {
     window.addEventListener('hashchange', handler);
     return () => window.removeEventListener('hashchange', handler);
   }, []);
+
+  useEffect(() => {
+    document.title = getPageTitle(path);
+  }, [path]);
 
   const Page = routes[path] ?? Home;
 

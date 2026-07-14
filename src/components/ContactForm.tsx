@@ -58,7 +58,7 @@ export default function ContactForm({ source = 'home', className = '' }: Contact
     return (
       <div className={`flex flex-col items-center justify-center py-20 text-center ${className}`}>
         <CheckCircle className="text-[#C44F6E] mb-6" size={40} strokeWidth={1} />
-        <h3 className="section-display-small mb-3">Hvala na upitu!</h3>
+        <h3 className="catering-section-display-small mb-3">Hvala na upitu!</h3>
         <p className="max-w-[260px] text-[15px] font-light leading-[1.65] text-stone-600">
           Kontaktiraćemo vas u roku od 2 sata.
         </p>

@@ -1,33 +1,21 @@
 import CateringPageLayout from '../components/CateringPageLayout';
 import heroSlave from '../assets/heroes/hero-slave.png';
+import posnaSlavaBoard from '../assets/catering/posna-slava-board.png';
+import mrsnaSlavaBoard from '../assets/catering/mrsna-slava-board.webp';
 
 const variants = [
   {
     label: 'POSNO',
     title: 'Posna slava',
-    description: 'Sushi meni bez mesa i mlečnih proizvoda, prilagođen za posne slave, Badnji dan i posne trpeze.',
-    details: [
-      'Posni sushi setovi',
-      'Riba, povrće i biljni dodaci',
-      'Avokado, krastavac, tuna i losos opcije',
-      'Elegantna postavka za slavsku trpezu',
-    ],
-    ctaText: 'Zatraži posnu ponudu',
-    ctaHref: 'https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20posna%20slava%20i%20Sushi%20Panda%20ponuda.',
+    description: 'Sushi meni prilagođen posnim slavama, uz lagane ukuse i elegantnu prezentaciju za vašu trpezu.',
+    image: posnaSlavaBoard,
   },
   {
     label: 'MRSNO',
     title: 'Mrsna slava',
-    description: 'Bogati sushi setovi za klasičnu slavsku trpezu, sa premium rolnama, nigiri izborom i live chef opcijom.',
-    details: [
-      'Premium sushi setovi',
-      'Tempura i nigiri asortiman',
-      'Live sushi chef opcija',
-      'Kompletna postavka i dostava',
-    ],
-    ctaText: 'Zatraži mrsnu ponudu',
-    ctaHref: 'https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20mrsna%20slava%20i%20Sushi%20Panda%20ponuda.',
-    dark: true,
+    description: 'Domaći suhomesnati proizvodi, sirevi i slavski specijaliteti za bogatu i elegantnu slavsku trpezu.',
+    image: mrsnaSlavaBoard,
+    strongerOverlay: true,
   },
 ];
 
@@ -82,6 +70,7 @@ export default function KeteringSlave() {
       variants={variants}
       variantsTitle="Odaberi tip slave"
       formSource="slave"
+      showVariantCtas={false}
     />
   );
 }

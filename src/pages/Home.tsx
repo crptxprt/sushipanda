@@ -142,7 +142,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════════════
           HERO  —  inspired by Sushi Samurai reference
       ══════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-screen bg-[#f7f5f2] overflow-hidden flex flex-col">
+      <section className="screen-min-h relative flex flex-col overflow-hidden bg-[#f7f5f2]">
         <div className="soft-petal left-[48%] top-[17%] hidden h-44 w-22 rotate-[16deg] opacity-28 xl:block" />
         <div className="soft-petal right-[11%] top-[21%] hidden h-32 w-18 rotate-[22deg] opacity-20 lg:block" />
         <div className="rose-orb left-[46%] top-[60%] hidden h-40 w-40 opacity-20 xl:block" />
@@ -160,10 +160,10 @@ export default function Home() {
         />
 
         {/* Main flex content */}
-        <div className="relative z-10 grid w-full max-w-[1320px] mx-auto px-6 lg:px-10 pt-[90px] min-h-screen pb-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center gap-8 lg:gap-2">
+        <div className="screen-min-h relative z-10 mx-auto grid w-full max-w-[1320px] gap-8 px-4 pb-10 pt-[90px] sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-2 lg:px-10">
 
           {/* ── LEFT: Headline + CTA ── */}
-          <div className="w-full flex flex-col justify-center py-12 lg:py-0 lg:pr-10">
+          <div className="flex w-full flex-col justify-center py-8 sm:py-12 lg:py-0 lg:pr-10">
 
             {/* Overline */}
             <p className="editorial-kicker mb-8 text-stone-500">
@@ -179,7 +179,7 @@ export default function Home() {
             </h1>
 
             {/* Tagline */}
-            <p className="mb-8 max-w-[470px] text-[16px] font-light leading-[1.72] text-black/78 sm:text-[17px]">
+            <p className="catering-body mb-8 max-w-[470px] text-black/78">
               Premium sushi ketering i live chef iskustvo za proslave, slave
               i korporativne događaje u Kragujevcu.
             </p>
@@ -200,7 +200,7 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="flex flex-wrap gap-3 mb-14">
+            <div className="mb-12 flex flex-wrap gap-3 sm:mb-14">
               {['10–50+ gostiju', 'Live sushi chef', 'Postavka i dostava'].map((item) => (
                 <span
                   key={item}
@@ -213,7 +213,7 @@ export default function Home() {
 
             <button
               onClick={() => go('/o-nama')}
-              className="flex w-fit items-center gap-4 rounded-[20px] border border-[#eadfdb] bg-white/72 px-4 py-3 text-left shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#dccbc6] hover:bg-white/82"
+              className="flex w-full max-w-[28rem] items-center gap-4 rounded-[20px] border border-[#eadfdb] bg-white/72 px-4 py-3 text-left shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#dccbc6] hover:bg-white/82 sm:w-fit sm:max-w-none"
             >
               <div className="flex -space-x-3">
                 {[teamDenis, teamPava, teamMisha].map((src, i) => (
@@ -234,7 +234,7 @@ export default function Home() {
           </div>
 
           {/* ── RIGHT: Sushi hero image ── */}
-          <div className="w-full flex items-center justify-center lg:justify-end relative mt-4 lg:mt-0 lg:-ml-12">
+          <div className="relative mt-2 flex w-full items-center justify-center sm:mt-4 lg:-ml-12 lg:mt-0 lg:justify-end">
             <div
               className="absolute left-[8%] top-1/2 hidden -translate-y-1/2 xl:flex flex-col items-center gap-4 z-0"
               style={{ writingMode: 'vertical-rl' }}
@@ -282,24 +282,24 @@ export default function Home() {
       </div>
 
       {/* ── WHY SUSHI PANDA — editorial proof section ────────────── */}
-      <section ref={whyRef} className="relative overflow-hidden bg-white py-28">
+      <section ref={whyRef} className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
         <div className="soft-petal right-[7%] top-[12%] hidden h-40 w-20 rotate-[24deg] opacity-25 lg:block" />
         <div className="mx-auto grid max-w-[1320px] gap-14 px-6 lg:grid-cols-[0.86fr_1.14fr] lg:px-10">
           <div className="lg:pr-8">
             <p className="editorial-kicker mb-4 text-stone-500">Zašto Sushi Panda</p>
             <h2
-              className="section-display mb-6 text-[#111111]"
+              className="catering-section-display mb-6 text-[#111111]"
             >
               Premium servis,
               <br />
               <span className="italic font-normal text-stone-700">bez kompromisa</span>
             </h2>
-            <p className="max-w-[470px] text-[16px] font-light leading-[1.72] text-black/76 sm:text-[17px]">
+            <p className="catering-body max-w-[470px] text-black/76">
               Od pažljivo odabranih sastojaka do elegantne postavke na lokaciji, svaki detalj je
               osmišljen da događaj izgleda profinjeno i da gostima ostane u pamćenju.
             </p>
 
-            <div className="mt-10 grid max-w-[420px] grid-cols-2 gap-4">
+            <div className="mt-10 grid max-w-[420px] grid-cols-1 gap-4 sm:grid-cols-2">
               {[
                 ['10–50+', 'gostiju za različite formate'],
                 ['On-site', 'postavka i podrška na događaju'],
@@ -316,7 +316,7 @@ export default function Home() {
             {whyItems.map((item, i) => (
               <div
                 key={i}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#f1e7e2] bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-8 pb-8 pt-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(196,79,110,0.08)]"
+                className="group relative flex h-full flex-col overflow-hidden rounded-[26px] border border-[#f1e7e2] bg-[linear-gradient(180deg,rgba(255,255,255,1),rgba(250,245,244,1))] px-6 pb-7 pt-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(196,79,110,0.08)] sm:px-8 sm:pb-8 sm:pt-7"
               >
                 <div className="mb-8 flex items-start justify-between gap-4">
                   <span className="font-serif text-[2.8rem] leading-none text-[#111111]/10">
@@ -326,10 +326,10 @@ export default function Home() {
                     <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
                   </div>
                 </div>
-                <h3 className="mb-3 min-h-[5.2rem] font-serif text-[1.28rem] font-bold leading-[1.18] text-[#111111]">
+                <h3 className="catering-card-title mb-3 min-h-[5.2rem] text-[#111111]">
                   {item.title}
                 </h3>
-                <p className="text-[15px] font-light leading-[1.68] text-black/74">{item.desc}</p>
+                <p className="catering-body-small text-black/74">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -337,16 +337,16 @@ export default function Home() {
       </section>
 
       {/* ── KATEGORIJE ──────────────────────────────────────────────── */}
-      <section ref={cateringOptionsRef} className="bg-[#f7f5f2] px-6 py-28">
+      <section ref={cateringOptionsRef} className="bg-[#f7f5f2] px-4 py-20 sm:px-6 sm:py-24 lg:px-6 lg:py-28">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
           <div className="mb-16 grid gap-10 lg:grid-cols-[0.72fr_0.28fr] lg:items-end">
             <div>
               <p className="editorial-kicker mb-4 text-stone-500">Usluge</p>
-              <h2 className="section-display">
+              <h2 className="catering-section-display">
                 Vrste ketering evenata
               </h2>
             </div>
-            <p className="max-w-sm text-[16px] font-light leading-[1.7] text-black/74 lg:ml-auto">
+            <p className="catering-body max-w-sm text-black/74 lg:ml-auto">
               Različiti formati događaja traže različitu atmosferu, ritam i prezentaciju. Zato svaku
               uslugu prilagođavamo gostima, lokaciji i karakteru eventa.
             </p>
@@ -371,7 +371,7 @@ export default function Home() {
 
                 {/* Bottom text */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-serif font-bold text-white text-[1.15rem] mb-1">{cat.title}</h3>
+                  <h3 className="font-serif font-bold text-white text-[1.28rem] leading-[1.04] tracking-[-0.024em] mb-1">{cat.title}</h3>
                   <p className="text-[12px] font-light uppercase tracking-[0.16em] text-white">{cat.sub}</p>
                   <div className="mt-4 flex translate-y-2 items-center gap-2 text-[12px] uppercase tracking-[0.16em] text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     Saznaj više <ArrowRight size={11} />
@@ -384,19 +384,19 @@ export default function Home() {
       </section>
 
       {/* ── SUSHI CHEF — full dark premium card ───────────────────── */}
-      <section className="bg-[#fcfaf8] px-6 py-24">
+      <section className="bg-[#fcfaf8] px-4 py-20 sm:px-6 sm:py-24">
         <div className="mx-auto max-w-[1320px] overflow-hidden rounded-[40px] border border-[#241b1a] bg-[radial-gradient(circle_at_top_right,rgba(196,79,110,0.14),rgba(18,15,14,0)_28%),linear-gradient(135deg,#171211_0%,#0e0b0a_100%)] shadow-[0_36px_80px_rgba(12,9,8,0.22)]">
           <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
             <div className="flex flex-col justify-center p-8 lg:p-14">
               <p className="editorial-kicker mb-4 text-white">Ekskluzivna usluga</p>
               <h2
-                className="section-display mb-5 text-white"
+                className="catering-section-display mb-5 text-white"
               >
                 Sushi chef
                 <br />
                 <span className="italic font-normal text-white">na vašem eventu</span>
               </h2>
-              <p className="max-w-[430px] text-[16px] font-light leading-[1.72] text-white sm:text-[17px]">
+              <p className="catering-body max-w-[430px] text-white">
                 Sushi chef dolazi na lokaciju, priprema sushi pred gostima i pretvara ketering u
                 doživljaj koji podiže atmosferu, ritam servisa i premium utisak celog eventa.
               </p>
@@ -418,7 +418,7 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="relative min-h-[560px] overflow-hidden bg-[#0f0c0b]">
+            <div className="relative min-h-[420px] overflow-hidden bg-[#0f0c0b] sm:min-h-[500px] lg:min-h-[560px]">
               <img
                 src={currentChefSlide.src}
                 alt={currentChefSlide.alt}
@@ -452,15 +452,15 @@ export default function Home() {
       </section>
 
       {/* ── GALLERY ─────────────────────────────────────────────────── */}
-      <section className="py-28 px-6 bg-white">
+      <section className="bg-white px-4 py-20 sm:px-6 sm:py-24 lg:py-28">
         <div className="max-w-[1320px] mx-auto px-4 lg:px-6">
-          <div className="mb-14 flex items-end justify-between">
+          <div className="mb-12 flex flex-col gap-5 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="editorial-kicker mb-3 text-stone-500">Naš rad</p>
-              <h2 className="section-display">
+              <h2 className="catering-section-display">
                 Galerija
               </h2>
-              <p className="mt-4 max-w-md text-[16px] font-light leading-[1.7] text-black/74">
+              <p className="catering-body mt-4 max-w-md text-black/74">
                 Od detalja na stolu do kompletnih event postavki, biramo kadar koji prenosi atmosferu
                 i kvalitet usluge, a ne samo još jednu stock galeriju.
               </p>
@@ -473,7 +473,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {galleryShots.map((shot) => (
               <div
                 key={shot.src}
@@ -504,69 +504,79 @@ export default function Home() {
       </div>
 
       {/* ── QUICK CONTACT CTA ──────────────────────────────────────── */}
-      <section ref={ctaRef} className="relative overflow-hidden bg-[#F3E8E5] px-6 py-16">
-        <div className="soft-petal left-[6%] top-[22%] hidden h-56 w-28 rotate-[-20deg] lg:block" />
-        <div className="soft-petal right-[10%] bottom-[14%] hidden h-44 w-24 rotate-[30deg] lg:block" />
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-[0.88fr_1.12fr] gap-10 items-center">
+      <section ref={ctaRef} className="relative overflow-hidden bg-white px-4 py-14 sm:px-6 sm:py-16">
+        <div className="soft-petal left-[4%] top-[18%] hidden h-72 w-36 rotate-[-18deg] opacity-35 lg:block" />
+        <div className="soft-petal right-[7%] bottom-[10%] hidden h-60 w-30 rotate-[28deg] opacity-35 lg:block" />
+        <div className="mx-auto grid max-w-[1320px] grid-cols-1 gap-10 px-0 sm:px-4 lg:grid-cols-[0.88fr_1.12fr] lg:px-6 items-center">
 
           {/* Left */}
           <div className="lg:sticky lg:top-28">
             <p className="editorial-kicker mb-7 text-stone-500">Kontakt</p>
-            <h2
-              className="section-display mb-5 text-[#111111]"
-            >
+            <h2 className="catering-contact-display mb-5 font-serif text-[#111111]">
               Planiraš<br />
               <span className="italic font-normal">događaj?</span>
             </h2>
             <div className="mb-7 h-px w-10 bg-[#C44F6E]" />
-            <p className="max-w-sm text-[16px] font-light leading-[1.72] text-black/76 sm:text-[17px]">
+            <p className="catering-body max-w-sm text-black/76">
               Javite nam se odmah i dobićete brz odgovor, okvirnu cenu i smernice za vaš događaj.
             </p>
           </div>
 
           {/* Fast actions */}
-          <div className="rounded-[24px] border border-white/60 bg-white/92 p-5 shadow-[0_26px_60px_rgba(145,111,102,0.08)] lg:p-6">
-            <div className="grid gap-3 md:grid-cols-2">
+          <div className="rounded-[24px] border border-[#f0deda] bg-[#f9efec] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.04)] transition-transform duration-[250ms] ease-out hover:-translate-y-[3px] lg:p-8">
+            <div className="space-y-6">
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-[22px] border border-[#ead9d4] bg-[#181214] px-6 py-6 text-white transition-all duration-300 hover:bg-[#C44F6E] hover:shadow-[0_18px_38px_rgba(24,18,20,0.18)]"
+                className="group -mx-2 flex items-start gap-5 rounded-[20px] px-2 py-2 transition-all duration-[250ms] ease-out hover:bg-white/58"
               >
-                <div className="mb-10">
-                  <div className="w-fit rounded-full border border-white/14 bg-white/8 p-3 text-white">
-                    <MessageCircle size={18} strokeWidth={1.6} />
-                  </div>
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#e8d8d2] bg-white/92 transition-colors duration-[250ms] group-hover:border-[#C44F6E] group-hover:bg-[#fff7f4]"
+                  style={{ borderRadius: '50%' }}
+                >
+                  <MessageCircle size={14} className="text-stone-400 transition-colors duration-[250ms] group-hover:text-[#C44F6E]" strokeWidth={1.5} />
                 </div>
-                <p className="text-[12px] uppercase tracking-[0.16em] text-white/76">WhatsApp</p>
-                <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pišite na WhatsApp</p>
-                <p className="mt-4 max-w-[18rem] text-[15px] font-light leading-[1.65] text-white/78 sm:text-[16px]">
-                  Za brzu poruku, ponudu i dogovor termina.
-                </p>
+                <div>
+                  <p className="editorial-kicker mb-2 text-stone-500 transition-colors duration-[250ms] group-hover:text-[#b06a7b]">WhatsApp</p>
+                  <p className="catering-card-title text-[#111111] transition-colors duration-[250ms] group-hover:text-[#C44F6E]">
+                    Pišite na WhatsApp
+                  </p>
+                  <p className="catering-body-small mt-2 max-w-[20rem] text-black/72 transition-colors duration-[250ms] group-hover:text-black/86">
+                    Za brzu poruku, ponudu i dogovor termina.
+                  </p>
+                </div>
               </a>
 
               <a
                 href={phoneLink}
-                className="group rounded-[22px] border border-[#ead9d4] bg-[#fcfaf8] px-6 py-6 text-[#111111] transition-all duration-300 hover:border-[#C44F6E] hover:shadow-[0_18px_38px_rgba(196,79,110,0.10)]"
+                className="group -mx-2 flex items-start gap-5 rounded-[20px] px-2 py-2 transition-all duration-[250ms] ease-out hover:bg-white/58"
               >
-                <div className="mb-10">
-                  <div className="w-fit rounded-full bg-[#f6ece8] p-3 text-[#181214]">
-                    <Phone size={18} strokeWidth={1.7} />
-                  </div>
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#e8d8d2] bg-white/92 transition-colors duration-[250ms] group-hover:border-[#C44F6E] group-hover:bg-[#fff7f4]"
+                  style={{ borderRadius: '50%' }}
+                >
+                  <Phone size={14} className="text-stone-400 transition-colors duration-[250ms] group-hover:text-[#C44F6E]" strokeWidth={1.5} />
                 </div>
-                <p className="text-[12px] uppercase tracking-[0.16em] text-stone-500">Telefon</p>
-                <p className="mt-3 text-[1.8rem] font-medium leading-[1.05] tracking-[-0.03em]">Pozovite nas</p>
-                <p className="mt-5 text-[1.35rem] font-medium tracking-[-0.02em] text-[#111111]">+381 66 404 049</p>
-                <p className="mt-3 max-w-[18rem] text-[15px] font-light leading-[1.65] text-black/72 sm:text-[16px]">
-                  Za direktan razgovor i brzu potvrdu detalja.
-                </p>
+                <div>
+                  <p className="editorial-kicker mb-2 text-stone-500 transition-colors duration-[250ms] group-hover:text-[#b06a7b]">Telefon</p>
+                  <p className="catering-card-title text-[#111111] transition-colors duration-[250ms] group-hover:text-[#C44F6E]">
+                    Pozovite nas
+                  </p>
+                  <p className="mt-3 text-[1.2rem] font-medium tracking-[-0.02em] text-[#111111] transition-colors duration-[250ms] group-hover:text-[#111111] sm:text-[1.35rem]">
+                    +381 66 404 049
+                  </p>
+                  <p className="catering-body-small mt-2 max-w-[20rem] text-black/72 transition-colors duration-[250ms] group-hover:text-black/86">
+                    Za direktan razgovor i brzu potvrdu detalja.
+                  </p>
+                </div>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <Footer variant="catering" />
     </div>
   );
 }

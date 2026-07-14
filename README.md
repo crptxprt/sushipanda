@@ -71,6 +71,30 @@ Preferred contact style:
 - Instagram URL: `https://www.instagram.com/sushipandaofficial`
 - Location: `Karađorđeva 47, Kragujevac, Srbija`
 
+## Footer Rules
+
+Important separation between the two site directions:
+
+- All catering pages must use the dark catering footer: `Footer variant="catering"`
+- Only the brand page `/sushi-panda` should use the light/default footer: `Footer()`
+
+Current routing expectation:
+
+- Dark catering footer:
+  - `/`
+  - `/ketering-proslave`
+  - `/ketering-slave`
+  - `/ketering-devojacko-momacko`
+  - `/ketering-korporativni`
+  - `/sushi-chef`
+  - `/galerija`
+  - `/o-nama`
+  - `/kontakt`
+- Light/default footer:
+  - `/sushi-panda`
+
+Do not accidentally replace the catering footer with the brand footer on catering routes.
+
 ## What Has Already Been Reworked
 
 Homepage:
@@ -113,6 +137,32 @@ Current font direction:
 
 - Serif display: `Cormorant Garamond`
 - Sans/body: `Inter`
+
+Important split:
+
+- Catering pages use the shared catering typography scale only
+- `/sushi-panda` keeps its own separate typography and should not be normalized together with catering pages
+
+Catering typography classes to preserve in [src/index.css](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/index.css):
+
+- `.catering-hero-display`
+- `.catering-section-display`
+- `.catering-section-display-medium`
+- `.catering-section-display-small`
+- `.catering-card-title`
+- `.catering-contact-display`
+- `.catering-body`
+- `.catering-body-small`
+
+Pages/components already aligned to this catering scale:
+
+- [src/pages/Home.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Home.tsx)
+- [src/pages/Kontakt.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Kontakt.tsx)
+- [src/pages/Galerija.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Galerija.tsx)
+- [src/pages/ONama.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/ONama.tsx)
+- [src/pages/SushiChef.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/SushiChef.tsx)
+- [src/components/CateringPageLayout.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/CateringPageLayout.tsx)
+- [src/components/ContactForm.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/ContactForm.tsx)
 
 Typography work already applied:
 
@@ -166,6 +216,8 @@ Use this if you open a fresh chat and want instant continuity:
 - лучше быстрый контакт: WhatsApp + телефон
 - если блок слабый, пересобираем нормально, а не слегка правим
 - не ломать ощущение воздуха и дорогого визуала
+- на всех catering-страницах должен быть черный `Footer variant="catering"`
+- светлый футер оставляем только на `/sushi-panda`
 
 Актуальные контакты:
 - +381 66 404 049

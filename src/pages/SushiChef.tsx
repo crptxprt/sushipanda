@@ -1,7 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ArrowRight } from 'lucide-react';
-import { navigate } from '../lib/router';
+import { ArrowRight, MapPin, MessageCircle, Phone } from 'lucide-react';
 import heroSushiChef from '../assets/heroes/hero-sushi-chef.png';
 import chefExperience from '../assets/chef-experience.png';
 
@@ -25,37 +24,37 @@ export default function SushiChef() {
       <Header />
 
       {/* HERO */}
-      <section className="relative h-[62vh] min-h-[460px] flex items-end overflow-hidden bg-[#111111]">
+      <section className="relative flex min-h-[420px] items-end overflow-hidden bg-[#111111] sm:min-h-[460px] lg:h-[62vh]">
         <img src={heroSushiChef} alt="Sushi chef" className="absolute inset-0 w-full h-full object-cover opacity-50" style={{ objectPosition: 'center 40%' }} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/10" />
 
         <span className="absolute right-14 top-1/2 -translate-y-1/2 font-serif text-[140px] leading-none text-sp-kanji/10 pointer-events-none select-none hidden lg:block">司</span>
 
-        <div className="relative z-10 max-w-[1320px] mx-auto px-6 lg:px-14 pb-16 w-full">
+        <div className="relative z-10 mx-auto w-full max-w-[1320px] px-4 pb-12 sm:px-6 sm:pb-14 lg:px-14 lg:pb-16">
           <p className="editorial-kicker text-sp-kanji mb-4">Ekskluzivna usluga</p>
-          <h1 className="inner-hero-display text-white">
+          <h1 className="catering-hero-display text-white">
             Sushi chef<br /><span className="italic font-normal">na vašem eventi</span>
           </h1>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="py-28 px-6 bg-white">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+        <div className="mx-auto grid max-w-[1320px] grid-cols-1 gap-12 px-0 lg:grid-cols-2 lg:gap-20 lg:px-10">
           <div>
             <p className="editorial-kicker mb-8 text-stone-500">Šta dobijate</p>
-            <h2 className="section-display-medium mb-8">
+            <h2 className="catering-section-display-medium mb-8">
               Iskustvo koje<br /><span className="italic font-normal">se pamti</span>
             </h2>
             <div className="w-10 h-px bg-[#C44F6E] mb-8" />
-            <p className="mb-10 text-[16px] font-light leading-[1.72] text-black/76">
+            <p className="catering-body mb-10 text-black/76">
               Naš sushi chef dolazi sa kompletnom opremom i svežim sastojcima — priprema autentični japanski sushi koji postaje centralni deo večeri.
             </p>
             <ul className="space-y-5">
               {highlights.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <ArrowRight size={13} strokeWidth={1.5} className="text-[#C44F6E] shrink-0 mt-1" />
-                  <span className="text-[16px] font-light leading-[1.65] text-black/76">{item}</span>
+                  <span className="catering-body text-black/76">{item}</span>
                 </li>
               ))}
             </ul>
@@ -67,18 +66,18 @@ export default function SushiChef() {
       </section>
 
       {/* PROCESS */}
-      <section className="py-28 px-6 bg-[#f7f5f2]">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
+      <section className="bg-[#f7f5f2] px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
+        <div className="mx-auto max-w-[1320px] px-0 lg:px-10">
           <div className="mb-16">
             <p className="editorial-kicker mb-3 text-stone-500">Kako funkcioniše</p>
-            <h2 className="section-display-small">Proces u 3 koraka</h2>
+            <h2 className="catering-section-display-small">Proces u 3 koraka</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {steps.map((s) => (
-              <div key={s.num} className="bg-white p-10 lg:p-12" style={{ borderRadius: '20px' }}>
-                <p className="font-serif font-bold text-[5rem] leading-none mb-6 select-none text-black/6">{s.num}</p>
-                <h3 className="serif-card-title text-[#111111] mb-4">{s.title}</h3>
-                <p className="text-[15px] font-light leading-[1.68] text-black/74">{s.desc}</p>
+              <div key={s.num} className="bg-white p-7 sm:p-10 lg:p-12" style={{ borderRadius: '20px' }}>
+                <p className="mb-5 select-none font-serif text-[3.8rem] font-bold leading-none text-black/6 sm:mb-6 sm:text-[5rem]">{s.num}</p>
+                <h3 className="catering-card-title text-[#111111] mb-4">{s.title}</h3>
+                <p className="catering-body-small text-black/74">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -86,9 +85,9 @@ export default function SushiChef() {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-28 px-6 bg-[#F0EDE7]">
-        <div className="max-w-[1320px] mx-auto px-4 lg:px-10">
-          <div className="relative overflow-hidden border border-[#e4d8d2] bg-white px-8 py-12 sm:px-10 lg:px-14 lg:py-16 shadow-[0_24px_55px_rgba(120,92,84,0.08)]" style={{ borderRadius: '28px' }}>
+      <section id="sushi-chef-contact" className="bg-[#F0EDE7] px-4 py-16 sm:px-6 sm:py-20 lg:py-28">
+        <div className="mx-auto max-w-[1320px] px-0 lg:px-10">
+          <div className="relative overflow-hidden border border-[#e4d8d2] bg-white px-5 py-8 shadow-[0_24px_55px_rgba(120,92,84,0.08)] sm:px-10 sm:py-12 lg:px-14 lg:py-16" style={{ borderRadius: '28px' }}>
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute left-[5%] top-[12%] h-36 w-36 rounded-full bg-[#f2e8e2] blur-3xl" />
               <div className="absolute right-[8%] bottom-[12%] h-44 w-44 rounded-full bg-[#C44F6E]/10 blur-3xl" />
@@ -97,32 +96,83 @@ export default function SushiChef() {
             <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
               <div>
                 <p className="editorial-kicker mb-6 text-stone-500">Kontakt</p>
-                <h2 className="section-display-medium text-[#111111] mb-5">
+                <h2 className="catering-section-display-medium text-[#111111] mb-5">
                   Rezerviši<br /><span className="italic font-normal">sushi chefa</span>
                 </h2>
                 <div className="w-10 h-px bg-[#C44F6E] mb-8" />
-                <p className="max-w-[36rem] text-[16px] font-light leading-[1.75] text-black/74">
+                <p className="catering-body max-w-[36rem] text-black/74">
                   Ako želiš live sushi iskustvo na događaju, javi nam termin, broj gostiju i tip eventa. Pripremićemo predlog organizacije i nastupa chefa na licu mesta.
                 </p>
               </div>
 
-              <div className="flex flex-col items-start gap-4 lg:items-end">
-                <button
-                  onClick={() => navigate('/kontakt')}
-                  className="rounded-full bg-[#111111] px-10 py-4 text-[12px] uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:bg-[#C44F6E]"
+              <div className="w-full lg:max-w-[560px]">
+                <div
+                  className="relative overflow-hidden rounded-[24px] border border-[#eadfd9] bg-[#fffdfb] px-5 py-6 shadow-[0_18px_44px_rgba(120,92,84,0.06)] sm:rounded-[34px] sm:px-8 sm:py-8 lg:px-10 lg:py-10"
                 >
-                  Javi nam se
-                </button>
-                <p className="text-[13px] font-light leading-[1.7] text-black/52 lg:max-w-[17rem] lg:text-right">
-                  Kontakt preko stranice, telefona ili WhatsApp-a za brzi dogovor oko termina.
-                </p>
+                  <div className="pointer-events-none absolute inset-0">
+                    <div className="absolute right-[-6%] top-[14%] h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(243,233,227,0.95)_0%,rgba(243,233,227,0.28)_48%,rgba(243,233,227,0)_74%)]" />
+                  </div>
+
+                  <div className="relative">
+                    <p className="editorial-kicker mb-8 text-stone-500">Informacije</p>
+
+                    <div className="space-y-8">
+                      <div className="grid grid-cols-[44px_1fr] items-start gap-4 sm:grid-cols-[54px_1fr] sm:gap-5">
+                        <span className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-full border border-[#e5dbd6] text-[#a79b94] sm:h-[54px] sm:w-[54px]">
+                          <Phone size={18} strokeWidth={1.6} className="sm:h-[22px] sm:w-[22px]" />
+                        </span>
+                        <div>
+                          <p className="text-[12px] uppercase tracking-[0.24em] text-stone-500">Telefon</p>
+                          <a
+                            href="tel:+38166404049"
+                            className="mt-3 block break-words font-sans text-[1.45rem] leading-[1.04] tracking-[-0.032em] text-[#111111] transition-colors hover:text-[#C44F6E] sm:text-[1.85rem] lg:text-[2.2rem]"
+                          >
+                            +381 66 404 049
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-[44px_1fr] items-start gap-4 sm:grid-cols-[54px_1fr] sm:gap-5">
+                        <span className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-full border border-[#e5dbd6] text-[#a79b94] sm:h-[54px] sm:w-[54px]">
+                          <MessageCircle size={18} strokeWidth={1.6} className="sm:h-[22px] sm:w-[22px]" />
+                        </span>
+                        <div>
+                          <p className="text-[12px] uppercase tracking-[0.24em] text-stone-500">WhatsApp</p>
+                          <a
+                            href="https://wa.me/38166404049"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-3 block font-sans text-[1.45rem] leading-[1.04] tracking-[-0.032em] text-[#111111] transition-colors hover:text-[#C44F6E] sm:text-[1.8rem] lg:text-[2.1rem]"
+                          >
+                            Napišite nam
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-[44px_1fr] items-start gap-4 sm:grid-cols-[54px_1fr] sm:gap-5">
+                        <span className="inline-flex h-[44px] w-[44px] items-center justify-center rounded-full border border-[#e5dbd6] text-[#a79b94] sm:h-[54px] sm:w-[54px]">
+                          <MapPin size={18} strokeWidth={1.6} className="sm:h-[22px] sm:w-[22px]" />
+                        </span>
+                        <div>
+                          <p className="text-[12px] uppercase tracking-[0.24em] text-stone-500">Lokacija</p>
+                          <p className="mt-3 font-sans text-[1.45rem] leading-[1.04] tracking-[-0.032em] text-[#111111] sm:text-[1.8rem] lg:text-[2.1rem]">
+                            Karađorđeva 47
+                          </p>
+                          <p className="catering-body-small mt-4 text-black/72">
+                            Kragujevac, Srbija
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <Footer variant="catering" />
     </div>
   );
 }
