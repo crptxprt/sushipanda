@@ -12,8 +12,9 @@ import Kontakt from './pages/Kontakt';
 import SushiPanda from './pages/SushiPanda';
 
 const routes: Record<string, React.ComponentType> = {
-  '/': Home,
+  '/': SushiPanda,
   '/sushi-panda': SushiPanda,
+  '/ketering': Home,
   '/ketering-proslave': KeteringProslave,
   '/ketering-slave': KeteringSlave,
   '/ketering-devojacko-momacko': KeteringDevojackoMomacko,
@@ -29,7 +30,7 @@ const CATERING_SITE_TITLE = 'Sushi catering za Kragujevac';
 
 function getPageTitle(path: string) {
   if (
-    path === '/' ||
+    path === '/ketering' ||
     path.startsWith('/ketering-') ||
     path === '/sushi-chef'
   ) {
@@ -52,7 +53,7 @@ export default function App() {
     document.title = getPageTitle(path);
   }, [path]);
 
-  const Page = routes[path] ?? Home;
+  const Page = routes[path] ?? SushiPanda;
 
   return <Page />;
 }

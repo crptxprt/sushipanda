@@ -193,7 +193,7 @@ export default function Home() {
                 Zatraži ponudu
               </button>
               <button
-                onClick={() => navigate('/', 'ketering-opcije')}
+                onClick={() => navigate('/ketering', 'ketering-opcije')}
                 className="text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
               >
                 Pogledaj opcije
