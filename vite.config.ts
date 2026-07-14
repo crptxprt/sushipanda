@@ -10,13 +10,13 @@ export default defineConfig(({ mode }) => {
         title: 'Sushi Panda Catering — Sushi koji pravi događaj',
         description: 'Premium sushi catering u Kragujevcu za proslave, slave, devojačke, momačke i korporativne evente.',
         url: 'https://catering.sushipanda.rs/',
-        image: 'https://catering.sushipanda.rs/og-catering.png',
+        image: 'https://catering.sushipanda.rs/og-catering-hero.png',
       }
     : {
         title: 'Sushi Panda — Sushi dostava koja osvaja Srbiju',
         description: 'Premijalna sushi dostava u Kragujevcu i Kraljevu. Uskoro stižemo i u Jagodinu.',
         url: 'https://sushipanda.rs/',
-        image: 'https://sushipanda.rs/og-sushipanda.png',
+        image: 'https://sushipanda.rs/og-sushipanda-hero.png',
       };
 
   return {
