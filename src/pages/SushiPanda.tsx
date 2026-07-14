@@ -271,7 +271,7 @@ export default function SushiPanda() {
                   </div>
                 </div>
 
-                <div className="relative min-h-[330px] sm:min-h-[500px] lg:min-h-[660px]">
+                <div className="relative -mt-14 min-h-[330px] sm:-mt-12 sm:min-h-[500px] lg:mt-0 lg:min-h-[660px]">
                   <div className="pointer-events-none absolute inset-0 hidden lg:block">
                     <img
                       src={pandaSerbiaMap}
