@@ -140,19 +140,19 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
 
   return (
     <footer className="bg-white text-[#111111]">
-      <div className="w-full px-6 pb-8 pt-10 sm:px-8 lg:px-14">
-        <div className="grid gap-10 border-t border-black/8 pt-10 lg:grid-cols-[1.25fr_0.85fr_0.9fr] lg:items-start lg:gap-14">
+      <div className="w-full px-5 pb-6 pt-8 sm:px-8 sm:pb-8 sm:pt-10 lg:px-14">
+        <div className="grid gap-8 border-t border-black/8 pt-8 sm:gap-10 sm:pt-10 lg:grid-cols-[1.25fr_0.85fr_0.9fr] lg:items-start lg:gap-14">
           <div className="max-w-[24rem] text-center lg:text-left">
             <button onClick={() => go('/')} className="inline-flex items-center gap-3 focus:outline-none">
               <img src={pandaHeroLogo} alt="Sushi Panda logo" className="h-[56px] w-auto object-contain sm:h-[64px]" />
               <img src={pandaHeroWordmark} alt="Sushi Panda wordmark" className="h-[30px] w-auto object-contain sm:h-[34px]" />
             </button>
 
-            <p className="mt-6 text-[15px] leading-[1.65] text-black/68">
+            <p className="mt-4 text-[15px] leading-[1.6] text-black/68 sm:mt-6">
               Savremeni sushi brend koji raste grad po grad, uz isti fokus na ukus, brzinu i vizuelni standard.
             </p>
 
-            <div className="mt-7 flex items-center justify-center gap-3 lg:justify-start">
+            <div className="mt-5 flex items-center justify-center gap-3 sm:mt-7 lg:justify-start">
               <a
                 href="https://www.instagram.com/sushipandaofficial"
                 target="_blank"
@@ -176,7 +176,7 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
 
           <div className="text-center lg:text-left">
             <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-black/42">Catering</p>
-            <div className="mt-5 max-w-[17rem] lg:max-w-[17rem] mx-auto lg:mx-0">
+            <div className="mt-4 max-w-[17rem] lg:mt-5 lg:max-w-[17rem] mx-auto lg:mx-0">
               <button
                 onClick={() => go('/ketering-proslave')}
                 className="group text-left"
@@ -195,7 +195,7 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
             <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-black/42">Kontakt</p>
             <a
               href="tel:+38166404049"
-              className="mt-5 flex items-center justify-center gap-3 text-[18px] font-semibold leading-[1.4] text-[#111111] transition-colors hover:text-[#ff4a22] sm:text-[19px] lg:justify-start"
+              className="mt-4 flex items-center justify-center gap-3 text-[18px] font-semibold leading-[1.4] text-[#111111] transition-colors hover:text-[#ff4a22] sm:mt-5 sm:text-[19px] lg:justify-start"
             >
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#f6f8fc] text-[#ff4a22]">
                 <Phone size={18} strokeWidth={1.9} />
@@ -209,7 +209,7 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-black/8 pt-5 text-center text-[13px] text-black/46 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+        <div className="mt-8 flex flex-col gap-2 border-t border-black/8 pt-5 text-center text-[13px] text-black/46 sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:text-left">
           <p>Sushi Panda © 2025</p>
           <p>Kragujevac • Kraljevo • Jagodina</p>
         </div>

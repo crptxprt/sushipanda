@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, Instagram, Phone } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Instagram, Phone } from 'lucide-react';
 import { navigate } from '../lib/router';
 import Footer from '../components/Footer';
 import pandaHeroLogo from '../assets/panda-sushi-hero-logo.png';
@@ -83,12 +83,6 @@ const journeyCities = [
   },
 ] as const;
 
-const navCities = [
-  { label: 'Kragujevac', value: 'kragujevac', phone: '+381 66 594 2236', isActive: true },
-  { label: 'Kraljevo', value: 'kraljevo', phone: '+381 64 658 3446', isActive: true },
-  { label: 'Jagodina', value: 'jagodina', phone: '+38065000003', isActive: false },
-] as const;
-
 const journeyCardContent = {
   default: {
     title: '🐼 Jagodina',
@@ -110,26 +104,12 @@ const journeyCardContent = {
 
 export default function SushiPanda() {
   const [heroReady, setHeroReady] = useState(false);
-  const [selectedCity, setSelectedCity] = useState<(typeof navCities)[number]['value']>('kragujevac');
-  const [isCityMenuOpen, setIsCityMenuOpen] = useState(false);
   const [hoveredJourneyCity, setHoveredJourneyCity] = useState<(typeof journeyCities)[number]['value'] | null>(null);
   const [scooterBounceTick, setScooterBounceTick] = useState(0);
-  const cityMenuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => setHeroReady(true), 120);
     return () => window.clearTimeout(timeoutId);
-  }, []);
-
-  useEffect(() => {
-    const handlePointerDown = (event: MouseEvent) => {
-      if (!cityMenuRef.current?.contains(event.target as Node)) {
-        setIsCityMenuOpen(false);
-      }
-    };
-
-    window.addEventListener('mousedown', handlePointerDown);
-    return () => window.removeEventListener('mousedown', handlePointerDown);
   }, []);
 
   const go = (path: string) => {
@@ -137,7 +117,6 @@ export default function SushiPanda() {
     window.scrollTo({ top: 0 });
   };
 
-  const activeCity = navCities.find((city) => city.value === selectedCity) ?? navCities[0];
   const activeJourneyCard =
     hoveredJourneyCity != null
       ? journeyCardContent[hoveredJourneyCity]
@@ -203,7 +182,7 @@ export default function SushiPanda() {
             </svg>
           </div>
 
-          <div className="relative flex h-[90vh] min-h-[760px] w-full flex-col">
+          <div className="relative flex min-h-[860px] w-full flex-col sm:min-h-[920px] lg:h-[90vh] lg:min-h-[760px]">
             <div className="relative z-20 flex items-center justify-between px-4 pt-5 sm:px-6 sm:pt-6 lg:px-14 lg:pt-8">
               <button onClick={() => go('/')} aria-label="Sushi Panda" className="shrink-0">
                 <span className="inline-flex items-center gap-3">
@@ -213,72 +192,12 @@ export default function SushiPanda() {
               </button>
 
               <div className="hidden items-center gap-4 lg:flex">
-                <div ref={cityMenuRef} className="relative">
-                  <button
-                    type="button"
-                    onClick={() => setIsCityMenuOpen((open) => !open)}
-                    className="inline-flex h-[52px] min-w-[188px] items-center justify-between rounded-[18px] border border-black/8 bg-white px-5 text-[15px] font-semibold tracking-[-0.01em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28"
-                    aria-haspopup="menu"
-                    aria-expanded={isCityMenuOpen}
-                  >
-                    <span>{activeCity.label}</span>
-                    <ChevronDown
-                      size={18}
-                      strokeWidth={2}
-                      className={`transition-transform duration-200 ${isCityMenuOpen ? 'rotate-180' : ''}`}
-                    />
-                  </button>
-
-                  {isCityMenuOpen && (
-                    <div className="absolute right-0 top-[calc(100%+12px)] z-40 min-w-[220px] overflow-hidden rounded-[22px] border border-black/8 bg-white p-2 shadow-[0_18px_48px_rgba(17,17,17,0.14)]">
-                      {navCities.map((city) => {
-                        const isActive = city.value === selectedCity;
-                        const isDisabled = !city.isActive;
-
-                        return (
-                          <button
-                            key={city.value}
-                            type="button"
-                            disabled={isDisabled}
-                            onClick={() => {
-                              if (isDisabled) return;
-                              setSelectedCity(city.value);
-                              setIsCityMenuOpen(false);
-                            }}
-                            className={`flex w-full items-center justify-between rounded-[16px] px-4 py-3 text-left text-[16px] font-semibold transition-colors ${
-                              isDisabled
-                                ? 'cursor-not-allowed text-black/30'
-                                : ''
-                            } ${
-                              isActive
-                                ? 'bg-[#fff3ef] text-[#ff4a22]'
-                                : isDisabled
-                                  ? ''
-                                  : 'text-[#111111] hover:bg-[#f7f8fb]'
-                            }`}
-                          >
-                            <span className="flex items-center gap-2">
-                              {city.label}
-                              {isDisabled ? (
-                                <span className="text-[11px] font-medium uppercase tracking-[0.08em] text-black/28">
-                                  uskoro
-                                </span>
-                              ) : null}
-                            </span>
-                            {isActive ? <span className="text-[18px] leading-none">•</span> : null}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-
                 <a
-                  href={`tel:${activeCity.phone.replace(/\s+/g, '')}`}
+                  href="tel:+381665942236"
                   className="inline-flex h-[52px] items-center gap-3 rounded-[18px] border border-black/8 bg-white px-5 text-[15px] font-semibold tracking-[-0.01em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22]"
                 >
                   <Phone size={18} strokeWidth={1.9} />
-                  <span>{activeCity.phone}</span>
+                  <span>+381 66 594 2236</span>
                 </a>
 
                 <button
@@ -300,84 +219,32 @@ export default function SushiPanda() {
               </div>
             </div>
 
-            <div className="relative z-20 flex flex-wrap gap-3 px-4 pt-4 sm:px-6 lg:hidden">
+            <div className="relative z-20 flex gap-3 px-4 pt-4 sm:px-6 lg:hidden">
               <a
-                href={`tel:${activeCity.phone.replace(/\s+/g, '')}`}
-                className="inline-flex h-[46px] min-w-0 flex-1 items-center justify-center gap-2 rounded-[16px] border border-black/8 bg-white px-4 text-[14px] font-semibold tracking-[-0.01em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22]"
+                href="tel:+381665942236"
+                className="inline-flex h-[46px] w-[calc(100%-108px)] shrink-0 items-center justify-center gap-2 rounded-[16px] border border-black/8 bg-white px-3 text-[12px] font-semibold tracking-[-0.01em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22] sm:text-[14px]"
               >
                 <Phone size={16} strokeWidth={1.8} />
-                <span className="truncate">{activeCity.phone}</span>
+                <span className="truncate">+381 66 594 2236</span>
               </a>
               <button
                 onClick={() => go('/ketering-proslave')}
-                className="inline-flex h-[46px] items-center justify-center rounded-[16px] border border-black/8 bg-white px-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22]"
+                className="inline-flex h-[46px] w-[96px] shrink-0 items-center justify-center rounded-[16px] border border-black/8 bg-white px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22] sm:w-auto sm:px-4 sm:text-[12px]"
               >
                 Catering
               </button>
-              <button
-                type="button"
-                onClick={() => setIsCityMenuOpen((open) => !open)}
-                className="inline-flex h-[46px] w-full items-center justify-between rounded-[16px] border border-black/8 bg-white px-4 text-[14px] font-semibold tracking-[-0.01em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 sm:w-auto sm:min-w-[220px]"
-                aria-haspopup="menu"
-                aria-expanded={isCityMenuOpen}
-              >
-                <span>{activeCity.label}</span>
-                <ChevronDown
-                  size={18}
-                  strokeWidth={2}
-                  className={`transition-transform duration-200 ${isCityMenuOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
             </div>
 
-            {isCityMenuOpen ? (
-              <div className="relative z-30 px-4 pt-3 sm:px-6 lg:hidden">
-                <div className="overflow-hidden rounded-[22px] border border-black/8 bg-white p-2 shadow-[0_18px_48px_rgba(17,17,17,0.14)]">
-                  {navCities.map((city) => {
-                    const isActive = city.value === selectedCity;
-                    const isDisabled = !city.isActive;
-
-                    return (
-                      <button
-                        key={city.value}
-                        type="button"
-                        disabled={isDisabled}
-                        onClick={() => {
-                          if (isDisabled) return;
-                          setSelectedCity(city.value);
-                          setIsCityMenuOpen(false);
-                        }}
-                        className={`flex w-full items-center justify-between rounded-[16px] px-4 py-3 text-left text-[15px] font-semibold transition-colors ${
-                          isDisabled ? 'cursor-not-allowed text-black/30' : ''
-                        } ${
-                          isActive
-                            ? 'bg-[#fff3ef] text-[#ff4a22]'
-                            : isDisabled
-                              ? ''
-                              : 'text-[#111111] hover:bg-[#f7f8fb]'
-                        }`}
-                      >
-                        <span className="flex items-center gap-2">
-                          {city.label}
-                          {isDisabled ? <span className="text-[11px] font-medium uppercase tracking-[0.08em] text-black/28">uskoro</span> : null}
-                        </span>
-                        {isActive ? <span className="text-[18px] leading-none">•</span> : null}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            ) : null}
-
-            <div className="relative grid min-h-0 flex-1 content-start gap-8 overflow-hidden px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-10 lg:grid-cols-[0.45fr_0.55fr] lg:items-center lg:gap-10 lg:overflow-visible lg:px-14 lg:pb-12 lg:pt-12">
+            <div className="relative grid min-h-0 flex-1 content-start gap-3 overflow-hidden px-4 pb-8 pt-8 sm:gap-8 sm:px-6 sm:pb-10 sm:pt-10 lg:grid-cols-[0.45fr_0.55fr] lg:items-center lg:gap-10 lg:overflow-visible lg:px-14 lg:pb-12 lg:pt-12">
                 <div className="relative z-10 max-w-[39rem] self-center">
                   <h1 className="panda-display-hero font-sans text-[#111111]">
                     <span className="block sm:whitespace-nowrap">Sushi Panda.</span>
                     <span className="block sm:whitespace-nowrap">Širimo se</span>
                     <span className="block sm:whitespace-nowrap">grad po grad.</span>
                   </h1>
-                  <p className="panda-body-large mt-5 max-w-[26rem] text-black/82 sm:mt-6">
-                    Premijalna sushi dostava
+                  <p className="panda-body-large mt-5 max-w-[20rem] text-black/82 sm:mt-6 sm:max-w-[26rem]">
+                    Premijalna sushi
+                    <br className="sm:hidden" /> dostava
                     <br />
                     koja raste kroz Srbiju.
                   </p>
@@ -398,20 +265,20 @@ export default function SushiPanda() {
                   </div>
                 </div>
 
-                <div className="relative min-h-[430px] sm:min-h-[560px] lg:min-h-[660px]">
+                <div className="relative min-h-[330px] sm:min-h-[500px] lg:min-h-[660px]">
                   <div className="pointer-events-none absolute inset-0">
                     <img
                       src={pandaSerbiaMap}
                       alt=""
                       aria-hidden="true"
-                      className="absolute right-[-12%] top-[56%] w-[120%] max-w-none -translate-y-1/2 rotate-[13deg] object-contain sm:right-[-10%] sm:w-[142%] lg:right-[-16%] lg:top-[54%] lg:w-[158%]"
+                      className="absolute right-[-6%] top-[48%] w-[108%] max-w-none -translate-y-1/2 rotate-[13deg] object-contain sm:right-[-10%] sm:top-[54%] sm:w-[142%] lg:right-[-16%] lg:w-[158%]"
                     />
                   </div>
 
                   {journeyCities.map((city) => (
                     <div
                       key={city.name}
-                      className="absolute z-20 -m-4 p-4"
+                      className="absolute z-20 -m-2 p-2 sm:-m-4 sm:p-4"
                       onMouseEnter={() => {
                         setHoveredJourneyCity(city.value);
                         if (city.value === 'jagodina') {
@@ -429,20 +296,20 @@ export default function SushiPanda() {
                         opacity: heroReady ? 1 : 0,
                         transition: 'opacity 520ms ease, transform 260ms ease',
                         transitionDelay: city.delay,
-                        cursor: 'pointer',
+                        cursor: 'default',
                       }}
                     >
-                      <div className="flex items-start gap-3">
-                        <span className="relative mt-1.5 flex h-8 w-8 shrink-0 items-center justify-center">
-                          <span className="absolute h-8 w-8 rounded-full bg-[#ff4a22]/18 blur-[1px]" />
-                          <span className="absolute h-6 w-6 rounded-full bg-[#ff4a22] shadow-[0_8px_18px_rgba(255,74,34,0.35)]" />
-                          <span className="absolute h-2.5 w-2.5 rounded-full bg-white" />
+                      <div className="flex items-start gap-2 sm:gap-3">
+                        <span className="relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center sm:mt-1.5 sm:h-8 sm:w-8">
+                          <span className="absolute h-5 w-5 rounded-full bg-[#ff4a22]/18 blur-[1px] sm:h-8 sm:w-8" />
+                          <span className="absolute h-3.5 w-3.5 rounded-full bg-[#ff4a22] shadow-[0_8px_18px_rgba(255,74,34,0.35)] sm:h-6 sm:w-6" />
+                          <span className="absolute h-1.5 w-1.5 rounded-full bg-white sm:h-2.5 sm:w-2.5" />
                         </span>
                         <div>
-                          <p className="font-sans text-[1rem] font-black uppercase leading-none tracking-[-0.04em] text-[#111111] sm:text-[1.45rem]">
+                          <p className="font-sans text-[0.78rem] font-black uppercase leading-none tracking-[-0.04em] text-[#111111] sm:text-[1.45rem]">
                             {city.name}
                           </p>
-                          <p className="panda-eyebrow mt-1 lowercase text-[#ff4a22] sm:text-[13px]">
+                          <p className="mt-0.5 text-[0.58rem] font-semibold lowercase tracking-[0.08em] text-[#ff4a22] sm:mt-1 sm:text-[13px]">
                             {city.label}
                           </p>
                         </div>
@@ -450,7 +317,7 @@ export default function SushiPanda() {
                     </div>
                   ))}
 
-                  <div className="absolute bottom-[-2%] left-[2%] z-10 flex items-end gap-4 sm:left-[12%] lg:bottom-[-60px]">
+                  <div className="absolute bottom-[-2%] left-[2%] z-10 hidden items-end gap-4 sm:left-[12%] lg:flex lg:bottom-[-60px]">
                     <div className="relative">
                       <div
                         className="absolute bottom-[5%] left-[46%] h-[22px] w-[250px] rounded-full bg-black"
@@ -654,21 +521,21 @@ export default function SushiPanda() {
 
             <div className="grid items-center gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12">
               <div className="flex max-w-[46rem] flex-col justify-center self-center">
-                <h2 className="font-sans text-[#111111] text-[1.7rem] font-extrabold leading-[0.94] tracking-[-0.055em] sm:text-[2.3rem] lg:text-[2.9rem]">
+                <h2 className="font-sans text-[#111111] text-[2rem] font-extrabold leading-[0.94] tracking-[-0.055em] sm:text-[2.3rem] lg:text-[2.9rem]">
                   Ne pravimo samo sushi.
                 </h2>
-                <p className="mt-3 font-sans text-[1.55rem] font-extrabold leading-[0.95] tracking-[-0.05em] text-[#111111] sm:text-[2.1rem] lg:text-[2.7rem]">
+                <p className="mt-3 font-sans text-[1.9rem] font-extrabold leading-[0.95] tracking-[-0.05em] text-[#111111] sm:text-[2.1rem] lg:text-[2.7rem]">
                   Stvaramo
                 </p>
-                <p className="font-sans mt-1 text-[2.35rem] font-black uppercase leading-[0.88] tracking-[-0.065em] text-[#ff3b2f] sm:text-[3.8rem] lg:text-[5.35rem]">
+                <p className="font-sans mt-1 text-[3.2rem] font-black uppercase leading-[0.88] tracking-[-0.065em] text-[#ff3b2f] sm:text-[3.8rem] lg:text-[5.35rem]">
                   UMETNOST
                 </p>
               </div>
 
-              <div className="relative flex min-h-[420px] items-center justify-center lg:-translate-x-[6%] lg:justify-end">
+              <div className="relative flex min-h-[330px] items-center justify-center sm:min-h-[390px] lg:-translate-x-[6%] lg:min-h-[420px] lg:justify-end">
                 <div className="absolute h-[560px] w-[560px] rounded-full bg-[#edf4ff]/55 blur-[14px]" />
                 <div
-                  className="relative w-[180px] sm:w-[260px] lg:w-[420px]"
+                  className="relative w-[270px] sm:w-[340px] lg:w-[420px]"
                   style={{ animation: 'pandaRollFloat 4s ease-in-out infinite' }}
                 >
                   <div className="absolute left-1/2 top-[92%] h-[28px] w-[72%] -translate-x-1/2 rounded-full bg-black/12 blur-[10px]" />
