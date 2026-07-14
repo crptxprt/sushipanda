@@ -63,6 +63,8 @@ const journeyCities = [
     label: 'aktivno',
     top: '31%',
     left: '33%',
+    mobileTop: '38%',
+    mobileLeft: '42%',
     delay: '180ms',
   },
   {
@@ -71,6 +73,8 @@ const journeyCities = [
     label: 'aktivno',
     top: '55%',
     left: '20%',
+    mobileTop: '57%',
+    mobileLeft: '35%',
     delay: '360ms',
   },
   {
@@ -79,6 +83,8 @@ const journeyCities = [
     label: 'uskoro',
     top: '48%',
     left: '57%',
+    mobileTop: '42%',
+    mobileLeft: '59%',
     delay: '540ms',
   },
 ] as const;
@@ -266,7 +272,7 @@ export default function SushiPanda() {
                 </div>
 
                 <div className="relative min-h-[330px] sm:min-h-[500px] lg:min-h-[660px]">
-                  <div className="pointer-events-none absolute inset-0">
+                  <div className="pointer-events-none absolute inset-0 hidden lg:block">
                     <img
                       src={pandaSerbiaMap}
                       alt=""
@@ -275,10 +281,45 @@ export default function SushiPanda() {
                     />
                   </div>
 
+                  <div className="absolute inset-0 lg:hidden">
+                    <img
+                      src={pandaSerbiaMap}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-full w-full object-contain"
+                    />
+                    {journeyCities.map((city) => (
+                      <div
+                        key={`mobile-${city.name}`}
+                        className="absolute z-20 -m-2 p-2 sm:-m-4 sm:p-4"
+                        style={{
+                          top: city.mobileTop,
+                          left: city.mobileLeft,
+                          transform: heroReady ? 'translate(0, 0)' : 'translate(0, 10px)',
+                          opacity: heroReady ? 1 : 0,
+                          transition: 'opacity 520ms ease, transform 260ms ease',
+                          transitionDelay: city.delay,
+                        }}
+                      >
+                        <div className="flex items-start gap-2 sm:gap-3">
+                          <span className="relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center sm:mt-1.5 sm:h-8 sm:w-8">
+                            <span className="absolute h-5 w-5 rounded-full bg-[#ff4a22]/18 blur-[1px] sm:h-8 sm:w-8" />
+                            <span className="absolute h-3.5 w-3.5 rounded-full bg-[#ff4a22] shadow-[0_8px_18px_rgba(255,74,34,0.35)] sm:h-6 sm:w-6" />
+                            <span className="absolute h-1.5 w-1.5 rounded-full bg-white sm:h-2.5 sm:w-2.5" />
+                          </span>
+                          <div>
+                            <p className="font-sans text-[0.78rem] font-black uppercase leading-none tracking-[-0.04em] text-[#111111] sm:text-[1.45rem]">{city.name}</p>
+                            <p className="mt-0.5 text-[0.58rem] font-semibold lowercase tracking-[0.08em] text-[#ff4a22] sm:mt-1 sm:text-[13px]">{city.label}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
                   {journeyCities.map((city) => (
                     <div
                       key={city.name}
-                      className="absolute z-20 -m-2 p-2 sm:-m-4 sm:p-4"
+                      className="absolute z-20 hidden -m-2 p-2 lg:block lg:-m-4 lg:p-4"
                       onMouseEnter={() => {
                         setHoveredJourneyCity(city.value);
                         if (city.value === 'jagodina') {
