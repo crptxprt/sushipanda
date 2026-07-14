@@ -1,14 +1,22 @@
-# Sushi Panda Catering
+# Sushi Panda
 
-Premium sushi catering website for Sushi Panda, built as a custom Vite + React project.
+Vite + React project for the Sushi Panda brand landing and catering pages.
 
-## Working Context
+This README is the project memory for future Codex chats. Read it before changing routing, deployment, domains, footer logic, or large visual sections.
+
+## Current Status
 
 - Local path: `/Users/alexandrugabara/Documents/New project 9/sushipanda`
+- Local dev URL: `http://localhost:5173/`
 - Main working branch: `codex/sushipanda-pr-view`
-- Active remote for pushes: `trend`
-- Push command: `git push trend codex/sushipanda-pr-view`
-- Local preview: `http://localhost:5173/`
+- GitHub repo: `https://github.com/crptxprt/sushipanda`
+- Current deploy: Vercel project `sushipanda`
+- Production domains connected in Vercel:
+  - `sushipanda.rs`
+  - `www.sushipanda.rs`
+  - `sushipanda.vercel.app`
+- DNS provider: Cloudflare
+- Registrar: Loopia
 
 ## Local Development
 
@@ -30,58 +38,138 @@ Build check:
 npm run build
 ```
 
-## Git Remotes
+## Git Workflow
 
 Current remotes:
 
-- `origin` → `https://github.com/crptxprt/sushipanda.git`
-- `trend` → `https://github.com/trend0xai/sushipanda.git`
+- `origin` -> `https://github.com/crptxprt/sushipanda.git`
+- `trend` -> `https://github.com/trend0xai/sushipanda.git`
 
-Main deployment/testing flow during this phase has been through `trend`.
+Use `origin` for the active production/Vercel flow:
 
-## Current Brand / UX Direction
+```bash
+git push origin codex/sushipanda-pr-view
+```
 
-Visual direction:
+Vercel is connected to GitHub and currently deploys from `crptxprt/sushipanda`, branch `codex/sushipanda-pr-view`.
+
+After meaningful changes:
+
+```bash
+npm run build
+git add .
+git commit -m "Describe change"
+git push origin codex/sushipanda-pr-view
+```
+
+## Domain Setup
+
+Cloudflare nameservers set in Loopia:
+
+- `jasmine.ns.cloudflare.com`
+- `sterling.ns.cloudflare.com`
+
+Cloudflare DNS records for Vercel:
+
+- `sushipanda.rs` -> CNAME `053119fa6e84b43d.vercel-dns-017.com`
+- `www.sushipanda.rs` -> CNAME `053119fa6e84b43d.vercel-dns-017.com`
+
+Important:
+
+- These records should be DNS only if Vercel asks for that during validation.
+- After validation, Vercel may still need time to generate SSL.
+- If the wrong page appears on `sushipanda.rs`, first check app routing, not DNS.
+
+## Routing
+
+The domain root must open the brand landing.
+
+Current route rules in [src/App.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/App.tsx>):
+
+- `/` -> `SushiPanda`
+- `/sushi-panda` -> `SushiPanda`
+- `/ketering` -> `Home` catering landing
+- `/ketering-proslave` -> catering proslave page
+- `/ketering-slave` -> catering slave page
+- `/ketering-devojacko-momacko` -> catering devojacko/momacko page
+- `/ketering-korporativni` -> catering corporate page
+- `/sushi-chef` -> sushi chef catering page
+- `/galerija` -> catering gallery
+- `/o-nama` -> catering about
+- `/kontakt` -> catering contact
+
+Important:
+
+- `sushipanda.rs` should show the brand landing, not catering.
+- Catering currently still exists inside the same app.
+- Future target: move catering to `catering.sushipanda.rs`.
+- Vercel/domain settings cannot point directly to a hash route like `#/sushi-panda`; the root route in code must be correct.
+
+## Planned Domain Split
+
+Desired final structure:
+
+- `sushipanda.rs` -> Sushi Panda brand landing
+- `www.sushipanda.rs` -> same brand landing
+- `catering.sushipanda.rs` -> catering site
+
+Current state:
+
+- Brand landing is now the root route.
+- Catering is still in the same codebase and accessible by `/ketering` and the catering routes.
+- A second Vercel project or a routing split will be needed for `catering.sushipanda.rs`.
+
+Recommended next step for the split:
+
+- Create a separate Vercel project for catering or separate the builds later.
+- Add `catering.sushipanda.rs` to that project.
+- Add Cloudflare DNS record for `catering` based on the Vercel instructions.
+
+## Visual Direction
+
+Overall direction:
 
 - premium
 - clean
 - editorial
 - minimal
-- airy, high-end catering feel
+- airy
+- high-end sushi/catering feel
 
-Do not drift into:
+Avoid:
 
-- generic restaurant-template look
-- corporate SaaS feeling
+- generic restaurant template look
 - heavy forms
 - visual clutter
-- decorative Japanese clichés
+- corporate SaaS feeling
+- decorative Japanese cliches
+- replacing the dark catering footer with the brand footer
 
-Preferred contact style:
+## Contact Details
 
-- WhatsApp + phone
-- fast inquiry flow
-- no heavy lead form on landing page
-
-## Current Contact Details
+Use consistently across the project:
 
 - Phone: `+381 66 404 049`
-- WhatsApp: same number
+- WhatsApp: `https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.`
 - Instagram: `@sushipandaofficial`
 - Instagram URL: `https://www.instagram.com/sushipandaofficial`
+- TikTok: `https://www.tiktok.com/@pandasushikg`
 - Location: `Karađorđeva 47, Kragujevac, Srbija`
 
 ## Footer Rules
 
-Important separation between the two site directions:
+There are two footer directions:
 
-- All catering pages must use the dark catering footer: `Footer variant="catering"`
-- Only the brand page `/sushi-panda` should use the light/default footer: `Footer()`
+- Brand landing uses the light/default footer.
+- Catering pages use the dark catering footer: `Footer variant="catering"`.
 
-Current routing expectation:
+Current expectation:
 
-- Dark catering footer:
+- Light/default footer:
   - `/`
+  - `/sushi-panda`
+- Dark catering footer:
+  - `/ketering`
   - `/ketering-proslave`
   - `/ketering-slave`
   - `/ketering-devojacko-momacko`
@@ -90,46 +178,95 @@ Current routing expectation:
   - `/galerija`
   - `/o-nama`
   - `/kontakt`
-- Light/default footer:
-  - `/sushi-panda`
 
-Do not accidentally replace the catering footer with the brand footer on catering routes.
+Do not accidentally make all pages use the same footer.
 
-## What Has Already Been Reworked
+## Brand Landing Notes
 
-Homepage:
+Main file: [src/pages/SushiPanda.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/SushiPanda.tsx>)
 
-- premium/editorial hero rebuilt
-- many visuals replaced with sushi-focused imagery
-- stronger offer and CTA structure
-- `Zašto Sushi Panda` reworked
-- black ticker removed
-- `Vrste ketering evenata` reworked
-- `Sushi chef` block rebuilt multiple times
-- right side chef slider with 2 chef portraits + autoplay
-- `Planiraš događaj?` turned into quick-contact style
-- footer simplified and cleaned
-- typography polish applied
+The brand landing has a separate visual/typography system from catering.
 
-Contact page:
+Important hero state:
 
-- rebuilt into premium catering contact/booking page
-- no classic form-first layout
-- hero aligned with inner-page hero system
-- clean contact card with phone / WhatsApp / location
-- visual/editorial right side
+- Panda/map composition has been tuned many times.
+- Map readability is priority over panda size.
+- Panda should sit below city labels and not cover Jagodina.
+- Current announcement card text should remain:
 
-About page:
+```text
+🐼 Jagodina
 
-- rebuilt around real team members
-- people-first trust page
-- owner and chef cards added
-- sea/irrelevant stock visual removed
+Panda je već na putu.
 
-Inner pages:
+Otvaranje uskoro.
+```
 
-- hero sections aligned into one system for `O nama`, `Kontakt`, `Galerija`
-- typography system expanded across site
+Important content block:
+
+- Section text around `Ne pravimo samo sushi. Stvaramo UMETNOST` was reduced.
+- Roll image was enlarged.
+- User wanted the roll image to feel noticeably larger than before.
+
+## Catering Notes
+
+Main catering home file: [src/pages/Home.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/Home.tsx>)
+
+Catering pages should keep a premium editorial style:
+
+- serif display headings
+- soft white/pink contact area
+- quick contact flow
+- no heavy inquiry form
+- dark footer
+
+Contact section on catering home:
+
+- Main background should stay white.
+- The contact/info card can stay soft pink.
+- User preferred this direction after discussion.
+
+Package `Zatraži ponudu` buttons:
+
+- In [src/components/CateringPageLayout.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/components/CateringPageLayout.tsx>), buttons should anchor-scroll to the same page contact block.
+- Contact block id: `catering-contact`.
+- Do not navigate users away to `/kontakt` from those package CTAs.
+
+Sushi chef page:
+
+- [src/pages/SushiChef.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/SushiChef.tsx>) contact block right side was changed to match the other catering pages.
+- It should use the `Informacije` card with telephone, WhatsApp, and location instead of the old `Javi nam se` text block.
+
+## Slava Cards
+
+The `Odaberi tip slave` cards were reworked.
+
+Keep:
+
+- strong gradient overlay over photos
+- text in lower-left area
+- title white
+- description white/readable
+- no POSNO/MRSNO badges
+- short 2-3 line descriptions
+- premium editorial cover feeling
+
+Current descriptions:
+
+```text
+Posna slava:
+Sushi meni prilagođen posnim slavama, uz lagane ukuse i elegantnu prezentaciju za vašu trpezu.
+
+Mrsna slava:
+Domaći suhomesnati proizvodi, sirevi i slavski specijaliteti za bogatu i elegantnu slavsku trpezu.
+```
+
+Quote color below slava section:
+
+```css
+color: #000;
+opacity: 0.25;
+```
 
 ## Typography System
 
@@ -138,12 +275,13 @@ Current font direction:
 - Serif display: `Cormorant Garamond`
 - Sans/body: `Inter`
 
-Important split:
+Important:
 
-- Catering pages use the shared catering typography scale only
-- `/sushi-panda` keeps its own separate typography and should not be normalized together with catering pages
+- Catering pages use shared catering typography scale.
+- `/` and `/sushi-panda` brand landing can have its own separate typography.
+- Do not normalize the brand landing together with catering pages unless specifically requested.
 
-Catering typography classes to preserve in [src/index.css](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/index.css):
+Catering typography classes in [src/index.css](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/index.css>):
 
 - `.catering-hero-display`
 - `.catering-section-display`
@@ -154,88 +292,96 @@ Catering typography classes to preserve in [src/index.css](/Users/alexandrugabar
 - `.catering-body`
 - `.catering-body-small`
 
-Pages/components already aligned to this catering scale:
-
-- [src/pages/Home.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Home.tsx)
-- [src/pages/Kontakt.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Kontakt.tsx)
-- [src/pages/Galerija.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Galerija.tsx)
-- [src/pages/ONama.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/ONama.tsx)
-- [src/pages/SushiChef.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/SushiChef.tsx)
-- [src/components/CateringPageLayout.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/CateringPageLayout.tsx)
-- [src/components/ContactForm.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/ContactForm.tsx)
-
-Typography work already applied:
-
-- larger editorial hero titles
-- stronger section displays
-- refined italic emphasis
-- wider letter spacing for small uppercase labels
-
-Files central to typography:
-
-- [src/index.css](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/index.css)
-- [tailwind.config.js](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/tailwind.config.js)
-
 ## Key Files
 
-- Homepage: [src/pages/Home.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Home.tsx)
-- Contact: [src/pages/Kontakt.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Kontakt.tsx)
-- About: [src/pages/ONama.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/ONama.tsx)
-- Gallery: [src/pages/Galerija.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/Galerija.tsx)
-- Sushi chef page: [src/pages/SushiChef.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/pages/SushiChef.tsx)
-- Catering template layout: [src/components/CateringPageLayout.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/CateringPageLayout.tsx)
-- Header: [src/components/Header.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/Header.tsx)
-- Footer: [src/components/Footer.tsx](/Users/alexandrugabara/Documents/New%20project%209/sushipanda/src/components/Footer.tsx)
+- App routing: [src/App.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/App.tsx>)
+- Router helpers: [src/lib/router.ts](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/lib/router.ts>)
+- Brand landing: [src/pages/SushiPanda.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/SushiPanda.tsx>)
+- Catering home: [src/pages/Home.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/Home.tsx>)
+- Catering layout: [src/components/CateringPageLayout.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/components/CateringPageLayout.tsx>)
+- Sushi chef: [src/pages/SushiChef.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/SushiChef.tsx>)
+- Contact page: [src/pages/Kontakt.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/Kontakt.tsx>)
+- About page: [src/pages/ONama.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/ONama.tsx>)
+- Gallery: [src/pages/Galerija.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/pages/Galerija.tsx>)
+- Header: [src/components/Header.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/components/Header.tsx>)
+- Footer: [src/components/Footer.tsx](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/components/Footer.tsx>)
+- Global CSS: [src/index.css](</Users/alexandrugabara/Documents/New project 9/sushipanda/src/index.css>)
 
-## Workflow Notes
+## Recent Completed Work
 
-- After each meaningful change, commit + push immediately.
-- If a block feels weak, rebuild it properly instead of micro-tweaking.
-- Keep all contact data consistent across the entire site.
-- Preserve layout unless there is a clear reason to improve it.
-- Always check mobile/tablet/desktop after visual changes.
+- Connected project to GitHub repo `crptxprt/sushipanda`.
+- Deployed on Vercel.
+- Connected `sushipanda.rs` and `www.sushipanda.rs` to Vercel.
+- Changed root route `/` from catering home to brand landing.
+- Left catering available at `/ketering`.
+- Made white/default footer full width.
+- Reworked catering contact section on homepage to white section with soft pink contact card.
+- Updated Sushi Chef contact block to match other catering contact cards.
+- Made catering package CTA buttons anchor to same-page contact block.
+- Adjusted brand landing typography block so roll image is larger and text is smaller.
 
-## Ready-to-Paste Context For A New Chat
+## Do Not Break
 
-Use this if you open a fresh chat and want instant continuity:
+- `sushipanda.rs` must open the brand landing.
+- Do not point `sushipanda.rs` back to catering home.
+- Do not use Vercel domain settings to solve an in-app routing problem.
+- Do not make catering pages use the light brand footer.
+- Do not make `/sushi-panda` typography follow catering typography rules.
+- Do not remove the Jagodina announcement unless user explicitly asks.
+- Do not add heavy forms to catering inquiry flow.
+
+## Ready-To-Paste Context For A New Chat
 
 ```text
-Работаем в /Users/alexandrugabara/Documents/New project 9/sushipanda
-Ветка: codex/sushipanda-pr-view
-Пушим через: git push trend codex/sushipanda-pr-view
-Локальный просмотр: http://localhost:5173/
+Работаем в:
+/Users/alexandrugabara/Documents/New project 9/sushipanda
 
-Стиль сайта:
-- premium
-- clean
-- editorial
-- minimal
+Локально:
+http://localhost:5173/
 
-Важно:
-- без тяжелых форм
-- лучше быстрый контакт: WhatsApp + телефон
-- если блок слабый, пересобираем нормально, а не слегка правим
-- не ломать ощущение воздуха и дорогого визуала
-- на всех catering-страницах должен быть черный `Footer variant="catering"`
-- светлый футер оставляем только на `/sushi-panda`
+Ветка:
+codex/sushipanda-pr-view
 
-Актуальные контакты:
-- +381 66 404 049
-- @sushipandaofficial
-- https://www.instagram.com/sushipandaofficial
-- Karađorđeva 47, Kragujevac, Srbija
+GitHub:
+https://github.com/crptxprt/sushipanda
 
-Что уже сделано:
-- главная сильно переработана
-- Kontakt переделан в premium catering contact page
-- O nama переделана вокруг реальной команды
-- hero-секции внутренних страниц приведены к одной системе
-- typography polish уже сделан по всему сайту
+Пуш:
+git push origin codex/sushipanda-pr-view
 
-Работаем локально и проверяем через localhost, не через Vercel.
+Vercel:
+project sushipanda
+production сейчас с ветки codex/sushipanda-pr-view
+
+Домены:
+sushipanda.rs
+www.sushipanda.rs
+
+Cloudflare DNS:
+sushipanda.rs CNAME 053119fa6e84b43d.vercel-dns-017.com
+www.sushipanda.rs CNAME 053119fa6e84b43d.vercel-dns-017.com
+
+Важно по роутингу:
+/ и /sushi-panda = бренд-лендинг SushiPanda
+/ketering = кейтеринг главная
+остальные /ketering-* = страницы кейтеринга
+
+Будущая цель:
+sushipanda.rs = бренд-лендинг
+catering.sushipanda.rs = кейтеринг
+
+Важно по футерам:
+бренд-лендинг = светлый футер
+кейтеринг = черный Footer variant="catering"
+
+Стиль:
+premium, clean, editorial, minimal, airy
+
+Контакты:
++381 66 404 049
+WhatsApp: https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.
+Instagram: @sushipandaofficial
+TikTok: https://www.tiktok.com/@pandasushikg
+Karađorđeva 47, Kragujevac, Srbija
+
+Перед изменениями обязательно прочитать README.md.
 ```
-
-## Latest Typography Commits
-
-- `cad0476` — `Polish homepage typography system`
-- `9540547` — `Extend typography polish across site`
