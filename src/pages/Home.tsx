@@ -3,6 +3,7 @@ import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { getCurrentSection, navigate } from '../lib/router';
+import { cateringHomePath } from '../lib/site';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
 import chefPavaRaskovic from '../assets/chef-pava-raskovic.png';
@@ -193,7 +194,7 @@ export default function Home() {
                 Zatraži ponudu
               </button>
               <button
-                onClick={() => navigate('/ketering', 'ketering-opcije')}
+                onClick={() => navigate(cateringHomePath, 'ketering-opcije')}
                 className="text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
               >
                 Pogledaj opcije

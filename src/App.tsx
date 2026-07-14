@@ -10,9 +10,10 @@ import Galerija from './pages/Galerija';
 import ONama from './pages/ONama';
 import Kontakt from './pages/Kontakt';
 import SushiPanda from './pages/SushiPanda';
+import { isCateringSite } from './lib/site';
 
 const routes: Record<string, React.ComponentType> = {
-  '/': SushiPanda,
+  '/': isCateringSite ? Home : SushiPanda,
   '/sushi-panda': SushiPanda,
   '/ketering': Home,
   '/ketering-proslave': KeteringProslave,
@@ -29,6 +30,8 @@ const MAIN_SITE_TITLE = 'Sushi Panda — Premijalna sushi dostava u Srbiji';
 const CATERING_SITE_TITLE = 'Sushi catering za Kragujevac';
 
 function getPageTitle(path: string) {
+  if (isCateringSite) return CATERING_SITE_TITLE;
+
   if (
     path === '/ketering' ||
     path.startsWith('/ketering-') ||
@@ -53,7 +56,14 @@ export default function App() {
     document.title = getPageTitle(path);
   }, [path]);
 
-  const Page = routes[path] ?? SushiPanda;
+  // The catering deployment intentionally has no brand-landing fallback.
+  // This keeps catering.sushipanda.rs on the catering experience even if an
+  // old or mistyped hash URL is opened.
+  const Page = isCateringSite
+    ? path === '/sushi-panda'
+      ? Home
+      : routes[path] ?? Home
+    : routes[path] ?? SushiPanda;
 
   return <Page />;
 }

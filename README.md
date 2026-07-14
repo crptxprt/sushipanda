@@ -117,13 +117,25 @@ Current state:
 
 - Brand landing is now the root route.
 - Catering is still in the same codebase and accessible by `/ketering` and the catering routes.
-- A second Vercel project or a routing split will be needed for `catering.sushipanda.rs`.
+- The app is ready for a second Vercel project for `catering.sushipanda.rs`.
 
-Recommended next step for the split:
+### Catering Vercel Project Setup
 
-- Create a separate Vercel project for catering or separate the builds later.
-- Add `catering.sushipanda.rs` to that project.
-- Add Cloudflare DNS record for `catering` based on the Vercel instructions.
+Create a separate Vercel project using the same repository and production branch
+(`codex/sushipanda-pr-view`). In that project's Environment Variables, add:
+
+```text
+VITE_SITE=catering
+```
+
+This makes `/` render the catering home page in that deployment. The main
+`sushipanda` Vercel project must not have this variable, so `/` continues to
+render the Sushi Panda brand landing.
+
+Then add `catering.sushipanda.rs` to the new Vercel project. In Cloudflare,
+create a `CNAME` record with name `catering` and the target shown by Vercel.
+Keep it **DNS only** (grey cloud) until Vercel completes domain verification
+and SSL provisioning.
 
 ## Visual Direction
 
