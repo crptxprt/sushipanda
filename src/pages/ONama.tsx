@@ -22,7 +22,7 @@ const teamMembers = [
   },
   {
     name: 'Denis',
-    role: 'Sushi šef',
+    role: 'Sous chef',
     image: teamDenis,
     description: 'Zadužen za ukuse, preciznost pripreme i premium prezentaciju menija.',
   },
