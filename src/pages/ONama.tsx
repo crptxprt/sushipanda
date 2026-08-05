@@ -15,16 +15,16 @@ const teamMembers = [
     description: 'Vodi Sushi Panda sa fokusom na organizaciju, iskustvo gostiju i standard usluge.',
   },
   {
-    name: 'Denis',
-    role: 'Šef kuvar',
-    image: teamDenis,
-    description: 'Zadužen za ukuse, preciznost pripreme i premium prezentaciju menija.',
-  },
-  {
     name: 'Pava',
     role: 'Šef kuvar',
     image: teamPava,
     description: 'Brine o ritmu servisa, doslednosti kvaliteta i detaljima na događaju.',
+  },
+  {
+    name: 'Denis',
+    role: 'Sushi šef',
+    image: teamDenis,
+    description: 'Zadužen za ukuse, preciznost pripreme i premium prezentaciju menija.',
   },
   {
     name: 'Misha',
