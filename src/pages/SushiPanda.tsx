@@ -80,7 +80,7 @@ const journeyCities = [
   {
     value: 'jagodina',
     name: 'JAGODINA',
-    label: 'uskoro',
+    label: 'aktivno',
     top: '48%',
     left: '57%',
     mobileTop: '42%',
@@ -91,8 +91,8 @@ const journeyCities = [
 
 const journeyCardContent = {
   default: {
-    title: '🐼 Jagodina',
-    lines: ['Panda je već na putu.', 'Otvaranje uskoro.'],
+    title: '🐼 Sushi Panda',
+    lines: ['Panda je na putu.', 'Vidimo se uskoro.'],
   },
   kragujevac: {
     title: 'Kragujevac',
@@ -104,7 +104,7 @@ const journeyCardContent = {
   },
   jagodina: {
     title: 'Jagodina',
-    lines: ['🐼 Panda je već na putu.'],
+    lines: ['📞 064 6756898', 'Vuka Bojovića 1A, Jagodina 35000'],
   },
 } as const;
 
