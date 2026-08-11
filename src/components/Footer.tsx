@@ -54,7 +54,7 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
                 <BrandMark variant="footer" />
               </a>
               <p className="mx-auto max-w-sm text-[15px] font-light leading-[1.72] text-white/78 sm:text-[16px] lg:mx-0">
-                Savremen sushi catering za privatne proslave, slave i korporativne događaje u Kragujevcu.
+                Savremen sushi catering za privatne proslave, slave i korporativne događaje u Kragujevcu, Kraljevu i Jagodini.
               </p>
               <a
                 href="/kontakt"
@@ -131,7 +131,7 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
 
           <div className="mt-12 flex flex-col gap-3 border-t border-white/8 pt-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <p className="text-[11px] font-light uppercase tracking-[0.24em] text-stone-400 sm:text-[12px]">Sushi Panda &copy; {new Date().getFullYear()}</p>
-            <p className="text-[12px] font-light tracking-[0.06em] text-stone-400 sm:text-[13px]">Elegant sushi catering za događaje u Kragujevcu</p>
+            <p className="text-[12px] font-light tracking-[0.06em] text-stone-400 sm:text-[13px]">Elegant sushi catering za događaje u Kragujevcu, Kraljevu i Jagodini</p>
           </div>
         </div>
       </footer>

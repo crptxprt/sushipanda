@@ -28,15 +28,15 @@ const routes: Record<string, React.ComponentType> = {
 
 const MAIN_SITE_TITLE = 'Sushi Panda — Premijalna sushi dostava u Srbiji';
 const CATERING_PAGE_TITLES: Record<string, string> = {
-  '/': 'Sushi ketering u Kragujevcu za firme i proslave | Sushi Panda',
-  '/ketering-proslave': 'Sushi catering za proslave u Kragujevcu | Sushi Panda',
-  '/ketering-slave': 'Sushi ketering za slave u Kragujevcu | Sushi Panda',
+  '/': 'Sushi ketering: Kragujevac, Kraljevo i Jagodina | Sushi Panda',
+  '/ketering-proslave': 'Sushi catering za proslave: Kragujevac, Kraljevo i Jagodina | Sushi Panda',
+  '/ketering-slave': 'Sushi ketering za slave: Kragujevac, Kraljevo i Jagodina | Sushi Panda',
   '/ketering-devojacko-momacko': 'Sushi catering za devojačko i momačko veče | Sushi Panda',
-  '/ketering-korporativni': 'Ketering za firme u Kragujevcu | Sushi Panda',
-  '/sushi-chef': 'Sushi chef za događaje u Kragujevcu | Sushi Panda',
+  '/ketering-korporativni': 'Ketering za firme: Kragujevac, Kraljevo i Jagodina | Sushi Panda',
+  '/sushi-chef': 'Sushi chef: Kragujevac, Kraljevo i Jagodina | Sushi Panda',
   '/galerija': 'Galerija sushi catering događaja | Sushi Panda',
-  '/o-nama': 'O Sushi Panda Catering timu | Kragujevac',
-  '/kontakt': 'Kontakt za sushi catering u Kragujevcu | Sushi Panda',
+  '/o-nama': 'O Sushi Panda Catering timu | Kragujevac, Kraljevo i Jagodina',
+  '/kontakt': 'Kontakt za sushi catering | Kragujevac, Kraljevo i Jagodina',
 };
 
 function getPageTitle(path: string) {

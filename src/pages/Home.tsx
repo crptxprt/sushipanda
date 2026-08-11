@@ -26,7 +26,7 @@ const PROOF_STRIP = [
   'Premium sushi ketering',
   'Privatni i poslovni eventi',
   'Live sushi chef',
-  'Kragujevac',
+  'Kragujevac · Kraljevo · Jagodina',
 ];
 
 const categories = [
@@ -163,7 +163,7 @@ export default function Home() {
 
             {/* Overline */}
             <p className="editorial-kicker mb-8 text-stone-500">
-              — Premium Sushi Catering, Kragujevac
+              — Premium Sushi Catering · Kragujevac, Kraljevo i Jagodina
             </p>
 
             {/* Massive headline */}
@@ -177,7 +177,7 @@ export default function Home() {
             {/* Tagline */}
             <p className="catering-body mb-8 max-w-[470px] text-black/78">
               Premium sushi ketering i live chef iskustvo za proslave, slave
-              i korporativne događaje u Kragujevcu.
+              i korporativne događaje u Kragujevcu, Kraljevu i Jagodini.
             </p>
 
             {/* CTA — pill button (matches reference) */}
@@ -493,7 +493,7 @@ export default function Home() {
         <div className="flex items-center justify-center gap-6 max-w-md mx-auto px-6">
           <div className="flex-1 h-px bg-stone-200" />
           <p className="text-[12px] uppercase tracking-[0.18em] text-stone-500 font-light whitespace-nowrap">
-            Za privatne i poslovne događaje · Kragujevac
+            Za privatne i poslovne događaje · Kragujevac · Kraljevo · Jagodina
           </p>
           <div className="flex-1 h-px bg-stone-200" />
         </div>
