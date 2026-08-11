@@ -96,15 +96,15 @@ const journeyCardContent = {
   },
   kragujevac: {
     title: 'Kragujevac',
-    lines: ['📞 066 5942236', 'Karađorđeva 47, Kragujevac 34104'],
+    lines: ['📞 066 5942236', 'Karađorđeva 47, Kragujevac'],
   },
   kraljevo: {
     title: 'Kraljevo',
-    lines: ['📞 064 6583446', 'Čika Ljubina 19, Kraljevo 36000'],
+    lines: ['📞 064 6583446', 'Čika Ljubina 19, Kraljevo'],
   },
   jagodina: {
     title: 'Jagodina',
-    lines: ['📞 064 6756898', 'Vuka Bojovića 1A, Jagodina 35000'],
+    lines: ['📞 064 6756898', 'Vuka Bojovića 1A, Jagodina'],
   },
 } as const;
 
