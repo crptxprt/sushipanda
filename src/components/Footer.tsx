@@ -50,18 +50,18 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
         <div className="relative mx-auto max-w-[1320px] px-4 pb-8 pt-14 sm:px-6 lg:px-10">
           <div className="grid grid-cols-1 gap-10 border-t border-white/8 pt-10 sm:gap-12 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr] lg:gap-10">
             <div className="text-center lg:text-left">
-              <button onClick={() => go('/')} className="mb-7 inline-block focus:outline-none lg:block">
+              <a href="/" className="mb-7 inline-block focus:outline-none lg:block">
                 <BrandMark variant="footer" />
-              </button>
+              </a>
               <p className="mx-auto max-w-sm text-[15px] font-light leading-[1.72] text-white/78 sm:text-[16px] lg:mx-0">
                 Savremen sushi catering za privatne proslave, slave i korporativne događaje u Kragujevcu.
               </p>
-              <button
-                onClick={() => go('/kontakt')}
+              <a
+                href="/kontakt"
                 className="mt-8 inline-block rounded-full border border-[#e2c1ca]/30 px-7 py-3 text-[11px] font-light uppercase tracking-[0.24em] text-white transition-all duration-300 hover:border-[#C44F6E] hover:bg-[#C44F6E] hover:text-white sm:text-[12px]"
               >
                 Zatraži ponudu
-              </button>
+              </a>
             </div>
 
             <div className="text-center lg:text-left">
@@ -69,12 +69,12 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
               <ul className="space-y-3 sm:space-y-4">
                 {keteringLinks.map((link) => (
                   <li key={link.path}>
-                    <button
-                      onClick={() => go(link.path)}
+                    <a
+                      href={link.path}
                       className="text-[16px] font-light leading-[1.65] tracking-[0.01em] text-white/82 transition-colors hover:text-white"
                     >
                       {link.label}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -85,12 +85,12 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
               <ul className="space-y-3 sm:space-y-4">
                 {quickLinks.map((link) => (
                   <li key={link.path}>
-                    <button
-                      onClick={() => go(link.path)}
+                    <a
+                      href={link.path}
                       className="text-[16px] font-light leading-[1.65] tracking-[0.01em] text-white/82 transition-colors hover:text-white"
                     >
                       {link.label}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>

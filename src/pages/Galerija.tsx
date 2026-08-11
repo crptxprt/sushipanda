@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { navigate } from '../lib/router';
 import gallery01 from '../assets/gallery/gallery-01.avif';
 import gallery02 from '../assets/gallery/gallery-02.avif';
 import gallery04 from '../assets/gallery/gallery-04.avif';
@@ -123,9 +122,9 @@ export default function Galerija() {
           <h2 className="catering-section-display-medium text-white mb-10">
             Organizujmo tvoj<br /><span className="italic font-normal">sushi event</span>
           </h2>
-          <button onClick={() => navigate('/kontakt')} className="bg-[#C44F6E] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">
+          <a href="/kontakt" className="bg-[#C44F6E] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#D8748D] transition-colors font-light">
             Zatraži ponudu
-          </button>
+          </a>
         </div>
       </section>
 

@@ -38,7 +38,7 @@ interface CateringPageLayoutProps {
 }
 
 export default function CateringPageLayout({
-  title, titleItalic, subtitle, heroImage, intro, packages, variants, formSource, variantsTitle, showContactSection = true, showVariantCtas = true,
+  title, titleItalic, subtitle, heroImage, intro, packages, variants, variantsTitle, showContactSection = true,
 }: CateringPageLayoutProps) {
   const scrollToContact = () => {
     document.getElementById('catering-contact')?.scrollIntoView({

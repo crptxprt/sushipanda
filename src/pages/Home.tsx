@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { getCurrentSection, navigate } from '../lib/router';
+import { getCurrentSection } from '../lib/router';
 import { cateringHomePath } from '../lib/site';
 import heroSushiNigiri from '../assets/hero-sushi-nigiri.png';
 import chefDenisIvanoff from '../assets/chef-denis-ivanoff.png';
@@ -111,11 +111,6 @@ export default function Home() {
     'https://wa.me/38166404049?text=Zdravo%2C%20zanima%20me%20sushi%20catering%20za%20doga%C4%91aj.';
   const phoneLink = 'tel:+38166404049';
 
-  const go = (path: string) => {
-    navigate(path);
-    window.scrollTo({ top: 0 });
-  };
-
   useEffect(() => {
     const intervalId = window.setInterval(() => {
       setActiveChefSlide((current) => (current + 1) % chefSlides.length);
@@ -187,18 +182,18 @@ export default function Home() {
 
             {/* CTA — pill button (matches reference) */}
             <div className="flex flex-wrap items-center gap-4 mb-14">
-              <button
-                onClick={() => go('/kontakt')}
+              <a
+                href="/kontakt"
                 className="bg-[#181214] text-white text-[12px] uppercase tracking-[0.18em] px-9 py-4 rounded-full hover:bg-[#C44F6E] transition-colors duration-300 font-light shadow-[0_16px_36px_rgba(24,18,20,0.15)]"
               >
                 Zatraži ponudu
-              </button>
-              <button
-                onClick={() => navigate(cateringHomePath, 'ketering-opcije')}
+              </a>
+              <a
+                href={`${cateringHomePath}?section=ketering-opcije`}
                 className="text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#111111] transition-colors font-light underline underline-offset-4"
               >
                 Pogledaj opcije
-              </button>
+              </a>
             </div>
 
             <div className="mb-12 flex flex-wrap gap-3 sm:mb-14">
@@ -212,8 +207,8 @@ export default function Home() {
               ))}
             </div>
 
-            <button
-              onClick={() => go('/o-nama')}
+            <a
+              href="/o-nama"
               className="flex w-full max-w-[28rem] items-center gap-4 rounded-[20px] border border-[#eadfdb] bg-white/72 px-4 py-3 text-left shadow-[0_18px_42px_rgba(196,79,110,0.06)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#dccbc6] hover:bg-white/82 sm:w-fit sm:max-w-none"
             >
               <div className="flex -space-x-3">
@@ -231,7 +226,7 @@ export default function Home() {
                 <p className="text-[13px] text-stone-800 font-light">Naš tim kuvara i sushi majstora</p>
                 <p className="text-[12px] text-stone-500 font-light tracking-[0.04em]">Iskusna ekipa za evente svih formata</p>
               </div>
-            </button>
+            </a>
           </div>
 
           {/* ── RIGHT: Sushi hero image ── */}
@@ -355,9 +350,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {categories.map((cat) => (
-              <button
+              <a
                 key={cat.path}
-                onClick={() => go(cat.path)}
+                href={cat.path}
                 className="group relative overflow-hidden border border-[#e9ddd6] bg-white/70 text-left focus:outline-none"
                 style={{ borderRadius: '22px' }}
               >
@@ -378,7 +373,7 @@ export default function Home() {
                     Saznaj više <ArrowRight size={11} />
                   </div>
                 </div>
-              </button>
+              </a>
             ))}
           </div>
         </div>
@@ -410,13 +405,13 @@ export default function Home() {
                 <span>Meni po meri</span>
               </div>
 
-              <button
-                onClick={() => go('/sushi-chef')}
+              <a
+                href="/sushi-chef"
                 className="group mt-10 inline-flex w-fit items-center gap-3 rounded-full border border-white/12 bg-white px-8 py-4 text-[12px] font-light uppercase tracking-[0.18em] text-[#111111] transition-colors duration-300 hover:bg-[#C44F6E] hover:text-white"
               >
                 Zatraži sushi chefa
                 <ArrowRight size={13} strokeWidth={1.5} className="transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
             </div>
 
             <div className="relative min-h-[420px] overflow-hidden bg-[#0f0c0b] sm:min-h-[500px] lg:min-h-[560px]">
@@ -466,12 +461,12 @@ export default function Home() {
                 i kvalitet usluge, a ne samo još jednu stock galeriju.
               </p>
             </div>
-            <button
-              onClick={() => go('/galerija')}
+            <a
+              href="/galerija"
               className="group hidden items-center gap-2 text-[12px] font-light uppercase tracking-[0.18em] text-stone-600 transition-colors hover:text-[#C44F6E] sm:flex"
             >
               Sve slike <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

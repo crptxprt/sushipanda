@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { navigate } from '../lib/router';
 import BrandMark from './BrandMark';
 
 const keteringItems = [
@@ -28,13 +27,6 @@ export default function Header({ transparent = false }: HeaderProps) {
 
   const opaque = !transparent || scrolled;
 
-  const go = (path: string) => {
-    navigate(path);
-    setMobileOpen(false);
-    setDropdownOpen(false);
-    window.scrollTo({ top: 0 });
-  };
-
   const linkClass = `text-[12px] tracking-[0.22em] font-light uppercase transition-colors hover:text-[#C44F6E] cursor-pointer ${
     opaque ? 'text-stone-700' : 'text-stone-600/95'
   }`;
@@ -52,10 +44,10 @@ export default function Header({ transparent = false }: HeaderProps) {
 
           {/* Left nav */}
           <nav className="flex items-center gap-8">
-            <span onClick={() => go('/')} className={`${linkClass} flex items-center gap-2`}>
+            <a href="/" className={`${linkClass} flex items-center gap-2`}>
               <span className="text-[#C44F6E] font-light">—</span>
               Početna
-            </span>
+            </a>
 
             <div
               className="relative pb-3 -mb-3"
@@ -78,24 +70,25 @@ export default function Header({ transparent = false }: HeaderProps) {
                 }`}
               >
                 {keteringItems.map((item) => (
-                  <span
+                  <a
                     key={item.path}
-                    onClick={() => go(item.path)}
+                    href={item.path}
+                    onClick={() => setDropdownOpen(false)}
                     className="block px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase text-stone-600 hover:text-[#C44F6E] hover:bg-[#fbf4f2] transition-colors font-light border-b border-black/4 last:border-0 cursor-pointer"
                   >
                     {item.label}
-                  </span>
+                  </a>
                 ))}
               </div>
             </div>
 
-            <span onClick={() => go('/galerija')} className={linkClass}>Galerija</span>
+            <a href="/galerija" className={linkClass}>Galerija</a>
           </nav>
 
           {/* Center: Logo */}
           <div className="flex justify-center">
-            <button
-              onClick={() => go('/')}
+            <a
+              href="/"
               className="group focus:outline-none"
               aria-label="Sushi Panda"
             >
@@ -104,14 +97,14 @@ export default function Header({ transparent = false }: HeaderProps) {
                 variant="bare"
                 className="transition-transform duration-300 group-hover:scale-[1.02]"
               />
-            </button>
+            </a>
           </div>
 
           {/* Right */}
           <div className="flex items-center justify-end gap-8">
-            <span onClick={() => go('/o-nama')} className={linkClass}>O nama</span>
-            <span
-              onClick={() => go('/kontakt')}
+            <a href="/o-nama" className={linkClass}>O nama</a>
+            <a
+              href="/kontakt"
               className={`rounded-full border px-7 py-2 text-[12px] tracking-[0.22em] uppercase font-light transition-all duration-300 cursor-pointer ${
                 opaque
                   ? 'border-[#d8c8ca] text-[#111111] hover:border-[#cdb7bb] hover:bg-[#f1e8e3] hover:text-[#111111]'
@@ -119,19 +112,19 @@ export default function Header({ transparent = false }: HeaderProps) {
               }`}
             >
               Kontakt
-            </span>
+            </a>
           </div>
         </div>
 
         {/* ── Mobile ── */}
         <div className="flex w-full items-center justify-between lg:hidden">
-          <button
-            onClick={() => go('/')}
+          <a
+            href="/"
             className="focus:outline-none"
             aria-label="Sushi Panda"
           >
             <BrandMark size="sm" variant="bare" />
-          </button>
+          </a>
           <button
             className={`transition-colors ${opaque ? 'text-[#111111]' : 'text-[#1b1416]'}`}
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -154,33 +147,36 @@ export default function Header({ transparent = false }: HeaderProps) {
             { label: 'O nama', path: '/o-nama' },
             { label: 'Kontakt', path: '/kontakt' },
           ].map((l) => (
-            <span
+            <a
               key={l.path}
-              onClick={() => go(l.path)}
+              href={l.path}
+              onClick={() => setMobileOpen(false)}
               className="block py-4 text-[12px] tracking-[0.22em] uppercase text-stone-600 border-b border-stone-100 cursor-pointer hover:text-[#C44F6E] transition-colors"
             >
               {l.label}
-            </span>
+            </a>
           ))}
           <div className="py-3">
             <p className="text-[12px] tracking-[0.22em] uppercase text-stone-500 mb-3">Ketering</p>
             {keteringItems.map((item) => (
-              <span
+              <a
                 key={item.path}
-                onClick={() => go(item.path)}
+                href={item.path}
+                onClick={() => setMobileOpen(false)}
                 className="block py-3 pl-3 text-[12px] tracking-[0.22em] uppercase text-stone-600 border-b border-stone-50 cursor-pointer hover:text-[#C44F6E] transition-colors"
               >
                 {item.label}
-              </span>
+              </a>
             ))}
           </div>
           <div className="pt-6">
-            <span
-              onClick={() => go('/kontakt')}
+            <a
+              href="/kontakt"
+              onClick={() => setMobileOpen(false)}
               className="block w-full text-center bg-[#1b1416] text-white text-[12px] tracking-[0.22em] uppercase py-4 cursor-pointer hover:bg-[#C44F6E] transition-colors"
             >
               Zatraži ponudu
-            </span>
+            </a>
           </div>
         </div>
       </div>

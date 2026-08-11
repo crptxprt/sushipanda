@@ -27,17 +27,27 @@ const routes: Record<string, React.ComponentType> = {
 };
 
 const MAIN_SITE_TITLE = 'Sushi Panda — Premijalna sushi dostava u Srbiji';
-const CATERING_SITE_TITLE = 'Sushi catering za Kragujevac';
+const CATERING_PAGE_TITLES: Record<string, string> = {
+  '/': 'Sushi ketering u Kragujevcu za firme i proslave | Sushi Panda',
+  '/ketering-proslave': 'Sushi catering za proslave u Kragujevcu | Sushi Panda',
+  '/ketering-slave': 'Sushi ketering za slave u Kragujevcu | Sushi Panda',
+  '/ketering-devojacko-momacko': 'Sushi catering za devojačko i momačko veče | Sushi Panda',
+  '/ketering-korporativni': 'Ketering za firme u Kragujevcu | Sushi Panda',
+  '/sushi-chef': 'Sushi chef za događaje u Kragujevcu | Sushi Panda',
+  '/galerija': 'Galerija sushi catering događaja | Sushi Panda',
+  '/o-nama': 'O Sushi Panda Catering timu | Kragujevac',
+  '/kontakt': 'Kontakt za sushi catering u Kragujevcu | Sushi Panda',
+};
 
 function getPageTitle(path: string) {
-  if (isCateringSite) return CATERING_SITE_TITLE;
+  if (isCateringSite) return CATERING_PAGE_TITLES[path] ?? CATERING_PAGE_TITLES['/'];
 
   if (
     path === '/ketering' ||
     path.startsWith('/ketering-') ||
     path === '/sushi-chef'
   ) {
-    return CATERING_SITE_TITLE;
+    return CATERING_PAGE_TITLES['/'];
   }
 
   return MAIN_SITE_TITLE;
@@ -48,8 +58,12 @@ export default function App() {
 
   useEffect(() => {
     const handler = () => setPath(getCurrentPath());
+    window.addEventListener('popstate', handler);
     window.addEventListener('hashchange', handler);
-    return () => window.removeEventListener('hashchange', handler);
+    return () => {
+      window.removeEventListener('popstate', handler);
+      window.removeEventListener('hashchange', handler);
+    };
   }, []);
 
   useEffect(() => {

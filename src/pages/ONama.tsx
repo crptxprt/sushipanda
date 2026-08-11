@@ -1,6 +1,5 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { navigate } from '../lib/router';
 import { ArrowRight } from 'lucide-react';
 import teamRuslan from '../assets/team-ruslan.png';
 import teamDenis from '../assets/team-denis.png';
@@ -144,10 +143,10 @@ export default function ONama() {
           Planiraš <span className="italic font-normal">sushi event?</span>
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-5">
-          <button onClick={() => navigate('/kontakt')} className="bg-[#111111] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#C44F6E] transition-colors font-light">Zatraži ponudu</button>
-          <button onClick={() => navigate('/ketering-proslave')} className="group inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#C44F6E] transition-colors font-light">
+          <a href="/kontakt" className="bg-[#111111] text-white text-[12px] uppercase tracking-[0.18em] px-12 py-4 rounded-full hover:bg-[#C44F6E] transition-colors font-light">Zatraži ponudu</a>
+          <a href="/ketering-proslave" className="group inline-flex items-center gap-3 text-[12px] uppercase tracking-[0.18em] text-stone-600 hover:text-[#C44F6E] transition-colors font-light">
             Pogledaj opcije <ArrowRight size={12} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </div>
       </section>
 
