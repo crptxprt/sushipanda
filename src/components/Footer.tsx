@@ -1,3 +1,4 @@
+
 import { Instagram, MapPin, Phone } from 'lucide-react';
 import { navigate } from '../lib/router';
 import pandaHeroLogo from '../assets/panda-sushi-hero-logo.png';
@@ -177,8 +178,8 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
           <div className="text-center lg:text-left">
             <p className="text-[13px] font-medium uppercase tracking-[0.16em] text-black/42">Catering</p>
             <div className="mt-4 max-w-[17rem] lg:mt-5 lg:max-w-[17rem] mx-auto lg:mx-0">
-              <button
-                onClick={() => go('/ketering-proslave')}
+              <a
+                href="https://catering.sushipanda.rs/ketering-proslave"
                 className="group text-left"
               >
                 <span className="block text-[20px] font-semibold leading-[1.35] text-[#111111] transition-colors group-hover:text-[#ff4a22]">
@@ -187,7 +188,7 @@ export default function Footer({ variant = 'default' }: { variant?: FooterVarian
                 <span className="mt-2 block text-[15px] leading-[1.6] text-black/58">
                   Pogledaj posebnu catering ponudu za događaje, proslave i poslovne prilike.
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
