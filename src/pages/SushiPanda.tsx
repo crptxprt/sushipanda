@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Instagram, Phone } from 'lucide-react';
 import { navigate } from '../lib/router';
+import { cateringUrl } from '../lib/site';
 import Footer from '../components/Footer';
 import pandaHeroLogo from '../assets/panda-sushi-hero-logo.png';
 import pandaHeroWordmark from '../assets/panda-sushi-hero-wordmark.png';
@@ -207,7 +208,7 @@ export default function SushiPanda() {
                 </a>
 
                 <button
-                  onClick={() => go('/ketering-proslave')}
+                  onClick={() => { window.location.href = cateringUrl('/'); }}
                   className="inline-flex h-[52px] items-center rounded-[18px] border border-black/8 bg-white px-6 text-[13px] font-semibold uppercase tracking-[0.08em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22]"
                 >
                   Catering
@@ -234,7 +235,7 @@ export default function SushiPanda() {
                 <span className="truncate">+381 66 594 2236</span>
               </a>
               <button
-                onClick={() => go('/ketering-proslave')}
+                onClick={() => { window.location.href = cateringUrl('/'); }}
                 className="inline-flex h-[46px] w-[96px] shrink-0 items-center justify-center rounded-[16px] border border-black/8 bg-white px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#111111] shadow-[0_10px_28px_rgba(17,17,17,0.06)] transition-colors hover:border-[#ff4a22]/28 hover:text-[#ff4a22] sm:w-auto sm:px-4 sm:text-[12px]"
               >
                 Catering

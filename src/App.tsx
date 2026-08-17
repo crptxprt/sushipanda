@@ -10,7 +10,7 @@ import Galerija from './pages/Galerija';
 import ONama from './pages/ONama';
 import Kontakt from './pages/Kontakt';
 import SushiPanda from './pages/SushiPanda';
-import { isCateringSite } from './lib/site';
+import { cateringUrl, isCateringSite } from './lib/site';
 
 const routes: Record<string, React.ComponentType> = {
   '/': isCateringSite ? Home : SushiPanda,
@@ -39,13 +39,19 @@ const CATERING_PAGE_TITLES: Record<string, string> = {
   '/kontakt': 'Kontakt za sushi catering | Kragujevac, Kraljevo i Jagodina',
 };
 
+const isCateringPath = (path: string) =>
+  path === '/ketering' ||
+  path.startsWith('/ketering-') ||
+  path === '/sushi-chef' ||
+  path === '/galerija' ||
+  path === '/o-nama' ||
+  path === '/kontakt';
+
 function getPageTitle(path: string) {
   if (isCateringSite) return CATERING_PAGE_TITLES[path] ?? CATERING_PAGE_TITLES['/'];
 
   if (
-    path === '/ketering' ||
-    path.startsWith('/ketering-') ||
-    path === '/sushi-chef'
+    isCateringPath(path)
   ) {
     return CATERING_PAGE_TITLES['/'];
   }
@@ -69,6 +75,16 @@ export default function App() {
   useEffect(() => {
     document.title = getPageTitle(path);
   }, [path]);
+
+  // Catering must never render under the main sushipanda.rs domain. Preserve
+  // old shared links, but send them to their canonical catering URL instead.
+  useEffect(() => {
+    if (!isCateringSite && isCateringPath(path)) {
+      window.location.replace(cateringUrl(path));
+    }
+  }, [path]);
+
+  if (!isCateringSite && isCateringPath(path)) return null;
 
   // The catering deployment intentionally has no brand-landing fallback.
   // This keeps catering.sushipanda.rs on the catering experience even if an
